@@ -5,14 +5,17 @@
   "budget_eur": 0,
   "completed": {},
   "failures": {},
-  "lease": {
-    "owner": "37699229623:1",
-    "run": "37699229623",
-    "task": "brief-review:site-garagiste:d22b9400f97f3522efadbb29455ff909f9e5b202cbc872b51fdddcd489bfd95c",
-    "heartbeat": 1791413753.0000021,
-    "expires": 1791414353.0000024
-  },
-  "events": [],
+  "lease": null,
+  "events": [
+    {
+      "kind": "RECOVERED",
+      "old_owner": "37699229623:1",
+      "by": "37699229623:2",
+      "previous_conclusion": null,
+      "task": "brief-review:site-garagiste:d22b9400f97f3522efadbb29455ff909f9e5b202cbc872b51fdddcd489bfd95c",
+      "recovered_at": 1791413788.005998
+    }
+  ],
   "blocked": [
     "GSC_DEDICATED_READONLY_ACCESS",
     "PRODUCT_ZERO_BUDGET_GATE",
