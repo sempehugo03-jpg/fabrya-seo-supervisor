@@ -81,16 +81,9 @@
     }
   },
   "failures": {
-    "competitor-surface:2026-W41:v1": 1
+    "competitor-surface:2026-W41:v1": 2
   },
-  "lease": {
-    "owner": "37701315122:2",
-    "run": "37701315122",
-    "task": "competitor-surface:2026-W41:v1",
-    "trigger": "workflow_dispatch",
-    "heartbeat": 1791415192.9398582,
-    "expires": 1791415792.9398584
-  },
+  "lease": null,
   "events": [
     {
       "kind": "RECOVERED",
@@ -143,6 +136,14 @@
       "error_type": "RuntimeError",
       "error": "Public document too large",
       "at": 1791415011.6011794
+    },
+    {
+      "kind": "ERROR",
+      "task": "competitor-surface:2026-W41:v1",
+      "owner": "37701315122:2",
+      "error_type": "RuntimeError",
+      "error": "Public document too large",
+      "at": 1791415196.2542307
     }
   ],
   "blocked": [
