@@ -51,17 +51,37 @@
       "run": "37699229623",
       "attempt": "2",
       "completed_at": 1791413792.5064406
+    },
+    "brief-review:site-photographe:f9671530883124efba4b47e2fda9c497b2fdf732b247b500d35dc5cb347c1843": {
+      "result": {
+        "page": "site-photographe",
+        "title": "Création de site photographe : portfolio et demandes",
+        "description": "Préparez un site de photographe qui présente vos spécialités, vos séries et vos conditions, puis guide les visiteurs vers une demande de séance précise.",
+        "title_length": 52,
+        "description_length": 152,
+        "headings": [
+          "Choisir une prestation et montrer des séries cohérentes",
+          "Demande de séance : recueillir ce qui permet de répondre",
+          "Preuves à réunir avant publication",
+          "Distinguer un portfolio utile d’une liste de fonctionnalités",
+          "Questions fréquentes",
+          "Validation de l’intégration",
+          "Mesure après changement autorisé"
+        ],
+        "findings": [],
+        "editorial_status": "NEEDS_HUMAN_REVIEW",
+        "publication_authorized": false,
+        "body": "title: Création de site photographe : portfolio et demandes\ndescription: Préparez un site de photographe qui présente vos spécialités, vos séries et vos conditions, puis guide les visiteurs vers une demande de séance précise.\n\n# Création de site photographe : portfolio et demandes\n\nPROPOSITION NON PUBLIÉE. Destination envisagée : la page existante\n/conseils/site-photographe, après coordination et validation du propriétaire produit.\nConserver son URL et vérifier son canonical lors de l’intégration.\n\nUn site de photographe aide le visiteur à choisir votre spécialité, comprendre\nvotre approche et transmettre les informations utiles à une séance. Un portfolio\norganisé par prestations montre davantage qu’une galerie sans contexte : il permet\nde comparer les styles et de comprendre ce que vous pourrez réaliser.\n\n## Choisir une prestation et montrer des séries cohérentes\n\nDistinguez mariage, portrait et photographie d’entreprise uniquement si ces\nprestations font partie de votre activité. Pour chaque série, précisez le contexte,\nle lieu et la demande initiale. Sélectionnez des images dont vous possédez les droits\nde diffusion, avec l’autorisation nécessaire des personnes représentées.\n\nPréparez les images pour le mobile : dimensions adaptées, compression et texte\nalternatif utile. Mesurez le chargement avec les fichiers réels plutôt que de\npromettre une vitesse sans test. Une légende raconte le travail ; le texte\nalternatif décrit ce que l’image apporte à la page.\n\n## Demande de séance : recueillir ce qui permet de répondre\n\nLa demande peut se limiter à la prestation, à la date souhaitée, au lieu et à un\nmoyen de réponse. Expliquez les déplacements, les livrables et les délais que vous\nappliquez réellement. Une demande ne confirme pas une disponibilité : le\nphotographe doit répondre et préciser les conditions avant tout engagement.\n\nCTA proposé : « Décrire mon projet de site photographe ». Raccorder au parcours\nexistant seulement après avoir vérifié la réception du message. Ne pas annoncer de\nréservation automatique ou de galerie client tant que leur fonctionnement n’est\npas démontré.\n\n## Preuves à réunir avant publication\n\n- Une série réelle et autorisée pour chacune des prestations présentées.\n- Une démonstration mobile du parcours portfolio → demande → réception.\n- Conditions et tarifs actuels validés par leur propriétaire, sans reprendre un\n  prix historique ou inventer une fonctionnalité Fabrya.\n\n## Distinguer un portfolio utile d’une liste de fonctionnalités\n\nLa page professionnelle Wix consacrée aux photographes présente galeries,\nréservations et vente de prestations ou tirages :\nhttps://fr.wix.com/photography/website (consultée le 08/10/2026).\nIl s’agit de son discours commercial, pas d’un test de toutes ses fonctionnalités.\nCette observation suggère une expérience Fabrya centrée sur une série réelle et\nune demande reçue, avec preuve du parcours avant toute promesse équivalente.\nNe pas publier de classement concurrent ou prétendre que Fabrya est supérieur.\n\n## Questions fréquentes\n\n**Les réseaux sociaux suffisent-ils ?** Ils peuvent faire découvrir votre travail.\nUn portfolio propre permet de présenter vos prestations, votre zone et vos\nconditions au même endroit. Aucun canal ne garantit des réservations.\n\n**Quelles photos préparer ?** Des séries représentatives et autorisées, triées par\nprestation. Gardez les fichiers originaux et préparez une version web adaptée.\n\n**Faut-il afficher un prix ?** Affichez vos conditions réelles si elles sont\ncomparables. Pour une prestation variable, expliquez les éléments nécessaires à\nune estimation ; ne présentez pas une fourchette inventée comme un devis.\n\n## Validation de l’intégration\n\nRelecture métier, accord produit, métadonnées uniques, canonical existant,\nimages autorisées, contrôle mobile et réception du formulaire. Les liens internes\ndoivent conserver l’acquisition d’origine ; ne pas ajouter de paramètres qui\nprétendent transformer une visite directe en acquisition Google.\n\n## Mesure après changement autorisé\n\nEnregistrer la date et la version effectivement publiée. Comparer deux périodes\nGSC de durée identique, sans chevauchement, en séparant marque et hors marque.\nSuivre impressions, clics, demandes qualifiées et paiements confirmés attribués\nau premier canal externe. Signaler un volume faible ; ne pas conclure à une\namélioration sur quelques impressions ou sur un test de longueur de description.\n"
+      },
+      "run": "37701335724",
+      "attempt": "1",
+      "trigger": "workflow_run",
+      "commit": "62ac0add98b95104122ce3e2ec336a43b261c70d",
+      "completed_at": 1791415007.0011356
     }
   },
   "failures": {},
-  "lease": {
-    "owner": "37701335724:1",
-    "run": "37701335724",
-    "task": "brief-review:site-photographe:f9671530883124efba4b47e2fda9c497b2fdf732b247b500d35dc5cb347c1843",
-    "trigger": "workflow_run",
-    "heartbeat": 1791415005.8481476,
-    "expires": 1791415605.848148
-  },
+  "lease": null,
   "events": [
     {
       "kind": "RECOVERED",
@@ -100,6 +120,12 @@
       "trigger": "workflow_run",
       "old_trigger": "workflow_dispatch",
       "recovered_at": 1791415004.7681766
+    },
+    {
+      "kind": "COMPLETED",
+      "task": "brief-review:site-photographe:f9671530883124efba4b47e2fda9c497b2fdf732b247b500d35dc5cb347c1843",
+      "owner": "37701335724:1",
+      "trigger": "workflow_run"
     }
   ],
   "blocked": [
