@@ -54,14 +54,7 @@
     }
   },
   "failures": {},
-  "lease": {
-    "owner": "37701071272:1",
-    "run": "37701071272",
-    "task": "brief-review:site-photographe:f9671530883124efba4b47e2fda9c497b2fdf732b247b500d35dc5cb347c1843",
-    "trigger": "workflow_dispatch",
-    "heartbeat": 1791414854.728285,
-    "expires": 1791415454.7282856
-  },
+  "lease": null,
   "events": [
     {
       "kind": "RECOVERED",
@@ -80,6 +73,16 @@
       "kind": "COMPLETED",
       "task": "brief-review:site-photographe:720cb13c034a534a1a6020f75beaf086ac7a60a9aea325d9acfafaf77dcc5ae9",
       "owner": "37699229623:2"
+    },
+    {
+      "kind": "RECOVERED",
+      "old_owner": "37701071272:1",
+      "by": "37701098454:1",
+      "previous_conclusion": "failure",
+      "task": "brief-review:site-photographe:f9671530883124efba4b47e2fda9c497b2fdf732b247b500d35dc5cb347c1843",
+      "trigger": "workflow_run",
+      "old_trigger": "workflow_dispatch",
+      "recovered_at": 1791414865.778878
     }
   ],
   "blocked": [
