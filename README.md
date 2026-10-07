@@ -19,9 +19,15 @@ An isolated workflow_run watchdog wakes automatically when the main SEO workflow
 fails. It shares the same concurrency group and state, uses only trusted main
 source from this repository and never retries itself recursively. Successful main
 runs cause no productive watchdog job. Cron remains the fallback for lost events.
-During validation the cron is temporarily five minutes; normal cadence is restored
-after the external evidence is collected. Manual interruption_test is a controlled
+Validation initially used a five-minute cron; normal fifteen-minute cadence is
+restored. Manual interruption_test is a controlled
 failure probe, not a production or paid operation.
+
+Public research can retain per-source blockers (robots, HTTP, size limit), then
+continue on the other allowed sources without bypassing a restriction. Such a
+review is WITH_BLOCKERS, never a feature or ranking PASS. An observed GitHub 500
+after a committed checkpoint is handled by reading the requested state before
+retrying; conflicting owners still fail closed.
 
 The first run deliberately exits 73 after persisting a claim; a later independent
 run must prove recovery. No test result alone proves external operation. Consult

@@ -3,7 +3,7 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
     inputs:
       interruption_test:
@@ -22,8 +22,8 @@ jobs:
     timeout-minutes: 5
     env:
       GH_TOKEN: ${{ github.token }}
-      CRASH_PROBE: ${{ (github.event_name == 'schedule' || inputs.interruption_test == true) && 'true' || 'false' }}
-      CRASH_PROBE_ID: ${{ github.event_name == 'schedule' && 'automatic-schedule-v1' || 'controlled-interruption-v3' }}
+      CRASH_PROBE: ${{ inputs.interruption_test == true && 'true' || 'false' }}
+      CRASH_PROBE_ID: 'controlled-interruption-v4'
     steps:
       - name: Read own repository only
         run: |

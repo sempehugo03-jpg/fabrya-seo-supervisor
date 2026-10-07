@@ -66,5 +66,16 @@ class SeoPreparation(unittest.TestCase):
                 supervisor.save(supervisor.empty_state(), 'old', 'test')
             self.assertEqual([c.args[0] for c in call.call_args_list], ['PUT', 'GET'])
 
+    def test_oversized_competitor_retained_without_losing_other_observations(self):
+        observations = [RuntimeError('Public document too large'),
+            dict(url=supervisor.COMPETITORS[1], status='READ', claims_verified=False),
+            dict(url=supervisor.COMPETITORS[2], status='ROBOTS_DISALLOWED')]
+        with patch.object(supervisor, 'review_competitor', side_effect=observations):
+            result = supervisor.competitor_review()
+            self.assertEqual(result['operational_status'], 'WITH_BLOCKERS')
+            self.assertEqual(result['observed_pages'], 1)
+            self.assertEqual(result['results'][0]['error'], 'Public document too large')
+            self.assertFalse(result['publication_authorized'])
+
 if __name__ == '__main__':
     unittest.main()

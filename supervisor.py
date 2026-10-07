@@ -67,30 +67,42 @@ class VisibleText(HTMLParser):
             self.parts.append(data)
 
 
-def competitor_review():
+def review_competitor(url):
     from urllib.parse import urlparse
+    robot_url = 'https://' + urlparse(url).hostname + '/robots.txt'
+    try:
+        robots = public_read(robot_url).decode('utf-8', errors='replace')
+    except urllib.error.HTTPError as error:
+        if error.code != 404:
+            raise
+        robots = ''
+    parser = urllib.robotparser.RobotFileParser()
+    parser.parse(robots.splitlines())
+    if not parser.can_fetch(PUBLIC_AGENT, url):
+        return dict(url=url, status='ROBOTS_DISALLOWED')
+    body = public_read(url)
+    visible = VisibleText(); visible.feed(body.decode('utf-8', errors='replace'))
+    surface = ' '.join(visible.parts).lower()
+    terms = [term for term in ('portfolio', 'réservation', 'devis', 'google maps',
+        'fiche google', 'galerie', 'démonstration') if term in surface]
+    return dict(url=url, status='READ', fetched_at=time.time(),
+        document_sha256=hashlib.sha256(body).hexdigest(), h1_count=visible.h1,
+        observed_lexical_terms=terms, claims_verified=False)
+
+
+def competitor_review():
     results = []
     for url in COMPETITORS:
-        robot_url = 'https://' + urlparse(url).hostname + '/robots.txt'
         try:
-            robots = public_read(robot_url).decode('utf-8', errors='replace')
-        except urllib.error.HTTPError as error:
-            if error.code != 404:
-                raise
-            robots = ''
-        parser = urllib.robotparser.RobotFileParser()
-        parser.parse(robots.splitlines())
-        if not parser.can_fetch(PUBLIC_AGENT, url):
-            results.append(dict(url=url, status='ROBOTS_DISALLOWED')); continue
-        body = public_read(url)
-        visible = VisibleText(); visible.feed(body.decode('utf-8', errors='replace'))
-        surface = ' '.join(visible.parts).lower()
-        terms = [term for term in ('portfolio', 'réservation', 'devis', 'google maps',
-            'fiche google', 'galerie', 'démonstration') if term in surface]
-        results.append(dict(url=url, status='READ', fetched_at=time.time(),
-            document_sha256=hashlib.sha256(body).hexdigest(), h1_count=visible.h1,
-            observed_lexical_terms=terms, claims_verified=False))
+            results.append(review_competitor(url))
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, RuntimeError) as error:
+            # A blocked/oversized document is evidence, not grounds to bypass its limit
+            # or discard observations from the other explicitly allowed sources.
+            results.append(dict(url=url, status='BLOCKED', error_type=type(error).__name__,
+                error=str(error)[:300], at=time.time(), claims_verified=False))
     return dict(kind='PUBLIC_COMPETITOR_SURFACE', results=results,
+        observed_pages=sum(r['status'] == 'READ' for r in results),
+        operational_status='OBSERVED' if all(r['status'] == 'READ' for r in results) else 'WITH_BLOCKERS',
         interpretation='Lexical observations, not feature tests or ranking evidence',
         next_action='Validate one real portfolio-to-request demo before promising booking',
         publication_authorized=False)
@@ -213,7 +225,7 @@ def main():
     tasks = [(task_id(path), path.stem, lambda p=path: audit(p))
         for path in sorted((ROOT / 'briefs').glob('*.md'))]
     week = datetime.now(timezone.utc).strftime('%G-W%V')
-    tasks.append(('competitor-surface:' + week + ':v1', 'competitor-surface', competitor_review))
+    tasks.append(('competitor-surface:' + week + ':v2', 'competitor-surface', competitor_review))
     for key, label, evaluate in tasks:
         if key in state['completed']:
             print('DEDUP: ' + key); continue
