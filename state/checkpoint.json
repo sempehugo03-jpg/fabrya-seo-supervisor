@@ -91,5 +91,13 @@
     "owner": "37699229623:1",
     "task": "brief-review:site-garagiste:d22b9400f97f3522efadbb29455ff909f9e5b202cbc872b51fdddcd489bfd95c",
     "at": 1791413754.3896847
+  },
+  "probes": {
+    "controlled-interruption-v2": {
+      "owner": "37701071272:1",
+      "task": "brief-review:site-photographe:f9671530883124efba4b47e2fda9c497b2fdf732b247b500d35dc5cb347c1843",
+      "trigger": "workflow_dispatch",
+      "at": 1791414855.7165878
+    }
   }
 }
