@@ -17,5 +17,10 @@
     "GSC_DEDICATED_READONLY_ACCESS",
     "PRODUCT_ZERO_BUDGET_GATE",
     "PRODUCTION_COORDINATION"
-  ]
+  ],
+  "crash_probe_recorded": {
+    "owner": "37699229623:1",
+    "task": "brief-review:site-garagiste:d22b9400f97f3522efadbb29455ff909f9e5b202cbc872b51fdddcd489bfd95c",
+    "at": 1791413754.3896847
+  }
 }
