@@ -138,8 +138,29 @@ def save(state, sha, message):
     payload = dict(message=message, content=content, branch=BRANCH)
     if sha:
         payload['sha'] = sha
-    result = api('PUT', '/repos/' + REPO + '/contents/' + STATE_PATH, payload)
-    return result['content']['sha']
+    path = '/repos/' + REPO + '/contents/' + STATE_PATH
+    for attempt in range(3):
+        try:
+            result = api('PUT', path, payload)
+            return result['content']['sha']
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as error:
+            if isinstance(error, urllib.error.HTTPError) and error.code < 500:
+                raise  # Never retry an authorization failure or CAS conflict.
+            # A real GitHub 500 occurred AFTER applying a checkpoint. Read before retrying.
+            try:
+                observed = api('GET', path + '?ref=' + BRANCH)
+                if json.loads(base64.b64decode(observed['content'])) == state:
+                    print('AMBIGUOUS_WRITE_CONFIRMED: checkpoint persisted once')
+                    return observed['sha']
+                if observed['sha'] != sha:
+                    raise RuntimeError('Checkpoint changed concurrently; write refused') from error
+            except urllib.error.HTTPError as read_error:
+                if read_error.code != 404 or sha is not None:
+                    raise
+            if attempt == 2:
+                raise
+            time.sleep(attempt + 1)
+    raise RuntimeError('Unreachable checkpoint retry state')
 
 
 def audit(path):

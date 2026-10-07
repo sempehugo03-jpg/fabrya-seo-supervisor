@@ -1,6 +1,10 @@
 import unittest
 from pathlib import Path
 import supervisor
+import base64
+import json
+import urllib.error
+from unittest.mock import patch
 
 
 class SeoPreparation(unittest.TestCase):
@@ -35,6 +39,32 @@ class SeoPreparation(unittest.TestCase):
         for url in ('https://fabrya.fr/robots.txt', 'http://fr.wix.com/', 'https://evil.example/'):
             with self.assertRaises(RuntimeError):
                 supervisor.public_read(url)
+
+    def test_committed_checkpoint_then_500_is_confirmed_without_second_write(self):
+        state = supervisor.empty_state()
+        committed = dict(content=base64.b64encode(json.dumps(state).encode()).decode(), sha='new')
+        error = urllib.error.HTTPError('https://api.github.com/test', 500, 'server', {}, None)
+        with patch.object(supervisor, 'api', side_effect=[error, committed]) as call:
+            self.assertEqual(supervisor.save(state, 'old', 'test'), 'new')
+            self.assertEqual([c.args[0] for c in call.call_args_list], ['PUT', 'GET'])
+
+    def test_transient_uncommitted_write_retries_with_original_fence(self):
+        state = supervisor.empty_state()
+        old = dict(content=base64.b64encode(b'{}').decode(), sha='old')
+        error = urllib.error.HTTPError('https://api.github.com/test', 503, 'server', {}, None)
+        with patch.object(supervisor, 'api', side_effect=[error, old, dict(content=dict(sha='new'))]) as call:
+            with patch.object(supervisor.time, 'sleep'):
+                self.assertEqual(supervisor.save(state, 'old', 'test'), 'new')
+            puts = [c.args[2] for c in call.call_args_list if c.args[0] == 'PUT']
+            self.assertEqual([p['sha'] for p in puts], ['old', 'old'])
+
+    def test_concurrent_change_after_500_fails_closed_without_overwrite(self):
+        error = urllib.error.HTTPError('https://api.github.com/test', 500, 'server', {}, None)
+        other = dict(content=base64.b64encode(b'{"different_owner":true}').decode(), sha='other')
+        with patch.object(supervisor, 'api', side_effect=[error, other]) as call:
+            with self.assertRaisesRegex(RuntimeError, 'concurrently'):
+                supervisor.save(supervisor.empty_state(), 'old', 'test')
+            self.assertEqual([c.args[0] for c in call.call_args_list], ['PUT', 'GET'])
 
 if __name__ == '__main__':
     unittest.main()

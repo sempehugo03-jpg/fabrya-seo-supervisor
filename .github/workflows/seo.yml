@@ -23,7 +23,7 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       CRASH_PROBE: ${{ (github.event_name == 'schedule' || inputs.interruption_test == true) && 'true' || 'false' }}
-      CRASH_PROBE_ID: ${{ github.event_name == 'schedule' && 'automatic-schedule-v1' || 'controlled-interruption-v2' }}
+      CRASH_PROBE_ID: ${{ github.event_name == 'schedule' && 'automatic-schedule-v1' || 'controlled-interruption-v3' }}
     steps:
       - name: Read own repository only
         run: |
