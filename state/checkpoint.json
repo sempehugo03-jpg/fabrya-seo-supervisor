@@ -108,6 +108,12 @@
       "task": "brief-review:site-photographe:f9671530883124efba4b47e2fda9c497b2fdf732b247b500d35dc5cb347c1843",
       "trigger": "workflow_dispatch",
       "at": 1791414855.7165878
+    },
+    "controlled-interruption-v3": {
+      "owner": "37701315122:1",
+      "task": "brief-review:site-photographe:f9671530883124efba4b47e2fda9c497b2fdf732b247b500d35dc5cb347c1843",
+      "trigger": "workflow_dispatch",
+      "at": 1791414995.1609025
     }
   }
 }
