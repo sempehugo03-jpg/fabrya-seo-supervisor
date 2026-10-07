@@ -54,7 +54,14 @@
     }
   },
   "failures": {},
-  "lease": null,
+  "lease": {
+    "owner": "37701335724:1",
+    "run": "37701335724",
+    "task": "brief-review:site-photographe:f9671530883124efba4b47e2fda9c497b2fdf732b247b500d35dc5cb347c1843",
+    "trigger": "workflow_run",
+    "heartbeat": 1791415005.8481476,
+    "expires": 1791415605.848148
+  },
   "events": [
     {
       "kind": "RECOVERED",
