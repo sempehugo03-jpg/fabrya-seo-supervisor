@@ -1,0 +1,21 @@
+{
+  "identity": "fabrya-seo-deterministic-v1",
+  "schema": 1,
+  "status": "PARTIAL_DETERMINISTIC",
+  "budget_eur": 0,
+  "completed": {},
+  "failures": {},
+  "lease": {
+    "owner": "37699229623:1",
+    "run": "37699229623",
+    "task": "brief-review:site-garagiste:d22b9400f97f3522efadbb29455ff909f9e5b202cbc872b51fdddcd489bfd95c",
+    "heartbeat": 1791413753.0000021,
+    "expires": 1791414353.0000024
+  },
+  "events": [],
+  "blocked": [
+    "GSC_DEDICATED_READONLY_ACCESS",
+    "PRODUCT_ZERO_BUDGET_GATE",
+    "PRODUCTION_COORDINATION"
+  ]
+}
