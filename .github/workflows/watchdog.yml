@@ -1,15 +1,8 @@
-name: Isolated SEO preparation and recovery
+name: Isolated SEO failure recovery watchdog
 on:
-  push:
-    branches: [main]
-  schedule:
-    - cron: '*/5 * * * *'
-  workflow_dispatch:
-    inputs:
-      interruption_test:
-        description: One controlled durable interruption, recovered by isolated watchdog
-        type: boolean
-        default: false
+  workflow_run:
+    workflows: [Isolated SEO preparation and recovery]
+    types: [completed]
 permissions:
   contents: write
   actions: read
@@ -17,15 +10,15 @@ concurrency:
   group: fabrya-seo-single-supervisor
   cancel-in-progress: false
 jobs:
-  prepare:
+  recover:
+    if: github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.head_repository.full_name == github.repository && github.event.workflow_run.head_branch == 'main'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     env:
       GH_TOKEN: ${{ github.token }}
-      CRASH_PROBE: ${{ (github.event_name == 'schedule' || inputs.interruption_test == true) && 'true' || 'false' }}
-      CRASH_PROBE_ID: ${{ github.event_name == 'schedule' && 'automatic-schedule-v1' || 'controlled-interruption-v2' }}
+      CRASH_PROBE: 'false'
     steps:
-      - name: Read own repository only
+      - name: Read own trusted default branch only
         run: |
           set -eu
           test "$GITHUB_REPOSITORY" = "sempehugo03-jpg/fabrya-seo-supervisor"
@@ -35,8 +28,7 @@ jobs:
           git -c "http.extraheader=AUTHORIZATION: basic $auth" fetch --quiet --depth=1 origin "$GITHUB_SHA"
           git checkout --quiet FETCH_HEAD
           unset auth
-      - name: Validate isolated executor
+      - name: Verify recovery executor
         run: python3 -m unittest discover -s tests -v
-      - name: Prepare useful SEO reviews and recover checkpoints
-        if: github.event_name != 'push'
+      - name: Recover same SEO state and unfinished useful task
         run: python3 supervisor.py

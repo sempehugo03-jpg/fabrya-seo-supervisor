@@ -15,6 +15,14 @@ never reclaimed merely because the lease expired. Three failed evaluations block
 a task for review. Finished work is skipped, including reruns. Empty cycles produce
 no commits or hourly comments. GitHub run records retain cycle heartbeats/errors.
 
+An isolated workflow_run watchdog wakes automatically when the main SEO workflow
+fails. It shares the same concurrency group and state, uses only trusted main
+source from this repository and never retries itself recursively. Successful main
+runs cause no productive watchdog job. Cron remains the fallback for lost events.
+During validation the cron is temporarily five minutes; normal cadence is restored
+after the external evidence is collected. Manual interruption_test is a controlled
+failure probe, not a production or paid operation.
+
 The first run deliberately exits 73 after persisting a claim; a later independent
 run must prove recovery. No test result alone proves external operation. Consult
 Actions and the state branch for actual evidence. Scheduled jobs can be delayed or
