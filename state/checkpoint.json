@@ -81,7 +81,14 @@
     }
   },
   "failures": {},
-  "lease": null,
+  "lease": {
+    "owner": "37701335724:1",
+    "run": "37701335724",
+    "task": "competitor-surface:2026-W41:v1",
+    "trigger": "workflow_run",
+    "heartbeat": 1791415008.0067077,
+    "expires": 1791415608.006708
+  },
   "events": [
     {
       "kind": "RECOVERED",
