@@ -7,12 +7,93 @@ import re
 import time
 import urllib.error
 import urllib.request
+import urllib.robotparser
+from datetime import datetime, timezone
+from html.parser import HTMLParser
 from pathlib import Path
 
 REPO = 'sempehugo03-jpg/fabrya-seo-supervisor'
 BRANCH = 'seo-state'
 STATE_PATH = 'state/checkpoint.json'
 ROOT = Path(__file__).parent
+COMPETITORS = (
+    'https://fr.wix.com/photography/website',
+    'https://wecomm.fr/creation-site-web/photographe/',
+    'https://lokalio.fr/creation-site-internet-garagiste',
+)
+PUBLIC_HOSTS = {'fr.wix.com', 'wecomm.fr', 'lokalio.fr'}
+PUBLIC_AGENT = 'FabryaSEOReview/1.0 (+https://github.com/' + REPO + ')'
+
+
+class SafeRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        from urllib.parse import urlparse
+        target = urlparse(newurl)
+        if target.scheme != 'https' or target.hostname not in PUBLIC_HOSTS:
+            raise RuntimeError('Competitor redirect outside allowlist refused')
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+
+def public_read(url):
+    from urllib.parse import urlparse
+    target = urlparse(url)
+    if target.scheme != 'https' or target.hostname not in PUBLIC_HOSTS:
+        raise RuntimeError('Public destination refused')
+    req = urllib.request.Request(url, headers={'User-Agent': PUBLIC_AGENT})
+    # No GitHub auth, cookies, analytics callback or provider credentials.
+    with urllib.request.build_opener(SafeRedirect()).open(req, timeout=15) as response:
+        body = response.read(1_000_001)
+        if len(body) > 1_000_000:
+            raise RuntimeError('Public document too large')
+        return body
+
+
+class VisibleText(HTMLParser):
+    def __init__(self):
+        super().__init__(); self.hidden = 0; self.parts = []; self.h1 = 0
+
+    def handle_starttag(self, tag, attrs):
+        if tag in ('script', 'style'):
+            self.hidden += 1
+        if tag == 'h1':
+            self.h1 += 1
+
+    def handle_endtag(self, tag):
+        if tag in ('script', 'style'):
+            self.hidden = max(0, self.hidden - 1)
+
+    def handle_data(self, data):
+        if not self.hidden:
+            self.parts.append(data)
+
+
+def competitor_review():
+    from urllib.parse import urlparse
+    results = []
+    for url in COMPETITORS:
+        robot_url = 'https://' + urlparse(url).hostname + '/robots.txt'
+        try:
+            robots = public_read(robot_url).decode('utf-8', errors='replace')
+        except urllib.error.HTTPError as error:
+            if error.code != 404:
+                raise
+            robots = ''
+        parser = urllib.robotparser.RobotFileParser()
+        parser.parse(robots.splitlines())
+        if not parser.can_fetch(PUBLIC_AGENT, url):
+            results.append(dict(url=url, status='ROBOTS_DISALLOWED')); continue
+        body = public_read(url)
+        visible = VisibleText(); visible.feed(body.decode('utf-8', errors='replace'))
+        surface = ' '.join(visible.parts).lower()
+        terms = [term for term in ('portfolio', 'réservation', 'devis', 'google maps',
+            'fiche google', 'galerie', 'démonstration') if term in surface]
+        results.append(dict(url=url, status='READ', fetched_at=time.time(),
+            document_sha256=hashlib.sha256(body).hexdigest(), h1_count=visible.h1,
+            observed_lexical_terms=terms, claims_verified=False))
+    return dict(kind='PUBLIC_COMPETITOR_SURFACE', results=results,
+        interpretation='Lexical observations, not feature tests or ranking evidence',
+        next_action='Validate one real portfolio-to-request demo before promising booking',
+        publication_authorized=False)
 
 
 def api(method, path, body=None):
@@ -107,8 +188,11 @@ def main():
         state['lease'] = None
         sha = save(state, sha, 'seo: recover interrupted checkpoint')
     new = 0
-    for path in sorted((ROOT / 'briefs').glob('*.md')):
-        key = task_id(path)
+    tasks = [(task_id(path), path.stem, lambda p=path: audit(p))
+        for path in sorted((ROOT / 'briefs').glob('*.md'))]
+    week = datetime.now(timezone.utc).strftime('%G-W%V')
+    tasks.append(('competitor-surface:' + week + ':v1', 'competitor-surface', competitor_review))
+    for key, label, evaluate in tasks:
         if key in state['completed']:
             print('DEDUP: ' + key); continue
         failures = state['failures'].get(key, 0)
@@ -116,7 +200,7 @@ def main():
             print('RETRY_LIMIT: ' + key); continue
         state['lease'] = dict(owner=owner, run=run, task=key,
             heartbeat=time.time(), expires=time.time() + 600)
-        sha = save(state, sha, 'seo: claim ' + path.stem)
+        sha = save(state, sha, 'seo: claim ' + label)
         # First installation deliberately crashes AFTER a durable claim.
         probe_id = os.environ.get('CRASH_PROBE_ID', 'initial')
         probes = state.setdefault('probes', {})
@@ -125,13 +209,13 @@ def main():
             sha = save(state, sha, 'seo: persist real interruption probe')
             os._exit(73)
         try:
-            result = audit(path)
+            result = evaluate()
             # Completion/result atomically persisted: no non-idempotent publication.
             state['completed'][key] = dict(result=result, run=run, attempt=attempt,
                 completed_at=time.time())
             state['events'].append(dict(kind='COMPLETED', task=key, owner=owner))
             state['lease'] = None
-            sha = save(state, sha, 'seo: save useful review ' + path.stem)
+            sha = save(state, sha, 'seo: save useful review ' + label)
             new += 1
         except Exception as error:
             state['failures'][key] = failures + 1

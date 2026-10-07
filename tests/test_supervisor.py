@@ -24,5 +24,17 @@ class SeoPreparation(unittest.TestCase):
         self.assertIn('GSC_DEDICATED_READONLY_ACCESS', state['blocked'])
         self.assertEqual(state['status'], 'PARTIAL_DETERMINISTIC')
 
+    def test_competitor_observation_ignores_scripts_and_is_not_a_feature_proof(self):
+        parser = supervisor.VisibleText()
+        parser.feed('<h1>Portfolio</h1><script>réservation garantie</script><p>Devis</p>')
+        self.assertEqual(parser.h1, 1)
+        self.assertNotIn('réservation garantie', ' '.join(parser.parts))
+        self.assertIn('Devis', ' '.join(parser.parts))
+
+    def test_public_fetch_rejects_product_and_unknown_hosts_before_network(self):
+        for url in ('https://fabrya.fr/robots.txt', 'http://fr.wix.com/', 'https://evil.example/'):
+            with self.assertRaises(RuntimeError):
+                supervisor.public_read(url)
+
 if __name__ == '__main__':
     unittest.main()

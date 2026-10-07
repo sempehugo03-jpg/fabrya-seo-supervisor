@@ -28,6 +28,15 @@ CTA, integration checks and a conversion measurement plan. The executor validate
 their metadata/structure, persists the complete review and authorizes no publishing.
 New approved preparation tasks are added as briefs, not generic content batches.
 
+Weekly deterministic competitor research reads only three allowlisted public
+pages (Wix photographer, WeComm photographer, Lokalio garage), respecting robots
+and refusing cross-host redirects. It records timestamp, document hash, H1 count
+and lexical positioning terms, without republishing text or claiming features
+were tested. It selects a concrete next evidence requirement: a real
+portfolio-to-request demonstration before promising booking. Three failed attempts
+are retained and stop; no credential is sent to competitors. This task continues
+without Work supplying a fresh brief each week.
+
 ## Isolation and remaining blockers
 
 GITHUB_TOKEN only belongs to this repository: contents write, actions read. The
