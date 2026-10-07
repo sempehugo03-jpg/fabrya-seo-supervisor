@@ -83,7 +83,14 @@
   "failures": {
     "competitor-surface:2026-W41:v1": 1
   },
-  "lease": null,
+  "lease": {
+    "owner": "37701315122:2",
+    "run": "37701315122",
+    "task": "competitor-surface:2026-W41:v1",
+    "trigger": "workflow_dispatch",
+    "heartbeat": 1791415192.9398582,
+    "expires": 1791415792.9398584
+  },
   "events": [
     {
       "kind": "RECOVERED",
