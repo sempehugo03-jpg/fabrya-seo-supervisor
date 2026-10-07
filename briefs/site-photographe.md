@@ -43,6 +43,16 @@ pas démontré.
 - Conditions et tarifs actuels validés par leur propriétaire, sans reprendre un
   prix historique ou inventer une fonctionnalité Fabrya.
 
+## Distinguer un portfolio utile d’une liste de fonctionnalités
+
+La page professionnelle Wix consacrée aux photographes présente galeries,
+réservations et vente de prestations ou tirages :
+https://fr.wix.com/photography/website (consultée le 08/10/2026).
+Il s’agit de son discours commercial, pas d’un test de toutes ses fonctionnalités.
+Cette observation suggère une expérience Fabrya centrée sur une série réelle et
+une demande reçue, avec preuve du parcours avant toute promesse équivalente.
+Ne pas publier de classement concurrent ou prétendre que Fabrya est supérieur.
+
 ## Questions fréquentes
 
 **Les réseaux sociaux suffisent-ils ?** Ils peuvent faire découvrir votre travail.

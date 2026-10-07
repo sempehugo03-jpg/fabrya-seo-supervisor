@@ -118,8 +118,10 @@ def main():
             heartbeat=time.time(), expires=time.time() + 600)
         sha = save(state, sha, 'seo: claim ' + path.stem)
         # First installation deliberately crashes AFTER a durable claim.
-        if os.environ.get('CRASH_PROBE') == 'true' and not state.get('crash_probe_recorded'):
-            state['crash_probe_recorded'] = dict(owner=owner, task=key, at=time.time())
+        probe_id = os.environ.get('CRASH_PROBE_ID', 'initial')
+        probes = state.setdefault('probes', {})
+        if os.environ.get('CRASH_PROBE') == 'true' and probe_id not in probes:
+            probes[probe_id] = dict(owner=owner, task=key, at=time.time())
             sha = save(state, sha, 'seo: persist real interruption probe')
             os._exit(73)
         try:
