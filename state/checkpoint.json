@@ -5,7 +5,13 @@
   "budget_eur": 0,
   "completed": {},
   "failures": {},
-  "lease": null,
+  "lease": {
+    "owner": "37699229623:2",
+    "run": "37699229623",
+    "task": "brief-review:site-garagiste:d22b9400f97f3522efadbb29455ff909f9e5b202cbc872b51fdddcd489bfd95c",
+    "heartbeat": 1791413789.2436647,
+    "expires": 1791414389.243665
+  },
   "events": [
     {
       "kind": "RECOVERED",
