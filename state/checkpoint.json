@@ -3,15 +3,34 @@
   "schema": 1,
   "status": "PARTIAL_DETERMINISTIC",
   "budget_eur": 0,
-  "completed": {},
-  "failures": {},
-  "lease": {
-    "owner": "37699229623:2",
-    "run": "37699229623",
-    "task": "brief-review:site-garagiste:d22b9400f97f3522efadbb29455ff909f9e5b202cbc872b51fdddcd489bfd95c",
-    "heartbeat": 1791413789.2436647,
-    "expires": 1791414389.243665
+  "completed": {
+    "brief-review:site-garagiste:d22b9400f97f3522efadbb29455ff909f9e5b202cbc872b51fdddcd489bfd95c": {
+      "result": {
+        "page": "site-garagiste",
+        "title": "Site internet garage : services et demandes atelier",
+        "description": "Préparez un site de garage avec vos interventions, horaires, accès et coordonnées, pour aider les automobilistes à transmettre une demande atelier précise.",
+        "title_length": 51,
+        "description_length": 155,
+        "headings": [
+          "Organiser les services selon les besoins réels",
+          "Demande atelier : préciser le véhicule et le motif",
+          "Preuves avant publication",
+          "Questions fréquentes",
+          "Validation de l’intégration",
+          "Mesure commerciale"
+        ],
+        "findings": [],
+        "editorial_status": "NEEDS_HUMAN_REVIEW",
+        "publication_authorized": false,
+        "body": "title: Site internet garage : services et demandes atelier\ndescription: Préparez un site de garage avec vos interventions, horaires, accès et coordonnées, pour aider les automobilistes à transmettre une demande atelier précise.\n\n# Site internet garage : services et demandes atelier\n\nPROPOSITION NON PUBLIÉE. Destination envisagée : la page existante\n/conseils/site-garagiste après coordination et validation produit. Conserver son\nURL ; ne pas créer des pages presque identiques pour chaque variante métier.\n\nLe site d’un garage doit répondre à trois questions avant le contact : intervenez-vous\nsur ce véhicule, pour quel type de besoin et comment vous joindre ? Présentez les\ninterventions réellement pratiquées, vos horaires et votre accès. Une demande en\nligne ne remplace ni un diagnostic ni la validation de l’atelier.\n\n## Organiser les services selon les besoins réels\n\nSéparez entretien, diagnostic, réparation et carrosserie lorsque vous proposez ces\nservices. Précisez les marques ou types de véhicules acceptés sans en inventer.\nPour une panne, expliquez comment contacter l’atelier ; ne promettez pas un délai\nd’intervention ou une prise en charge urgente qui n’a pas été confirmée.\n\nAffichez l’adresse, l’accès et les horaires actuels. Si l’accueil téléphonique et\nl’accueil atelier ont des horaires différents, distinguez-les. Les photographies\nréelles de l’entrée et de l’atelier aident à préparer une visite.\n\n## Demande atelier : préciser le véhicule et le motif\n\nLe formulaire peut recueillir le modèle du véhicule, le besoin exprimé et un moyen\nde réponse. Demandez seulement les données nécessaires. Un automobiliste peut\ndécrire un symptôme ; cela ne constitue pas un diagnostic validé.\n\nDistinguez une estimation indicative, le diagnostic effectué par l’atelier et le\ndevis accepté. Un créneau demandé reste à confirmer. Le message de confirmation\ndoit annoncer seulement la bonne réception de la demande si aucune réservation\nréelle n’a eu lieu.\n\nCTA proposé : « Décrire mon projet de site pour mon garage ». Connecter au parcours\nexistant après vérification de la réception ; ne pas inventer un outil de devis\nautomatique ou un agenda synchronisé.\n\n## Preuves avant publication\n\n- Prestations, horaires, adresse et coordonnées validés par le professionnel.\n- Photographies autorisées, qualifications et avis cités avec une preuve réelle.\n- Test mobile complet de demande et confirmation de réception par l’atelier.\n- Validation des prix et des fonctionnalités Fabrya avant toute mention commerciale.\n\n## Questions fréquentes\n\n**Peut-on obtenir un devis sans diagnostic ?** Cela dépend de l’intervention et des\ninformations disponibles. Expliquez quand un examen du véhicule est nécessaire.\n\n**Un formulaire réserve-t-il un rendez-vous ?** Seulement si le système confirme\neffectivement le créneau. Sinon, il transmet une demande à l’atelier.\n\n**Quelles informations véhicule demander ?** Celles nécessaires à la première\nréponse. Évitez de collecter des documents ou identifiants sans besoin précis.\n\n## Validation de l’intégration\n\nAccord produit, relecture métier, canonical et URL conservés, métadonnées uniques,\nliens internes contrôlés, test mobile et formulaire reçu. Vérifier que les liens\ninternes n’écrasent pas le premier canal d’acquisition. Aucun déploiement n’est\nautorisé par ce document.\n\n## Mesure commerciale\n\nEnregistrer la version et la date effectivement publiées. Comparer deux fenêtres\nGSC de durée égale sans chevauchement ; séparer marque, recherches garage et\ncarrosserie. Relier les demandes qualifiées aux paiements confirmés avec un\nidentifiant dédupliqué et un canal d’origine vérifié. Une hausse d’impressions seule\nne prouve pas l’acquisition d’un client payant.\n"
+      },
+      "run": "37699229623",
+      "attempt": "2",
+      "completed_at": 1791413790.6141038
+    }
   },
+  "failures": {},
+  "lease": null,
   "events": [
     {
       "kind": "RECOVERED",
@@ -20,6 +39,11 @@
       "previous_conclusion": null,
       "task": "brief-review:site-garagiste:d22b9400f97f3522efadbb29455ff909f9e5b202cbc872b51fdddcd489bfd95c",
       "recovered_at": 1791413788.005998
+    },
+    {
+      "kind": "COMPLETED",
+      "task": "brief-review:site-garagiste:d22b9400f97f3522efadbb29455ff909f9e5b202cbc872b51fdddcd489bfd95c",
+      "owner": "37699229623:2"
     }
   ],
   "blocked": [
