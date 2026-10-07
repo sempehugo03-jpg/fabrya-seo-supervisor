@@ -30,7 +30,13 @@
     }
   },
   "failures": {},
-  "lease": null,
+  "lease": {
+    "owner": "37699229623:2",
+    "run": "37699229623",
+    "task": "brief-review:site-photographe:720cb13c034a534a1a6020f75beaf086ac7a60a9aea325d9acfafaf77dcc5ae9",
+    "heartbeat": 1791413791.549403,
+    "expires": 1791414391.5494032
+  },
   "events": [
     {
       "kind": "RECOVERED",
