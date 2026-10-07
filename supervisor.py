@@ -172,6 +172,7 @@ def main():
         raise RuntimeError('Wrong repository: isolation refused')
     run = os.environ['GITHUB_RUN_ID']
     attempt = os.environ['GITHUB_RUN_ATTEMPT']
+    trigger = os.environ['GITHUB_EVENT_NAME']
     owner = run + ':' + attempt
     state, sha = load()
     lease = state['lease']
@@ -184,7 +185,7 @@ def main():
             print('LOCKED: previous run still active'); return
         state['events'].append(dict(kind='RECOVERED', old_owner=lease['owner'],
             by=owner, previous_conclusion=previous.get('conclusion'), task=lease['task'],
-            recovered_at=time.time()))
+            trigger=trigger, old_trigger=lease.get('trigger'), recovered_at=time.time()))
         state['lease'] = None
         sha = save(state, sha, 'seo: recover interrupted checkpoint')
     new = 0
@@ -198,22 +199,22 @@ def main():
         failures = state['failures'].get(key, 0)
         if failures >= 3:
             print('RETRY_LIMIT: ' + key); continue
-        state['lease'] = dict(owner=owner, run=run, task=key,
+        state['lease'] = dict(owner=owner, run=run, task=key, trigger=trigger,
             heartbeat=time.time(), expires=time.time() + 600)
         sha = save(state, sha, 'seo: claim ' + label)
         # First installation deliberately crashes AFTER a durable claim.
         probe_id = os.environ.get('CRASH_PROBE_ID', 'initial')
         probes = state.setdefault('probes', {})
         if os.environ.get('CRASH_PROBE') == 'true' and probe_id not in probes:
-            probes[probe_id] = dict(owner=owner, task=key, at=time.time())
+            probes[probe_id] = dict(owner=owner, task=key, trigger=trigger, at=time.time())
             sha = save(state, sha, 'seo: persist real interruption probe')
             os._exit(73)
         try:
             result = evaluate()
             # Completion/result atomically persisted: no non-idempotent publication.
             state['completed'][key] = dict(result=result, run=run, attempt=attempt,
-                completed_at=time.time())
-            state['events'].append(dict(kind='COMPLETED', task=key, owner=owner))
+                trigger=trigger, commit=os.environ['GITHUB_SHA'], completed_at=time.time())
+            state['events'].append(dict(kind='COMPLETED', task=key, owner=owner, trigger=trigger))
             state['lease'] = None
             sha = save(state, sha, 'seo: save useful review ' + label)
             new += 1
@@ -226,7 +227,7 @@ def main():
             raise
     # No hourly empty commits or reports. GitHub run timestamps serve as cycle heartbeat.
     print(json.dumps(dict(new_results=new, completed=len(state['completed']),
-        state_branch=BRANCH, status=state['status'], budget_eur=0)))
+        trigger=trigger, run=run, state_branch=BRANCH, status=state['status'], budget_eur=0)))
     summary = os.environ.get('GITHUB_STEP_SUMMARY')
     if summary:
         with open(summary, 'a') as out:

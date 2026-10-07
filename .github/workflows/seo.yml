@@ -17,7 +17,7 @@ jobs:
     timeout-minutes: 5
     env:
       GH_TOKEN: ${{ github.token }}
-      CRASH_PROBE: 'true'
+      CRASH_PROBE: ${{ github.event_name == 'schedule' && 'true' || 'false' }}
       CRASH_PROBE_ID: 'automatic-schedule-v1'
     steps:
       - name: Read own repository only
