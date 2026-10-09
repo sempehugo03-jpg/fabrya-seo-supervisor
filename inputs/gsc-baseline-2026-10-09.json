@@ -1,0 +1,80 @@
+{
+  "captured_at": "2026-10-09",
+  "gsc_settled_through": "2026-10-06",
+  "goal": "FIRST_GOOGLE_ORGANIC_CUSTOMER",
+  "deadline": "2026-10-22",
+  "site": "https://fabrya.fr/",
+  "top_pages": [
+    {
+      "page": "https://fabrya.fr/",
+      "clicks": 0,
+      "impressions": 23,
+      "position": 1.3913
+    },
+    {
+      "page": "https://fabrya.fr/conseils/site-avocat",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 1.5
+    },
+    {
+      "page": "https://fabrya.fr/conseils/site-garagiste",
+      "clicks": 0,
+      "impressions": 47,
+      "position": 53.8723
+    },
+    {
+      "page": "https://fabrya.fr/conseils/site-photographe",
+      "clicks": 0,
+      "impressions": 11,
+      "position": 5.5455
+    }
+  ],
+  "exact_query_checks": [
+    {
+      "query": "création site photographe",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 23
+    },
+    {
+      "query": "création site internet garagiste",
+      "clicks": 0,
+      "impressions": 9,
+      "position": 78.1111
+    },
+    {
+      "query": "création site internet mécanicien auto",
+      "clicks": 0,
+      "impressions": 10,
+      "position": 91
+    },
+    {
+      "query": "création site carrosserie",
+      "clicks": 0,
+      "impressions": 5,
+      "position": 99.8
+    },
+    {
+      "query": "fabrya",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1
+    }
+  ],
+  "indexed_verified": [
+    "https://fabrya.fr/",
+    "https://fabrya.fr/conseils/site-photographe",
+    "https://fabrya.fr/conseils/site-garagiste",
+    "https://fabrya.fr/conseils/site-avocat"
+  ],
+  "rules": {
+    "sector_limit": false,
+    "objective_metric": "paid customer attributed to Google organic",
+    "spam_allowed": false,
+    "paid_ads_allowed": false,
+    "doorway_pages_allowed": false,
+    "fake_reviews_allowed": false,
+    "fake_clicks_allowed": false
+  }
+}
