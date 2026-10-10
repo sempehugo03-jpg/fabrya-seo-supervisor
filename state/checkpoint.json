@@ -291,20 +291,22 @@
         "evidence": null
       }
     },
-    "current_action": "ACTIONS_ADMIN_DIAGNOSIS",
-    "next_action": "AUTHORIZE_GITHUB_BROWSER_FALLBACK",
+    "current_action": "VERIFY_NATIVE_SCHEDULE_ON_CURRENT_COMMIT",
+    "next_action": "FIRST_NATIVE_SCHEDULE_THEN_INSTALLED_RECOVERY_PROTOCOL",
     "first_google_organic_customer": "NOT_YET",
-    "terminal_state": "BLOCKED_HUMAN",
-    "human_blocker": {
-      "code": "ACTIONS_ADMIN_INSPECTION_AUTHORIZATION",
-      "reason": "Actions administrative settings return HTTP 403 to the durable token; connector does not expose administrative endpoints.",
-      "action": "Authorize the cloud browser fallback for GitHub Actions administrative inspection."
-    }
+    "terminal_state": "RUNNING"
   },
   "SEO_RUNTIME_AUTONOMOUS": "FAIL",
-  "human_blocker": {
-    "code": "ACTIONS_ADMIN_INSPECTION_AUTHORIZATION",
-    "reason": "Actions administrative settings return HTTP 403 to the durable token; connector does not expose administrative endpoints.",
-    "action": "Authorize the cloud browser fallback for GitHub Actions administrative inspection."
+  "scheduler_admin_inspection": {
+    "checked_at": "2026-10-10T22:36:42Z",
+    "default_branch": "main",
+    "actions_permissions": "ALLOW_ALL",
+    "workflow_activation": "ACTIVE_DISABLE_OPTION_VISIBLE",
+    "actions_policies": "NONE",
+    "cron": "*/5 * * * *",
+    "current_commit": "00cf421c86401bcde2302812ceca185d37aaae89",
+    "demonstrated_administrative_cause": null,
+    "administrative_changes": [],
+    "result": "NO_ADMINISTRATIVE_CAUSE_DEMONSTRATED"
   }
 }
