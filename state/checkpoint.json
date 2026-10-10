@@ -228,5 +228,73 @@
       "trigger": "workflow_dispatch",
       "at": 1791414995.1609025
     }
-  }
+  },
+  "SEO_AUTOPILOT_STATUS": {
+    "current_commit": "5cafc16554fec277ca0ac7e69a874bb3caba1316",
+    "last_schedule_run": 38073184526,
+    "last_successful_schedule": null,
+    "last_watchdog_recovery": null,
+    "gates": {
+      "SEO_RUNTIME_AUTONOMOUS": {
+        "status": "FAIL",
+        "reason": "NO_VERIFIED_SUCCESSFUL_SCHEDULE_ON_CURRENT_COMMIT",
+        "evidence": null
+      },
+      "GSC_DIRECT_READ": {
+        "status": "FAIL",
+        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "evidence": null
+      },
+      "OPPORTUNITY_ENGINE": {
+        "status": "FAIL",
+        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "evidence": null
+      },
+      "STAGING_EXECUTOR": {
+        "status": "FAIL",
+        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "evidence": null
+      },
+      "SEO_QA": {
+        "status": "FAIL",
+        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "evidence": null
+      },
+      "SAFE_AUTO_PUBLISH": {
+        "status": "FAIL",
+        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "evidence": null
+      },
+      "MEASUREMENT_LOOP": {
+        "status": "FAIL",
+        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "evidence": null
+      },
+      "AUTO_ROLLBACK": {
+        "status": "FAIL",
+        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "evidence": null
+      },
+      "ATTRIBUTION_PIPELINE": {
+        "status": "FAIL",
+        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "evidence": null
+      },
+      "WATCHDOG_RECOVERY": {
+        "status": "FAIL",
+        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "evidence": null
+      },
+      "PRIVACY_GATE": {
+        "status": "FAIL",
+        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "evidence": null
+      }
+    },
+    "current_action": "VALIDATE_DURABLE_RUNTIME",
+    "next_action": "DIAGNOSE_AND_OBSERVE_REAL_SCHEDULE",
+    "first_google_organic_customer": "NOT_YET",
+    "terminal_state": "RUNNING"
+  },
+  "SEO_RUNTIME_AUTONOMOUS": "FAIL"
 }
