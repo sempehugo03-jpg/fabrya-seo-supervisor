@@ -136,7 +136,21 @@
   "failures": {
     "competitor-surface:2026-W41:v1": 2
   },
-  "lease": null,
+  "lease": {
+    "owner": "38093303066:1",
+    "run": "38093303066",
+    "task": "runtime-verification",
+    "trigger": "push",
+    "wake": {
+      "schema": 1,
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "slot": 497686,
+      "issued_at": 1791673029,
+      "source_commit": "f6298be4693c0257207f51b572eaca42f9dc81dc"
+    },
+    "heartbeat": 1791673040.1052253,
+    "expires": 1791673640.1052256
+  },
   "events": [
     {
       "kind": "RECOVERED",
@@ -333,5 +347,20 @@
     "github_schedule_role": "FALLBACK",
     "native_cloudflare_cron": "NOT_EXPOSED_BY_CONNECTED_SITES",
     "proof_status": "PENDING_REAL_DELIVERIES"
+  },
+  "runtime_cycle": {
+    "run": "38093303066",
+    "attempt": "1",
+    "trigger": "push",
+    "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
+    "started_at": 1791673040.1052232,
+    "status": "STARTED",
+    "wake": {
+      "schema": 1,
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "slot": 497686,
+      "issued_at": 1791673029,
+      "source_commit": "f6298be4693c0257207f51b572eaca42f9dc81dc"
+    }
   }
 }
