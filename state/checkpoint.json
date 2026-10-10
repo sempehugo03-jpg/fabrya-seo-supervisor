@@ -291,10 +291,20 @@
         "evidence": null
       }
     },
-    "current_action": "VALIDATE_DURABLE_RUNTIME",
-    "next_action": "DIAGNOSE_AND_OBSERVE_REAL_SCHEDULE",
+    "current_action": "ACTIONS_ADMIN_DIAGNOSIS",
+    "next_action": "AUTHORIZE_GITHUB_BROWSER_FALLBACK",
     "first_google_organic_customer": "NOT_YET",
-    "terminal_state": "RUNNING"
+    "terminal_state": "BLOCKED_HUMAN",
+    "human_blocker": {
+      "code": "ACTIONS_ADMIN_INSPECTION_AUTHORIZATION",
+      "reason": "Actions administrative settings return HTTP 403 to the durable token; connector does not expose administrative endpoints.",
+      "action": "Authorize the cloud browser fallback for GitHub Actions administrative inspection."
+    }
   },
-  "SEO_RUNTIME_AUTONOMOUS": "FAIL"
+  "SEO_RUNTIME_AUTONOMOUS": "FAIL",
+  "human_blocker": {
+    "code": "ACTIONS_ADMIN_INSPECTION_AUTHORIZATION",
+    "reason": "Actions administrative settings return HTTP 403 to the durable token; connector does not expose administrative endpoints.",
+    "action": "Authorize the cloud browser fallback for GitHub Actions administrative inspection."
+  }
 }
