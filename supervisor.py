@@ -13,6 +13,7 @@ from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 from runtime_status import reconcile
+from external_scheduler import wake_metadata, PROBE_ID
 
 REPO = 'sempehugo03-jpg/fabrya-seo-supervisor'
 BRANCH = 'seo-state'
@@ -234,7 +235,7 @@ def reconcile_runtime_status(state):
     receipt_ids = {str(item['run']) for item in state.get('cycle_receipts', [])}
     jobs = {}
     for run in runs:
-        if (str(run['id']) in receipt_ids and run.get('head_sha') == current
+        if (str(run['id']) in receipt_ids and (run.get('head_sha') == current or run.get('head_branch') == 'seo-wake')
             and run.get('status') == 'completed' and run.get('conclusion') == 'success'):
             jobs[str(run['id'])] = api('GET', base + '/actions/runs/'
                 + str(run['id']) + '/jobs')['jobs']
@@ -278,8 +279,13 @@ def main():
     attempt = os.environ['GITHUB_RUN_ATTEMPT']
     trigger = os.environ['GITHUB_EVENT_NAME']
     owner = run + ':' + attempt
+    wake = wake_metadata()
     state, sha = load()
+    if wake and str(wake['slot']) in state.get('external_wakes_completed', {}):
+        print('DEDUP: external hourly wake'); return
     lease = state['lease']
+    if not wake and trigger == 'workflow_run' and lease:
+        wake = lease.get('wake')
     if lease:
         previous = api('GET', '/repos/' + REPO + '/actions/runs/' + lease['run'])
         terminal = previous['status'] == 'completed'
@@ -294,10 +300,17 @@ def main():
         sha = save(state, sha, 'seo: recover interrupted checkpoint')
     # Every scheduled cycle advances an inspectable, non-private checkpoint.
     state['runtime_cycle'] = dict(run=run, attempt=attempt, trigger=trigger,
-        commit=os.environ['GITHUB_SHA'], started_at=time.time(), status='STARTED')
+        commit=os.environ.get('SEO_SOURCE_COMMIT', os.environ['GITHUB_SHA']), started_at=time.time(), status='STARTED')
+    if wake:
+        state['runtime_cycle']['wake'] = wake
     state['lease'] = dict(owner=owner, run=run, task='runtime-verification',
-        trigger=trigger, heartbeat=time.time(), expires=time.time() + 600)
+        trigger=trigger, wake=wake, heartbeat=time.time(), expires=time.time() + 600)
     sha = save(state, sha, 'seo: checkpoint durable cycle start')
+    # One crash after the external baseline; the original watchdog resumes the lease.
+    if wake and state.get('external_baseline') and PROBE_ID not in state.setdefault('probes', {}):
+        state['probes'][PROBE_ID] = dict(owner=owner, trigger=trigger, wake=wake, at=time.time())
+        sha = save(state, sha, 'seo: persist external interruption probe')
+        os._exit(73)
     # One reversible scheduled failure, recovered by the existing watchdog.
     runtime_probe_id = 'scheduled-runtime-verification-20261010'
     probes = state.setdefault('probes', {})
@@ -332,7 +345,7 @@ def main():
             result = evaluate()
             # Completion/result atomically persisted: no non-idempotent publication.
             state['completed'][key] = dict(result=result, run=run, attempt=attempt,
-                trigger=trigger, commit=os.environ['GITHUB_SHA'], completed_at=time.time())
+                trigger=trigger, commit=os.environ.get('SEO_SOURCE_COMMIT', os.environ['GITHUB_SHA']), completed_at=time.time())
             state['events'].append(dict(kind='COMPLETED', task=key, owner=owner, trigger=trigger))
             state['lease'] = None
             sha = save(state, sha, 'seo: save useful review ' + label)
@@ -358,12 +371,16 @@ def main():
             state['SEO_RUNTIME_AUTONOMOUS'] = 'PASS'
             state['runtime_verification'] = dict(baseline=state['scheduled_baseline'],
                 interruption=probe, following_schedule=dict(state['runtime_cycle']))
+    if wake:
+        state.setdefault('external_baseline', dict(state['runtime_cycle']))
+        state.setdefault('external_wakes_completed', {})[str(wake['slot'])] = dict(state['runtime_cycle'])
     state.setdefault('SEO_RUNTIME_AUTONOMOUS', 'FAIL')
     state.setdefault('cycle_receipts', []).append(dict(state['runtime_cycle']))
     state['cycle_receipts'] = state['cycle_receipts'][-100:]
     reconcile_runtime_status(state)
     sha = save(state, sha, 'seo: checkpoint durable cycle result')
-    if state['SEO_AUTOPILOT_STATUS']['gates']['WATCHDOG_RECOVERY']['status'] == 'PASS':
+    if (not state.get('external_baseline') and
+        state['SEO_AUTOPILOT_STATUS']['gates']['WATCHDOG_RECOVERY']['status'] == 'PASS'):
         restore_normal_cadence()
     # Cycle metadata contains no private performance or acquisition data.
     print(json.dumps(dict(new_results=new, completed=len(state['completed']),

@@ -1,9 +1,9 @@
 name: Isolated SEO preparation and recovery
 on:
   push:
-    branches: [main]
+    branches: [main, seo-wake]
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
     inputs:
       interruption_test:
@@ -23,7 +23,8 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       CRASH_PROBE: ${{ inputs.interruption_test == true && 'true' || 'false' }}
-      CRASH_PROBE_ID: 'controlled-interruption-v4'
+      CRASH_PROBE_ID: controlled-interruption-v4
+      SEO_WAKE_FILE: /tmp/fabrya-seo-wake.json
     steps:
       - name: Read own repository only
         run: |
@@ -32,15 +33,25 @@ jobs:
           git init --quiet .
           git remote add origin "https://github.com/$GITHUB_REPOSITORY.git"
           auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
-          git -c "http.extraheader=AUTHORIZATION: basic $auth" fetch --quiet --depth=1 origin "$GITHUB_SHA"
+          if [ "$GITHUB_REF" = refs/heads/seo-wake ]; then
+            git -c "http.extraheader=AUTHORIZATION: basic $auth" fetch --quiet --depth=1 origin "$GITHUB_SHA"
+            git show FETCH_HEAD:runtime/wake.json > "$SEO_WAKE_FILE"
+            git -c "http.extraheader=AUTHORIZATION: basic $auth" fetch --quiet --depth=1 origin main
+          else
+            git -c "http.extraheader=AUTHORIZATION: basic $auth" fetch --quiet --depth=1 origin "$GITHUB_SHA"
+          fi
           git checkout --quiet FETCH_HEAD
+          printf 'SEO_SOURCE_COMMIT=%s\n' "$(git rev-parse HEAD)" >> "$GITHUB_ENV"
           unset auth
       - name: Validate isolated executor
         run: python3 -m unittest discover -s tests -v
-      - name: Diagnose Actions scheduler settings
-        run: python3 supervisor.py --diagnose-runtime
       - name: Reconcile externally verified terminal status
         run: python3 supervisor.py --reconcile
       - name: Prepare useful SEO reviews and recover checkpoints
-        if: github.event_name != 'push'
-        run: python3 supervisor.py
+        if: github.event_name != 'push' || github.ref == 'refs/heads/seo-wake'
+        run: |
+          if [ "$GITHUB_REF" = refs/heads/seo-wake ] && python3 -c 'import json,os,sys;sys.exit(0 if json.load(open(os.environ["SEO_WAKE_FILE"]))["issued_at"] == 0 else 1)'; then
+            echo 'Transport initialization; not an autonomous cycle.'
+          else
+            python3 supervisor.py
+          fi

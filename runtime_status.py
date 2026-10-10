@@ -1,5 +1,7 @@
 """Public control metadata only; no search, acquisition or customer payloads."""
 
+from external_scheduler import verified_external_runs, PROBE_ID
+
 GATES = (
     'SEO_RUNTIME_AUTONOMOUS', 'GSC_DIRECT_READ', 'OPPORTUNITY_ENGINE',
     'STAGING_EXECUTOR', 'SEO_QA', 'SAFE_AUTO_PUBLISH', 'MEASUREMENT_LOOP',
@@ -42,6 +44,7 @@ def reconcile(state, current_commit, runs, jobs_by_run):
             'evidence': {'run': successful[0]['id'], 'commit': current_commit}}
     else:
         gates['SEO_RUNTIME_AUTONOMOUS']['reason'] = 'NO_VERIFIED_SUCCESSFUL_SCHEDULE_ON_CURRENT_COMMIT'
+    external = verified_external_runs(state, current_commit, runs, jobs_by_run, receipts)
     probe = state.get('probes', {}).get('scheduled-runtime-verification-20261010')
     recovery = None
     if probe:
@@ -63,15 +66,41 @@ def reconcile(state, current_commit, runs, jobs_by_run):
                 break
     gates['WATCHDOG_RECOVERY']['reason'] = (
         gates['WATCHDOG_RECOVERY']['reason'] or '')
+    external_probe = state.get('probes', {}).get(PROBE_ID)
+    external_recovery = None
+    if external_probe:
+        for event in reversed(state.get('events', [])):
+            if (event.get('kind') != 'RECOVERED' or event.get('old_owner') != external_probe.get('owner')
+                or event.get('old_trigger') != 'push' or event.get('trigger') != 'workflow_run'
+                or event.get('previous_conclusion') != 'failure'):
+                continue
+            rr = next((r for r in runs if str(r['id']) == event.get('by', '').split(':')[0]), None)
+            if rr and verified(rr, 'workflow_run', 'Verify recovery executor',
+                    'Recover same SEO state and unfinished useful task'):
+                external_recovery = {'run': rr['id'], 'commit': current_commit, 'completed_at': rr.get('updated_at')}
+                break
+    following = external_recovery and any(r.get('created_at', '') > external_recovery['completed_at'] for r in external)
+    distinct_slots = {receipts[str(r['id'])]['wake']['slot'] for r in external}
+    if len(distinct_slots) >= 2 and following:
+        proof = {'scheduler': 'HOSTED_AUTOMATION', 'runs': [r['id'] for r in external],
+                 'commit': current_commit, 'recovery': external_recovery}
+        gates['SEO_RUNTIME_AUTONOMOUS'] = {'status': 'PASS', 'reason': '', 'evidence': proof}
+        gates['WATCHDOG_RECOVERY'] = {'status': 'PASS', 'reason': '', 'evidence': external_recovery}
+        recovery = external_recovery
+    elif state.get('external_scheduler_config'):
+        gates['SEO_RUNTIME_AUTONOMOUS'] = {'status': 'FAIL', 'reason': 'EXTERNAL_DELIVERY_RECOVERY_AND_FOLLOWING_WAKE_NOT_YET_PROVEN', 'evidence': None}
+        gates['WATCHDOG_RECOVERY'] = {'status': 'FAIL', 'reason': 'EXTERNAL_CRASH_RECOVERY_NOT_YET_PROVEN', 'evidence': None}
     status = {
         'current_commit': current_commit,
         'last_schedule_run': schedules[0]['id'] if schedules else None,
         'last_successful_schedule': successful[0]['id'] if successful else None,
         'last_watchdog_recovery': recovery,
+        'last_external_wake': external[0]['id'] if external else None,
+        'scheduler': state.get('external_scheduler_config'),
         'gates': gates,
         'current_action': 'VALIDATE_DURABLE_RUNTIME',
         'next_action': ('VERIFY_SCHEDULED_INTERRUPTION_AND_RECOVERY' if successful
-                        else 'DIAGNOSE_AND_OBSERVE_REAL_SCHEDULE'),
+                        else 'VERIFY_EXTERNAL_WAKE_RECOVERY_AND_NEXT_CYCLE' if state.get('external_scheduler_config') else 'DIAGNOSE_AND_OBSERVE_REAL_SCHEDULE'),
         'first_google_organic_customer': 'NOT_YET',
         'terminal_state': terminal_state(gates, state.get('human_blocker') if not successful else None),
     }
