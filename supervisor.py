@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 import re
+import sys
 import time
 import urllib.error
 import urllib.request
@@ -11,6 +12,7 @@ import urllib.robotparser
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
+from runtime_status import reconcile
 
 REPO = 'sempehugo03-jpg/fabrya-seo-supervisor'
 BRANCH = 'seo-state'
@@ -225,6 +227,50 @@ def restore_normal_cadence():
         content=base64.b64encode(restored.encode()).decode()))
 
 
+def reconcile_runtime_status(state):
+    base = '/repos/' + REPO
+    current = api('GET', base + '/git/ref/heads/main')['object']['sha']
+    runs = api('GET', base + '/actions/runs?per_page=100')['workflow_runs']
+    receipt_ids = {str(item['run']) for item in state.get('cycle_receipts', [])}
+    jobs = {}
+    for run in runs:
+        if (str(run['id']) in receipt_ids and run.get('head_sha') == current
+            and run.get('status') == 'completed' and run.get('conclusion') == 'success'):
+            jobs[str(run['id'])] = api('GET', base + '/actions/runs/'
+                + str(run['id']) + '/jobs')['jobs']
+    return reconcile(state, current, runs, jobs)
+
+
+def reconcile_only():
+    if os.environ.get('GITHUB_REPOSITORY') != REPO:
+        raise RuntimeError('Wrong repository')
+    state, sha = load()
+    status = reconcile_runtime_status(state)
+    save(state, sha, 'seo: reconcile externally verified autopilot status')
+    print(json.dumps(status))
+
+
+def diagnose_runtime():
+    if os.environ.get('GITHUB_REPOSITORY') != REPO:
+        raise RuntimeError('Wrong repository')
+    base = '/repos/' + REPO
+    diagnosis = {}
+    for label, path in (
+        ('workflows', '/actions/workflows'),
+        ('actions_settings', '/actions/permissions'),
+        ('default_token_permissions', '/actions/permissions/workflow'),
+    ):
+        try:
+            value = api('GET', base + path)
+            if label == 'workflows':
+                value = [{'id': item['id'], 'path': item['path'], 'state': item['state']}
+                         for item in value['workflows']]
+            diagnosis[label] = value
+        except urllib.error.HTTPError as error:
+            diagnosis[label] = {'status': 'READ_UNAVAILABLE', 'http_status': error.code}
+    print(json.dumps({'runtime_diagnosis': diagnosis}))
+
+
 def main():
     if os.environ.get('GITHUB_REPOSITORY') != REPO:
         raise RuntimeError('Wrong repository: isolation refused')
@@ -313,8 +359,11 @@ def main():
             state['runtime_verification'] = dict(baseline=state['scheduled_baseline'],
                 interruption=probe, following_schedule=dict(state['runtime_cycle']))
     state.setdefault('SEO_RUNTIME_AUTONOMOUS', 'FAIL')
+    state.setdefault('cycle_receipts', []).append(dict(state['runtime_cycle']))
+    state['cycle_receipts'] = state['cycle_receipts'][-100:]
+    reconcile_runtime_status(state)
     sha = save(state, sha, 'seo: checkpoint durable cycle result')
-    if state['SEO_RUNTIME_AUTONOMOUS'] == 'PASS':
+    if state['SEO_AUTOPILOT_STATUS']['gates']['WATCHDOG_RECOVERY']['status'] == 'PASS':
         restore_normal_cadence()
     # Cycle metadata contains no private performance or acquisition data.
     print(json.dumps(dict(new_results=new, completed=len(state['completed']),
@@ -328,5 +377,10 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    if '--diagnose-runtime' in sys.argv:
+        diagnose_runtime()
+    elif '--reconcile' in sys.argv:
+        reconcile_only()
+    else:
+        main()
 

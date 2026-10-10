@@ -37,6 +37,10 @@ jobs:
           unset auth
       - name: Validate isolated executor
         run: python3 -m unittest discover -s tests -v
+      - name: Diagnose Actions scheduler settings
+        run: python3 supervisor.py --diagnose-runtime
+      - name: Reconcile externally verified terminal status
+        run: python3 supervisor.py --reconcile
       - name: Prepare useful SEO reviews and recover checkpoints
         if: github.event_name != 'push'
         run: python3 supervisor.py
