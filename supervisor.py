@@ -240,7 +240,7 @@ def main():
     # One reversible scheduled failure, recovered by the existing watchdog.
     probe_id = 'scheduled-runtime-verification-20261010'
     probes = state.setdefault('probes', {})
-    if trigger == 'schedule' and probe_id not in probes:
+    if trigger == 'schedule' and 'scheduled_baseline' in state and probe_id not in probes:
         probes[probe_id] = dict(owner=owner, task='runtime-verification',
             trigger=trigger, at=time.time())
         sha = save(state, sha, 'seo: persist scheduled interruption probe')
@@ -286,6 +286,8 @@ def main():
     state['runtime_cycle'].update(status='COMPLETED', completed_at=time.time(), new_results=new,
         decision='PREPARATION_COMPLETED' if new else 'NO_ACTION',
         reason='Canonical briefs unchanged; direct GSC and product executor unavailable' if not new else 'Brief review completed')
+    if trigger == 'schedule':
+        state.setdefault('scheduled_baseline', dict(state['runtime_cycle']))
     sha = save(state, sha, 'seo: checkpoint durable cycle result')
     # Cycle metadata contains no private performance or acquisition data.
     print(json.dumps(dict(new_results=new, completed=len(state['completed']),
