@@ -123,7 +123,8 @@ def api(method, path, body=None):
 
 def empty_state():
     return dict(identity='fabrya-seo-deterministic-v1', schema=1,
-        status='PARTIAL_DETERMINISTIC', budget_eur=0, completed={}, failures={},
+        status='PARTIAL_DETERMINISTIC', SEO_RUNTIME_AUTONOMOUS='FAIL',
+        budget_eur=0, completed={}, failures={},
         lease=None, events=[], blocked=['GSC_DEDICATED_READONLY_ACCESS',
         'PRODUCT_ZERO_BUDGET_GATE', 'PRODUCTION_COORDINATION'])
 
@@ -210,6 +211,20 @@ def task_id(path):
     return 'brief-review:' + path.stem + ':' + hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def restore_normal_cadence():
+    """CAS restore of the existing scheduler, only after external proof."""
+    path = '/repos/' + REPO + '/contents/.github/workflows/seo.yml'
+    current = api('GET', path + '?ref=main')
+    text = base64.b64decode(current['content']).decode()
+    accelerated = "cron: '*/5 * * * *'"
+    if accelerated not in text:
+        return
+    restored = text.replace(accelerated, "cron: '7,22,37,52 * * * *'")
+    api('PUT', path, dict(sha=current['sha'], branch='main',
+        message='seo: restore normal cadence after scheduled recovery proof',
+        content=base64.b64encode(restored.encode()).decode()))
+
+
 def main():
     if os.environ.get('GITHUB_REPOSITORY') != REPO:
         raise RuntimeError('Wrong repository: isolation refused')
@@ -285,10 +300,22 @@ def main():
             raise
     state['runtime_cycle'].update(status='COMPLETED', completed_at=time.time(), new_results=new,
         decision='PREPARATION_COMPLETED' if new else 'NO_ACTION',
-        reason='Canonical briefs unchanged; direct GSC and product executor unavailable' if not new else 'Brief review completed')
+        reason='Canonical briefs unchanged; no GSC/product connection configured in this Supervisor' if not new else 'Brief review completed')
     if trigger == 'schedule':
         state.setdefault('scheduled_baseline', dict(state['runtime_cycle']))
+        probe = state.get('probes', {}).get(probe_id)
+        recovered = probe and any(event.get('kind') == 'RECOVERED'
+            and event.get('old_owner') == probe.get('owner')
+            and event.get('old_trigger') == 'schedule'
+            and event.get('trigger') == 'workflow_run' for event in state['events'])
+        if recovered:
+            state['SEO_RUNTIME_AUTONOMOUS'] = 'PASS'
+            state['runtime_verification'] = dict(baseline=state['scheduled_baseline'],
+                interruption=probe, following_schedule=dict(state['runtime_cycle']))
+    state.setdefault('SEO_RUNTIME_AUTONOMOUS', 'FAIL')
     sha = save(state, sha, 'seo: checkpoint durable cycle result')
+    if state['SEO_RUNTIME_AUTONOMOUS'] == 'PASS':
+        restore_normal_cadence()
     # Cycle metadata contains no private performance or acquisition data.
     print(json.dumps(dict(new_results=new, completed=len(state['completed']),
         trigger=trigger, run=run, state_branch=BRANCH, status=state['status'], budget_eur=0)))
@@ -302,3 +329,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
