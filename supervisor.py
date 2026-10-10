@@ -23,6 +23,7 @@ COMPETITORS = (
 )
 PUBLIC_HOSTS = {'fr.wix.com', 'wecomm.fr', 'lokalio.fr'}
 PUBLIC_AGENT = 'FabryaSEOReview/1.0 (+https://github.com/' + REPO + ')'
+EXECUTABLE_BRIEFS = ('site-garagiste.md', 'site-photographe.md')
 
 
 class SafeRedirect(urllib.request.HTTPRedirectHandler):
@@ -175,6 +176,15 @@ def save(state, sha, message):
     raise RuntimeError('Unreachable checkpoint retry state')
 
 
+def executable_brief_paths():
+    """Return only canonical SEO work items; policy/support docs are never executable."""
+    paths = [ROOT / 'briefs' / name for name in EXECUTABLE_BRIEFS]
+    missing = [path.name for path in paths if not path.is_file()]
+    if missing:
+        raise RuntimeError('Missing executable SEO briefs: ' + ', '.join(missing))
+    return paths
+
+
 def audit(path):
     text = path.read_text()
     title = re.search(r'^title: (.+)$', text, re.M).group(1)
@@ -223,7 +233,7 @@ def main():
         sha = save(state, sha, 'seo: recover interrupted checkpoint')
     new = 0
     tasks = [(task_id(path), path.stem, lambda p=path: audit(p))
-        for path in sorted((ROOT / 'briefs').glob('*.md'))]
+        for path in executable_brief_paths()]
     week = datetime.now(timezone.utc).strftime('%G-W%V')
     tasks.append(('competitor-surface:' + week + ':v2', 'competitor-surface', competitor_review))
     for key, label, evaluate in tasks:

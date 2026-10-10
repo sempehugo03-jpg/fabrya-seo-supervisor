@@ -9,13 +9,23 @@ from unittest.mock import patch
 
 class SeoPreparation(unittest.TestCase):
     def test_real_briefs_are_structured_without_authorizing_publication(self):
-        paths = list((Path(__file__).parents[1] / 'briefs').glob('*.md'))
-        self.assertEqual(len(paths), 2)
+        paths = supervisor.executable_brief_paths()
+        self.assertEqual({path.name for path in paths}, set(supervisor.EXECUTABLE_BRIEFS))
         for path in paths:
             result = supervisor.audit(path)
             self.assertEqual(result['findings'], [], path.name)
             self.assertFalse(result['publication_authorized'])
             self.assertEqual(result['editorial_status'], 'NEEDS_HUMAN_REVIEW')
+
+    def test_auxiliary_brief_documents_are_not_executable_tasks(self):
+        brief_dir = Path(__file__).parents[1] / 'briefs'
+        all_docs = {path.name for path in brief_dir.glob('*.md')}
+        selected = {path.name for path in supervisor.executable_brief_paths()}
+        self.assertEqual(selected, {'site-garagiste.md', 'site-photographe.md'})
+        self.assertIn('quality-gate-fallback-2026-10-10.md', all_docs)
+        self.assertIn('photo-conversion-check-2026-10-10.md', all_docs)
+        self.assertNotIn('quality-gate-fallback-2026-10-10.md', selected)
+        self.assertNotIn('photo-conversion-check-2026-10-10.md', selected)
 
     def test_task_identity_follows_content(self):
         path = Path(__file__).parents[1] / 'briefs/site-photographe.md'
