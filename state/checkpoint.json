@@ -230,7 +230,7 @@
     }
   },
   "SEO_AUTOPILOT_STATUS": {
-    "current_commit": "5cafc16554fec277ca0ac7e69a874bb3caba1316",
+    "current_commit": "00cf421c86401bcde2302812ceca185d37aaae89",
     "last_schedule_run": 38073184526,
     "last_successful_schedule": null,
     "last_watchdog_recovery": null,
