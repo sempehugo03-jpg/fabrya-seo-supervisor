@@ -230,10 +230,12 @@
     }
   },
   "SEO_AUTOPILOT_STATUS": {
-    "current_commit": "00cf421c86401bcde2302812ceca185d37aaae89",
+    "current_commit": "d7cc6b79de93bbf256a1b6c43a63e995489e92f8",
     "last_schedule_run": 38073184526,
     "last_successful_schedule": null,
     "last_watchdog_recovery": null,
+    "last_external_wake": null,
+    "scheduler": null,
     "gates": {
       "SEO_RUNTIME_AUTONOMOUS": {
         "status": "FAIL",
@@ -291,8 +293,8 @@
         "evidence": null
       }
     },
-    "current_action": "VERIFY_NATIVE_SCHEDULE_ON_CURRENT_COMMIT",
-    "next_action": "FIRST_NATIVE_SCHEDULE_THEN_INSTALLED_RECOVERY_PROTOCOL",
+    "current_action": "VALIDATE_DURABLE_RUNTIME",
+    "next_action": "DIAGNOSE_AND_OBSERVE_REAL_SCHEDULE",
     "first_google_organic_customer": "NOT_YET",
     "terminal_state": "RUNNING"
   },
