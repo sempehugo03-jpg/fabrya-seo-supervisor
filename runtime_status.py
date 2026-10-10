@@ -73,8 +73,14 @@ def reconcile(state, current_commit, runs, jobs_by_run):
         'next_action': ('VERIFY_SCHEDULED_INTERRUPTION_AND_RECOVERY' if successful
                         else 'DIAGNOSE_AND_OBSERVE_REAL_SCHEDULE'),
         'first_google_organic_customer': 'NOT_YET',
-        'terminal_state': terminal_state(gates),
+        'terminal_state': terminal_state(gates, state.get('human_blocker') if not successful else None),
     }
+    if state.get('human_blocker') and not successful:
+        status['human_blocker'] = state['human_blocker']
+        status['current_action'] = 'ACTIONS_ADMIN_DIAGNOSIS'
+        status['next_action'] = 'AUTHORIZE_GITHUB_BROWSER_FALLBACK'
+    elif successful:
+        state.pop('human_blocker', None)
     state['SEO_AUTOPILOT_STATUS'] = status
     # Older provisional flags are superseded by externally verified evidence.
     state['SEO_RUNTIME_AUTONOMOUS'] = gates['SEO_RUNTIME_AUTONOMOUS']['status']
