@@ -253,10 +253,10 @@ def main():
         trigger=trigger, heartbeat=time.time(), expires=time.time() + 600)
     sha = save(state, sha, 'seo: checkpoint durable cycle start')
     # One reversible scheduled failure, recovered by the existing watchdog.
-    probe_id = 'scheduled-runtime-verification-20261010'
+    runtime_probe_id = 'scheduled-runtime-verification-20261010'
     probes = state.setdefault('probes', {})
-    if trigger == 'schedule' and 'scheduled_baseline' in state and probe_id not in probes:
-        probes[probe_id] = dict(owner=owner, task='runtime-verification',
+    if trigger == 'schedule' and 'scheduled_baseline' in state and runtime_probe_id not in probes:
+        probes[runtime_probe_id] = dict(owner=owner, task='runtime-verification',
             trigger=trigger, at=time.time())
         sha = save(state, sha, 'seo: persist scheduled interruption probe')
         os._exit(73)
@@ -303,7 +303,7 @@ def main():
         reason='Canonical briefs unchanged; no GSC/product connection configured in this Supervisor' if not new else 'Brief review completed')
     if trigger == 'schedule':
         state.setdefault('scheduled_baseline', dict(state['runtime_cycle']))
-        probe = state.get('probes', {}).get(probe_id)
+        probe = state.get('probes', {}).get(runtime_probe_id)
         recovered = probe and any(event.get('kind') == 'RECOVERED'
             and event.get('old_owner') == probe.get('owner')
             and event.get('old_trigger') == 'schedule'
