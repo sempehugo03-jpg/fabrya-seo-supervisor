@@ -231,6 +231,21 @@ def main():
             trigger=trigger, old_trigger=lease.get('trigger'), recovered_at=time.time()))
         state['lease'] = None
         sha = save(state, sha, 'seo: recover interrupted checkpoint')
+    # Every scheduled cycle advances an inspectable, non-private checkpoint.
+    state['runtime_cycle'] = dict(run=run, attempt=attempt, trigger=trigger,
+        commit=os.environ['GITHUB_SHA'], started_at=time.time(), status='STARTED')
+    state['lease'] = dict(owner=owner, run=run, task='runtime-verification',
+        trigger=trigger, heartbeat=time.time(), expires=time.time() + 600)
+    sha = save(state, sha, 'seo: checkpoint durable cycle start')
+    # One reversible scheduled failure, recovered by the existing watchdog.
+    probe_id = 'scheduled-runtime-verification-20261010'
+    probes = state.setdefault('probes', {})
+    if trigger == 'schedule' and probe_id not in probes:
+        probes[probe_id] = dict(owner=owner, task='runtime-verification',
+            trigger=trigger, at=time.time())
+        sha = save(state, sha, 'seo: persist scheduled interruption probe')
+        os._exit(73)
+    state['lease'] = None
     new = 0
     tasks = [(task_id(path), path.stem, lambda p=path: audit(p))
         for path in executable_brief_paths()]
@@ -268,7 +283,11 @@ def main():
             state['lease'] = None
             save(state, sha, 'seo: retain failed task for bounded retry')
             raise
-    # No hourly empty commits or reports. GitHub run timestamps serve as cycle heartbeat.
+    state['runtime_cycle'].update(status='COMPLETED', completed_at=time.time(), new_results=new,
+        decision='PREPARATION_COMPLETED' if new else 'NO_ACTION',
+        reason='Canonical briefs unchanged; direct GSC and product executor unavailable' if not new else 'Brief review completed')
+    sha = save(state, sha, 'seo: checkpoint durable cycle result')
+    # Cycle metadata contains no private performance or acquisition data.
     print(json.dumps(dict(new_results=new, completed=len(state['completed']),
         trigger=trigger, run=run, state_branch=BRANCH, status=state['status'], budget_eur=0)))
     summary = os.environ.get('GITHUB_STEP_SUMMARY')
