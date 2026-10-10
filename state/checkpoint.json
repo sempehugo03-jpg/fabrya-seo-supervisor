@@ -235,11 +235,22 @@
     "last_successful_schedule": null,
     "last_watchdog_recovery": null,
     "last_external_wake": null,
-    "scheduler": null,
+    "scheduler": {
+      "provider": "HOSTED_AUTOMATION",
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "wake_branch": "seo-wake",
+      "wake_path": "runtime/wake.json",
+      "cadence": "HOURLY",
+      "timezone": "Europe/Paris",
+      "source_branch": "main",
+      "github_schedule_role": "FALLBACK",
+      "native_cloudflare_cron": "NOT_EXPOSED_BY_CONNECTED_SITES",
+      "proof_status": "PENDING_REAL_DELIVERIES"
+    },
     "gates": {
       "SEO_RUNTIME_AUTONOMOUS": {
         "status": "FAIL",
-        "reason": "NO_VERIFIED_SUCCESSFUL_SCHEDULE_ON_CURRENT_COMMIT",
+        "reason": "EXTERNAL_DELIVERY_RECOVERY_AND_FOLLOWING_WAKE_NOT_YET_PROVEN",
         "evidence": null
       },
       "GSC_DIRECT_READ": {
@@ -284,7 +295,7 @@
       },
       "WATCHDOG_RECOVERY": {
         "status": "FAIL",
-        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "reason": "EXTERNAL_CRASH_RECOVERY_NOT_YET_PROVEN",
         "evidence": null
       },
       "PRIVACY_GATE": {
@@ -293,8 +304,8 @@
         "evidence": null
       }
     },
-    "current_action": "VALIDATE_DURABLE_RUNTIME",
-    "next_action": "DIAGNOSE_AND_OBSERVE_REAL_SCHEDULE",
+    "current_action": "VALIDATE_EXTERNAL_SCHEDULER",
+    "next_action": "EXTERNAL_BASELINE_THEN_CONTROLLED_CRASH_RECOVERY_THEN_NEXT_WAKE",
     "first_google_organic_customer": "NOT_YET",
     "terminal_state": "RUNNING"
   },
@@ -310,5 +321,17 @@
     "demonstrated_administrative_cause": null,
     "administrative_changes": [],
     "result": "NO_ADMINISTRATIVE_CAUSE_DEMONSTRATED"
+  },
+  "external_scheduler_config": {
+    "provider": "HOSTED_AUTOMATION",
+    "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+    "wake_branch": "seo-wake",
+    "wake_path": "runtime/wake.json",
+    "cadence": "HOURLY",
+    "timezone": "Europe/Paris",
+    "source_branch": "main",
+    "github_schedule_role": "FALLBACK",
+    "native_cloudflare_cron": "NOT_EXPOSED_BY_CONNECTED_SITES",
+    "proof_status": "PENDING_REAL_DELIVERIES"
   }
 }
