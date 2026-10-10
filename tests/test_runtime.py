@@ -24,7 +24,7 @@ class DurableRuntime(unittest.TestCase):
             saved.append(copy.deepcopy(value))
             return 'checkpoint'
         env = {'GITHUB_REPOSITORY': supervisor.REPO, 'GITHUB_RUN_ID': '3',
-               'GITHUB_RUN_ATTEMPT': '1', 'GITHUB_EVENT_NAME': 'schedule', 'GITHUB_SHA': 'current'}
+               'GITHUB_RUN_ATTEMPT': '1', 'GITHUB_EVENT_NAME': 'schedule', 'GITHUB_SHA': 'current', 'SEO_SOURCE_COMMIT': 'current'}
         with patch.dict(os.environ, env), patch.object(supervisor, 'load', return_value=(state, 'old')), \
              patch.object(supervisor, 'save', side_effect=save), \
              patch.object(supervisor.os, '_exit', side_effect=SystemExit(73)):
@@ -46,7 +46,7 @@ class DurableRuntime(unittest.TestCase):
             return 'checkpoint'
         env = {'GITHUB_REPOSITORY': supervisor.REPO, 'GITHUB_RUN_ID': '5',
                'GITHUB_RUN_ATTEMPT': '1', 'GITHUB_EVENT_NAME': 'schedule',
-               'GITHUB_SHA': 'current', 'CRASH_PROBE': 'false'}
+               'GITHUB_SHA': 'current', 'SEO_SOURCE_COMMIT': 'current', 'CRASH_PROBE': 'false'}
         with patch.dict(os.environ, env), patch.object(supervisor, 'load', return_value=(state, 'old')), \
              patch.object(supervisor, 'save', side_effect=save), \
              patch.object(supervisor, 'executable_brief_paths', return_value=[]), \
@@ -97,7 +97,7 @@ class TerminalContract(unittest.TestCase):
             return 'checkpoint'
         env = {'GITHUB_REPOSITORY': supervisor.REPO, 'GITHUB_RUN_ID': '2',
                'GITHUB_RUN_ATTEMPT': '1', 'GITHUB_EVENT_NAME': 'schedule',
-               'GITHUB_SHA': 'current', 'CRASH_PROBE': 'false'}
+               'GITHUB_SHA': 'current', 'SEO_SOURCE_COMMIT': 'current', 'CRASH_PROBE': 'false'}
         with patch.dict(os.environ, env), patch.object(supervisor, 'load', return_value=(state, 'old')), \
              patch.object(supervisor, 'save', side_effect=save), \
              patch.object(supervisor, 'executable_brief_paths', return_value=[]), \
@@ -118,7 +118,7 @@ class TerminalContract(unittest.TestCase):
             return 'checkpoint'
         env = {'GITHUB_REPOSITORY': supervisor.REPO, 'GITHUB_RUN_ID': '2',
                'GITHUB_RUN_ATTEMPT': '1', 'GITHUB_EVENT_NAME': 'workflow_run',
-               'GITHUB_SHA': 'current', 'CRASH_PROBE': 'false'}
+               'GITHUB_SHA': 'current', 'SEO_SOURCE_COMMIT': 'current', 'CRASH_PROBE': 'false'}
         with patch.dict(os.environ, env), patch.object(supervisor, 'load', return_value=(state, 'old')), \
              patch.object(supervisor, 'api', return_value={'status': 'completed', 'conclusion': 'failure'}), \
              patch.object(supervisor, 'save', side_effect=save), \
