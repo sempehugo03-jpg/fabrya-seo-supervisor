@@ -331,7 +331,7 @@ def main():
         failures = state['failures'].get(key, 0)
         if failures >= 3:
             print('RETRY_LIMIT: ' + key); continue
-        state['lease'] = dict(owner=owner, run=run, task=key, trigger=trigger,
+        state['lease'] = dict(owner=owner, run=run, task=key, trigger=trigger, wake=wake,
             heartbeat=time.time(), expires=time.time() + 600)
         sha = save(state, sha, 'seo: claim ' + label)
         # First installation deliberately crashes AFTER a durable claim.
