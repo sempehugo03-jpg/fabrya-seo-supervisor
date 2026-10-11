@@ -3,10 +3,12 @@
 Use the existing hosted task and existing GitHub executor. No new Supervisor.
 Runtime/watchdog verification is acquired; never inject a second crash.
 
-## Daily data intake, prior to the normal hourly wake
+## Data intake at each existing scheduled cycle
 
-1. Read the latest private snapshot and public aggregate manifest. Refresh once
-   per UTC day after GSC_DIRECT_READ is proven. Until its first PASS, refresh at\n   every hosted wake (one read set per hour), so intake precedes the same-slot\n   executor and its attestation. Retry a failed read next wake, at most three\n   attempts per day.
+1. Read the latest private snapshot and public aggregate manifest. Refresh GSC
+   at EACH cycle as Hugo explicitly requested on 11 October 2026. Retry a failed
+   read next wake, at most three attempts per error cycle; preserve the prior
+   actual timestamp when data is unavailable. Do not claim a fresh read from reuse.
 2. Use connected GSC Wizard for property https://fabrya.fr/:
    query_search_analytics dimensions [date,query,page], rowLimit 1000;
    query_search_analytics dimensions [page], rowLimit 1000; get_site_summary days28.
@@ -46,7 +48,8 @@ Runtime/watchdog verification is acquired; never inject a second crash.
    Inspect the selected public page, compare several hypotheses, and pursue only
    existing reversible SEO actions. No production write without a genuine isolated
    writer, current-version CAS, QA and rollback. Detect source changes and defer.
-   No custom security bypass, secret alteration, Stripe/product/Kévin modification.
+   No custom security bypass, secret alteration, Stripe/Kévin or Product change
+   outside the explicitly authorized CMS SEO/passive attribution boundary.
 
 ## Proven integration boundary
 
@@ -57,5 +60,8 @@ publishes FALLBACK_V2 after provider failures. Do not call or impersonate it as
 an executor. Staging/publication/rollback gates must stay FAIL until a safe
 SEO-only content writer exists. Acquisition API currently lacks checkout/payment
 confirmation and creates a fresh random event id for every POST; it does not
-prove deduplication or first-touch payment attribution. Do not change these
-product/Stripe routes under the current prohibition.
+prove deduplication or first-touch payment attribution. CMS SEO and passive attribution preparation are now explicitly authorized.
+Do not change Stripe, prices, checkout behavior or activation. Read current
+runtime/PRODUCT_BOUNDARY.md and the current Product/public deployments before
+using the above dated observations as a release gate; a price mismatch does not
+stop safe SEO work or require a normal SEO decision from Hugo.
