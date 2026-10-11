@@ -314,7 +314,7 @@
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
       "completed_at": "2026-10-11T00:13:45Z"
     },
-    "last_external_wake": 38151302641,
+    "last_external_wake": 38154706622,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
@@ -334,6 +334,7 @@
         "evidence": {
           "scheduler": "HOSTED_AUTOMATION",
           "runs": [
+            38154706622,
             38151302641,
             38146887778,
             38142449145,
@@ -349,6 +350,7 @@
           "commit": "62838183d035f100bd10badf39cfe7c7ae7de0e2",
           "transport_sources": [
             "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
+            "62838183d035f100bd10badf39cfe7c7ae7de0e2",
             "74ced331e92b2deaedb139786b4a29f2603db1c6",
             "f6298be4693c0257207f51b572eaca42f9dc81dc"
           ],
@@ -360,9 +362,18 @@
         }
       },
       "GSC_DIRECT_READ": {
-        "status": "FAIL",
-        "reason": "REAL_READ_PERSISTED_AWAITING_HOSTED_DELIVERY_PROOF",
-        "evidence": null
+        "status": "PASS",
+        "reason": "",
+        "evidence": {
+          "snapshot_commit": "a1044f901620d214e2edb4d77310739494ff7f63",
+          "read_at": "2026-10-11T16:14:58.898Z",
+          "start_date": "2026-09-11",
+          "end_date": "2026-10-08",
+          "settled_through": "UNKNOWN",
+          "acquisition": "HOSTED_SCHEDULED_TASK",
+          "automation_slot": 497704,
+          "consumed_by_run": "38154706622"
+        }
       },
       "OPPORTUNITY_ENGINE": {
         "status": "PASS",
