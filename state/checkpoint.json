@@ -824,6 +824,14 @@
       "delivery": "HOSTED_SCHEDULED_TASK",
       "observed_last_run_time": "2026-10-11T08:35:41.505125+00:00",
       "completed_tasks_unchanged": true
+    },
+    "497697": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38130018099",
+      "wake_commit": "79be3152f1dafce5c4a9f06b1dfe81c4b9fbbd5a",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-11T09:54:46.372584+00:00",
+      "completed_tasks_unchanged": true
     }
   },
   "scheduled_baseline": {
