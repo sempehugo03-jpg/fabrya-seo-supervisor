@@ -268,7 +268,7 @@
     }
   },
   "SEO_AUTOPILOT_STATUS": {
-    "current_commit": "5b154776922103248491fb227e179cb4ddfbd948",
+    "current_commit": "bde54d97ceed1d4f13583dc124470f3b8d8a66d2",
     "last_wake": {
       "run": "38165261813",
       "attempt": "1",
@@ -348,7 +348,7 @@
             38104117458,
             38093303066
           ],
-          "commit": "5b154776922103248491fb227e179cb4ddfbd948",
+          "commit": "bde54d97ceed1d4f13583dc124470f3b8d8a66d2",
           "transport_sources": [
             "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
             "62838183d035f100bd10badf39cfe7c7ae7de0e2",
@@ -430,8 +430,8 @@
         "evidence": null
       }
     },
-    "current_action": "INSPECT_CURRENT_PUBLIC_PAGES_AND_PREPARE_AUTHORIZED_CONNECTIONS",
-    "next_action": "EXISTING_SCHEDULED_CYCLE_REFRESH_GSC_AND_RECHECK_CURRENT_PRODUCT_PUBLIC_BOUNDARY",
+    "current_action": "INSPECT",
+    "next_action": "INSPECT_CURRENT_PAGE_AND_ISOLATED_SEO_WRITER",
     "first_google_organic_customer": "NOT_YET",
     "terminal_state": "RUNNING"
   },
