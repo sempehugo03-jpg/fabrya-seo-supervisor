@@ -35,4 +35,16 @@ class OpportunitiesTest(unittest.TestCase):
         self.assertEqual(len(state['gsc_observations']), 1)
         self.assertEqual(capability_gates(state)['GSC_DIRECT_READ']['status'], 'FAIL')
 
+    def test_attestation_must_match_the_run_that_consumed_snapshot(self):
+        data = copy.deepcopy(self.data)
+        data['acquisition'] = 'HOSTED_SCHEDULED_TASK'
+        data['automation_slot'] = 497703
+        state = {'external_scheduler_attestations': {
+            '497703': {'delivery': 'HOSTED_SCHEDULED_TASK', 'run': 'earlier-run'}
+        }}
+        consume(state, data, 'consumer-run', 'push')
+        self.assertEqual(capability_gates(state)['GSC_DIRECT_READ']['status'], 'FAIL')
+        state['external_scheduler_attestations']['497703']['run'] = 'consumer-run'
+        self.assertEqual(capability_gates(state)['GSC_DIRECT_READ']['status'], 'PASS')
+
 if __name__ == '__main__': unittest.main()
