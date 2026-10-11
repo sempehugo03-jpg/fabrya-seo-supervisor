@@ -268,7 +268,45 @@
     }
   },
   "SEO_AUTOPILOT_STATUS": {
-    "current_commit": "e08b38ee299a089abc02f95c28e4e8e04dfe16c8",
+    "current_commit": "62838183d035f100bd10badf39cfe7c7ae7de0e2",
+    "last_wake": {
+      "run": "38151302641",
+      "attempt": "1",
+      "trigger": "push",
+      "commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
+      "started_at": 1791732427.3281662,
+      "status": "COMPLETED",
+      "wake": {
+        "schema": 1,
+        "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+        "slot": 497703,
+        "issued_at": 1791732408,
+        "source_commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b"
+      },
+      "completed_at": 1791732428.3886323,
+      "new_results": 0,
+      "decision": "NO_ACTION",
+      "reason": "Canonical briefs unchanged; no GSC/product connection configured in this Supervisor"
+    },
+    "last_successful_cycle": {
+      "run": "38151302641",
+      "attempt": "1",
+      "trigger": "push",
+      "commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
+      "started_at": 1791732427.3281662,
+      "status": "COMPLETED",
+      "wake": {
+        "schema": 1,
+        "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+        "slot": 497703,
+        "issued_at": 1791732408,
+        "source_commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b"
+      },
+      "completed_at": 1791732428.3886323,
+      "new_results": 0,
+      "decision": "NO_ACTION",
+      "reason": "Canonical briefs unchanged; no GSC/product connection configured in this Supervisor"
+    },
     "last_schedule_run": 38148922221,
     "last_successful_schedule": null,
     "last_watchdog_recovery": {
@@ -308,7 +346,7 @@
             38104117458,
             38093303066
           ],
-          "commit": "e08b38ee299a089abc02f95c28e4e8e04dfe16c8",
+          "commit": "62838183d035f100bd10badf39cfe7c7ae7de0e2",
           "transport_sources": [
             "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
             "74ced331e92b2deaedb139786b4a29f2603db1c6",
@@ -323,12 +361,12 @@
       },
       "GSC_DIRECT_READ": {
         "status": "FAIL",
-        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "reason": "REAL_PRIVATE_READ_AVAILABLE; FIRST_HOSTED_CONSUMPTION_AND_ATTESTATION_PENDING",
         "evidence": null
       },
       "OPPORTUNITY_ENGINE": {
         "status": "FAIL",
-        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "reason": "INSTALLED; FIRST_REAL_SUPERVISOR_DECISION_PENDING",
         "evidence": null
       },
       "STAGING_EXECUTOR": {
@@ -376,7 +414,7 @@
         "evidence": null
       }
     },
-    "current_action": "PRIVATE_SEO_DRAFT_PREPARED",
+    "current_action": "WAIT_FRESH_GSC",
     "next_action": "OWNER_AUTHORIZE_BOUNDED_SEO_CMS_AND_FIRST_TOUCH_ATTRIBUTION_INTEGRATION",
     "first_google_organic_customer": "NOT_YET",
     "terminal_state": "BLOCKED_HUMAN",
@@ -391,44 +429,6 @@
         "AGGREGATE_OPPORTUNITY_DECISIONS"
       ],
       "notified_at": "2026-10-11T15:57:58.217Z"
-    },
-    "last_wake": {
-      "run": "38151302641",
-      "attempt": "1",
-      "trigger": "push",
-      "commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
-      "started_at": 1791732427.3281662,
-      "status": "COMPLETED",
-      "wake": {
-        "schema": 1,
-        "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-        "slot": 497703,
-        "issued_at": 1791732408,
-        "source_commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b"
-      },
-      "completed_at": 1791732428.3886323,
-      "new_results": 0,
-      "decision": "NO_ACTION",
-      "reason": "Canonical briefs unchanged; no GSC/product connection configured in this Supervisor"
-    },
-    "last_successful_cycle": {
-      "run": "38151302641",
-      "attempt": "1",
-      "trigger": "push",
-      "commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
-      "started_at": 1791732427.3281662,
-      "status": "COMPLETED",
-      "wake": {
-        "schema": 1,
-        "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-        "slot": 497703,
-        "issued_at": 1791732408,
-        "source_commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b"
-      },
-      "completed_at": 1791732428.3886323,
-      "new_results": 0,
-      "decision": "NO_ACTION",
-      "reason": "Canonical briefs unchanged; no GSC/product connection configured in this Supervisor"
     }
   },
   "SEO_RUNTIME_AUTONOMOUS": "PASS",
