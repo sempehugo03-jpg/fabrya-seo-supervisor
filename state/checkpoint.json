@@ -268,7 +268,7 @@
     }
   },
   "SEO_AUTOPILOT_STATUS": {
-    "current_commit": "84deb3ddbe831adaf6fdab4670feceaeb13d8327",
+    "current_commit": "5175d315fbb8035d6205bfb25a7b0b82780436e9",
     "last_wake": {
       "run": "38159976710",
       "attempt": "1",
@@ -348,7 +348,7 @@
             38104117458,
             38093303066
           ],
-          "commit": "84deb3ddbe831adaf6fdab4670feceaeb13d8327",
+          "commit": "5175d315fbb8035d6205bfb25a7b0b82780436e9",
           "transport_sources": [
             "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
             "62838183d035f100bd10badf39cfe7c7ae7de0e2",
@@ -397,7 +397,7 @@
       },
       "SAFE_AUTO_PUBLISH": {
         "status": "FAIL",
-        "reason": "NO_CMS_CAS_QA_AND_ROLLBACK_WRITER; FALLBACK_V2_PRESENT_IN_SEO_GENERATOR",
+        "reason": "PRIVATE_STAGING_CANNOT_PUBLISH; PRODUCTION_SEO_WRITER_AND_TARGET_QA_PENDING",
         "evidence": null
       },
       "MEASUREMENT_LOOP": {
