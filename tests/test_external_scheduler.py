@@ -86,6 +86,22 @@ class ExternalScheduler(unittest.TestCase):
         self.assertEqual(result['gates']['WATCHDOG_RECOVERY']['status'], 'PASS')
         self.assertEqual(result['gates']['WATCHDOG_RECOVERY']['evidence']['commit'], 'old')
 
+    def test_acquired_transport_proof_survives_later_source_changes(self):
+        state, runs, jobs = self.fixture()
+        state['probes'][PROBE_ID]['wake'] = {'source_commit': 'old-source'}
+        for receipt in state['cycle_receipts']:
+            receipt['commit'] = 'old-source'
+            if receipt.get('wake'):
+                receipt['wake']['source_commit'] = 'old-source'
+        for run in runs:
+            if run['id'] == 3:
+                run['head_sha'] = 'old-source'
+        result = reconcile(state, 'new-gsc-source', runs, jobs)
+        self.assertEqual(result['gates']['SEO_RUNTIME_AUTONOMOUS']['status'], 'PASS')
+        self.assertEqual(result['gates']['WATCHDOG_RECOVERY']['status'], 'PASS')
+        self.assertEqual(result['gates']['SEO_RUNTIME_AUTONOMOUS']['evidence']['transport_sources'],
+                         ['old-source'])
+
     def test_manual_marker_wrong_delivery_and_failed_qa_never_pass(self):
         state, runs, jobs = self.fixture()
         for a in state['external_scheduler_attestations'].values():
