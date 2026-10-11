@@ -47,7 +47,7 @@ def reconcile(state, current_commit, runs, jobs_by_run):
             'evidence': {'run': successful[0]['id'], 'commit': current_commit}}
     else:
         gates['SEO_RUNTIME_AUTONOMOUS']['reason'] = 'NO_VERIFIED_SUCCESSFUL_SCHEDULE_ON_CURRENT_COMMIT'
-    external = verified_external_runs(state, current_commit, runs, jobs_by_run, receipts)
+    external = verified_external_runs(state, current_commit, runs, jobs_by_run, all_receipts)
     probe = state.get('probes', {}).get('scheduled-runtime-verification-20261010')
     recovery = None
     if probe:
@@ -99,7 +99,9 @@ def reconcile(state, current_commit, runs, jobs_by_run):
     distinct_slots = {receipts[str(r['id'])]['wake']['slot'] for r in external}
     if len(distinct_slots) >= 2 and following:
         proof = {'scheduler': 'HOSTED_AUTOMATION', 'runs': [r['id'] for r in external],
-                 'commit': current_commit, 'recovery': external_recovery}
+                 'commit': current_commit,
+                 'transport_sources': sorted({all_receipts[str(r['id'])]['commit'] for r in external}),
+                 'recovery': external_recovery}
         gates['SEO_RUNTIME_AUTONOMOUS'] = {'status': 'PASS', 'reason': '', 'evidence': proof}
         gates['WATCHDOG_RECOVERY'] = {'status': 'PASS', 'reason': '', 'evidence': external_recovery}
         recovery = external_recovery
