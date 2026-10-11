@@ -307,7 +307,7 @@
       "decision": "NO_ACTION",
       "reason": "Current page inspection required; no proven production writer"
     },
-    "last_schedule_run": 38148922221,
+    "last_schedule_run": 38168130383,
     "last_successful_schedule": null,
     "last_watchdog_recovery": {
       "run": 38097697056,
@@ -431,7 +431,7 @@
       }
     },
     "current_action": "INSPECT",
-    "next_action": "EXISTING_SCHEDULED_CYCLE_REFRESH_GSC_RECHECK_PUBLIC_PRODUCT_AND_PREPARE_BOUNDED_PUBLIC_CONNECTION",
+    "next_action": "INSPECT_CURRENT_PAGE_AND_ISOLATED_SEO_WRITER",
     "first_google_organic_customer": "NOT_YET",
     "terminal_state": "RUNNING"
   },
