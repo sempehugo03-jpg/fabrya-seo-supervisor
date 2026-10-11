@@ -214,6 +214,17 @@ def audit(path):
         publication_authorized=False, body=text)
 
 
+def read_gsc_aggregate():
+    try:
+        remote_input = api('GET', '/repos/' + REPO + '/contents/state/gsc-latest.json?ref=' + BRANCH)
+        return json.loads(base64.b64decode(remote_input['content']).decode())
+    except urllib.error.HTTPError as error:
+        if error.code != 404:
+            raise
+        aggregate_path = ROOT / 'inputs' / 'gsc-latest.json'
+        return json.loads(aggregate_path.read_text()) if aggregate_path.exists() else None
+
+
 def task_id(path):
     return 'brief-review:' + path.stem + ':' + hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -366,9 +377,9 @@ def main():
             state['lease'] = None
             save(state, sha, 'seo: retain failed task for bounded retry')
             raise
-    aggregate_path = ROOT / 'inputs' / 'gsc-latest.json'
-    if aggregate_path.exists():
-        consume(state, json.loads(aggregate_path.read_text()), run, trigger)
+    aggregate_data = read_gsc_aggregate()
+    if aggregate_data is not None:
+        consume(state, aggregate_data, run, trigger)
     state['runtime_cycle'].update(status='COMPLETED', completed_at=time.time(), new_results=new,
         decision='PREPARATION_COMPLETED' if new else 'NO_ACTION',
         reason=state.get('seo_decision', {}).get('reason', 'No fresh GSC input available') if not new else 'Brief review completed')

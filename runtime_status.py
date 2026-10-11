@@ -109,6 +109,18 @@ def reconcile(state, current_commit, runs, jobs_by_run):
         gates['SEO_RUNTIME_AUTONOMOUS'] = {'status': 'FAIL', 'reason': 'EXTERNAL_DELIVERY_RECOVERY_AND_FOLLOWING_WAKE_NOT_YET_PROVEN', 'evidence': None}
         gates['WATCHDOG_RECOVERY'] = {'status': 'FAIL', 'reason': 'EXTERNAL_CRASH_RECOVERY_NOT_YET_PROVEN', 'evidence': None}
     gates.update(capability_gates(state))
+    reasons = {
+        'STAGING_EXECUTOR': 'NO_AUTHORIZED_ISOLATED_CMS_WRITE_CONNECTION',
+        'SEO_QA': 'NO_REAL_STAGING_CHANGE_TO_VERIFY',
+        'SAFE_AUTO_PUBLISH': 'NO_CMS_CAS_QA_AND_ROLLBACK_WRITER; FALLBACK_V2_PRESENT_IN_SEO_GENERATOR',
+        'MEASUREMENT_LOOP': 'NO_PUBLISHED_EXPERIMENT_TO_OBSERVE',
+        'AUTO_ROLLBACK': 'NO_CMS_RESTORE_EXECUTOR_OR_REAL_RESTORATION_PROOF',
+        'ATTRIBUTION_PIPELINE': 'FIRST_TOUCH_CHECKOUT_PAYMENT_JOIN_AND_EVENT_DEDUP_NOT_AVAILABLE',
+        'PRIVACY_GATE': 'SUPERVISOR_WRITES_FILTERED; EXTERNAL_WRITER_AND_ARTIFACT_PATHS_NOT_FULLY_PROVEN',
+    }
+    for name, reason in reasons.items():
+        gates[name]['reason'] = reason
+
     status = {
         'current_commit': current_commit,
         'last_schedule_run': schedules[0]['id'] if schedules else None,
@@ -120,15 +132,13 @@ def reconcile(state, current_commit, runs, jobs_by_run):
         'current_action': state.get('seo_decision', {}).get('decision', 'WAIT_FRESH_GSC'),
         'next_action': state.get('seo_decision', {}).get('next_action', 'READ_GSC_VIA_EXISTING_SCHEDULER'),
         'first_google_organic_customer': 'NOT_YET',
-        'terminal_state': terminal_state(gates, state.get('human_blocker') if not successful else None),
+        'terminal_state': terminal_state(gates, state.get('human_blocker')),
     }
-    if state.get('human_blocker') and not successful:
+    if state.get('human_blocker'):
         status['human_blocker'] = state['human_blocker']
-        status['current_action'] = 'ACTIONS_ADMIN_DIAGNOSIS'
-        status['next_action'] = 'AUTHORIZE_GITHUB_BROWSER_FALLBACK'
-    elif successful:
-        state.pop('human_blocker', None)
+        status['next_action'] = state['human_blocker'].get('next_action', 'OWNER_ACTION_REQUIRED')
     state['SEO_AUTOPILOT_STATUS'] = status
     # Older provisional flags are superseded by externally verified evidence.
     state['SEO_RUNTIME_AUTONOMOUS'] = gates['SEO_RUNTIME_AUTONOMOUS']['status']
     return status
+

@@ -21,7 +21,7 @@ Runtime/watchdog verification is acquired; never inject a second crash.
    source, acquisition HOSTED_SCHEDULED_TASK, this automation's actual metadata,
    full connector responses and missing-value flags. Use create_file, then read
    back and compare. If an identical snapshot exists, reuse it. Never overwrite.
-4. Construct aggregate-only inputs/gsc-latest.json on public SEO main:
+4. Construct aggregate-only state/gsc-latest.json on public SEO branch seo-state:
    exact top-level keys schema=1, source=GSC_API, read_at, start_date, end_date,
    settled_through (UNKNOWN when connector returns null), private_snapshot_commit
    (actual private write commit), acquisition=HOSTED_SCHEDULED_TASK,
@@ -35,7 +35,7 @@ Runtime/watchdog verification is acquired; never inject a second crash.
    supported visible commercial query, use UNKNOWN. Do not publish query strings.
    Do not infer unknown query ranks from page averages; anonymized rows differ.
    Do not sum page totals and claim property totals. No client/session identifiers.
-5. Update manifest using fetched blob SHA CAS; read back. Read NEW main SHA,
+5. Update manifest using fetched blob SHA CAS; read back. Do not commit daily data on main (it needlessly invalidates source proof). Read current main SHA,
    then execute the normal unique hourly wake protocol. Do not use dispatch.
 6. On the following wake, inspect previous actual jobs and cycle receipts and
    saved automation metadata. GSC_DIRECT_READ stays FAIL until the observation's

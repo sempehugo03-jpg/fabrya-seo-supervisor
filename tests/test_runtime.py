@@ -8,6 +8,8 @@ from runtime_status import GATES, reconcile, terminal_state
 
 class DurableRuntime(unittest.TestCase):
     def setUp(self):
+        intake = patch.object(supervisor, 'read_gsc_aggregate', return_value=None)
+        intake.start(); self.addCleanup(intake.stop)
         self.reconcile_patch = patch.object(supervisor, 'reconcile_runtime_status',
             side_effect=lambda state: state.update(SEO_AUTOPILOT_STATUS={
                 'gates': {'WATCHDOG_RECOVERY': {'status': 'FAIL'}}}))
@@ -90,6 +92,10 @@ class HistoricalRecoveryEvidence(unittest.TestCase):
 
 
 class TerminalContract(unittest.TestCase):
+    def setUp(self):
+        intake = patch.object(supervisor, 'read_gsc_aggregate', return_value=None)
+        intake.start(); self.addCleanup(intake.stop)
+
     setUp = DurableRuntime.setUp
     def test_incomplete_and_unproven_gates_never_complete(self):
         self.assertEqual(terminal_state({}), 'RUNNING')
