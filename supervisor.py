@@ -13,6 +13,8 @@ from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 from runtime_status import reconcile
+from opportunities import consume
+from privacy import check_public_text
 from external_scheduler import wake_metadata, PROBE_ID
 
 REPO = 'sempehugo03-jpg/fabrya-seo-supervisor'
@@ -115,6 +117,8 @@ def competitor_review():
 def api(method, path, body=None):
     # No arbitrary destinations, private repository, provider API or site HTTP.
     assert path.startswith('/repos/' + REPO + '/')
+    if method in ('PUT', 'POST') and body and 'content' in body:
+        check_public_text(base64.b64decode(body['content']).decode())
     data = None if body is None else json.dumps(body).encode()
     req = urllib.request.Request('https://api.github.com' + path, data=data,
         method=method, headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
@@ -362,9 +366,12 @@ def main():
             state['lease'] = None
             save(state, sha, 'seo: retain failed task for bounded retry')
             raise
+    aggregate_path = ROOT / 'inputs' / 'gsc-latest.json'
+    if aggregate_path.exists():
+        consume(state, json.loads(aggregate_path.read_text()), run, trigger)
     state['runtime_cycle'].update(status='COMPLETED', completed_at=time.time(), new_results=new,
         decision='PREPARATION_COMPLETED' if new else 'NO_ACTION',
-        reason='Canonical briefs unchanged; no GSC/product connection configured in this Supervisor' if not new else 'Brief review completed')
+        reason=state.get('seo_decision', {}).get('reason', 'No fresh GSC input available') if not new else 'Brief review completed')
     if trigger == 'schedule':
         state.setdefault('scheduled_baseline', dict(state['runtime_cycle']))
         probe = state.get('probes', {}).get(runtime_probe_id)

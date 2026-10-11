@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "source": "GSC_API",
+  "read_at": "2026-10-11T15:42:21.812Z",
+  "start_date": "2026-09-11",
+  "end_date": "2026-10-08",
+  "settled_through": "UNKNOWN",
+  "private_snapshot_commit": "c5d318b6693cdd9bc3a296dad3a4546cad2714b2",
+  "acquisition": "INSTALLATION",
+  "automation_slot": null,
+  "pages": [
+    {
+      "url": "https://fabrya.fr/",
+      "clicks": 0,
+      "impressions": 25,
+      "ctr": 0,
+      "position": 1.3599999999999999,
+      "commercial_intent": "BRAND",
+      "nonbrand_visible_impressions": "UNKNOWN",
+      "nonbrand_visible_position": "UNKNOWN"
+    },
+    {
+      "url": "https://fabrya.fr/conseils/site-avocat",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 1.5,
+      "commercial_intent": "UNKNOWN",
+      "nonbrand_visible_impressions": "UNKNOWN",
+      "nonbrand_visible_position": "UNKNOWN"
+    },
+    {
+      "url": "https://fabrya.fr/conseils/site-garagiste",
+      "clicks": 0,
+      "impressions": 47,
+      "ctr": 0,
+      "position": 53.87234042553192,
+      "commercial_intent": "COMMERCIAL",
+      "nonbrand_visible_impressions": 29,
+      "nonbrand_visible_position": 85.27586206896552
+    },
+    {
+      "url": "https://fabrya.fr/conseils/site-photographe",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 5.545454545454546,
+      "commercial_intent": "COMMERCIAL",
+      "nonbrand_visible_impressions": 2,
+      "nonbrand_visible_position": 24
+    }
+  ]
+}

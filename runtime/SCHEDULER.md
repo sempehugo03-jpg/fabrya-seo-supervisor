@@ -1,6 +1,7 @@
 # Existing Supervisor: external wake transport
 
-Only repository sempehugo03-jpg/fabrya-seo-supervisor is writable.
+Public control code/state: sempehugo03-jpg/fabrya-seo-supervisor only.
+Private GSC data only: fabrya-engine/seo-private-state under seo/gsc/, per GSC_PIPELINE.md.
 The existing hosted hourly task 6ac6c67c278081918b6a6d8846594c72 is the scheduler.
 It runs independently of an interactive Work session. No second Supervisor.
 GitHub executes the same supervisor.py and owns the same seo-state checkpoint.
@@ -52,3 +53,7 @@ No Sites source, environment variables, Kévin, product, Stripe or domain change
    Notify Hugo only for COMPLETE (all 11 PASS), a new indispensable human blocker,
    or a verified first Google organic nonbrand real customer. Otherwise silence.
    Technical COMPLETE must not pause ongoing authorized SEO operation.
+
+## SEO intake extension
+Apply runtime/GSC_PIPELINE.md before each normal wake. Runtime/watchdog acquired;
+do not repeat their interruption probe. Keep the same leases and executor.

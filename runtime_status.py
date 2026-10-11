@@ -1,6 +1,7 @@
 """Public control metadata only; no search, acquisition or customer payloads."""
 
 from external_scheduler import verified_external_runs, PROBE_ID
+from opportunities import capability_gates
 
 GATES = (
     'SEO_RUNTIME_AUTONOMOUS', 'GSC_DIRECT_READ', 'OPPORTUNITY_ENGINE',
@@ -105,6 +106,7 @@ def reconcile(state, current_commit, runs, jobs_by_run):
     elif state.get('external_scheduler_config'):
         gates['SEO_RUNTIME_AUTONOMOUS'] = {'status': 'FAIL', 'reason': 'EXTERNAL_DELIVERY_RECOVERY_AND_FOLLOWING_WAKE_NOT_YET_PROVEN', 'evidence': None}
         gates['WATCHDOG_RECOVERY'] = {'status': 'FAIL', 'reason': 'EXTERNAL_CRASH_RECOVERY_NOT_YET_PROVEN', 'evidence': None}
+    gates.update(capability_gates(state))
     status = {
         'current_commit': current_commit,
         'last_schedule_run': schedules[0]['id'] if schedules else None,
@@ -113,9 +115,8 @@ def reconcile(state, current_commit, runs, jobs_by_run):
         'last_external_wake': external[0]['id'] if external else None,
         'scheduler': state.get('external_scheduler_config'),
         'gates': gates,
-        'current_action': 'VALIDATE_DURABLE_RUNTIME',
-        'next_action': ('VERIFY_SCHEDULED_INTERRUPTION_AND_RECOVERY' if successful
-                        else 'VERIFY_EXTERNAL_WAKE_RECOVERY_AND_NEXT_CYCLE' if state.get('external_scheduler_config') else 'DIAGNOSE_AND_OBSERVE_REAL_SCHEDULE'),
+        'current_action': state.get('seo_decision', {}).get('decision', 'WAIT_FRESH_GSC'),
+        'next_action': state.get('seo_decision', {}).get('next_action', 'READ_GSC_VIA_EXISTING_SCHEDULER'),
         'first_google_organic_customer': 'NOT_YET',
         'terminal_state': terminal_state(gates, state.get('human_blocker') if not successful else None),
     }
