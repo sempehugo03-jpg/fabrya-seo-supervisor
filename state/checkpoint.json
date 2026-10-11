@@ -376,10 +376,60 @@
         "evidence": null
       }
     },
-    "current_action": "WAIT_FRESH_GSC",
-    "next_action": "READ_GSC_VIA_EXISTING_SCHEDULER",
+    "current_action": "PRIVATE_SEO_DRAFT_PREPARED",
+    "next_action": "OWNER_AUTHORIZE_BOUNDED_SEO_CMS_AND_FIRST_TOUCH_ATTRIBUTION_INTEGRATION",
     "first_google_organic_customer": "NOT_YET",
-    "terminal_state": "RUNNING"
+    "terminal_state": "BLOCKED_HUMAN",
+    "human_blocker": {
+      "code": "ISOLATED_SEO_BACKEND_CONNECTION_AND_ATTRIBUTION_SCOPE_REQUIRED",
+      "reason": "Current owner-authenticated D1 content has no SEO service mutation API; current product acquisition loses first-touch and lacks deduped checkout/payment attribution. Implementing these backend connections crosses the explicit product-modification boundary.",
+      "next_action": "OWNER_AUTHORIZE_BOUNDED_SEO_CMS_AND_FIRST_TOUCH_ATTRIBUTION_INTEGRATION",
+      "scope": "SEO_CAPABILITIES_NOT_RUNTIME",
+      "contract": "runtime/SEO_EXECUTOR_CONTRACT.md",
+      "safe_work_continues": [
+        "GSC_PRIVATE_INTAKE",
+        "AGGREGATE_OPPORTUNITY_DECISIONS"
+      ],
+      "notified_at": "2026-10-11T15:57:58.217Z"
+    },
+    "last_wake": {
+      "run": "38151302641",
+      "attempt": "1",
+      "trigger": "push",
+      "commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
+      "started_at": 1791732427.3281662,
+      "status": "COMPLETED",
+      "wake": {
+        "schema": 1,
+        "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+        "slot": 497703,
+        "issued_at": 1791732408,
+        "source_commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b"
+      },
+      "completed_at": 1791732428.3886323,
+      "new_results": 0,
+      "decision": "NO_ACTION",
+      "reason": "Canonical briefs unchanged; no GSC/product connection configured in this Supervisor"
+    },
+    "last_successful_cycle": {
+      "run": "38151302641",
+      "attempt": "1",
+      "trigger": "push",
+      "commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
+      "started_at": 1791732427.3281662,
+      "status": "COMPLETED",
+      "wake": {
+        "schema": 1,
+        "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+        "slot": 497703,
+        "issued_at": 1791732408,
+        "source_commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b"
+      },
+      "completed_at": 1791732428.3886323,
+      "new_results": 0,
+      "decision": "NO_ACTION",
+      "reason": "Canonical briefs unchanged; no GSC/product connection configured in this Supervisor"
+    }
   },
   "SEO_RUNTIME_AUTONOMOUS": "PASS",
   "scheduler_admin_inspection": {
@@ -1149,5 +1199,25 @@
       "decision": "NO_ACTION",
       "reason": "Canonical briefs unchanged; no GSC/product connection configured in this Supervisor"
     }
+  },
+  "human_blocker": {
+    "code": "ISOLATED_SEO_BACKEND_CONNECTION_AND_ATTRIBUTION_SCOPE_REQUIRED",
+    "reason": "Current owner-authenticated D1 content has no SEO service mutation API; current product acquisition loses first-touch and lacks deduped checkout/payment attribution. Implementing these backend connections crosses the explicit product-modification boundary.",
+    "next_action": "OWNER_AUTHORIZE_BOUNDED_SEO_CMS_AND_FIRST_TOUCH_ATTRIBUTION_INTEGRATION",
+    "scope": "SEO_CAPABILITIES_NOT_RUNTIME",
+    "contract": "runtime/SEO_EXECUTOR_CONTRACT.md",
+    "safe_work_continues": [
+      "GSC_PRIVATE_INTAKE",
+      "AGGREGATE_OPPORTUNITY_DECISIONS"
+    ],
+    "notified_at": "2026-10-11T15:57:58.217Z"
+  },
+  "seo_installation": {
+    "code_commit": "e08b38ee299a089abc02f95c28e4e8e04dfe16c8",
+    "private_draft_commit": "bea5c735fc6ffe639a5cf81dabe93606cec8820f",
+    "publication": "NONE",
+    "real_gsc_read_private_commit": "20bdfadd4e66e09a8819b9cac923934c5394b852",
+    "first_hosted_consumption": "AWAITING_PROOF",
+    "qa_live_page": "INSPECTED_NOT_STAGING_QA"
   }
 }
