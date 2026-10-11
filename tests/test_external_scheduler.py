@@ -86,6 +86,7 @@ class ExternalScheduler(unittest.TestCase):
         self.assertEqual(result['gates']['WATCHDOG_RECOVERY']['status'], 'PASS')
         self.assertEqual(result['gates']['WATCHDOG_RECOVERY']['evidence']['commit'], 'old')
 
+    # SEO feature commits must not erase independently attested transport proof.
     def test_acquired_transport_proof_survives_later_source_changes(self):
         state, runs, jobs = self.fixture()
         state['probes'][PROBE_ID]['wake'] = {'source_commit': 'old-source'}
