@@ -1959,7 +1959,7 @@
       "observed_at": "2026-10-11T22:03:23.650Z",
       "private_receipt_commit": "f2f39d2859e32374f687251ca92681568d2f1286",
       "source_commit": "bde54d97ceed1d4f13583dc124470f3b8d8a66d2",
-      "wake_run": null,
+      "wake_run": "38178882166",
       "delivery_attested": false,
       "observed_automation_last_run_time": "2026-10-11T20:40:01.244603+00:00",
       "reads": {
