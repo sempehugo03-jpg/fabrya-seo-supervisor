@@ -252,9 +252,9 @@
     }
   },
   "SEO_AUTOPILOT_STATUS": {
-    "current_commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
+    "current_commit": "d57a481bba5eca78cc4bdbb3e3b4ecb6a2b9fc28",
     "last_schedule_run": 38103004541,
-    "last_successful_schedule": 38103004541,
+    "last_successful_schedule": null,
     "last_watchdog_recovery": null,
     "last_external_wake": null,
     "scheduler": {
@@ -327,7 +327,7 @@
       }
     },
     "current_action": "VALIDATE_DURABLE_RUNTIME",
-    "next_action": "VERIFY_SCHEDULED_INTERRUPTION_AND_RECOVERY",
+    "next_action": "VERIFY_EXTERNAL_WAKE_RECOVERY_AND_NEXT_CYCLE",
     "first_google_organic_customer": "NOT_YET",
     "terminal_state": "RUNNING"
   },
