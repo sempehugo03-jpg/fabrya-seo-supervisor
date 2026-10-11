@@ -387,12 +387,12 @@
       },
       "STAGING_EXECUTOR": {
         "status": "FAIL",
-        "reason": "NO_AUTHORIZED_ISOLATED_CMS_WRITE_CONNECTION",
+        "reason": "REAL_PRIVATE_CMS_STAGE_ACCEPTED; SCHEDULED_EXECUTOR_CONSUMPTION_PENDING",
         "evidence": null
       },
       "SEO_QA": {
         "status": "FAIL",
-        "reason": "NO_REAL_STAGING_CHANGE_TO_VERIFY",
+        "reason": "PRIVATE_STAGE_EXISTS; REAL_TARGET_RENDERER_QA_PENDING",
         "evidence": null
       },
       "SAFE_AUTO_PUBLISH": {
@@ -412,7 +412,7 @@
       },
       "ATTRIBUTION_PIPELINE": {
         "status": "FAIL",
-        "reason": "FIRST_TOUCH_CHECKOUT_PAYMENT_JOIN_AND_EVENT_DEDUP_NOT_AVAILABLE",
+        "reason": "IMMUTABLE_PRIVATE_FIRST_TOUCH_JOIN_INSTALLED; PUBLIC_FUNNEL_AND_OWNER_EXCLUSIONS_PENDING",
         "evidence": null
       },
       "WATCHDOG_RECOVERY": {
@@ -431,20 +431,22 @@
       }
     },
     "current_action": "INSPECT",
-    "next_action": "OWNER_AUTHORIZE_BOUNDED_SEO_CMS_AND_FIRST_TOUCH_ATTRIBUTION_INTEGRATION",
+    "next_action": "PRODUCT_OWNER_PUBLIC_RELEASE_DECISION_WITH_EXISTING_QA_GATES",
     "first_google_organic_customer": "NOT_YET",
     "terminal_state": "BLOCKED_HUMAN",
     "human_blocker": {
-      "code": "ISOLATED_SEO_BACKEND_CONNECTION_AND_ATTRIBUTION_SCOPE_REQUIRED",
-      "reason": "Current owner-authenticated D1 content has no SEO service mutation API; current product acquisition loses first-touch and lacks deduped checkout/payment attribution. Implementing these backend connections crosses the explicit product-modification boundary.",
-      "next_action": "OWNER_AUTHORIZE_BOUNDED_SEO_CMS_AND_FIRST_TOUCH_ATTRIBUTION_INTEGRATION",
-      "scope": "SEO_CAPABILITIES_NOT_RUNTIME",
-      "contract": "runtime/SEO_EXECUTOR_CONTRACT.md",
+      "code": "PUBLIC_PRODUCT_RELEASE_OUTSIDE_SEO_SCOPE",
+      "reason": "Private Product EUR59 and existing public Product EUR90/trial are separate runtimes and schemas. Promoting the public EUR59 Product/payment path exceeds the authorized CMS/attribution-only change. Private staging must not be represented as a public writer.",
+      "next_action": "PRODUCT_OWNER_PUBLIC_RELEASE_DECISION_WITH_EXISTING_QA_GATES",
+      "scope": "PUBLIC_PRODUCT_RELEASE_NOT_SAFE_SEO_READS",
+      "contract": "runtime/PRODUCT_BOUNDARY.md",
       "safe_work_continues": [
         "GSC_PRIVATE_INTAKE",
-        "AGGREGATE_OPPORTUNITY_DECISIONS"
+        "AGGREGATE_OPPORTUNITY_DECISIONS",
+        "CURRENT_PAGE_INSPECTION",
+        "PRIVATE_SEO_STAGING"
       ],
-      "notified_at": "2026-10-11T15:57:58.217Z"
+      "notified_at": "2026-10-11T18:43:29.997Z"
     }
   },
   "SEO_RUNTIME_AUTONOMOUS": "PASS",
@@ -1309,16 +1311,18 @@
     }
   },
   "human_blocker": {
-    "code": "ISOLATED_SEO_BACKEND_CONNECTION_AND_ATTRIBUTION_SCOPE_REQUIRED",
-    "reason": "Current owner-authenticated D1 content has no SEO service mutation API; current product acquisition loses first-touch and lacks deduped checkout/payment attribution. Implementing these backend connections crosses the explicit product-modification boundary.",
-    "next_action": "OWNER_AUTHORIZE_BOUNDED_SEO_CMS_AND_FIRST_TOUCH_ATTRIBUTION_INTEGRATION",
-    "scope": "SEO_CAPABILITIES_NOT_RUNTIME",
-    "contract": "runtime/SEO_EXECUTOR_CONTRACT.md",
+    "code": "PUBLIC_PRODUCT_RELEASE_OUTSIDE_SEO_SCOPE",
+    "reason": "Private Product EUR59 and existing public Product EUR90/trial are separate runtimes and schemas. Promoting the public EUR59 Product/payment path exceeds the authorized CMS/attribution-only change. Private staging must not be represented as a public writer.",
+    "next_action": "PRODUCT_OWNER_PUBLIC_RELEASE_DECISION_WITH_EXISTING_QA_GATES",
+    "scope": "PUBLIC_PRODUCT_RELEASE_NOT_SAFE_SEO_READS",
+    "contract": "runtime/PRODUCT_BOUNDARY.md",
     "safe_work_continues": [
       "GSC_PRIVATE_INTAKE",
-      "AGGREGATE_OPPORTUNITY_DECISIONS"
+      "AGGREGATE_OPPORTUNITY_DECISIONS",
+      "CURRENT_PAGE_INSPECTION",
+      "PRIVATE_SEO_STAGING"
     ],
-    "notified_at": "2026-10-11T15:57:58.217Z"
+    "notified_at": "2026-10-11T18:43:29.997Z"
   },
   "seo_installation": {
     "code_commit": "e08b38ee299a089abc02f95c28e4e8e04dfe16c8",
@@ -1483,5 +1487,35 @@
       "next_action": "INSPECT_CURRENT_PAGE_AND_ISOLATED_SEO_WRITER",
       "first_google_organic_customer": "NOT_YET"
     }
-  ]
+  ],
+  "resolved_human_blockers": [
+    {
+      "code": "ISOLATED_SEO_BACKEND_CONNECTION_AND_ATTRIBUTION_SCOPE_REQUIRED",
+      "resolved_at": "2026-10-11T18:43:29.997Z",
+      "resolution": "EXPLICIT_CMS_AND_FIRST_TOUCH_AUTHORIZATION_AND_PRIVATE_DEPLOYMENT"
+    }
+  ],
+  "seo_boundary": {
+    "product_commit": "1baf79355c313e226c5d0b23116dd63c5cb0d850",
+    "seo_commit": "84deb3ddbe831adaf6fdab4670feceaeb13d8327",
+    "private_source_commit": "e57b284b11ead4350b5c68cc13409f5e744ef270",
+    "private_deployment": "appgdep_6acbd760840481918076c74f053ab49f",
+    "scope": "PRIVATE_SEO_STAGING_AND_PASSIVE_FIRST_TOUCH",
+    "installed_at": "2026-10-11T18:43:29.997Z",
+    "product_tests": 44,
+    "private_tests": 43,
+    "root_build": "PASS",
+    "worker_build": "PASS",
+    "public_publication": "NONE",
+    "private_stage": {
+      "id": "seo-garage-20261011-business-01",
+      "state": "STAGED",
+      "acquisition": "INTERACTIVE_AUTHORIZED_WORK",
+      "before_hash": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0",
+      "after_hash": "67c9938c08e12ed9423169e2bbf1b763a55312cbc5a7c807c2e3315fbbe35f28",
+      "created_at": "2026-10-11T18:39:27.590Z",
+      "source_snapshot": "8661c4717553c284d7b34dc49ef9c6141818d3b4"
+    },
+    "first_google_organic_customer": "NOT_YET"
+  }
 }
