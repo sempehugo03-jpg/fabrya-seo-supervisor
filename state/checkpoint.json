@@ -431,7 +431,7 @@
       }
     },
     "current_action": "INSPECT",
-    "next_action": "INSPECT_CURRENT_PAGE_AND_ISOLATED_SEO_WRITER",
+    "next_action": "EXISTING_SCHEDULED_CYCLE_REFRESH_GSC_RECHECK_PUBLIC_PRODUCT_AND_PREPARE_BOUNDED_PUBLIC_CONNECTION",
     "first_google_organic_customer": "NOT_YET",
     "terminal_state": "RUNNING"
   },
@@ -1642,7 +1642,7 @@
     "public_price_eur_month": 90,
     "public_trial_days": 30,
     "public_price_evidence": "Browser https://fabrya.fr/tarifs rendered EUR90/month and first charge after 30 days; deployed checkout source matches",
-    "product_branch_commit": "1ff66765548446fbd174357908d2ad405ede1335",
+    "product_branch_commit": "5a0efea2b6bea55f300a434c550f8cd7a062f3b3",
     "product_public_ready": "NOT_YET",
     "product_public_deployment_status": "NOT_AUTHORIZED",
     "private_version": 20,
@@ -1656,6 +1656,37 @@
     "gsc_manual_snapshot_commit": "86ca6b4a4c30fe39dabe7d9c9d9324f7ae7a9e86",
     "first_google_organic_customer": "NOT_YET",
     "current_action": "INSPECT_CURRENT_PUBLIC_PAGES_AND_PREPARE_AUTHORIZED_CONNECTIONS",
-    "next_action": "EXISTING_SCHEDULED_CYCLE_REFRESH_GSC_AND_RECHECK_CURRENT_PRODUCT_PUBLIC_BOUNDARY"
+    "next_action": "EXISTING_SCHEDULED_CYCLE_REFRESH_GSC_RECHECK_PUBLIC_PRODUCT_AND_PREPARE_BOUNDED_PUBLIC_CONNECTION",
+    "product_next_action": "QUEUE_BROWSER_QA",
+    "latest_product_checkpoint_observed_at": "2026-10-11T19:10:20.636Z",
+    "last_real_action": "READ_CURRENT_GSC_AND_INSPECT_RENDERED_PUBLIC_PRICE_AND_TWO_SEO_PAGES"
+  },
+  "current_page_observations": {
+    "observed_at": "2026-10-11T19:10:20.636Z",
+    "acquisition": "MANUAL_BROWSER_INSPECTION",
+    "public_source_commit": "4b7369b5bee6d400d13e0d52616ea88d87d4aab6",
+    "pages": [
+      {
+        "url": "https://fabrya.fr/conseils/site-garagiste",
+        "title_h1": "Création site internet garage automobile : guide pratique",
+        "quality": "GENERIC_ADVICE_WITH_LIMITED_SECTOR_SPECIFIC_DETAIL",
+        "cta_destination": "PUBLIC_ROOT_OLD_PRODUCT",
+        "internal_campaign_is_google_proof": false,
+        "next_action": "REUSE_EXISTING_STAGE_NO_HOURLY_REEDIT",
+        "publication_state": "NOT_PUBLISHED",
+        "existing_stage": "seo-garage-20261011-business-01"
+      },
+      {
+        "url": "https://fabrya.fr/conseils/site-photographe",
+        "title_h1": "Création site internet photographe : guide pratique",
+        "quality": "GENERIC_ADVICE_WITHOUT_REAL_FABRYA_PHOTOGRAPHER_VISUAL_PROOF",
+        "cta_destination": "PUBLIC_ROOT_OLD_PRODUCT",
+        "internal_campaign_is_google_proof": false,
+        "next_action": "COMPARE_ONE_QUERY_ALIGNED_HYPOTHESIS_WITH_CURRENT_OFFER",
+        "publication_state": "NOT_PUBLISHED",
+        "commercial_top10_proven": false
+      }
+    ],
+    "max_actions": 2
   }
 }
