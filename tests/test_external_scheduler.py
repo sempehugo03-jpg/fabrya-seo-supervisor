@@ -60,6 +60,19 @@ class ExternalScheduler(unittest.TestCase):
             self.assertEqual(reconcile(s, 'current', runs, jobs)['gates']['SEO_RUNTIME_AUTONOMOUS']['status'], 'FAIL')
         self.assertEqual(reconcile(state, 'current', runs[:-1], jobs)['gates']['SEO_RUNTIME_AUTONOMOUS']['status'], 'FAIL')
 
+    def test_hosted_task_completion_time_after_wake_is_valid(self):
+        from datetime import datetime, timezone
+        state, runs, jobs = self.fixture()
+        receipts = {str(item['wake']['slot']): item for item in state['cycle_receipts']
+                    if item.get('wake')}
+        for slot, audit in state['external_scheduler_attestations'].items():
+            issued = receipts[slot]['wake']['issued_at']
+            audit['observed_last_run_time'] = datetime.fromtimestamp(
+                issued + 45, tz=timezone.utc).isoformat()
+        result = reconcile(state, 'current', runs, jobs)
+        self.assertEqual(result['gates']['SEO_RUNTIME_AUTONOMOUS']['status'], 'PASS')
+        self.assertEqual(result['gates']['WATCHDOG_RECOVERY']['status'], 'PASS')
+
     def test_manual_marker_wrong_delivery_and_failed_qa_never_pass(self):
         state, runs, jobs = self.fixture()
         for a in state['external_scheduler_attestations'].values():
