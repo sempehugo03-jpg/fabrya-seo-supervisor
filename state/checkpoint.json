@@ -276,7 +276,7 @@
       "commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
       "completed_at": "2026-10-11T07:52:40Z"
     },
-    "last_external_wake": null,
+    "last_external_wake": 38125296950,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
