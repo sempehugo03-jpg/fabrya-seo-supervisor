@@ -268,11 +268,15 @@
     }
   },
   "SEO_AUTOPILOT_STATUS": {
-    "current_commit": "f015208af45a6b6a62cb22476ae113c26b0fce68",
+    "current_commit": "8831556db97a4d1a31df6628aa9b21cd45f4292f",
     "last_schedule_run": 38148922221,
     "last_successful_schedule": null,
-    "last_watchdog_recovery": null,
-    "last_external_wake": null,
+    "last_watchdog_recovery": {
+      "run": 38097697056,
+      "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
+      "completed_at": "2026-10-11T00:13:45Z"
+    },
+    "last_external_wake": 38151302641,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
@@ -287,9 +291,35 @@
     },
     "gates": {
       "SEO_RUNTIME_AUTONOMOUS": {
-        "status": "FAIL",
-        "reason": "EXTERNAL_DELIVERY_RECOVERY_AND_FOLLOWING_WAKE_NOT_YET_PROVEN",
-        "evidence": null
+        "status": "PASS",
+        "reason": "",
+        "evidence": {
+          "scheduler": "HOSTED_AUTOMATION",
+          "runs": [
+            38151302641,
+            38146887778,
+            38142449145,
+            38137125451,
+            38133437694,
+            38130018099,
+            38125296950,
+            38117669383,
+            38113995549,
+            38104117458,
+            38093303066
+          ],
+          "commit": "8831556db97a4d1a31df6628aa9b21cd45f4292f",
+          "transport_sources": [
+            "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
+            "74ced331e92b2deaedb139786b4a29f2603db1c6",
+            "f6298be4693c0257207f51b572eaca42f9dc81dc"
+          ],
+          "recovery": {
+            "run": 38097697056,
+            "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
+            "completed_at": "2026-10-11T00:13:45Z"
+          }
+        }
       },
       "GSC_DIRECT_READ": {
         "status": "FAIL",
@@ -332,9 +362,13 @@
         "evidence": null
       },
       "WATCHDOG_RECOVERY": {
-        "status": "FAIL",
-        "reason": "EXTERNAL_CRASH_RECOVERY_NOT_YET_PROVEN",
-        "evidence": null
+        "status": "PASS",
+        "reason": "",
+        "evidence": {
+          "run": 38097697056,
+          "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
+          "completed_at": "2026-10-11T00:13:45Z"
+        }
       },
       "PRIVACY_GATE": {
         "status": "FAIL",
@@ -347,7 +381,7 @@
     "first_google_organic_customer": "NOT_YET",
     "terminal_state": "RUNNING"
   },
-  "SEO_RUNTIME_AUTONOMOUS": "FAIL",
+  "SEO_RUNTIME_AUTONOMOUS": "PASS",
   "scheduler_admin_inspection": {
     "checked_at": "2026-10-10T22:36:42Z",
     "default_branch": "main",
