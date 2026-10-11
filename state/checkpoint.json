@@ -136,7 +136,21 @@
   "failures": {
     "competitor-surface:2026-W41:v1": 2
   },
-  "lease": null,
+  "lease": {
+    "owner": "38117669383:1",
+    "run": "38117669383",
+    "task": "runtime-verification",
+    "trigger": "push",
+    "wake": {
+      "schema": 1,
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "slot": 497694,
+      "issued_at": 1791699548,
+      "source_commit": "74ced331e92b2deaedb139786b4a29f2603db1c6"
+    },
+    "heartbeat": 1791699562.8362017,
+    "expires": 1791700162.836202
+  },
   "events": [
     {
       "kind": "RECOVERED",
@@ -357,23 +371,19 @@
     "proof_status": "PENDING_REAL_DELIVERIES"
   },
   "runtime_cycle": {
-    "run": "38113995549",
+    "run": "38117669383",
     "attempt": "1",
     "trigger": "push",
     "commit": "74ced331e92b2deaedb139786b4a29f2603db1c6",
-    "started_at": 1791695506.1311393,
-    "status": "COMPLETED",
+    "started_at": 1791699562.8361995,
+    "status": "STARTED",
     "wake": {
       "schema": 1,
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-      "slot": 497693,
-      "issued_at": 1791695489,
+      "slot": 497694,
+      "issued_at": 1791699548,
       "source_commit": "74ced331e92b2deaedb139786b4a29f2603db1c6"
-    },
-    "completed_at": 1791695507.3334873,
-    "new_results": 0,
-    "decision": "NO_ACTION",
-    "reason": "Canonical briefs unchanged; no GSC/product connection configured in this Supervisor"
+    }
   },
   "external_baseline": {
     "run": "38093303066",
