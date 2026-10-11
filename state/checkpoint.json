@@ -271,7 +271,11 @@
     "current_commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
     "last_schedule_run": 38122826086,
     "last_successful_schedule": null,
-    "last_watchdog_recovery": null,
+    "last_watchdog_recovery": {
+      "run": 38122842030,
+      "commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
+      "completed_at": "2026-10-11T07:52:40Z"
+    },
     "last_external_wake": null,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
