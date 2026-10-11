@@ -23,8 +23,10 @@ def terminal_state(gates, human_blocker=None):
 def reconcile(state, current_commit, runs, jobs_by_run):
     gates = {name: {'status': 'FAIL', 'reason': 'CAPABILITY_NOT_INSTALLED_OR_PROVEN',
                     'evidence': None} for name in GATES}
-    receipts = {str(item['run']): item for item in state.get('cycle_receipts', [])
-                if item.get('status') == 'COMPLETED' and item.get('commit') == current_commit}
+    all_receipts = {str(item['run']): item for item in state.get('cycle_receipts', [])
+                    if item.get('status') == 'COMPLETED'}
+    receipts = {run: item for run, item in all_receipts.items()
+                if item.get('commit') == current_commit}
     def verified(run, trigger, test_step, execution_step):
         if (run.get('event') != trigger or run.get('status') != 'completed'
             or run.get('conclusion') != 'success' or run.get('head_sha') != current_commit
@@ -75,9 +77,22 @@ def reconcile(state, current_commit, runs, jobs_by_run):
                 or event.get('previous_conclusion') != 'failure'):
                 continue
             rr = next((r for r in runs if str(r['id']) == event.get('by', '').split(':')[0]), None)
-            if rr and verified(rr, 'workflow_run', 'Verify recovery executor',
-                    'Recover same SEO state and unfinished useful task'):
-                external_recovery = {'run': rr['id'], 'commit': current_commit, 'completed_at': rr.get('updated_at')}
+            rr_receipt = rr and all_receipts.get(str(rr['id']))
+            probe_commit = external_probe.get('wake', {}).get('source_commit')
+            rr_steps = {step.get('name'): step.get('conclusion')
+                        for job in jobs_by_run.get(str(rr['id']), []) if rr
+                        and job.get('conclusion') == 'success'
+                        for step in job.get('steps', [])}
+            if (rr and rr_receipt and probe_commit
+                    and rr.get('event') == 'workflow_run'
+                    and rr.get('status') == 'completed' and rr.get('conclusion') == 'success'
+                    and rr.get('head_branch') == 'main' and rr.get('head_sha') == probe_commit
+                    and rr.get('run_attempt', 1) == 1
+                    and rr_receipt.get('commit') == probe_commit
+                    and rr_steps.get('Verify recovery executor') == 'success'
+                    and rr_steps.get('Recover same SEO state and unfinished useful task') == 'success'):
+                external_recovery = {'run': rr['id'], 'commit': probe_commit,
+                                     'completed_at': rr.get('updated_at')}
                 break
     following = external_recovery and any(r.get('created_at', '') > external_recovery['completed_at'] for r in external)
     distinct_slots = {receipts[str(r['id'])]['wake']['slot'] for r in external}
