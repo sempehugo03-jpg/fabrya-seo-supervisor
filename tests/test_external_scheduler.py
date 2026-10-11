@@ -23,7 +23,7 @@ class ExternalScheduler(unittest.TestCase):
 
     def fixture(self):
         state = {'external_scheduler_config': {'automation_id': AUTOMATION_ID},
-                 'probes': {PROBE_ID: {'owner': '2:1'}},
+                 'probes': {PROBE_ID: {'owner': '2:1', 'wake': {'source_commit': 'current'}}},
                  'events': [{'kind': 'RECOVERED', 'old_owner': '2:1', 'old_trigger': 'push',
                     'trigger': 'workflow_run', 'previous_conclusion': 'failure', 'by': '3:1'}],
                  'cycle_receipts': [], 'external_scheduler_attestations': {}}
