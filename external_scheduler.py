@@ -40,7 +40,8 @@ def verified_external_runs(state, current_commit, runs, jobs, receipts):
                 and run.get('head_branch') == 'seo-wake'
                 and run.get('status') == 'completed' and run.get('conclusion') == 'success'
                 and run.get('run_attempt', 1) == 1
-                and receipt.get('commit') == current_commit
+                and receipt.get('commit')
+                and wake.get('source_commit', receipt.get('commit')) == receipt.get('commit')
                 and audit.get('automation_id') == AUTOMATION_ID
                 and audit.get('run') == str(run['id'])
                 and audit.get('wake_commit') == run.get('head_sha')
