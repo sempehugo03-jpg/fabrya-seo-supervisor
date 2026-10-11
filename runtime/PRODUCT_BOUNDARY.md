@@ -62,23 +62,53 @@ mirror. It is not a publication or autonomous stage proof. Source GSC snapshot
    boundary is unresolved. The old authorization-scope blocker is resolved;
    never request the same CMS/attribution authorization again.
 
-## Remaining exact boundary
+## Current public boundary — revalidated 11 October 2026
 
-Public fabrya.fr still serves Sites source
-4b7369b5bee6d400d13e0d52616ea88d87d4aab6, a different runtime/schema from this
-private Product. Its checkout source is EUR90/month with a 30-day trial; the
-requested Product contract is EUR59/month without this trial. No public source,
-checkout, Stripe, activation or payment was modified by this targeted integration.
-Promoting/replacing that public Product/payment route crosses the user's unique
-SEO/attribution scope. Request a Product-side release decision once, then retain
-it durably. Do not stop harmless SEO operation or notify the same blocker hourly.
-A production SEO-only writer may be prepared within the authorized scope, but
-must preserve the currently served Product and cannot itself promote the module.
+This is a dated observation, not a permanent blocker. Hugo requires current
+Product and public deployment reads before any release-boundary decision.
+On 11 October at 19:05 UTC:
+- Public Site version 506 still uses source
+  4b7369b5bee6d400d13e0d52616ea88d87d4aab6. Browser /tarifs visibly shows
+  EUR90/month, first charge after 30 days. Root metadata agrees. The deployed
+  checkout source enforces 9000 EUR cents and trial_period_days=30; no checkout
+  or payment was created for this inspection.
+- Public /conseils/site-photographe is rendered and its demo CTA targets the
+  same public root with internal utm_source=seo. That internal label never
+  proves a first acquisition from Google.
+- Public D1 overview contains sd_seo_pages and sd_acquisition_events but no
+  installed fp_first_touch/fp_seo_changes tables. Its source has client-updated
+  campaign context and no bounded /api/seo/changes endpoint. Do not mistake
+  the private CMS for the public writer.
+- Product Supervisor checkpoint current_commit
+  1ff66765548446fbd174357908d2ad405ede1335 follows 18e21823457012f07321eaa6370f77abdf11ab81.
+  Product tests PASS; browser QA is being repaired/recovered. PUBLIC_READY=NOT_YET,
+  public_deployment_status=NOT_AUTHORIZED. This is an observation of another
+  Supervisor, not authorization to release or change billing.
+- Private Site version 20 source 537ca5e92d841b1a7b297f3ba744b30d79c71c3b deployed
+  successfully at 19:04 UTC. Its live aggregate attribution endpoint still
+  responds 200: direct test sessions only, zero projects/demos/checkouts/confirmed
+  payments, exclusion_policy_ready=false, first_google_organic_customer=NOT_YET.
+
+Remove PUBLIC_PRODUCT_RELEASE_OUTSIDE_SEO_SCOPE as a blanket human stop.
+The price mismatch remains currently observed, but it does not prevent GSC,
+page inspection, CMS/attribution preparation or private bounded staging.
+Keep the SEO loop RUNNING with the production connection gates FAIL.
+A genuinely indispensable out-of-scope release/payment action can require a
+separate human gate only at that concrete action, with fresh evidence.
+
+At EACH cycle re-read the actual Product checkpoint, current deployed versions
+and the public price/CTA before trusting this snapshot. If the public 59/month
+Product becomes deployed, immediately discard the old price blocker and verify
+the actual public CMS and immutable first-touch joins; price alone proves neither.
+Never promote the private Product, change price/checkout/Stripe/activation, or
+create a live payment from the SEO scope. Product may continue independently.
+A production SEO-only writer remains explicitly authorized and may be prepared
+without asking Hugo for a normal SEO decision.
+
 STAGING_EXECUTOR needs actual scheduled use; SEO_QA needs the real target renderer;
-SAFE_AUTO_PUBLISH, MEASUREMENT_LOOP, AUTO_ROLLBACK and ATTRIBUTION_PIPELINE remain
-FAIL until their actual production connections/receipts exist. Local SQL rollback
-and private payment fixtures are not production proofs. PRIVACY_GATE remains FAIL
-until that complete production boundary is verified.
+SAFE_AUTO_PUBLISH, MEASUREMENT_LOOP, AUTO_ROLLBACK and ATTRIBUTION_PIPELINE stay
+FAIL until production connections/receipts exist. PRIVACY_GATE needs that complete
+boundary verified. A private SQL rollback or payment fixture is not public proof.
 
 ## Business horizon
 
