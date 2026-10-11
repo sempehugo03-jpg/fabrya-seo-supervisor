@@ -50,7 +50,7 @@ def verified_external_runs(state, current_commit, runs, jobs, receipts):
             continue
         try:
             delivered_at = datetime.fromisoformat(audit['observed_last_run_time'].replace('Z', '+00:00')).timestamp()
-            if int(delivered_at // 3600) != wake['slot'] or not 0 <= wake['issued_at'] - delivered_at <= 1800:
+            if int(delivered_at // 3600) != wake['slot'] or abs(wake['issued_at'] - delivered_at) > 1800:
                 continue
         except (ValueError, TypeError):
             continue
