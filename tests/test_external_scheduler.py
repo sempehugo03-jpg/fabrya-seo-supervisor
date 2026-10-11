@@ -73,6 +73,19 @@ class ExternalScheduler(unittest.TestCase):
         self.assertEqual(result['gates']['SEO_RUNTIME_AUTONOMOUS']['status'], 'PASS')
         self.assertEqual(result['gates']['WATCHDOG_RECOVERY']['status'], 'PASS')
 
+    def test_verified_recovery_survives_scheduler_only_source_fix(self):
+        state, runs, jobs = self.fixture()
+        state['probes'][PROBE_ID]['wake'] = {'source_commit': 'old'}
+        for receipt in state['cycle_receipts']:
+            receipt['commit'] = 'old' if receipt['run'] == '3' else 'new'
+        for run in runs:
+            if run['id'] == 3:
+                run['head_sha'] = 'old'
+        result = reconcile(state, 'new', runs, jobs)
+        self.assertEqual(result['gates']['SEO_RUNTIME_AUTONOMOUS']['status'], 'PASS')
+        self.assertEqual(result['gates']['WATCHDOG_RECOVERY']['status'], 'PASS')
+        self.assertEqual(result['gates']['WATCHDOG_RECOVERY']['evidence']['commit'], 'old')
+
     def test_manual_marker_wrong_delivery_and_failed_qa_never_pass(self):
         state, runs, jobs = self.fixture()
         for a in state['external_scheduler_attestations'].values():
