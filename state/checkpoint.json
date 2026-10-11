@@ -136,7 +136,15 @@
   "failures": {
     "competitor-surface:2026-W41:v1": 2
   },
-  "lease": null,
+  "lease": {
+    "owner": "38148922221:1",
+    "run": "38148922221",
+    "task": "runtime-verification",
+    "trigger": "schedule",
+    "wake": null,
+    "heartbeat": 1791730339.5307758,
+    "expires": 1791730939.5307758
+  },
   "events": [
     {
       "kind": "RECOVERED",
@@ -396,23 +404,12 @@
     "proof_status": "PENDING_REAL_DELIVERIES"
   },
   "runtime_cycle": {
-    "run": "38146887778",
+    "run": "38148922221",
     "attempt": "1",
-    "trigger": "push",
+    "trigger": "schedule",
     "commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
-    "started_at": 1791728543.145201,
-    "status": "COMPLETED",
-    "wake": {
-      "schema": 1,
-      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-      "slot": 497702,
-      "issued_at": 1791728485,
-      "source_commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b"
-    },
-    "completed_at": 1791728544.204304,
-    "new_results": 0,
-    "decision": "NO_ACTION",
-    "reason": "Canonical briefs unchanged; no GSC/product connection configured in this Supervisor"
+    "started_at": 1791730339.5307732,
+    "status": "STARTED"
   },
   "external_baseline": {
     "run": "38093303066",
