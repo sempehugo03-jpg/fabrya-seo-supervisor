@@ -136,21 +136,7 @@
   "failures": {
     "competitor-surface:2026-W41:v1": 2
   },
-  "lease": {
-    "owner": "38133437694:1",
-    "run": "38133437694",
-    "task": "runtime-verification",
-    "trigger": "push",
-    "wake": {
-      "schema": 1,
-      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-      "slot": 497698,
-      "issued_at": 1791715818,
-      "source_commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b"
-    },
-    "heartbeat": 1791715891.029891,
-    "expires": 1791716491.029891
-  },
+  "lease": null,
   "events": [
     {
       "kind": "RECOVERED",
@@ -412,14 +398,18 @@
     "trigger": "push",
     "commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
     "started_at": 1791715891.029888,
-    "status": "STARTED",
+    "status": "COMPLETED",
     "wake": {
       "schema": 1,
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
       "slot": 497698,
       "issued_at": 1791715818,
       "source_commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b"
-    }
+    },
+    "completed_at": 1791715892.0160115,
+    "new_results": 0,
+    "decision": "NO_ACTION",
+    "reason": "Canonical briefs unchanged; no GSC/product connection configured in this Supervisor"
   },
   "external_baseline": {
     "run": "38093303066",
@@ -608,6 +598,25 @@
         "source_commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b"
       },
       "completed_at": 1791712464.270181,
+      "new_results": 0,
+      "decision": "NO_ACTION",
+      "reason": "Canonical briefs unchanged; no GSC/product connection configured in this Supervisor"
+    },
+    "497698": {
+      "run": "38133437694",
+      "attempt": "1",
+      "trigger": "push",
+      "commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
+      "started_at": 1791715891.029888,
+      "status": "COMPLETED",
+      "wake": {
+        "schema": 1,
+        "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+        "slot": 497698,
+        "issued_at": 1791715818,
+        "source_commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b"
+      },
+      "completed_at": 1791715892.0160115,
       "new_results": 0,
       "decision": "NO_ACTION",
       "reason": "Canonical briefs unchanged; no GSC/product connection configured in this Supervisor"
@@ -805,6 +814,25 @@
         "source_commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b"
       },
       "completed_at": 1791712464.270181,
+      "new_results": 0,
+      "decision": "NO_ACTION",
+      "reason": "Canonical briefs unchanged; no GSC/product connection configured in this Supervisor"
+    },
+    {
+      "run": "38133437694",
+      "attempt": "1",
+      "trigger": "push",
+      "commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
+      "started_at": 1791715891.029888,
+      "status": "COMPLETED",
+      "wake": {
+        "schema": 1,
+        "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+        "slot": 497698,
+        "issued_at": 1791715818,
+        "source_commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b"
+      },
+      "completed_at": 1791715892.0160115,
       "new_results": 0,
       "decision": "NO_ACTION",
       "reason": "Canonical briefs unchanged; no GSC/product connection configured in this Supervisor"
