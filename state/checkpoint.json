@@ -268,7 +268,7 @@
     }
   },
   "SEO_AUTOPILOT_STATUS": {
-    "current_commit": "8831556db97a4d1a31df6628aa9b21cd45f4292f",
+    "current_commit": "10b12a429e4997e86364dda4c1359ed918d45cfc",
     "last_schedule_run": 38148922221,
     "last_successful_schedule": null,
     "last_watchdog_recovery": {
@@ -308,7 +308,7 @@
             38104117458,
             38093303066
           ],
-          "commit": "8831556db97a4d1a31df6628aa9b21cd45f4292f",
+          "commit": "10b12a429e4997e86364dda4c1359ed918d45cfc",
           "transport_sources": [
             "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
             "74ced331e92b2deaedb139786b4a29f2603db1c6",
@@ -333,32 +333,32 @@
       },
       "STAGING_EXECUTOR": {
         "status": "FAIL",
-        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "reason": "NO_AUTHORIZED_ISOLATED_CMS_WRITE_CONNECTION",
         "evidence": null
       },
       "SEO_QA": {
         "status": "FAIL",
-        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "reason": "NO_REAL_STAGING_CHANGE_TO_VERIFY",
         "evidence": null
       },
       "SAFE_AUTO_PUBLISH": {
         "status": "FAIL",
-        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "reason": "NO_CMS_CAS_QA_AND_ROLLBACK_WRITER; FALLBACK_V2_PRESENT_IN_SEO_GENERATOR",
         "evidence": null
       },
       "MEASUREMENT_LOOP": {
         "status": "FAIL",
-        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "reason": "NO_PUBLISHED_EXPERIMENT_TO_OBSERVE",
         "evidence": null
       },
       "AUTO_ROLLBACK": {
         "status": "FAIL",
-        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "reason": "NO_CMS_RESTORE_EXECUTOR_OR_REAL_RESTORATION_PROOF",
         "evidence": null
       },
       "ATTRIBUTION_PIPELINE": {
         "status": "FAIL",
-        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "reason": "FIRST_TOUCH_CHECKOUT_PAYMENT_JOIN_AND_EVENT_DEDUP_NOT_AVAILABLE",
         "evidence": null
       },
       "WATCHDOG_RECOVERY": {
@@ -372,7 +372,7 @@
       },
       "PRIVACY_GATE": {
         "status": "FAIL",
-        "reason": "CAPABILITY_NOT_INSTALLED_OR_PROVEN",
+        "reason": "SUPERVISOR_WRITES_FILTERED; EXTERNAL_WRITER_AND_ARTIFACT_PATHS_NOT_FULLY_PROVEN",
         "evidence": null
       }
     },
