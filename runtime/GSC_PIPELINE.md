@@ -6,7 +6,7 @@ Runtime/watchdog verification is acquired; never inject a second crash.
 ## Daily data intake, prior to the normal hourly wake
 
 1. Read the latest private snapshot and public aggregate manifest. Refresh once
-   per UTC day; retry a failed read next wake, at most three attempts per day.
+   per UTC day after GSC_DIRECT_READ is proven. Until its first PASS, refresh at\n   every hosted wake (one read set per hour), so intake precedes the same-slot\n   executor and its attestation. Retry a failed read next wake, at most three\n   attempts per day.
 2. Use connected GSC Wizard for property https://fabrya.fr/:
    query_search_analytics dimensions [date,query,page], rowLimit 1000;
    query_search_analytics dimensions [page], rowLimit 1000; get_site_summary days28.
