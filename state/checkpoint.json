@@ -268,7 +268,7 @@
     }
   },
   "SEO_AUTOPILOT_STATUS": {
-    "current_commit": "62838183d035f100bd10badf39cfe7c7ae7de0e2",
+    "current_commit": "84deb3ddbe831adaf6fdab4670feceaeb13d8327",
     "last_wake": {
       "run": "38159976710",
       "attempt": "1",
@@ -314,7 +314,7 @@
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
       "completed_at": "2026-10-11T00:13:45Z"
     },
-    "last_external_wake": 38154706622,
+    "last_external_wake": 38159976710,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
@@ -334,6 +334,7 @@
         "evidence": {
           "scheduler": "HOSTED_AUTOMATION",
           "runs": [
+            38159976710,
             38154706622,
             38151302641,
             38146887778,
@@ -347,7 +348,7 @@
             38104117458,
             38093303066
           ],
-          "commit": "62838183d035f100bd10badf39cfe7c7ae7de0e2",
+          "commit": "84deb3ddbe831adaf6fdab4670feceaeb13d8327",
           "transport_sources": [
             "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
             "62838183d035f100bd10badf39cfe7c7ae7de0e2",
@@ -365,14 +366,14 @@
         "status": "PASS",
         "reason": "",
         "evidence": {
-          "snapshot_commit": "a1044f901620d214e2edb4d77310739494ff7f63",
-          "read_at": "2026-10-11T16:14:58.898Z",
+          "snapshot_commit": "8661c4717553c284d7b34dc49ef9c6141818d3b4",
+          "read_at": "2026-10-11T17:30:25.200Z",
           "start_date": "2026-09-11",
           "end_date": "2026-10-08",
           "settled_through": "UNKNOWN",
           "acquisition": "HOSTED_SCHEDULED_TASK",
-          "automation_slot": 497704,
-          "consumed_by_run": "38154706622"
+          "automation_slot": 497705,
+          "consumed_by_run": "38159976710"
         }
       },
       "OPPORTUNITY_ENGINE": {
