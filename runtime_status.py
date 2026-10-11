@@ -109,6 +109,9 @@ def reconcile(state, current_commit, runs, jobs_by_run):
         gates['SEO_RUNTIME_AUTONOMOUS'] = {'status': 'FAIL', 'reason': 'EXTERNAL_DELIVERY_RECOVERY_AND_FOLLOWING_WAKE_NOT_YET_PROVEN', 'evidence': None}
         gates['WATCHDOG_RECOVERY'] = {'status': 'FAIL', 'reason': 'EXTERNAL_CRASH_RECOVERY_NOT_YET_PROVEN', 'evidence': None}
     gates.update(capability_gates(state))
+    if not state.get('seo_decision'):
+        gates['GSC_DIRECT_READ']['reason'] = 'REAL_PRIVATE_READ_AVAILABLE; FIRST_HOSTED_CONSUMPTION_AND_ATTESTATION_PENDING'
+        gates['OPPORTUNITY_ENGINE']['reason'] = 'INSTALLED; FIRST_REAL_SUPERVISOR_DECISION_PENDING'
     reasons = {
         'STAGING_EXECUTOR': 'NO_AUTHORIZED_ISOLATED_CMS_WRITE_CONNECTION',
         'SEO_QA': 'NO_REAL_STAGING_CHANGE_TO_VERIFY',
@@ -123,6 +126,8 @@ def reconcile(state, current_commit, runs, jobs_by_run):
 
     status = {
         'current_commit': current_commit,
+        'last_wake': state.get('runtime_cycle'),
+        'last_successful_cycle': state.get('cycle_receipts', [None])[-1] if state.get('cycle_receipts') else None,
         'last_schedule_run': schedules[0]['id'] if schedules else None,
         'last_successful_schedule': successful[0]['id'] if successful else None,
         'last_watchdog_recovery': recovery,
