@@ -413,5 +413,15 @@
       "decision": "NO_ACTION",
       "reason": "Canonical briefs unchanged; no GSC/product connection configured in this Supervisor"
     }
-  ]
+  ],
+  "external_scheduler_attestations": {
+    "497686": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38093303066",
+      "wake_commit": "16c1448322074a15ddac8469ed64f708bd829811",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-10T22:57:42.054639+00:00",
+      "completed_tasks_unchanged": true
+    }
+  }
 }
