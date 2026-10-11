@@ -1674,35 +1674,70 @@
       },
       "decision": "NO_STAGE_DUPLICATE",
       "reason": "Existing garage stage received durably; photographer mirror absent"
+    },
+    {
+      "slot": 497707,
+      "observed_at": "2026-10-11T20:00:05.266Z",
+      "private_receipt_commit": "d83de38d1b91fc96375cb055acb43bd096d6204b",
+      "source_commit": "bde54d97ceed1d4f13583dc124470f3b8d8a66d2",
+      "wake_run": null,
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-11T18:49:13.160615+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "photographer_page": {
+          "status": 404
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01"
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Existing garage stage received durably; photographer mirror absent"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-11T19:08:07.244Z",
-    "acquisition": "MANUAL_CURRENT_STATE_INSPECTION",
-    "contract_commit": "5b154776922103248491fb227e179cb4ddfbd948",
+    "observed_at": "2026-10-11T20:00:05.266Z",
+    "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
+    "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 506,
     "public_source_commit": "4b7369b5bee6d400d13e0d52616ea88d87d4aab6",
+    "public_deployment_status": "succeeded",
     "public_price_eur_month": 90,
     "public_trial_days": 30,
-    "public_price_evidence": "Browser https://fabrya.fr/tarifs rendered EUR90/month and first charge after 30 days; deployed checkout source matches",
-    "product_branch_commit": "5a0efea2b6bea55f300a434c550f8cd7a062f3b3",
+    "public_price_evidence": "Browser https://fabrya.fr/tarifs rendered EUR90/month and first charge after 30 days; CTA targets root",
+    "product_branch_commit": "5f9d4e1633ee33d09339d105b31d92e27570e197",
+    "product_checkpoint_commit": "5f9d4e1633ee33d09339d105b31d92e27570e197",
+    "product_state": "BLOCKED_HUMAN",
     "product_public_ready": "NOT_YET",
     "product_public_deployment_status": "NOT_AUTHORIZED",
-    "private_version": 20,
-    "private_source_commit": "537ca5e92d841b1a7b297f3ba744b30d79c71c3b",
+    "private_version": 21,
+    "private_source_commit": "29a06450d7e089730c477173d595cb0ca31a5122",
+    "private_deployment_status": "succeeded",
     "private_attribution_http": 200,
-    "private_confirmed_live_payments": 0,
+    "private_confirmed_live_payments": "UNKNOWN",
     "private_exclusion_policy_ready": false,
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_manual_snapshot_commit": "86ca6b4a4c30fe39dabe7d9c9d9324f7ae7a9e86",
+    "gsc_private_snapshot_commit": "919b1fae5f769cce01764ead0a07bb27189080b7",
     "first_google_organic_customer": "NOT_YET",
     "current_action": "INSPECT_CURRENT_PUBLIC_PAGES_AND_PREPARE_AUTHORIZED_CONNECTIONS",
-    "next_action": "EXISTING_SCHEDULED_CYCLE_REFRESH_GSC_RECHECK_PUBLIC_PRODUCT_AND_PREPARE_BOUNDED_PUBLIC_CONNECTION",
-    "product_next_action": "QUEUE_BROWSER_QA",
-    "latest_product_checkpoint_observed_at": "2026-10-11T19:10:20.636Z",
-    "last_real_action": "READ_CURRENT_GSC_AND_INSPECT_RENDERED_PUBLIC_PRICE_AND_TWO_SEO_PAGES"
+    "next_action": "EXISTING_SCHEDULED_CYCLE_CONSUME_GSC_AND_CONTINUE_BOUNDED_INSPECTION",
+    "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
+    "latest_product_checkpoint_observed_at": "2026-10-11T19:32:40.279Z",
+    "last_real_action": "READ_CURRENT_GSC_INSPECT_PUBLIC_PRICE_AND_VERIFY_PRIVATE_CMS_ATTRIBUTION"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
