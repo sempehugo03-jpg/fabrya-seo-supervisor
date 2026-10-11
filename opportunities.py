@@ -112,7 +112,8 @@ def capability_gates(state):
     observed = [x for x in state.get('gsc_observations', [])
         if x['acquisition'] == 'HOSTED_SCHEDULED_TASK'
         and str(x['automation_slot']) in attested
-        and attested[str(x['automation_slot'])].get('delivery') == 'HOSTED_SCHEDULED_TASK']
+        and attested[str(x['automation_slot'])].get('delivery') == 'HOSTED_SCHEDULED_TASK'
+        and str(attested[str(x['automation_slot'])].get('run')) == str(x['consumed_by_run'])]
     result['GSC_DIRECT_READ'] = {'status': 'PASS' if observed else 'FAIL',
         'reason': '' if observed else 'REAL_READ_PERSISTED_AWAITING_HOSTED_DELIVERY_PROOF',
         'evidence': observed[-1] if observed else None}
