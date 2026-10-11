@@ -58,6 +58,37 @@ class DurableRuntime(unittest.TestCase):
         restore.assert_not_called()
 
 
+class HistoricalRecoveryEvidence(unittest.TestCase):
+    def test_reconcile_fetches_jobs_for_checkpoint_recovery_on_older_source(self):
+        state = {
+            'cycle_receipts': [{'run': '7', 'commit': 'old-source',
+                                'status': 'COMPLETED'}],
+            'events': [{'kind': 'RECOVERED', 'by': '7:1'}],
+        }
+        recovery = {'id': 7, 'event': 'workflow_run', 'head_branch': 'main',
+                    'head_sha': 'old-source', 'status': 'completed',
+                    'conclusion': 'success', 'run_attempt': 1}
+        recovery_jobs = [{'conclusion': 'success', 'steps': [
+            {'name': 'Verify recovery executor', 'conclusion': 'success'},
+            {'name': 'Recover same SEO state and unfinished useful task',
+             'conclusion': 'success'}]}]
+
+        def api(method, path, body=None):
+            if path.endswith('/git/ref/heads/main'):
+                return {'object': {'sha': 'current-source'}}
+            if path.endswith('/actions/runs?per_page=100'):
+                return {'workflow_runs': [recovery]}
+            if path.endswith('/actions/runs/7/jobs'):
+                return {'jobs': recovery_jobs}
+            raise AssertionError(path)
+
+        with patch.object(supervisor, 'api', side_effect=api), \
+             patch.object(supervisor, 'reconcile', return_value={'status': 'checked'}) as check:
+            self.assertEqual(supervisor.reconcile_runtime_status(state),
+                             {'status': 'checked'})
+        self.assertEqual(check.call_args.args[3]['7'], recovery_jobs)
+
+
 class TerminalContract(unittest.TestCase):
     setUp = DurableRuntime.setUp
     def test_incomplete_and_unproven_gates_never_complete(self):
