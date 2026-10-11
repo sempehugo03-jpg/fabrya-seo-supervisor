@@ -1795,7 +1795,7 @@
       "observed_at": "2026-10-11T20:00:05.266Z",
       "private_receipt_commit": "d83de38d1b91fc96375cb055acb43bd096d6204b",
       "source_commit": "bde54d97ceed1d4f13583dc124470f3b8d8a66d2",
-      "wake_run": null,
+      "wake_run": "38170384237",
       "delivery_attested": false,
       "observed_automation_last_run_time": "2026-10-11T18:49:13.160615+00:00",
       "reads": {
