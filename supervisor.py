@@ -233,9 +233,14 @@ def reconcile_runtime_status(state):
     current = api('GET', base + '/git/ref/heads/main')['object']['sha']
     runs = api('GET', base + '/actions/runs?per_page=100')['workflow_runs']
     receipt_ids = {str(item['run']) for item in state.get('cycle_receipts', [])}
+    recovery_ids = {event.get('by', '').split(':')[0]
+                    for event in state.get('events', [])
+                    if event.get('kind') == 'RECOVERED' and event.get('by')}
     jobs = {}
     for run in runs:
-        if (str(run['id']) in receipt_ids and (run.get('head_sha') == current or run.get('head_branch') == 'seo-wake')
+        if (str(run['id']) in receipt_ids
+            and (run.get('head_sha') == current or run.get('head_branch') == 'seo-wake'
+                 or str(run['id']) in recovery_ids)
             and run.get('status') == 'completed' and run.get('conclusion') == 'success'):
             jobs[str(run['id'])] = api('GET', base + '/actions/runs/'
                 + str(run['id']) + '/jobs')['jobs']
