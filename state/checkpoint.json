@@ -1995,7 +1995,7 @@
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-11T22:03:23.650Z",
+    "observed_at": "2026-10-11T22:56:04.489Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 506,
@@ -2003,7 +2003,7 @@
     "public_deployment_status": "succeeded",
     "public_price_eur_month": 90,
     "public_trial_days": 30,
-    "public_price_evidence": "Browser https://fabrya.fr/tarifs rendered EUR90/month and first charge after 30 days; CTA targets root",
+    "public_price_evidence": "Browser https://fabrya.fr/tarifs rendered EUR90/month and first charge after 30 days; both primary CTAs target root",
     "product_branch_commit": "5f9d4e1633ee33d09339d105b31d92e27570e197",
     "product_checkpoint_commit": "5f9d4e1633ee33d09339d105b31d92e27570e197",
     "product_state": "BLOCKED_TECHNICAL",
@@ -2023,8 +2023,8 @@
     "current_action": "INSPECT_CURRENT_PUBLIC_PAGES_AND_PREPARE_AUTHORIZED_CONNECTIONS",
     "next_action": "EXISTING_SCHEDULED_CYCLE_CONSUME_GSC_AND_CONTINUE_BOUNDED_INSPECTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "latest_product_checkpoint_observed_at": "2026-10-11T21:52:18.977Z",
-    "last_real_action": "READ_CURRENT_GSC_INSPECT_PUBLIC_PRICE_AND_VERIFY_PRIVATE_CMS_ATTRIBUTION"
+    "latest_product_checkpoint_observed_at": "2026-10-11T22:50:24.627Z",
+    "last_real_action": "REFRESH_GSC_REUSE_IDENTICAL_SLOT_SNAPSHOT_AND_REVALIDATE_PUBLIC_PRIVATE_BOUNDARY"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
