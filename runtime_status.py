@@ -96,7 +96,7 @@ def reconcile(state, current_commit, runs, jobs_by_run):
                                      'completed_at': rr.get('updated_at')}
                 break
     following = external_recovery and any(r.get('created_at', '') > external_recovery['completed_at'] for r in external)
-    distinct_slots = {receipts[str(r['id'])]['wake']['slot'] for r in external}
+    distinct_slots = {all_receipts[str(r['id'])]['wake']['slot'] for r in external}
     if len(distinct_slots) >= 2 and following:
         proof = {'scheduler': 'HOSTED_AUTOMATION', 'runs': [r['id'] for r in external],
                  'commit': current_commit,
