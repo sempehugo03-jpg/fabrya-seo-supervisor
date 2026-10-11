@@ -268,7 +268,7 @@
     }
   },
   "SEO_AUTOPILOT_STATUS": {
-    "current_commit": "10b12a429e4997e86364dda4c1359ed918d45cfc",
+    "current_commit": "e08b38ee299a089abc02f95c28e4e8e04dfe16c8",
     "last_schedule_run": 38148922221,
     "last_successful_schedule": null,
     "last_watchdog_recovery": {
@@ -308,7 +308,7 @@
             38104117458,
             38093303066
           ],
-          "commit": "10b12a429e4997e86364dda4c1359ed918d45cfc",
+          "commit": "e08b38ee299a089abc02f95c28e4e8e04dfe16c8",
           "transport_sources": [
             "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
             "74ced331e92b2deaedb139786b4a29f2603db1c6",
