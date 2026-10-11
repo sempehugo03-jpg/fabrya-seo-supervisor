@@ -270,13 +270,13 @@
   "SEO_AUTOPILOT_STATUS": {
     "current_commit": "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
     "last_schedule_run": 38148922221,
-    "last_successful_schedule": null,
+    "last_successful_schedule": 38148922221,
     "last_watchdog_recovery": {
       "run": 38097697056,
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
       "completed_at": "2026-10-11T00:13:45Z"
     },
-    "last_external_wake": 38142449145,
+    "last_external_wake": 38146887778,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
@@ -296,6 +296,7 @@
         "evidence": {
           "scheduler": "HOSTED_AUTOMATION",
           "runs": [
+            38146887778,
             38142449145,
             38137125451,
             38133437694,
@@ -366,7 +367,7 @@
       }
     },
     "current_action": "VALIDATE_DURABLE_RUNTIME",
-    "next_action": "VERIFY_EXTERNAL_WAKE_RECOVERY_AND_NEXT_CYCLE",
+    "next_action": "VERIFY_SCHEDULED_INTERRUPTION_AND_RECOVERY",
     "first_google_organic_customer": "NOT_YET",
     "terminal_state": "RUNNING"
   },
