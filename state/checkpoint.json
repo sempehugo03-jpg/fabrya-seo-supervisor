@@ -3438,10 +3438,39 @@
       "decision": "NO_STAGE_DUPLICATE",
       "reason": "Fresh GSC settlement advanced but rows and clicks were unchanged; existing garage stage remains the current bounded hypothesis",
       "wake_conclusion": "failure"
+    },
+    {
+      "slot": 497725,
+      "observed_at": "2026-10-12T13:57:33.940Z",
+      "private_receipt_commit": "0727e108f660e6e00ac1cec6b2641ff72d6b16c4",
+      "source_commit": "a1694844daa46abd0e86e5b4e7cd944507dcdac3",
+      "wake_run": "38257364499",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-12T13:45:09.052516+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01"
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh same-slot GSC responses unchanged; strict aggregate is repaired and next unique hourly wake must recover the persisted lease",
+      "wake_conclusion": "failure"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-12T13:39:15.766Z",
+    "observed_at": "2026-10-12T13:57:33.940Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 506,
@@ -3470,11 +3499,11 @@
     "internal_seo_utm_is_google_proof": false,
     "gsc_private_snapshot_commit": "6ed95e8f3f13ddbf783ae7388f54d2350d71dc49",
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "REPAIRED_STRICT_GSC_AGGREGATE_AFTER_VALIDATOR_FAILURE",
+    "current_action": "VERIFIED_STRICT_GSC_AGGREGATE_REPAIR_AFTER_RUN_FAILURE",
     "next_action": "NEXT_UNIQUE_HOURLY_WAKE_RECOVER_SAME_PERSISTED_LEASE",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-12T09:43:59.922Z",
-    "last_real_action": "FRESH_GSC_AND_PRODUCT_READS_SLOT_497725_BEFORE_WAKE"
+    "last_real_action": "FRESH_GSC_AND_PRODUCT_READS_SAME_SLOT_497725_NO_DUPLICATE_WAKE"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
