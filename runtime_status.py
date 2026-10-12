@@ -95,7 +95,65 @@ def reconcile(state, current_commit, runs, jobs_by_run):
                 external_recovery = {'run': rr['id'], 'commit': probe_commit,
                                      'completed_at': rr.get('updated_at')}
                 break
-    following = external_recovery and any(r.get('created_at', '') > external_recovery['completed_at'] for r in external)
+    if external_recovery:
+        state['external_recovery_evidence'] = {
+            'run': str(external_recovery['run']),
+            'commit': external_recovery['commit'],
+            'completed_at': external_recovery['completed_at'],
+            'probe_owner': external_probe.get('owner'),
+            'event_by': next((event.get('by') for event in state.get('events', [])
+                if event.get('kind') == 'RECOVERED'
+                and event.get('old_owner') == external_probe.get('owner')
+                and event.get('old_trigger') == 'push'
+                and event.get('trigger') == 'workflow_run'
+                and event.get('previous_conclusion') == 'failure'), None),
+            'receipt_status': 'COMPLETED',
+            'run_attempt': 1,
+            'run_conclusion': 'success',
+            'steps_verified': [
+                'Verify recovery executor',
+                'Recover same SEO state and unfinished useful task',
+            ],
+        }
+    else:
+        durable = state.get('external_recovery_evidence')
+        durable_run = durable and str(durable.get('run'))
+        durable_receipt = durable_run and all_receipts.get(durable_run)
+        durable_event = next((event for event in state.get('events', [])
+            if event.get('kind') == 'RECOVERED'
+            and event.get('old_owner') == (external_probe or {}).get('owner')
+            and event.get('old_trigger') == 'push'
+            and event.get('trigger') == 'workflow_run'
+            and event.get('previous_conclusion') == 'failure'
+            and event.get('by') == durable.get('event_by')), None) if durable else None
+        if (durable and external_probe and durable_event and durable_receipt
+                and durable.get('probe_owner') == external_probe.get('owner')
+                and durable.get('event_by') == durable_run + ':1'
+                and durable.get('commit') == durable_receipt.get('commit')
+                and durable_receipt.get('status') == 'COMPLETED'
+                and durable_receipt.get('trigger') == 'workflow_run'
+                and str(durable_receipt.get('attempt')) == '1'
+                and durable.get('receipt_status') == 'COMPLETED'
+                and durable.get('run_attempt') == 1
+                and durable.get('run_conclusion') == 'success'
+                and durable.get('steps_verified') == [
+                    'Verify recovery executor',
+                    'Recover same SEO state and unfinished useful task',
+                ]):
+            external_recovery = {'run': durable_run, 'commit': durable['commit'],
+                                 'completed_at': durable.get('completed_at')}
+
+    def instant(value):
+        if isinstance(value, (int, float)):
+            return float(value)
+        try:
+            return datetime.fromisoformat(str(value).replace('Z', '+00:00')).timestamp()
+        except (TypeError, ValueError):
+            return 0.0
+
+    following = external_recovery and any(
+        instant(r.get('created_at')) > instant(external_recovery.get('completed_at'))
+        for r in external)
     distinct_slots = {all_receipts[str(r['id'])]['wake']['slot'] for r in external}
     if len(distinct_slots) >= 2 and following:
         proof = {'scheduler': 'HOSTED_AUTOMATION', 'runs': [r['id'] for r in external],
