@@ -290,6 +290,16 @@
       "task": "competitor-surface:2026-W42:v2",
       "owner": "38188421300:1",
       "trigger": "push"
+    },
+    {
+      "kind": "CODE_REPAIR",
+      "defect": "NULL_RECOVERY_RUN_DEREFERENCE_FAIL_CLOSED",
+      "failed_wake_run": "38204700067",
+      "failed_watchdog_run": "38204730103",
+      "fix_commit": "a1694844daa46abd0e86e5b4e7cd944507dcdac3",
+      "validation_run": "38204812337",
+      "validation_conclusion": "success",
+      "validated_at": "2026-10-12T04:41:43Z"
     }
   ],
   "blocked": [
@@ -2517,7 +2527,7 @@
       "observed_at": "2026-10-12T04:39:21.244Z",
       "private_receipt_commit": "1790e6f84c3a498c6718a3022395285deb3684fb",
       "source_commit": "bde54d97ceed1d4f13583dc124470f3b8d8a66d2",
-      "wake_run": null,
+      "wake_run": "38204700067",
       "delivery_attested": false,
       "observed_automation_last_run_time": "2026-10-12T03:45:19.115088+00:00",
       "reads": {
@@ -2541,7 +2551,9 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Existing garage stage received durably; photographer mirror absent"
+      "reason": "Existing garage stage received durably; photographer mirror absent",
+      "wake_conclusion": "failure",
+      "failure_step": "Reconcile externally verified terminal status"
     }
   ],
   "public_product_resync": {
