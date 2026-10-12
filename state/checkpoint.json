@@ -1514,6 +1514,14 @@
       "delivery": "HOSTED_SCHEDULED_TASK",
       "observed_last_run_time": "2026-10-11T22:04:25.592833+00:00",
       "completed_tasks_unchanged": true
+    },
+    "497712": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38188421300",
+      "wake_commit": "2bdaaf83132546b16751598de3c995762640fce0",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-12T00:35:14.768051+00:00",
+      "completed_tasks_unchanged": true
     }
   },
   "scheduled_baseline": {
@@ -2207,7 +2215,7 @@
       "private_receipt_commit": "19d0dcebcebac10f6439b1a5e9f8fe0f0ca6695c",
       "source_commit": "bde54d97ceed1d4f13583dc124470f3b8d8a66d2",
       "wake_run": "38188421300",
-      "delivery_attested": false,
+      "delivery_attested": true,
       "observed_automation_last_run_time": "2026-10-11T22:56:22.735229+00:00",
       "reads": {
         "garage_page": {
@@ -2234,7 +2242,7 @@
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-12T00:32:40.186Z",
+    "observed_at": "2026-10-12T00:44:10.000Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 506,
@@ -2263,7 +2271,7 @@
     "next_action": "EXISTING_SCHEDULED_CYCLE_CONSUME_GSC_AND_CONTINUE_BOUNDED_INSPECTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-11T22:50:24.627Z",
-    "last_real_action": "REFRESH_GSC_PERSIST_NEW_WINDOW_AND_REVALIDATE_PUBLIC_PRIVATE_BOUNDARY"
+    "last_real_action": "ATTEST_SLOT_497712_AND_REFRESH_IDENTICAL_GSC_PRODUCT_READS"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
