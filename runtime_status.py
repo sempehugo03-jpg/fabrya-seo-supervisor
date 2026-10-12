@@ -80,9 +80,9 @@ def reconcile(state, current_commit, runs, jobs_by_run):
             rr = next((r for r in runs if str(r['id']) == event.get('by', '').split(':')[0]), None)
             rr_receipt = rr and all_receipts.get(str(rr['id']))
             probe_commit = external_probe.get('wake', {}).get('source_commit')
+            rr_jobs = jobs_by_run.get(str(rr['id']), []) if rr else []
             rr_steps = {step.get('name'): step.get('conclusion')
-                        for job in jobs_by_run.get(str(rr['id']), []) if rr
-                        and job.get('conclusion') == 'success'
+                        for job in rr_jobs if job.get('conclusion') == 'success'
                         for step in job.get('steps', [])}
             if (rr and rr_receipt and probe_commit
                     and rr.get('event') == 'workflow_run'
