@@ -373,7 +373,7 @@
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
       "completed_at": "2026-10-11T00:13:45Z"
     },
-    "last_external_wake": 38193699787,
+    "last_external_wake": 38200288801,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
@@ -393,6 +393,7 @@
         "evidence": {
           "scheduler": "HOSTED_AUTOMATION",
           "runs": [
+            38200288801,
             38193699787,
             38188421300,
             38178882166,
@@ -431,14 +432,14 @@
         "status": "PASS",
         "reason": "",
         "evidence": {
-          "snapshot_commit": "1bb749f92174776be976eeaeb5eb2beb203b168a",
-          "read_at": "2026-10-12T01:51:08.000Z",
+          "snapshot_commit": "45cc6831d55274981bb371179479d0ea4c708b7c",
+          "read_at": "2026-10-12T03:33:00.677Z",
           "start_date": "2026-09-12",
           "end_date": "2026-10-09",
-          "settled_through": "UNKNOWN",
+          "settled_through": "2026-10-09",
           "acquisition": "HOSTED_SCHEDULED_TASK",
-          "automation_slot": 497713,
-          "consumed_by_run": "38193699787"
+          "automation_slot": 497715,
+          "consumed_by_run": "38200288801"
         }
       },
       "OPPORTUNITY_ENGINE": {
@@ -1619,6 +1620,14 @@
       "delivery": "HOSTED_SCHEDULED_TASK",
       "observed_last_run_time": "2026-10-12T01:55:28.525923+00:00",
       "completed_tasks_unchanged": true
+    },
+    "497715": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38200288801",
+      "wake_commit": "8882853ea2a04ad1809bae9cc425d9f71a1eb248",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-12T03:35:40.197867+00:00",
+      "completed_tasks_unchanged": true
     }
   },
   "scheduled_baseline": {
@@ -2526,7 +2535,7 @@
       "private_receipt_commit": "ac36c5a2755fe2d85a497f30910633048c9b8e73",
       "source_commit": "bde54d97ceed1d4f13583dc124470f3b8d8a66d2",
       "wake_run": "38200288801",
-      "delivery_attested": false,
+      "delivery_attested": true,
       "observed_automation_last_run_time": "2026-10-12T01:55:28.525923+00:00",
       "reads": {
         "garage_page": {
@@ -2553,7 +2562,7 @@
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-12T03:33:11.859Z",
+    "observed_at": "2026-10-12T03:42:33.826Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 506,
@@ -2582,7 +2591,7 @@
     "next_action": "EXISTING_SCHEDULED_CYCLE_CONSUME_GSC_AND_CONTINUE_BOUNDED_INSPECTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-12T02:19:23.231Z",
-    "last_real_action": "REFRESH_GSC_PERSIST_NEW_SLOT_AND_REVALIDATE_PUBLIC_PRIVATE_BOUNDARY"
+    "last_real_action": "RECHECK_IDENTICAL_GSC_AND_PRODUCT_STATE_NO_DUPLICATE_WAKE"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
