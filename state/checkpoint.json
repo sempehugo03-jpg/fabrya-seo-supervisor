@@ -1805,6 +1805,16 @@
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497718,
       "consumed_by_run": "38212251567"
+    },
+    {
+      "snapshot_commit": "14a47620bae22d465bd89d38d0b328605ee36765",
+      "read_at": "2026-10-12T07:49:28.022Z",
+      "start_date": "2026-09-12",
+      "end_date": "2026-10-09",
+      "settled_through": "2026-10-09",
+      "acquisition": "HOSTED_SCHEDULED_TASK",
+      "automation_slot": 497719,
+      "consumed_by_run": null
     }
   ],
   "seo_decision": {
@@ -2713,7 +2723,7 @@
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-12T06:22:46.238Z",
+    "observed_at": "2026-10-12T07:51:40.035Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 506,
@@ -2736,13 +2746,13 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "7b7efeb0cbe69199acc45e83f343d6b2afc88e1f",
+    "gsc_private_snapshot_commit": "14a47620bae22d465bd89d38d0b328605ee36765",
     "first_google_organic_customer": "NOT_YET",
     "current_action": "INSPECT_CURRENT_PUBLIC_PAGES_AND_PREPARE_AUTHORIZED_CONNECTIONS",
     "next_action": "EXISTING_SCHEDULED_CYCLE_CONSUME_GSC_AND_CONTINUE_BOUNDED_INSPECTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-12T02:19:23.231Z",
-    "last_real_action": "FRESH_GSC_AND_PRODUCT_READS_SLOT_497718_BEFORE_WAKE"
+    "last_real_action": "FRESH_GSC_AND_PRODUCT_READS_SLOT_497719_BEFORE_WAKE"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
