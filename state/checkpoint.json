@@ -1985,6 +1985,16 @@
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497722,
       "consumed_by_run": "38234650156"
+    },
+    {
+      "snapshot_commit": "e50e124a5301b406fc909701f8bd4df7929268e1",
+      "read_at": "2026-10-12T11:27:30.475Z",
+      "start_date": "2026-09-12",
+      "end_date": "2026-10-09",
+      "settled_through": "2026-10-09",
+      "acquisition": "HOSTED_SCHEDULED_TASK",
+      "automation_slot": 497723,
+      "consumed_by_run": null
     }
   ],
   "seo_decision": {
