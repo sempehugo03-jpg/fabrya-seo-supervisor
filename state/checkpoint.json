@@ -413,7 +413,7 @@
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
       "completed_at": 1791677619.6435385
     },
-    "last_external_wake": 38307472863,
+    "last_external_wake": 38311784761,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
@@ -2282,6 +2282,14 @@
       "wake_commit": "a3c380dcfb75e31934c431da48d632af6b9f499a",
       "delivery": "HOSTED_SCHEDULED_TASK",
       "observed_last_run_time": "2026-10-12T20:58:16.455276+00:00",
+      "completed_tasks_unchanged": true
+    },
+    "497733": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38311784761",
+      "wake_commit": "36e3e3f791eb5d84f67c12c7b3190a8a804ffce9",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-12T21:38:58.106384+00:00",
       "completed_tasks_unchanged": true
     }
   },
@@ -4491,8 +4499,8 @@
       "private_receipt_commit": "d5fc0853baef772ae4aa75f7d58819724ab22de2",
       "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
       "wake_run": "38311784761",
-      "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-12T20:58:16.455276+00:00",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-12T21:38:58.106384+00:00",
       "reads": {
         "garage_page": {
           "status": 200,
