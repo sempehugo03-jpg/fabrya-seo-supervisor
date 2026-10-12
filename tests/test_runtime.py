@@ -125,6 +125,25 @@ class TerminalContract(unittest.TestCase):
         self.assertEqual(result['gates']['SEO_RUNTIME_AUTONOMOUS']['status'], 'PASS')
         self.assertEqual(result['terminal_state'], 'RUNNING')
 
+    def test_missing_external_recovery_run_fails_closed(self):
+        state = supervisor.empty_state()
+        state['external_scheduler_config'] = {'automation_id': 'hosted'}
+        state['probes']['external-runtime-verification-20261011'] = {
+            'owner': 'missing:1',
+            'wake': {'source_commit': 'current'},
+        }
+        state['events'] = [{
+            'kind': 'RECOVERED',
+            'old_owner': 'missing:1',
+            'old_trigger': 'push',
+            'trigger': 'workflow_run',
+            'previous_conclusion': 'failure',
+            'by': '999:1',
+        }]
+        result = reconcile(state, 'current', [], {})
+        self.assertEqual(result['terminal_state'], 'RUNNING')
+        self.assertEqual(result['gates']['WATCHDOG_RECOVERY']['status'], 'FAIL')
+
     def test_schedule_checkpoints_no_action_and_current_commit(self):
         state = supervisor.empty_state()
         state['probes'] = {'scheduled-runtime-verification-20261010': {}}
