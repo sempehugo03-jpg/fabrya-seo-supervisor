@@ -35,7 +35,8 @@ class ExternalScheduler(unittest.TestCase):
             issued = datetime.fromisoformat(stamp).timestamp(); slot = int(issued // 3600)
             wake = {'slot': slot, 'issued_at': issued, 'automation_id': AUTOMATION_ID}
             state['cycle_receipts'].append({'run': str(i), 'commit': 'current',
-                                           'status': 'COMPLETED', 'wake': wake})
+                                           'status': 'COMPLETED', 'trigger': event,
+                                           'attempt': '1', 'wake': wake})
             runs.append({'id': i, 'head_branch': branch, 'event': event, 'status': 'completed',
                          'conclusion': 'success', 'run_attempt': 1, 'head_sha': 'current' if i == 3 else str(i),
                          'created_at': stamp, 'updated_at': stamp})
