@@ -1920,7 +1920,7 @@
       "settled_through": "2026-10-09",
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497721,
-      "consumed_by_run": null
+      "consumed_by_run": "38229651709"
     }
   ],
   "seo_decision": {
@@ -2979,10 +2979,31 @@
       "decision": "NO_STAGE_DUPLICATE",
       "reason": "GSC unchanged; existing garage stage remains the current bounded hypothesis",
       "wake_conclusion": "success"
+    },
+    {
+      "slot": 497721,
+      "observed_at": "2026-10-12T09:23:47.753Z",
+      "private_receipt_commit": "81b58c784abd893335f455529cadc9c8b599616e",
+      "source_commit": "a1694844daa46abd0e86e5b4e7cd944507dcdac3",
+      "wake_run": "38229651709",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-12T07:53:44.903112+00:00",
+      "reads": {
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "GSC unchanged; existing garage stage remains the current bounded hypothesis",
+      "wake_conclusion": "success"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-12T07:51:40.035Z",
+    "observed_at": "2026-10-12T09:23:47.753Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 506,
@@ -2991,11 +3012,11 @@
     "public_price_eur_month": 90,
     "public_trial_days": 30,
     "public_price_evidence": "Browser https://fabrya.fr/tarifs rendered EUR90/month and first charge after 30 days; both primary CTAs target root",
-    "product_branch_commit": "5f9d4e1633ee33d09339d105b31d92e27570e197",
-    "product_checkpoint_commit": "5f9d4e1633ee33d09339d105b31d92e27570e197",
-    "product_state": "BLOCKED_HUMAN",
-    "product_public_ready": "NOT_YET",
-    "product_public_deployment_status": "NOT_AUTHORIZED",
+    "product_branch_commit": "UNKNOWN_BRANCH_MISSING",
+    "product_checkpoint_commit": "UNKNOWN_BRANCH_MISSING",
+    "product_state": "UNKNOWN_BRANCH_MISSING",
+    "product_public_ready": "UNKNOWN",
+    "product_public_deployment_status": "UNKNOWN",
     "private_version": 22,
     "private_source_commit": "e2690dc45c5ab62912f15fb483ed84b8081d5f94",
     "private_deployment_status": "succeeded",
@@ -3005,13 +3026,13 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "14a47620bae22d465bd89d38d0b328605ee36765",
+    "gsc_private_snapshot_commit": "da48471a8822df9a4efc6d72970c47fd346a21fc",
     "first_google_organic_customer": "NOT_YET",
     "current_action": "INSPECT_CURRENT_PUBLIC_PAGES_AND_PREPARE_AUTHORIZED_CONNECTIONS",
     "next_action": "EXISTING_SCHEDULED_CYCLE_CONSUME_GSC_AND_CONTINUE_BOUNDED_INSPECTION",
-    "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "latest_product_checkpoint_observed_at": "2026-10-12T02:19:23.231Z",
-    "last_real_action": "FRESH_GSC_AND_PRODUCT_READS_SLOT_497719_BEFORE_WAKE"
+    "product_next_action": "RECHECK_CURRENT_PRODUCT_STATE_BRANCH_OR_SITE",
+    "latest_product_checkpoint_observed_at": "UNKNOWN_BRANCH_MISSING",
+    "last_real_action": "FRESH_GSC_AND_PRODUCT_READS_SLOT_497721_BEFORE_WAKE"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
