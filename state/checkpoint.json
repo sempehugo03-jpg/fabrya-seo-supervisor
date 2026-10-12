@@ -4200,10 +4200,45 @@
       "decision": "NO_STAGE_DUPLICATE",
       "reason": "Fresh GSC rows and clicks unchanged; existing bounded garage stage remains the current hypothesis; public writer remains unproven",
       "wake_conclusion": "success"
+    },
+    {
+      "slot": 497731,
+      "observed_at": "2026-10-12T19:52:58.483Z",
+      "private_receipt_commit": "72c33b0887638d4ed0ca46c71d5984d74af2074c",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "wake_run": "38295873361",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-12T19:12:01.150273+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "sessions": 14,
+          "projects": 1,
+          "demos": 0,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01"
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Same-slot fresh GSC payload unchanged; existing garage stage remains received and no production writer is proven",
+      "wake_conclusion": "success",
+      "gsc_snapshot_reused": true
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-12T19:09:58.983Z",
+    "observed_at": "2026-10-12T19:52:58.483Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 506,
@@ -4214,13 +4249,13 @@
     "public_price_evidence": "Browser https://fabrya.fr/tarifs rendered EUR90/month and first charge after 30 days; primary CTAs target root",
     "product_repository": "sempehugo03-jpg/signature-digital-core",
     "product_branch_commit": "5f9d4e1633ee33d09339d105b31d92e27570e197",
-    "product_checkpoint_commit": "bfebb9cfd5b1dc109c15b2de4ffc8d49de474914",
-    "product_checkpoint_blob": "df1125400e3df4d51a3e2d810d67aaa1f2ade2c6",
+    "product_checkpoint_commit": "78baa6eba137941e2bc62e1bb5e90472c3e84d03",
+    "product_checkpoint_blob": "17249c85edfff8c4d25c9a3b612538089ab62386",
     "product_state": "BLOCKED_HUMAN",
     "product_public_ready": "NO",
     "product_public_deployment_status": "NOT_AUTHORIZED",
     "product_human_blocker": "CODEX_PRODUCT_AUTHENTICATION_REQUIRED",
-    "product_technical_blocker": "BROWSER_QA_CONSUMER_NOT_CONNECTED",
+    "product_technical_blocker": "DURABLE_PRODUCT_CODEX_CONSUMER_NOT_AUTHENTICATED",
     "private_version": 22,
     "private_source_commit": "e2690dc45c5ab62912f15fb483ed84b8081d5f94",
     "private_deployment_status": "succeeded",
@@ -4231,12 +4266,13 @@
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
     "gsc_private_snapshot_commit": "a9c64a26670c2fc32b258b5e019dea29f2df5c34",
+    "gsc_snapshot_reused_same_slot": true,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "ATTESTED_SLOT_497730; FRESH_GSC_CONSUMED; SLOT_497731_SUCCEEDED; NO_DUPLICATE_STAGE",
-    "next_action": "NEXT_WAKE_ATTEST_SLOT_497731_ONLY_IF_AUTOMATION_METADATA_MATCHES; REFRESH_GSC",
+    "current_action": "ATTESTED_SLOT_497731; SAME_SLOT_FRESH_GSC_IDENTICAL; NO_DUPLICATE_WAKE; NO_DUPLICATE_STAGE",
+    "next_action": "NEXT_UNIQUE_HOURLY_WAKE; REFRESH_GSC",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "latest_product_checkpoint_observed_at": "2026-10-12T17:58:53Z",
-    "last_real_action": "VERIFIED_HOSTED_DELIVERY_SLOT_497730_AND_SUCCESSFUL_CURRENT_WAKE_WITH_PRESERVED_RECOVERY_PROOF"
+    "latest_product_checkpoint_observed_at": "2026-10-12T19:43:39Z",
+    "last_real_action": "VERIFIED_HOSTED_DELIVERY_SLOT_497731_AND_PRESERVED_RECOVERY_PROOF"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
