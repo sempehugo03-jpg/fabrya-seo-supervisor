@@ -3994,10 +3994,39 @@
       "decision": "NO_STAGE_DUPLICATE",
       "reason": "Fresh GSC rows and clicks unchanged; existing bounded garage stage remains the current hypothesis",
       "wake_conclusion": "success"
+    },
+    {
+      "slot": 497730,
+      "observed_at": "2026-10-12T18:14:49.000Z",
+      "private_receipt_commit": "6ca5a66bf090882159ecc1181ac4df89a55b5c0a",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "wake_run": "38289679524",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-12T17:24:20.910622+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01"
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC rows and clicks unchanged; existing bounded garage stage remains the current hypothesis",
+      "wake_conclusion": "success"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-12T17:17:13.474Z",
+    "observed_at": "2026-10-12T18:14:49.000Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 506,
@@ -4009,8 +4038,8 @@
     "product_repository": "sempehugo03-jpg/signature-digital-core",
     "product_branch_commit": "5f9d4e1633ee33d09339d105b31d92e27570e197",
     "product_checkpoint_commit": "4d09d4fe427603edca3a4bf2540bf85740ce6e97",
-    "product_checkpoint_blob": "66f09170a1048237f288c89b39d02a3832c0d0ec",
-    "product_state": "BLOCKED_TECHNICAL",
+    "product_checkpoint_blob": "df1125400e3df4d51a3e2d810d67aaa1f2ade2c6",
+    "product_state": "BLOCKED_HUMAN",
     "product_public_ready": "NO",
     "product_public_deployment_status": "NOT_AUTHORIZED",
     "product_human_blocker": "CODEX_PRODUCT_AUTHENTICATION_REQUIRED",
@@ -4024,13 +4053,13 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "b6e560d02974aea186d64b4ae324387d96b2f3b1",
+    "gsc_private_snapshot_commit": "0e7b4e7a0b7c2b5b67865cdd074b08e80acc31ef",
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "FRESH_GSC_CONSUMED; SLOT_497729_SUCCEEDED; VERIFIED_RECOVERY_EVIDENCE_PERSISTED; PROOF_RETENTION_TESTS_PASS_7_OF_7",
-    "next_action": "NEXT_HOURLY_WAKE_USES_MAIN_1A2F960; ATTEST_SLOT_497729_ONLY_IF_AUTOMATION_METADATA_MATCHES",
+    "current_action": "ATTESTED_SLOT_497729; FRESH_GSC_CONSUMED; SLOT_497730_SUCCEEDED; NO_DUPLICATE_STAGE",
+    "next_action": "NEXT_WAKE_ATTEST_SLOT_497730_ONLY_IF_AUTOMATION_METADATA_MATCHES; REFRESH_GSC",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-12T09:43:59.922Z",
-    "last_real_action": "ATTESTED_SLOT_497728; PERSISTED_VERIFIED_RECOVERY_WITH_DIRECT_JOB_STEP_PROOF; REPAIRED_100_RUN_EVIDENCE_EROSION; TARGETED_TESTS_PASS"
+    "last_real_action": "VERIFIED_HOSTED_DELIVERY_SLOT_497729_AND_SUCCESSFUL_CURRENT_WAKE_WITH_PRESERVED_RECOVERY_PROOF"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
