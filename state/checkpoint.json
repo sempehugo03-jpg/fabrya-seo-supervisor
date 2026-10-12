@@ -1796,7 +1796,7 @@
       "settled_through": "2026-10-09",
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497718,
-      "consumed_by_run": null
+      "consumed_by_run": "38212251567"
     }
   ],
   "seo_decision": {
@@ -2676,7 +2676,7 @@
       "observed_at": "2026-10-12T06:22:15.099Z",
       "private_receipt_commit": "850168aacb166b6633ca755e6efc07114420af56",
       "source_commit": "a1694844daa46abd0e86e5b4e7cd944507dcdac3",
-      "wake_run": null,
+      "wake_run": "38212251567",
       "delivery_attested": false,
       "observed_automation_last_run_time": "2026-10-12T04:42:30.875523+00:00",
       "reads": {
@@ -2700,7 +2700,8 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Existing garage stage received durably; photographer mirror absent"
+      "reason": "Existing garage stage received durably; photographer mirror absent",
+      "wake_conclusion": "success"
     }
   ],
   "public_product_resync": {
