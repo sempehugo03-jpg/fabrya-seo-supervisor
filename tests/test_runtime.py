@@ -128,10 +128,10 @@ class TerminalContract(unittest.TestCase):
     def test_missing_external_recovery_run_fails_closed(self):
         state = supervisor.empty_state()
         state['external_scheduler_config'] = {'automation_id': 'hosted'}
-        state['probes']['external-runtime-verification-20261011'] = {
+        state['probes'] = {'external-runtime-verification-20261011': {
             'owner': 'missing:1',
             'wake': {'source_commit': 'current'},
-        }
+        }}
         state['events'] = [{
             'kind': 'RECOVERED',
             'old_owner': 'missing:1',
