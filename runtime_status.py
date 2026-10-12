@@ -1,5 +1,7 @@
 """Public control metadata only; no search, acquisition or customer payloads."""
 
+from datetime import datetime
+
 from external_scheduler import verified_external_runs, PROBE_ID
 from opportunities import capability_gates
 
