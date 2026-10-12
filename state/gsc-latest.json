@@ -1,21 +1,41 @@
 {
   "schema": 1,
   "source": "GSC_API",
-  "read_at": "2026-10-11T22:02:51.466Z",
-  "start_date": "2026-09-11",
-  "end_date": "2026-10-08",
+  "read_at": "2026-10-12T00:30:21.245Z",
+  "start_date": "2026-09-12",
+  "end_date": "2026-10-09",
   "settled_through": "UNKNOWN",
-  "private_snapshot_commit": "725c1ff84e22fa6941c9ba2ab556eab799557b06",
+  "private_snapshot_commit": "3cabba2a1cdcb30eccb866424f8e5938cca292a9",
   "acquisition": "HOSTED_SCHEDULED_TASK",
-  "automation_slot": 497710,
+  "automation_slot": 497712,
   "pages": [
     {
       "url": "https://fabrya.fr/",
       "clicks": 0,
-      "impressions": 25,
+      "impressions": 27,
       "ctr": 0,
-      "position": 1.3599999999999999,
+      "position": 1.3333333333333333,
       "commercial_intent": "BRAND",
+      "nonbrand_visible_impressions": "UNKNOWN",
+      "nonbrand_visible_position": "UNKNOWN"
+    },
+    {
+      "url": "https://fabrya.fr/conseils/google-artisan",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 2,
+      "commercial_intent": "UNKNOWN",
+      "nonbrand_visible_impressions": "UNKNOWN",
+      "nonbrand_visible_position": "UNKNOWN"
+    },
+    {
+      "url": "https://fabrya.fr/conseils/seo-local",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 1.4,
+      "commercial_intent": "UNKNOWN",
       "nonbrand_visible_impressions": "UNKNOWN",
       "nonbrand_visible_position": "UNKNOWN"
     },
