@@ -3688,10 +3688,39 @@
       "decision": "NO_STAGE_DUPLICATE",
       "reason": "Fresh GSC rows and clicks unchanged; existing bounded garage stage remains the current hypothesis",
       "wake_conclusion": "success"
+    },
+    {
+      "slot": 497728,
+      "observed_at": "2026-10-12T16:21:01.437Z",
+      "private_receipt_commit": "5823a0c6df1412d3e03ada2bf3a24aa6c6a2b3ef",
+      "source_commit": "a1694844daa46abd0e86e5b4e7cd944507dcdac3",
+      "wake_run": "38276555485",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-12T14:50:08.146163+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01"
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC rows and clicks unchanged; existing bounded garage stage remains the current hypothesis",
+      "wake_conclusion": "success"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-12T14:49:47.973Z",
+    "observed_at": "2026-10-12T16:21:01.437Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 506,
@@ -3718,13 +3747,13 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "e5453a93809d66d6a9820c870c52ea31f9aaafb8",
+    "gsc_private_snapshot_commit": "81876d3906518c0c7d77b7dac20fc59d72c8e884",
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "RECOVERED_SAME_PERSISTED_LEASE_AND_CONSUMED_CURRENT_GSC",
-    "next_action": "NEXT_WAKE_ATTEST_PREVIOUS_SUCCESS_IF_AUTOMATION_METADATA_MATCHES; REFRESH_GSC",
+    "current_action": "FRESH_GSC_CONSUMED_AND_CURRENT_WAKE_SUCCEEDED",
+    "next_action": "NEXT_WAKE_ATTEST_SLOT_497728_IF_AUTOMATION_METADATA_MATCHES; REFRESH_GSC",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-12T09:43:59.922Z",
-    "last_real_action": "FRESH_GSC_PRODUCT_READS_AND_SUCCESSFUL_RECOVERY_SLOT_497726_NO_DUPLICATE_STAGE"
+    "last_real_action": "ATTESTED_SLOT_497726_AND_SUCCESSFUL_SLOT_497728_NO_DUPLICATE_STAGE"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
