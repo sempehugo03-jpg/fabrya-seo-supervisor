@@ -3559,10 +3559,39 @@
       "decision": "NO_STAGE_DUPLICATE",
       "reason": "Fresh same-slot GSC responses unchanged; strict aggregate is repaired and next unique hourly wake must recover the persisted lease",
       "wake_conclusion": "failure"
+    },
+    {
+      "slot": 497726,
+      "observed_at": "2026-10-12T14:49:47.973Z",
+      "private_receipt_commit": "e3c4f0d390b2a3beadda2f15dc3bc745f7f12f7e",
+      "source_commit": "a1694844daa46abd0e86e5b4e7cd944507dcdac3",
+      "wake_run": "38265570101",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-12T13:59:26.220407+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01"
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC rows and clicks unchanged; existing bounded garage stage remains the current hypothesis",
+      "wake_conclusion": "success"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-12T13:57:33.940Z",
+    "observed_at": "2026-10-12T14:49:47.973Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 506,
@@ -3570,7 +3599,7 @@
     "public_deployment_status": "succeeded",
     "public_price_eur_month": 90,
     "public_trial_days": 30,
-    "public_price_evidence": "Browser https://fabrya.fr/tarifs rendered EUR90/month and first charge after 30 days; both primary CTAs target root",
+    "public_price_evidence": "Browser https://fabrya.fr/tarifs rendered EUR90/month and first charge after 30 days; primary CTAs target root",
     "product_repository": "sempehugo03-jpg/signature-digital-core",
     "product_branch_commit": "5f9d4e1633ee33d09339d105b31d92e27570e197",
     "product_checkpoint_commit": "4d09d4fe427603edca3a4bf2540bf85740ce6e97",
@@ -3589,13 +3618,13 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "6ed95e8f3f13ddbf783ae7388f54d2350d71dc49",
+    "gsc_private_snapshot_commit": "e5453a93809d66d6a9820c870c52ea31f9aaafb8",
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "VERIFIED_STRICT_GSC_AGGREGATE_REPAIR_AFTER_RUN_FAILURE",
-    "next_action": "NEXT_UNIQUE_HOURLY_WAKE_RECOVER_SAME_PERSISTED_LEASE",
+    "current_action": "RECOVERED_SAME_PERSISTED_LEASE_AND_CONSUMED_CURRENT_GSC",
+    "next_action": "NEXT_WAKE_ATTEST_PREVIOUS_SUCCESS_IF_AUTOMATION_METADATA_MATCHES; REFRESH_GSC",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-12T09:43:59.922Z",
-    "last_real_action": "FRESH_GSC_AND_PRODUCT_READS_SAME_SLOT_497725_NO_DUPLICATE_WAKE"
+    "last_real_action": "FRESH_GSC_PRODUCT_READS_AND_SUCCESSFUL_RECOVERY_SLOT_497726_NO_DUPLICATE_STAGE"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
