@@ -4484,10 +4484,44 @@
       "decision": "NO_STAGE_DUPLICATE",
       "reason": "Fresh GSC was read before the wake; existing bounded garage stage remains received; public writer remains unproven",
       "wake_conclusion": "success"
+    },
+    {
+      "slot": 497733,
+      "observed_at": "2026-10-12T21:37:13.299Z",
+      "private_receipt_commit": "d5fc0853baef772ae4aa75f7d58819724ab22de2",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "wake_run": "38311784761",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-12T20:58:16.455276+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "sessions": 14,
+          "projects": 1,
+          "demos": 0,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01"
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC was read before the wake; existing bounded garage stage remains received; public writer remains unproven",
+      "wake_conclusion": "success"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-12T20:56:23.089Z",
+    "observed_at": "2026-10-12T21:37:13.299Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 506,
@@ -4498,7 +4532,6 @@
     "public_price_evidence": "Browser https://fabrya.fr/tarifs rendered EUR90/month and first charge after 30 days; primary CTAs target root",
     "product_repository": "sempehugo03-jpg/signature-digital-core",
     "product_branch_commit": "5f9d4e1633ee33d09339d105b31d92e27570e197",
-    "product_checkpoint_commit": "78baa6eba137941e2bc62e1bb5e90472c3e84d03",
     "product_checkpoint_blob": "17249c85edfff8c4d25c9a3b612538089ab62386",
     "product_state": "BLOCKED_HUMAN",
     "product_public_ready": "NO",
@@ -4514,14 +4547,14 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "a225e35bc19b27e82354cc8291a7f5efcac10925",
+    "gsc_private_snapshot_commit": "a0c15ab4dbb216013d7f4049332d067a2d639c11",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "VERIFIED_WAKE_SLOT_497732; DELIVERY_ATTESTATION_PENDING; NO_DUPLICATE_STAGE",
+    "current_action": "VERIFIED_WAKE_SLOT_497733; DELIVERY_ATTESTATION_PENDING; NO_DUPLICATE_STAGE",
     "next_action": "AUDIT_DELIVERY_WHEN_AUTOMATION_METADATA_MATCHES; NEXT_UNIQUE_HOURLY_WAKE; REFRESH_GSC",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-12T19:47:12Z",
-    "last_real_action": "VERIFIED_GSC_READ_AND_GITHUB_WAKE_SLOT_497732_WITH_SUCCESSFUL_JOB_STEPS"
+    "last_real_action": "VERIFIED_GSC_READ_AND_GITHUB_WAKE_SLOT_497733_WITH_SUCCESSFUL_JOB_STEPS"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
