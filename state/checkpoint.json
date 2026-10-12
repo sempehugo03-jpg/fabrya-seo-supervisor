@@ -139,7 +139,7 @@
   "lease": {
     "owner": "38188421300:1",
     "run": "38188421300",
-    "task": "runtime-verification",
+    "task": "competitor-surface:2026-W42:v2",
     "trigger": "push",
     "wake": {
       "schema": 1,
@@ -148,8 +148,8 @@
       "issued_at": 1791765168,
       "source_commit": "bde54d97ceed1d4f13583dc124470f3b8d8a66d2"
     },
-    "heartbeat": 1791765190.8736942,
-    "expires": 1791765790.8736942
+    "heartbeat": 1791765192.0451417,
+    "expires": 1791765792.045142
   },
   "events": [
     {
