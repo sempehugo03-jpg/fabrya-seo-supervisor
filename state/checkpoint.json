@@ -367,7 +367,7 @@
     }
   },
   "SEO_AUTOPILOT_STATUS": {
-    "current_commit": "a1694844daa46abd0e86e5b4e7cd944507dcdac3",
+    "current_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
     "last_wake": {
       "run": "38283424358",
       "attempt": "1",
@@ -407,8 +407,12 @@
       "reason": "Current page inspection required; no proven production writer"
     },
     "last_schedule_run": 38229641874,
-    "last_successful_schedule": 38229641874,
-    "last_watchdog_recovery": null,
+    "last_successful_schedule": null,
+    "last_watchdog_recovery": {
+      "run": "38097697056",
+      "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
+      "completed_at": 1791677619.6435385
+    },
     "last_external_wake": 38276555485,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
@@ -424,9 +428,44 @@
     },
     "gates": {
       "SEO_RUNTIME_AUTONOMOUS": {
-        "status": "FAIL",
-        "reason": "EXTERNAL_DELIVERY_RECOVERY_AND_FOLLOWING_WAKE_NOT_YET_PROVEN",
-        "evidence": null
+        "status": "PASS",
+        "reason": "",
+        "evidence": {
+          "scheduler": "HOSTED_AUTOMATION",
+          "runs": [
+            38276555485,
+            38265570101,
+            38250312052,
+            38242892694,
+            38234650156,
+            38229651709,
+            38220179141,
+            38212251567,
+            38200288801,
+            38193699787,
+            38188421300,
+            38178882166,
+            38170384237,
+            38165261813,
+            38159976710,
+            38154706622,
+            38151302641,
+            38146887778
+          ],
+          "commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+          "transport_sources": [
+            "0b2112b9dbc7d10a558599a1fdaa4c7fb7c8d86b",
+            "5175d315fbb8035d6205bfb25a7b0b82780436e9",
+            "62838183d035f100bd10badf39cfe7c7ae7de0e2",
+            "a1694844daa46abd0e86e5b4e7cd944507dcdac3",
+            "bde54d97ceed1d4f13583dc124470f3b8d8a66d2"
+          ],
+          "recovery": {
+            "run": "38097697056",
+            "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
+            "completed_at": 1791677619.6435385
+          }
+        }
       },
       "GSC_DIRECT_READ": {
         "status": "PASS",
@@ -482,9 +521,13 @@
         "evidence": null
       },
       "WATCHDOG_RECOVERY": {
-        "status": "FAIL",
-        "reason": "EXTERNAL_CRASH_RECOVERY_NOT_YET_PROVEN",
-        "evidence": null
+        "status": "PASS",
+        "reason": "",
+        "evidence": {
+          "run": "38097697056",
+          "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
+          "completed_at": 1791677619.6435385
+        }
       },
       "PRIVACY_GATE": {
         "status": "FAIL",
@@ -497,7 +540,7 @@
     "first_google_organic_customer": "NOT_YET",
     "terminal_state": "RUNNING"
   },
-  "SEO_RUNTIME_AUTONOMOUS": "FAIL",
+  "SEO_RUNTIME_AUTONOMOUS": "PASS",
   "scheduler_admin_inspection": {
     "checked_at": "2026-10-10T22:36:42Z",
     "default_branch": "main",
