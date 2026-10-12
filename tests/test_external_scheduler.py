@@ -103,6 +103,21 @@ class ExternalScheduler(unittest.TestCase):
         self.assertEqual(result['gates']['SEO_RUNTIME_AUTONOMOUS']['evidence']['transport_sources'],
                          ['old-source'])
 
+    def test_verified_recovery_survives_run_history_window(self):
+        state, runs, jobs = self.fixture()
+        first = reconcile(state, 'current', runs, jobs)
+        self.assertEqual(first['gates']['WATCHDOG_RECOVERY']['status'], 'PASS')
+        self.assertEqual(state['external_recovery_evidence']['run'], '3')
+        compact_runs = [run for run in runs if run['id'] != 3]
+        compact_jobs = {key: value for key, value in jobs.items() if key != '3'}
+        durable = reconcile(state, 'current', compact_runs, compact_jobs)
+        self.assertEqual(durable['gates']['SEO_RUNTIME_AUTONOMOUS']['status'], 'PASS')
+        self.assertEqual(durable['gates']['WATCHDOG_RECOVERY']['status'], 'PASS')
+        broken = copy.deepcopy(state)
+        broken['external_recovery_evidence']['steps_verified'] = []
+        failed = reconcile(broken, 'current', compact_runs, compact_jobs)
+        self.assertEqual(failed['gates']['WATCHDOG_RECOVERY']['status'], 'FAIL')
+
     def test_manual_marker_wrong_delivery_and_failed_qa_never_pass(self):
         state, runs, jobs = self.fixture()
         for a in state['external_scheduler_attestations'].values():
