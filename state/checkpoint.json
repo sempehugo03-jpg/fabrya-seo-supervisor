@@ -1685,7 +1685,7 @@
       "settled_through": "UNKNOWN",
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497713,
-      "consumed_by_run": null
+      "consumed_by_run": "38193699787"
     }
   ],
   "seo_decision": {
@@ -2338,7 +2338,7 @@
       "observed_at": "2026-10-12T01:54:00.000Z",
       "private_receipt_commit": "ffc80b200415e17e06fe73c759b6895d1343f176",
       "source_commit": "bde54d97ceed1d4f13583dc124470f3b8d8a66d2",
-      "wake_run": null,
+      "wake_run": "38193699787",
       "delivery_attested": false,
       "observed_automation_last_run_time": "2026-10-12T00:46:26.632099+00:00",
       "reads": {
