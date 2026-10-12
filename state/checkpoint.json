@@ -1838,6 +1838,14 @@
       "delivery": "HOSTED_SCHEDULED_TASK",
       "observed_last_run_time": "2026-10-12T10:12:21.776226+00:00",
       "completed_tasks_unchanged": true
+    },
+    "497723": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38242892694",
+      "wake_commit": "450e41c90f1082b110ae827c95c80ec0d5c6db16",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-12T11:30:09.564768+00:00",
+      "completed_tasks_unchanged": true
     }
   },
   "scheduled_baseline": {
@@ -2033,6 +2041,16 @@
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497723,
       "consumed_by_run": "38242892694"
+    },
+    {
+      "snapshot_commit": "1f79399515eb7f05975cfddc3c31416e7b02ce8a",
+      "read_at": "2026-10-12T12:33:22.894Z",
+      "start_date": "2026-09-12",
+      "end_date": "2026-10-09",
+      "settled_through": "2026-10-09",
+      "acquisition": "HOSTED_SCHEDULED_TASK",
+      "automation_slot": 497724,
+      "consumed_by_run": null
     }
   ],
   "seo_decision": {
