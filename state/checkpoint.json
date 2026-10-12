@@ -2131,6 +2131,14 @@
       "delivery": "HOSTED_SCHEDULED_TASK",
       "observed_last_run_time": "2026-10-12T17:24:20.910622+00:00",
       "completed_tasks_unchanged": true
+    },
+    "497730": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38289679524",
+      "wake_commit": "90953d21dd962b38f744b8d2a62a3e579439be2a",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-12T18:17:03.532757+00:00",
+      "completed_tasks_unchanged": true
     }
   },
   "scheduled_baseline": {
@@ -4001,8 +4009,8 @@
       "private_receipt_commit": "6ca5a66bf090882159ecc1181ac4df89a55b5c0a",
       "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
       "wake_run": "38289679524",
-      "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-12T17:24:20.910622+00:00",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-12T18:17:03.532757+00:00",
       "reads": {
         "garage_page": {
           "status": 200,
