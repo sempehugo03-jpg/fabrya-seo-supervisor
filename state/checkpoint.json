@@ -1852,7 +1852,7 @@
       "settled_through": "2026-10-09",
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497719,
-      "consumed_by_run": null
+      "consumed_by_run": "38220179141"
     }
   ],
   "seo_decision": {
@@ -2801,6 +2801,27 @@
       },
       "decision": "NO_STAGE_DUPLICATE",
       "reason": "Existing garage stage received durably; photographer mirror absent",
+      "wake_conclusion": "success"
+    },
+    {
+      "slot": 497719,
+      "observed_at": "2026-10-12T07:51:40.035Z",
+      "private_receipt_commit": "9037159f62227ba0e15923c0d71f57ba5f2b8ef3",
+      "source_commit": "a1694844daa46abd0e86e5b4e7cd944507dcdac3",
+      "wake_run": "38220179141",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-12T06:55:27.045864+00:00",
+      "reads": {
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "GSC unchanged; existing garage stage remains the current bounded hypothesis",
       "wake_conclusion": "success"
     }
   ],
