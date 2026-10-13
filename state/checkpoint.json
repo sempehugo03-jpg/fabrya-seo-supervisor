@@ -433,7 +433,7 @@
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
       "completed_at": 1791677619.6435385
     },
-    "last_external_wake": 38463133866,
+    "last_external_wake": 38468722981,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
@@ -502,14 +502,14 @@
         "status": "PASS",
         "reason": "",
         "evidence": {
-          "snapshot_commit": "6af079c4cfb520f0c40a5a3bc107ea7d5203e90f",
-          "read_at": "2026-10-13T20:25:49.000Z",
+          "snapshot_commit": "deca9671cd280433aa3c372be3d51c37d31a8f6e",
+          "read_at": "2026-10-13T21:11:11.550Z",
           "start_date": "2026-09-13",
           "end_date": "2026-10-10",
           "settled_through": "2026-10-11",
           "acquisition": "HOSTED_SCHEDULED_TASK",
-          "automation_slot": 497756,
-          "consumed_by_run": "38463133866"
+          "automation_slot": 497757,
+          "consumed_by_run": "38468722981"
         }
       },
       "OPPORTUNITY_ENGINE": {
@@ -3128,6 +3128,16 @@
       "completed_tasks_unchanged": true,
       "job": "115523166920",
       "watchdog_run": "38463237353"
+    },
+    "497757": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38468722981",
+      "wake_commit": "dcff52e94627f0aabf2a64897b0ddd48a7dc858f",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-13T21:15:29.855472+00:00",
+      "completed_tasks_unchanged": true,
+      "job": "115541963964",
+      "watchdog_run": "38468890217"
     }
   },
   "scheduled_baseline": {
@@ -7232,8 +7242,47 @@
       "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
       "gsc_snapshot_commit": "deca9671cd280433aa3c372be3d51c37d31a8f6e",
       "wake_run": "38468722981",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-13T21:15:29.855472+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "sessions": 14,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01",
+          "noindex": true,
+          "nofollow": true
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC was read before the unique wake; current public offer and bounded private stage are unchanged; no production SEO writer is proven",
+      "wake_conclusion": "success",
+      "delivery_attestation_status": "VERIFIED",
+      "delivery_attested_at": "2026-10-13T22:30:31.881Z"
+    },
+    {
+      "slot": 497758,
+      "observed_at": "2026-10-13T22:30:31.881Z",
+      "private_receipt_commit": "6bfa191b91d41ea6266d6eb7d3f4739f7a1b1eca",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "gsc_snapshot_commit": "8b6f379207808c628aaee2c75f55c2573a8bd30f",
+      "wake_run": "38478318407",
       "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-13T20:33:22.798620+00:00",
+      "observed_automation_last_run_time": "2026-10-13T21:15:29.855472+00:00",
       "reads": {
         "garage_page": {
           "status": 200,
@@ -7265,7 +7314,7 @@
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-13T21:11:11.550Z",
+    "observed_at": "2026-10-13T22:30:31.881Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -7279,12 +7328,12 @@
     "public_59_release_observed": true,
     "product_repository": "sempehugo03-jpg/signature-digital-core",
     "product_branch_commit": "5f9d4e1633ee33d09339d105b31d92e27570e197",
-    "product_checkpoint_blob": "b217b4e646b6ebcc8c665d5f7474bbf4ab799f23",
-    "product_state": "BLOCKED_TECHNICAL",
+    "product_checkpoint_blob": "a3e00fb11204e222cb56c5de6570d77478ee6a3a",
+    "product_state": "BLOCKED_HUMAN",
     "product_public_ready": "NOT_YET",
     "product_public_deployment_status": "NOT_AUTHORIZED",
     "product_human_blocker": "CODEX_PRODUCT_AUTHENTICATION_REQUIRED",
-    "product_technical_blocker": "BROWSER_QA_CONSUMER_NOT_CONNECTED",
+    "product_technical_blocker": "DURABLE_PRODUCT_CODEX_CONSUMER_NOT_AUTHENTICATED",
     "private_version": 22,
     "private_source_commit": "e2690dc45c5ab62912f15fb483ed84b8081d5f94",
     "private_deployment_status": "succeeded",
@@ -7294,16 +7343,16 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "deca9671cd280433aa3c372be3d51c37d31a8f6e",
+    "gsc_private_snapshot_commit": "8b6f379207808c628aaee2c75f55c2573a8bd30f",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "SLOT_497756_DELIVERY_ATTESTED; PUBLIC_59_OBSERVED; WAKE_SLOT_497757_SUCCESS; DELIVERY_ATTESTATION_PENDING; NO_DUPLICATE_STAGE",
-    "next_action": "REFRESH_GSC_NEXT_CYCLE; ATTEST_SLOT_497757_IF_TASK_METADATA_MATCHES; CONTINUE_SAFE_QA_AND_INSPECTION",
+    "current_action": "SLOT_497757_DELIVERY_ATTESTED; PUBLIC_59_OBSERVED; WAKE_SLOT_497758_SUCCESS; DELIVERY_ATTESTATION_PENDING; NO_DUPLICATE_STAGE",
+    "next_action": "REFRESH_GSC_NEXT_CYCLE; ATTEST_SLOT_497758_IF_TASK_METADATA_MATCHES; CONTINUE_SAFE_QA_AND_INSPECTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "latest_product_checkpoint_observed_at": "2026-10-13T20:42:28.796Z",
-    "last_real_action": "VERIFIED_FRESH_GSC_READ; VERIFIED_SLOT_497757_GITHUB_RUN_AND_WATCHDOG; VERIFIED_CURRENT_PRODUCT_AND_PRIVATE_READS",
-    "gsc_manifest_read_at": "2026-10-13T21:11:11.550Z",
-    "latest_automation_last_run_time": "2026-10-13T20:33:22.798620+00:00",
+    "latest_product_checkpoint_observed_at": "2026-10-13T21:50:08.236Z",
+    "last_real_action": "VERIFIED_FRESH_GSC_READ; VERIFIED_SLOT_497758_GITHUB_RUN_AND_WATCHDOG; VERIFIED_CURRENT_PRODUCT_AND_PRIVATE_READS",
+    "gsc_manifest_read_at": "2026-10-13T22:30:31.881Z",
+    "latest_automation_last_run_time": "2026-10-13T21:15:29.855472+00:00",
     "public_deployment_id": "appgdep_6acd85d8c9fc8191aff4aa16a08a0b68",
     "private_deployment_id": "appgdep_6acbeac300208191af76086e1ec2723d"
   },
