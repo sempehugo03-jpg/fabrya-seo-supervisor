@@ -5161,10 +5161,46 @@
         "existing_stage_preview_http": 200,
         "decision": "NO_STAGE_DUPLICATE"
       }
+    },
+    {
+      "slot": 497740,
+      "observed_at": "2026-10-13T04:37:37.429Z",
+      "private_receipt_commit": "f527e53a3e42fd680ac600bf19fd5fb8940ab65d",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "gsc_snapshot_commit": "37a0ebda453e26e46731408edf42dc8725e0f07f",
+      "wake_run": "38347233607",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-13T03:43:03.504497+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "sessions": 14,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01"
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC was read before the wake; current offer and bounded private stage are unchanged; no production SEO writer is proven",
+      "wake_conclusion": "success",
+      "delivery_attestation_status": "PENDING_OBSERVED_SAME_SLOT_AUTOMATION_METADATA"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-13T03:42:44.673Z",
+    "observed_at": "2026-10-13T04:37:37.429Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -5193,17 +5229,17 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "81f68d6cfe1082e82890169c7b593a6e855adb6f",
-    "gsc_snapshot_reused_same_slot": true,
+    "gsc_private_snapshot_commit": "37a0ebda453e26e46731408edf42dc8725e0f07f",
+    "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "WAKE_SLOT_497739_FAILED_PRIVACY_GATE; PUBLIC_CONTACT_IDENTIFIER_REMOVED; SAME_SLOT_GSC_REFRESH_IDENTICAL; NEXT_UNIQUE_WAKE_RETRY; NO_DUPLICATE_STAGE",
-    "next_action": "NEXT_UNIQUE_HOURLY_WAKE_RETRIES_SAME_STATE; REFRESH_GSC; CONTINUE_SAFE_QA_AND_INSPECTION",
+    "current_action": "PUBLIC_59_OBSERVED; WAKE_SLOT_497740_SUCCEEDED; DELIVERY_ATTESTATION_PENDING_METADATA; NO_DUPLICATE_STAGE",
+    "next_action": "NEXT_HOURLY_AUDIT_ATTESTS_IF_METADATA_MATCHES; REFRESH_GSC; CONTINUE_SAFE_QA_AND_INSPECTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-13T01:59:23.066Z",
-    "last_real_action": "VERIFIED_SAME_SLOT_GSC_REFRESH; VERIFIED_CURRENT_PRODUCT_AND_PRIVATE_READS; RETAINED_REPAIRED_PUBLIC_PRIVACY_GATE_INPUT",
-    "gsc_manifest_read_at": "2026-10-13T03:31:00.306Z",
+    "last_real_action": "VERIFIED_GSC_READ; RECOVERED_FROM_PRIVACY_GATE_INPUT; VERIFIED_SUCCESSFUL_WAKE_SLOT_497740",
+    "gsc_manifest_read_at": "2026-10-13T04:35:11.409Z",
     "gsc_same_slot_refresh_read_at": "2026-10-13T03:42:44.673Z",
-    "latest_automation_last_run_time": "2026-10-13T03:37:15.949577+00:00"
+    "latest_automation_last_run_time": "2026-10-13T03:43:03.504497+00:00"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
