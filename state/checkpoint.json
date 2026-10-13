@@ -2483,6 +2483,14 @@
       "delivery": "HOSTED_SCHEDULED_TASK",
       "observed_last_run_time": "2026-10-13T02:14:04.572814+00:00",
       "completed_tasks_unchanged": true
+    },
+    "497740": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38347233607",
+      "wake_commit": "c42abcc92c9fa835ce54854502ada29b76bcb881",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-13T04:38:11.694037+00:00",
+      "completed_tasks_unchanged": true
     }
   },
   "scheduled_baseline": {
@@ -5169,8 +5177,8 @@
       "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
       "gsc_snapshot_commit": "37a0ebda453e26e46731408edf42dc8725e0f07f",
       "wake_run": "38347233607",
-      "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-13T03:43:03.504497+00:00",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-13T04:38:11.694037+00:00",
       "reads": {
         "garage_page": {
           "status": 200,
@@ -5196,7 +5204,7 @@
       "decision": "NO_STAGE_DUPLICATE",
       "reason": "Fresh GSC was read before the wake; current offer and bounded private stage are unchanged; no production SEO writer is proven",
       "wake_conclusion": "success",
-      "delivery_attestation_status": "PENDING_OBSERVED_SAME_SLOT_AUTOMATION_METADATA"
+      "delivery_attestation_status": "VERIFIED_HOSTED_SCHEDULED_TASK"
     }
   ],
   "public_product_resync": {
