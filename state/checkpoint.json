@@ -2530,6 +2530,14 @@
       "delivery": "HOSTED_SCHEDULED_TASK",
       "observed_last_run_time": "2026-10-13T04:38:11.694037+00:00",
       "completed_tasks_unchanged": true
+    },
+    "497742": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38355573834",
+      "wake_commit": "ef9731f2425563d23ca490f45f83b1c51a5699c6",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-13T06:19:07.556079+00:00",
+      "completed_tasks_unchanged": true
     }
   },
   "scheduled_baseline": {
@@ -5306,8 +5314,8 @@
       "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
       "gsc_snapshot_commit": "eca483c55487dfabe108f782a47c7f7d52972f4a",
       "wake_run": "38355573834",
-      "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-13T04:38:11.694037+00:00",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-13T06:19:07.556079+00:00",
       "reads": {
         "garage_page": {
           "status": 200,
@@ -5333,7 +5341,7 @@
       "decision": "NO_STAGE_DUPLICATE",
       "reason": "Fresh GSC was read before the wake; current offer and bounded private stage are unchanged; no production SEO writer is proven",
       "wake_conclusion": "success",
-      "delivery_attestation_status": "PENDING_OBSERVED_SAME_SLOT_AUTOMATION_METADATA"
+      "delivery_attestation_status": "VERIFIED"
     }
   ],
   "public_product_resync": {
@@ -5369,14 +5377,14 @@
     "gsc_private_snapshot_commit": "eca483c55487dfabe108f782a47c7f7d52972f4a",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "PUBLIC_59_OBSERVED; WAKE_SLOT_497742_SUCCEEDED; DELIVERY_ATTESTATION_PENDING_METADATA; NO_DUPLICATE_STAGE",
-    "next_action": "NEXT_HOURLY_AUDIT_ATTESTS_IF_METADATA_MATCHES; REFRESH_GSC; CONTINUE_SAFE_QA_AND_INSPECTION",
+    "current_action": "PUBLIC_59_OBSERVED; WAKE_SLOT_497742_ATTESTED; NO_DUPLICATE_STAGE",
+    "next_action": "REFRESH_GSC; EMIT_NEXT_UNIQUE_WAKE; CONTINUE_SAFE_QA_AND_INSPECTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-13T01:59:23.066Z",
     "last_real_action": "VERIFIED_GSC_READ; VERIFIED_SUCCESSFUL_WAKE_SLOT_497742; VERIFIED_CURRENT_PRODUCT_AND_PRIVATE_READS",
     "gsc_manifest_read_at": "2026-10-13T06:12:49.386Z",
     "gsc_same_slot_refresh_read_at": "2026-10-13T03:42:44.673Z",
-    "latest_automation_last_run_time": "2026-10-13T04:38:11.694037+00:00"
+    "latest_automation_last_run_time": "2026-10-13T06:19:07.556079+00:00"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
