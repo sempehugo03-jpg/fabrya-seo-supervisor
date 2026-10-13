@@ -433,6 +433,7 @@
         "evidence": {
           "scheduler": "HOSTED_AUTOMATION",
           "runs": [
+            38335698451,
             38331993502,
             38322768130,
             38311784761,
@@ -476,14 +477,14 @@
         "status": "PASS",
         "reason": "",
         "evidence": {
-          "snapshot_commit": "1377282ec32b3445c731a0e9a5779d08fcc6bf2d",
-          "read_at": "2026-10-13T01:21:26.810Z",
+          "snapshot_commit": "731dd1fa0421c9a24345bc3938bf29510a8d4100",
+          "read_at": "2026-10-13T02:07:14.314Z",
           "start_date": "2026-09-13",
           "end_date": "2026-10-10",
           "settled_through": "2026-10-10",
           "acquisition": "HOSTED_SCHEDULED_TASK",
-          "automation_slot": 497737,
-          "consumed_by_run": "38331993502"
+          "automation_slot": 497738,
+          "consumed_by_run": "38335698451"
         }
       },
       "OPPORTUNITY_ENGINE": {
