@@ -481,33 +481,14 @@
         "status": "PASS",
         "reason": "",
         "evidence": {
-          "snapshot_commit": "bef7f8beecc6aa360f743325ec6a1ce1fe5265f1",
-          "read_at": "2026-10-13T16:22:59.095Z",
+          "snapshot_commit": "7065ea3a5760869ac58dc2f993694b3ff9fd3216",
+          "read_at": "2026-10-13T19:16:07.000Z",
           "start_date": "2026-09-13",
           "end_date": "2026-10-10",
           "settled_through": "2026-10-11",
           "acquisition": "HOSTED_SCHEDULED_TASK",
-          "automation_slot": 497752,
-          "consumed_by_run": "38430106027",
-          "same_slot_refresh": {
-            "observed_at": "2026-10-13T16:51:40.796Z",
-            "actual_gsc_read_at": "2026-10-13T16:49:43.744Z",
-            "fresh_gsc_connector_responses_unchanged": true,
-            "private_snapshot_reused": true,
-            "connector_data_source": "api",
-            "connector_start_date": "2026-09-13",
-            "connector_end_date": "2026-10-10",
-            "connector_settled_through": "2026-10-11",
-            "connector_rows_date_query_page": 29,
-            "connector_rows_page": 6,
-            "clicks": 0,
-            "impressions": 107,
-            "observed_automation_last_run_time": "2026-10-13T16:27:25.092390+00:00",
-            "wake_reissued": false,
-            "wake_run": "38430106027",
-            "wake_conclusion": "success",
-            "delivery_attested": true
-          }
+          "automation_slot": 497755,
+          "consumed_by_run": "38454331807"
         }
       },
       "OPPORTUNITY_ENGINE": {
@@ -2982,6 +2963,16 @@
       "delivery": "HOSTED_SCHEDULED_TASK",
       "observed_last_run_time": "2026-10-13T16:27:25.092390+00:00",
       "completed_tasks_unchanged": true
+    },
+    "497753": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38439848420",
+      "wake_commit": "ff6d7087ceac7ef0a84656a60be06b35ef543d5f",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-13T17:37:19.899102+00:00",
+      "completed_tasks_unchanged": true,
+      "job": "115443273418",
+      "watchdog_run": "38439978945"
     }
   },
   "scheduled_baseline": {
@@ -6807,8 +6798,47 @@
       "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
       "gsc_snapshot_commit": "ac4841bc7b2e4a9fc5bd156f267f78b38a92fc15",
       "wake_run": "38439848420",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-13T17:37:19.899102+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "sessions": 14,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01",
+          "noindex": true,
+          "nofollow": true
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC was read before the unique wake; current public offer and bounded private stage are unchanged; no production SEO writer is proven",
+      "wake_conclusion": "success",
+      "delivery_attestation_status": "VERIFIED",
+      "delivery_attested_at": "2026-10-13T19:16:07.000Z"
+    },
+    {
+      "slot": 497755,
+      "observed_at": "2026-10-13T19:16:07.000Z",
+      "private_receipt_commit": "654492c74e60b9e35bad3d7dd6d5fe1e76052d82",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "gsc_snapshot_commit": "7065ea3a5760869ac58dc2f993694b3ff9fd3216",
+      "wake_run": "38454331807",
       "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-13T16:51:54.804049+00:00",
+      "observed_automation_last_run_time": "2026-10-13T17:37:19.899102+00:00",
       "reads": {
         "garage_page": {
           "status": 200,
@@ -6840,7 +6870,7 @@
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-13T17:36:59.305Z",
+    "observed_at": "2026-10-13T19:16:07.000Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -6869,16 +6899,16 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "ac4841bc7b2e4a9fc5bd156f267f78b38a92fc15",
+    "gsc_private_snapshot_commit": "7065ea3a5760869ac58dc2f993694b3ff9fd3216",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "SLOT_497752_DELIVERY_ATTESTED; PUBLIC_59_OBSERVED; WAKE_SLOT_497753_SUCCESS; DELIVERY_ATTESTATION_PENDING; NO_DUPLICATE_STAGE",
-    "next_action": "REFRESH_GSC_NEXT_CYCLE; ATTEST_SLOT_497753_IF_TASK_METADATA_MATCHES; CONTINUE_SAFE_QA_AND_INSPECTION",
+    "current_action": "SLOT_497753_DELIVERY_ATTESTED; PUBLIC_59_OBSERVED; WAKE_SLOT_497755_SUCCESS; DELIVERY_ATTESTATION_PENDING; NO_DUPLICATE_STAGE",
+    "next_action": "REFRESH_GSC_NEXT_CYCLE; ATTEST_SLOT_497755_IF_TASK_METADATA_MATCHES; CONTINUE_SAFE_QA_AND_INSPECTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-13T17:07:29.956Z",
-    "last_real_action": "VERIFIED_FRESH_GSC_READ; VERIFIED_SLOT_497753_GITHUB_RUN_AND_WATCHDOG; VERIFIED_CURRENT_PRODUCT_AND_PRIVATE_READS",
-    "gsc_manifest_read_at": "2026-10-13T17:34:46.984Z",
-    "latest_automation_last_run_time": "2026-10-13T16:51:54.804049+00:00",
+    "last_real_action": "VERIFIED_FRESH_GSC_READ; VERIFIED_SLOT_497755_GITHUB_RUN_AND_WATCHDOG; VERIFIED_CURRENT_PRODUCT_AND_PRIVATE_READS",
+    "gsc_manifest_read_at": "2026-10-13T19:16:07.000Z",
+    "latest_automation_last_run_time": "2026-10-13T17:37:19.899102+00:00",
     "public_deployment_id": "appgdep_6acd85d8c9fc8191aff4aa16a08a0b68",
     "private_deployment_id": "appgdep_6acbeac300208191af76086e1ec2723d"
   },
