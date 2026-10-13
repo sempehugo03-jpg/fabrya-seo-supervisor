@@ -189,15 +189,7 @@
   "failures": {
     "competitor-surface:2026-W41:v1": 2
   },
-  "lease": {
-    "owner": "38469980804:1",
-    "run": "38469980804",
-    "task": "runtime-verification",
-    "trigger": "workflow_run",
-    "wake": null,
-    "heartbeat": 1791926497.2258744,
-    "expires": 1791927097.2258747
-  },
+  "lease": null,
   "events": [
     {
       "kind": "RECOVERED",
@@ -340,6 +332,16 @@
       "trigger": "workflow_run",
       "old_trigger": "schedule",
       "recovered_at": 1791926495.0886855
+    },
+    {
+      "kind": "RECOVERED",
+      "old_owner": "38469980804:1",
+      "by": "38478318407:1",
+      "previous_conclusion": "failure",
+      "task": "runtime-verification",
+      "trigger": "push",
+      "old_trigger": "workflow_run",
+      "recovered_at": 1791930691.7787745
     }
   ],
   "blocked": [
