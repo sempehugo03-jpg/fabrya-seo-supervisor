@@ -1,13 +1,13 @@
 {
   "schema": 1,
   "source": "GSC_API",
-  "read_at": "2026-10-13T03:31:00.306Z",
+  "read_at": "2026-10-13T04:35:11.409Z",
   "start_date": "2026-09-13",
   "end_date": "2026-10-10",
   "settled_through": "2026-10-10",
-  "private_snapshot_commit": "81f68d6cfe1082e82890169c7b593a6e855adb6f",
+  "private_snapshot_commit": "37a0ebda453e26e46731408edf42dc8725e0f07f",
   "acquisition": "HOSTED_SCHEDULED_TASK",
-  "automation_slot": 497739,
+  "automation_slot": 497740,
   "pages": [
     {
       "url": "https://fabrya.fr/",
