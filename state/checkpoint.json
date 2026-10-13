@@ -4791,21 +4791,55 @@
       "wake_conclusion": "success",
       "same_slot_refresh_read_at": "2026-10-12T23:52:03.351Z",
       "same_slot_snapshot_reused": true
+    },
+    {
+      "slot": 497737,
+      "observed_at": "2026-10-13T01:24:13.886Z",
+      "private_receipt_commit": "738ce762a35c26690bca424d4eae1b692821137e",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "wake_run": "38331993502",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-12T23:54:56.363090+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "sessions": 14,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01"
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC was read before the wake; existing bounded garage stage remains received; public writer remains unproven",
+      "wake_conclusion": "success"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-12T23:52:03.351Z",
+    "observed_at": "2026-10-13T01:24:13.886Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
-    "public_version": 506,
-    "public_source_commit": "4b7369b5bee6d400d13e0d52616ea88d87d4aab6",
+    "public_version": 507,
+    "public_source_commit": "22619183a017cf268f458b74baf687fc8e2fd59f",
     "public_deployment_status": "succeeded",
     "public_price_eur_month": 90,
     "public_trial_days": 30,
     "public_price_evidence": "Browser https://fabrya.fr/tarifs rendered EUR90/month and first charge after 30 days; primary CTAs target root",
     "product_repository": "sempehugo03-jpg/signature-digital-core",
     "product_branch_commit": "5f9d4e1633ee33d09339d105b31d92e27570e197",
-    "product_checkpoint_blob": "17249c85edfff8c4d25c9a3b612538089ab62386",
+    "product_checkpoint_blob": "d8db95b8832bb4c8111dea5876d960e2982a8759",
     "product_state": "BLOCKED_HUMAN",
     "product_public_ready": "NO",
     "product_public_deployment_status": "NOT_AUTHORIZED",
@@ -4820,14 +4854,14 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "19a9e6f6851e6712647051f59042da18261ff8a0",
-    "gsc_snapshot_reused_same_slot": true,
+    "gsc_private_snapshot_commit": "1377282ec32b3445c731a0e9a5779d08fcc6bf2d",
+    "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "GSC_REFRESH_SLOT_497735; EXISTING_WAKE_ATTESTED; NO_DUPLICATE_WAKE_OR_STAGE",
-    "next_action": "NEXT_UNIQUE_HOURLY_WAKE; REFRESH_GSC; CONTINUE_SAFE_INSPECTION",
+    "current_action": "VERIFIED_WAKE_SLOT_497737; DELIVERY_ATTESTATION_PENDING; NO_DUPLICATE_STAGE",
+    "next_action": "AUDIT_DELIVERY_WHEN_AUTOMATION_METADATA_MATCHES; NEXT_UNIQUE_HOURLY_WAKE; REFRESH_GSC",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "latest_product_checkpoint_observed_at": "2026-10-12T19:47:12.292Z",
-    "last_real_action": "VERIFIED_FRESH_GSC_READ; REUSED_IDENTICAL_PRIVATE_SNAPSHOT; ATTESTED_EXISTING_WAKE_SLOT_497735",
+    "latest_product_checkpoint_observed_at": "2026-10-13T00:44:29.844Z",
+    "last_real_action": "VERIFIED_GSC_READ_AND_GITHUB_WAKE_SLOT_497737_WITH_SUCCESSFUL_JOB_STEPS",
     "gsc_manifest_read_at": "2026-10-12T23:52:03.351Z"
   },
   "current_page_observations": {
