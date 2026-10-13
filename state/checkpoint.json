@@ -5435,10 +5435,46 @@
       "reason": "Fresh GSC was read before the wake; current offer and bounded private stage are unchanged; no production SEO writer is proven",
       "wake_conclusion": "success",
       "delivery_attestation_status": "VERIFIED"
+    },
+    {
+      "slot": 497743,
+      "observed_at": "2026-10-13T07:15:03.823Z",
+      "private_receipt_commit": "f75f01240869773d43ffb3f4749029ff894218b2",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "gsc_snapshot_commit": "f3cd5fedf5fa25a35d68633beb2a6e504488ad97",
+      "wake_run": "38361366127",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-13T06:19:07.556079+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "sessions": 14,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01"
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC was read before the wake; current offer and bounded private stage are unchanged; no production SEO writer is proven",
+      "wake_conclusion": "success",
+      "delivery_attestation_status": "PENDING_OBSERVED_SAME_SLOT_AUTOMATION_METADATA"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-13T06:15:58.020Z",
+    "observed_at": "2026-10-13T07:15:03.823Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -5452,7 +5488,7 @@
     "public_59_release_observed": true,
     "product_repository": "sempehugo03-jpg/signature-digital-core",
     "product_branch_commit": "5f9d4e1633ee33d09339d105b31d92e27570e197",
-    "product_checkpoint_blob": "d38a1fb023eca5664627927d4ddfa3fd12326505",
+    "product_checkpoint_blob": "248b436458afc058bfd82859494ce5376dcaab62",
     "product_state": "BLOCKED_TECHNICAL",
     "product_public_ready": "NO",
     "product_public_deployment_status": "NOT_AUTHORIZED",
@@ -5467,15 +5503,15 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "eca483c55487dfabe108f782a47c7f7d52972f4a",
+    "gsc_private_snapshot_commit": "f3cd5fedf5fa25a35d68633beb2a6e504488ad97",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "PUBLIC_59_OBSERVED; WAKE_SLOT_497742_ATTESTED; NO_DUPLICATE_STAGE",
-    "next_action": "REFRESH_GSC; EMIT_NEXT_UNIQUE_WAKE; CONTINUE_SAFE_QA_AND_INSPECTION",
+    "current_action": "PUBLIC_59_OBSERVED; WAKE_SLOT_497743_SUCCEEDED; DELIVERY_ATTESTATION_PENDING_METADATA; NO_DUPLICATE_STAGE",
+    "next_action": "NEXT_HOURLY_AUDIT_ATTESTS_IF_METADATA_MATCHES; REFRESH_GSC; CONTINUE_SAFE_QA_AND_INSPECTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "latest_product_checkpoint_observed_at": "2026-10-13T01:59:23.066Z",
-    "last_real_action": "VERIFIED_GSC_READ; VERIFIED_SUCCESSFUL_WAKE_SLOT_497742; VERIFIED_CURRENT_PRODUCT_AND_PRIVATE_READS",
-    "gsc_manifest_read_at": "2026-10-13T06:12:49.386Z",
+    "latest_product_checkpoint_observed_at": "2026-10-13T07:08:34.947Z",
+    "last_real_action": "VERIFIED_GSC_READ; VERIFIED_SUCCESSFUL_WAKE_SLOT_497743; VERIFIED_CURRENT_PRODUCT_AND_PRIVATE_READS",
+    "gsc_manifest_read_at": "2026-10-13T07:11:45.082Z",
     "gsc_same_slot_refresh_read_at": "2026-10-13T03:42:44.673Z",
     "latest_automation_last_run_time": "2026-10-13T06:19:07.556079+00:00"
   },
