@@ -489,8 +489,25 @@
           "acquisition": "HOSTED_SCHEDULED_TASK",
           "automation_slot": 497752,
           "consumed_by_run": "38430106027",
-          "delivery_attested": true,
-          "observed_last_run_time": "2026-10-13T16:27:25.092390+00:00"
+          "same_slot_refresh": {
+            "observed_at": "2026-10-13T16:51:40.796Z",
+            "actual_gsc_read_at": "2026-10-13T16:49:43.744Z",
+            "fresh_gsc_connector_responses_unchanged": true,
+            "private_snapshot_reused": true,
+            "connector_data_source": "api",
+            "connector_start_date": "2026-09-13",
+            "connector_end_date": "2026-10-10",
+            "connector_settled_through": "2026-10-11",
+            "connector_rows_date_query_page": 29,
+            "connector_rows_page": 6,
+            "clicks": 0,
+            "impressions": 107,
+            "observed_automation_last_run_time": "2026-10-13T16:27:25.092390+00:00",
+            "wake_reissued": false,
+            "wake_run": "38430106027",
+            "wake_conclusion": "success",
+            "delivery_attested": true
+          }
         }
       },
       "OPPORTUNITY_ENGINE": {
