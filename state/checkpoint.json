@@ -3549,6 +3549,16 @@
       "completed_tasks_unchanged": true,
       "job": "115725649124",
       "watchdog_run": "38525864024"
+    },
+    "497768": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38534142404",
+      "wake_commit": "69a3852432893d7d38663a3babcc79c778ec9567",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-14T08:20:55.248268+00:00",
+      "completed_tasks_unchanged": true,
+      "job": "115752822215",
+      "watchdog_run": "38534247553"
     }
   },
   "scheduled_baseline": {
@@ -8616,13 +8626,13 @@
     },
     {
       "slot": 497768,
-      "observed_at": "2026-10-14T08:20:04.144Z",
-      "private_receipt_commit": "09109a18c88bdef6da3f94d524bb91d679c45412",
+      "observed_at": "2026-10-14T08:47:09.765Z",
+      "private_receipt_commit": "893643ed8ba85b57e9d416c95a8e9efe44e21b5d",
       "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
-      "gsc_snapshot_commit": "340c0723b4d094dbfc39c248cf56c608b25cad4c",
+      "gsc_snapshot_commit": "788bd7d6b666f38018d834f7ec2f36390b821040",
       "wake_run": "38534142404",
-      "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-14T07:03:56.946941+00:00",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-14T08:20:55.248268+00:00",
       "reads": {
         "garage_page": {
           "status": 200,
@@ -8648,16 +8658,17 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Fresh GSC preceded the unique wake; public 59 EUR and disabled ordering were revalidated; the existing bounded private stage remains noindex; no production SEO writer is proven",
+      "reason": "Fresh GSC re-read completed in the same hourly slot; duplicate wake suppressed; public 59 EUR and disabled ordering revalidated; existing bounded private stage remains noindex; no production SEO writer is proven",
       "wake_conclusion": "success",
       "wake_job": "115752822215",
       "watchdog_run": "38534247553",
       "watchdog_conclusion": "skipped",
-      "delivery_attestation_status": "PENDING_AUTOMATION_METADATA"
+      "delivery_attestation_status": "VERIFIED",
+      "delivery_attested_at": "2026-10-14T08:47:09.765Z"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-14T08:20:04.144Z",
+    "observed_at": "2026-10-14T08:47:09.765Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -8686,20 +8697,20 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "340c0723b4d094dbfc39c248cf56c608b25cad4c",
+    "gsc_private_snapshot_commit": "788bd7d6b666f38018d834f7ec2f36390b821040",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "PUBLIC_59_REVALIDATED; WAKE_SLOT_497768_SUCCESS; DELIVERY_ATTESTATION_PENDING; NO_DUPLICATE_STAGE",
-    "next_action": "ATTEST_SLOT_497768_ON_NEXT_MATCHING_TASK_METADATA; REFRESH_GSC_NEXT_CYCLE; CONTINUE_SAFE_QA_AND_INSPECTION",
+    "current_action": "PUBLIC_59_REVALIDATED; WAKE_SLOT_497768_DELIVERY_ATTESTED; SAME_SLOT_DUPLICATE_SUPPRESSED; NO_DUPLICATE_STAGE",
+    "next_action": "REFRESH_GSC_NEXT_CYCLE; EMIT_NEXT_UNSEEN_HOURLY_SLOT; CONTINUE_SAFE_QA_AND_INSPECTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-14T06:08:29.810Z",
-    "last_real_action": "VERIFIED_FRESH_GSC_READ; VERIFIED_SLOT_497768_RUN_JOB_RECEIPT_AND_WATCHDOG; VERIFIED_CURRENT_PRODUCT_PUBLIC_AND_PRIVATE_READS",
-    "gsc_manifest_read_at": "2026-10-14T08:15:39.569Z",
-    "latest_automation_last_run_time": "2026-10-14T07:03:56.946941+00:00",
+    "last_real_action": "VERIFIED_FRESH_GSC_READ; VERIFIED_SLOT_497768_RUN_JOB_RECEIPT_WATCHDOG_AND_SCHEDULED_DELIVERY; VERIFIED_CURRENT_PRODUCT_PUBLIC_AND_PRIVATE_READS",
+    "gsc_manifest_read_at": "2026-10-14T08:44:31.783Z",
+    "latest_automation_last_run_time": "2026-10-14T08:20:55.248268+00:00",
     "public_deployment_id": "appgdep_6acd85d8c9fc8191aff4aa16a08a0b68",
     "private_deployment_id": "appgdep_6acbeac300208191af76086e1ec2723d",
-    "latest_actual_gsc_read_at": "2026-10-14T08:15:39.569Z",
-    "latest_automation_updated_at": "2026-10-14T07:04:20.091039+00:00"
+    "latest_actual_gsc_read_at": "2026-10-14T08:44:31.783Z",
+    "latest_automation_updated_at": "2026-10-14T08:21:17.288797+00:00"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
