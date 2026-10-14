@@ -386,6 +386,16 @@
       "trigger": "workflow_run",
       "old_trigger": "push",
       "recovered_at": 1792020569.3729966
+    },
+    {
+      "kind": "STATE_REPAIR_PREPARED",
+      "defect": "PUBLIC_GSC_AGGREGATE_ENVELOPE_INVALID",
+      "error": "Unsupported aggregate envelope",
+      "failed_wake_run": "38654338191",
+      "failed_watchdog_run": "38654383001",
+      "manifest_repair_commit": "3e5fce053580d10a3de4e8a2b55af44a0ce361bb",
+      "status": "PENDING_NEXT_UNIQUE_WAKE",
+      "at": 1792020749
     }
   ],
   "blocked": [
@@ -603,8 +613,8 @@
         "evidence": null
       }
     },
-    "current_action": "INSPECT",
-    "next_action": "INSPECT_CURRENT_PAGE_AND_ISOLATED_SEO_WRITER",
+    "current_action": "RECOVER_PENDING_STATE_REPAIR",
+    "next_action": "NEXT_UNIQUE_HOURLY_WAKE",
     "first_google_organic_customer": "NOT_YET",
     "terminal_state": "RUNNING"
   },
@@ -4714,6 +4724,18 @@
       "automation_slot": 497780,
       "consumed_by_run": null,
       "same_slot_reread": true
+    },
+    {
+      "snapshot_commit": "29e5dae79789638dbdde58f4396bfedb4d70058c",
+      "read_at": "2026-10-14T23:28:31.794Z",
+      "start_date": "2026-09-14",
+      "end_date": "2026-10-11",
+      "settled_through": "2026-10-12",
+      "acquisition": "HOSTED_SCHEDULED_TASK",
+      "automation_slot": 497783,
+      "consumed_by_run": null,
+      "wake_run": "38654338191",
+      "wake_conclusion": "failure"
     }
   ],
   "seo_decision": {
@@ -7451,37 +7473,6 @@
   },
   "private_product_observations": [
     {
-      "slot": 497706,
-      "observed_at": "2026-10-11T18:48:59.001Z",
-      "private_receipt_commit": "b3de38e3cf3a5e10831256d6252f7a9ad9f10785",
-      "source_commit": "5175d315fbb8035d6205bfb25a7b0b82780436e9",
-      "wake_run": "38165261813",
-      "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-11T17:41:20.635072+00:00",
-      "reads": {
-        "garage_page": {
-          "status": 200,
-          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
-        },
-        "photographer_page": {
-          "status": 404
-        },
-        "attribution": {
-          "status": 200,
-          "first_google_organic_customer": "NOT_YET",
-          "exclusion_policy_ready": false,
-          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
-          "live_deployment_required": true
-        },
-        "existing_stage_preview": {
-          "status": 200,
-          "id": "seo-garage-20261011-business-01"
-        }
-      },
-      "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Existing garage stage received durably; photographer mirror absent"
-    },
-    {
       "slot": 497707,
       "observed_at": "2026-10-11T20:00:05.266Z",
       "private_receipt_commit": "d83de38d1b91fc96375cb055acb43bd096d6204b",
@@ -9922,10 +9913,55 @@
       "wake_job": "116098480979",
       "delivery_attestation_status": "PASS",
       "delivery_delta_seconds": 189.34400010108948
+    },
+    {
+      "slot": 497783,
+      "observed_at": "2026-10-14T23:31:40.779Z",
+      "private_receipt_commit": "d2450410cbf1abed5668e070ed1e00cc90d0a088",
+      "private_receipt_blob": "43198f1861d4b119d2b2aeebaa2fb6ab57570dba",
+      "private_receipt_path": "seo/gsc/2026-10-14-497783-private-product-1792020723.json",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "gsc_snapshot_commit": "29e5dae79789638dbdde58f4396bfedb4d70058c",
+      "wake_run": "38654338191",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-14T21:47:54.056278+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "sessions": 14,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01",
+          "noindex": true,
+          "nofollow": true,
+          "canonical": true
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC read persisted; unique wake and watchdog failed on invalid public aggregate envelope; strict envelope repaired for next unique hourly recovery",
+      "wake_conclusion": "failure",
+      "wake_job": "116160416628",
+      "watchdog_run": "38654383001",
+      "watchdog_job": "116160566348",
+      "watchdog_conclusion": "failure",
+      "delivery_attestation_status": "FAIL_RUN_CONCLUSION"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-14T21:46:24.808Z",
+    "observed_at": "2026-10-14T23:31:40.779Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -9940,12 +9976,12 @@
     "public_59_release_observed": true,
     "product_repository": "sempehugo03-jpg/signature-digital-core",
     "product_branch_commit": "5f9d4e1633ee33d09339d105b31d92e27570e197",
-    "product_checkpoint_blob": "74455730f57787e9ac51a5d79abadd3502e6bff8",
-    "product_state": "BLOCKED_TECHNICAL",
+    "product_checkpoint_blob": "6fae9c1cfadc2c40f83d7774692a3f669e79afba",
+    "product_state": "BLOCKED_HUMAN",
     "product_public_ready": "NOT_YET",
     "product_public_deployment_status": "NOT_AUTHORIZED",
     "product_human_blocker": "CODEX_PRODUCT_AUTHENTICATION_REQUIRED",
-    "product_technical_blocker": "BROWSER_QA_CONSUMER_NOT_CONNECTED",
+    "product_technical_blocker": "DURABLE_PRODUCT_CODEX_CONSUMER_NOT_AUTHENTICATED",
     "product_blocker_is_seo_stop": false,
     "private_version": 22,
     "private_source_commit": "e2690dc45c5ab62912f15fb483ed84b8081d5f94",
@@ -9957,18 +9993,18 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "dd0093e86cac62597ef2f095adc004d72bd2858d",
-    "gsc_snapshot_reused_same_slot": true,
+    "gsc_private_snapshot_commit": "29e5dae79789638dbdde58f4396bfedb4d70058c",
+    "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "SAME_SLOT_GSC_REREAD; SLOT_497780 DELIVERY_ATTESTED; PRODUCT PUBLIC/PRIVATE REREAD; NO_DUPLICATE_STAGE",
-    "next_action": "REFRESH GSC NEXT CYCLE; EMIT ONLY NEXT UNIQUE HOURLY WAKE; CONTINUE SAFE QA AND INSPECTION",
+    "current_action": "FRESH_GSC_READ; UNIQUE_WAKE_FAILED; STRICT AGGREGATE ENVELOPE REPAIRED; PRODUCT PUBLIC/PRIVATE REREAD; NO_DUPLICATE_STAGE",
+    "next_action": "NEXT UNIQUE HOURLY WAKE RECOVERS SAME LEASE; REFRESH GSC BEFORE EXECUTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-14T20:39:41.602Z",
-    "last_real_action": "VERIFIED SAME-SLOT GSC READ; ATTESTED REAL HOSTED DELIVERY AGAINST PUSH RUN AND SIX-STEP JOB; VERIFIED CURRENT PRODUCT PUBLIC AND PRIVATE READS",
-    "gsc_manifest_read_at": "2026-10-14T21:45:02.737Z",
-    "latest_actual_gsc_read_at": "2026-10-14T21:45:02.737Z",
-    "latest_automation_last_run_time": "2026-10-14T20:56:06.344626+00:00",
-    "latest_automation_updated_at": "2026-10-14T20:56:28.497411+00:00"
+    "last_real_action": "VERIFIED GSC READ; VERIFIED REAL FAILED PUSH AND WATCHDOG JOBS; REPAIRED EXACT AGGREGATE ENVELOPE DEFECT; VERIFIED CURRENT PRODUCT PUBLIC AND PRIVATE READS",
+    "gsc_manifest_read_at": "2026-10-14T23:28:31.794Z",
+    "latest_actual_gsc_read_at": "2026-10-14T23:28:31.794Z",
+    "latest_automation_last_run_time": "2026-10-14T21:47:54.056278+00:00",
+    "latest_automation_updated_at": "2026-10-14T21:48:15.605845+00:00"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
