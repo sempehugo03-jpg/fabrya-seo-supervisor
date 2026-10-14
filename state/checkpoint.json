@@ -8758,10 +8758,54 @@
       "watchdog_conclusion": "skipped",
       "delivery_attestation_status": "VERIFIED",
       "delivery_attested_at": "2026-10-14T08:47:09.765Z"
+    },
+    {
+      "slot": 497770,
+      "observed_at": "2026-10-14T10:17:28.372Z",
+      "private_receipt_commit": "6993f1c0f28db9c96aa15aa4a547c73d851d4ddd",
+      "private_receipt_blob": "9f054fd06882ecb31bb7d9f00db7f908848ad77b",
+      "private_receipt_path": "seo/gsc/2026-10-14-497770-private-product-1791972885.json",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "gsc_snapshot_commit": "307d463624241968410c736e95b4eabe67697d58",
+      "wake_run": "38548207401",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-14T08:47:49.991596+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "sessions": 14,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01",
+          "noindex": true,
+          "nofollow": true
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC read completed before the new hourly wake; public 59 EUR and disabled ordering revalidated; existing bounded private stage remains unpublished; no production SEO writer is proven",
+      "wake_conclusion": "success",
+      "wake_job": "115799436403",
+      "watchdog_run": "38548344454",
+      "watchdog_conclusion": "skipped",
+      "delivery_attestation_status": "PENDING_AUTOMATION_METADATA",
+      "delivery_attested_at": null
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-14T08:47:09.765Z",
+    "observed_at": "2026-10-14T10:17:28.372Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -8790,20 +8834,20 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "788bd7d6b666f38018d834f7ec2f36390b821040",
+    "gsc_private_snapshot_commit": "307d463624241968410c736e95b4eabe67697d58",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "PUBLIC_59_REVALIDATED; WAKE_SLOT_497768_DELIVERY_ATTESTED; SAME_SLOT_DUPLICATE_SUPPRESSED; NO_DUPLICATE_STAGE",
-    "next_action": "REFRESH_GSC_NEXT_CYCLE; EMIT_NEXT_UNSEEN_HOURLY_SLOT; CONTINUE_SAFE_QA_AND_INSPECTION",
+    "current_action": "FRESH_GSC_READ; PUBLIC_59_REVALIDATED; WAKE_SLOT_497770_RUN_RECEIPT_AND_WATCHDOG_VERIFIED; DELIVERY_ATTESTATION_PENDING; NO_DUPLICATE_STAGE",
+    "next_action": "ATTEST_SLOT_497770_ON_NEXT_PASS_IF_AUTOMATION_METADATA_MATCHES; REFRESH_GSC_NEXT_CYCLE; CONTINUE_SAFE_QA_AND_INSPECTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-14T06:08:29.810Z",
-    "last_real_action": "VERIFIED_FRESH_GSC_READ; VERIFIED_SLOT_497768_RUN_JOB_RECEIPT_WATCHDOG_AND_SCHEDULED_DELIVERY; VERIFIED_CURRENT_PRODUCT_PUBLIC_AND_PRIVATE_READS",
-    "gsc_manifest_read_at": "2026-10-14T08:44:31.783Z",
-    "latest_automation_last_run_time": "2026-10-14T08:20:55.248268+00:00",
+    "last_real_action": "VERIFIED_FRESH_GSC_READ; VERIFIED_SLOT_497770_RUN_JOB_RECEIPT_AND_WATCHDOG; VERIFIED_CURRENT_PRODUCT_PUBLIC_AND_PRIVATE_READS",
+    "gsc_manifest_read_at": "2026-10-14T10:10:32.009Z",
+    "latest_automation_last_run_time": "2026-10-14T08:47:49.991596+00:00",
     "public_deployment_id": "appgdep_6acd85d8c9fc8191aff4aa16a08a0b68",
     "private_deployment_id": "appgdep_6acbeac300208191af76086e1ec2723d",
-    "latest_actual_gsc_read_at": "2026-10-14T08:44:31.783Z",
-    "latest_automation_updated_at": "2026-10-14T08:21:17.288797+00:00"
+    "latest_actual_gsc_read_at": "2026-10-14T10:10:32.009Z",
+    "latest_automation_updated_at": "2026-10-14T08:48:12.467078+00:00"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
