@@ -1,13 +1,13 @@
 {
   "schema": 1,
   "source": "GSC_WIZARD",
-  "read_at": "2026-10-14T21:45:02.737Z",
+  "read_at": "2026-10-14T23:28:31.794Z",
   "start_date": "2026-09-14",
   "end_date": "2026-10-11",
   "settled_through": "2026-10-12",
-  "private_snapshot_commit": "dd0093e86cac62597ef2f095adc004d72bd2858d",
+  "private_snapshot_commit": "29e5dae79789638dbdde58f4396bfedb4d70058c",
   "acquisition": "HOSTED_SCHEDULED_TASK",
-  "automation_slot": 497780,
+  "automation_slot": 497783,
   "pages": [
     {
       "page": "https://fabrya.fr/",
