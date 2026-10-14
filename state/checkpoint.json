@@ -426,7 +426,7 @@
       "decision": "NO_ACTION",
       "reason": "Current page inspection required; no proven production writer"
     },
-    "last_schedule_run": 38623904741,
+    "last_schedule_run": 38648437490,
     "last_successful_schedule": 38623904741,
     "last_watchdog_recovery": {
       "run": "38097697056",
@@ -453,6 +453,7 @@
         "evidence": {
           "scheduler": "HOSTED_AUTOMATION",
           "runs": [
+            38635788583,
             38624135294,
             38612984736,
             38597626239,
@@ -505,15 +506,14 @@
         "status": "PASS",
         "reason": "",
         "evidence": {
-          "snapshot_commit": "dd0093e86cac62597ef2f095adc004d72bd2858d",
-          "read_at": "2026-10-14T21:45:02.737Z",
+          "snapshot_commit": "8f6767e5197bc0ff5a743e4545e9a14f1d16689f",
+          "read_at": "2026-10-14T20:52:43.539Z",
           "start_date": "2026-09-14",
           "end_date": "2026-10-11",
-          "settled_through": "2026-10-12",
+          "settled_through": "2026-10-11",
           "acquisition": "HOSTED_SCHEDULED_TASK",
           "automation_slot": 497780,
-          "consumed_by_run": null,
-          "same_slot_reread": true
+          "consumed_by_run": "38635788583"
         }
       },
       "OPPORTUNITY_ENGINE": {
@@ -570,8 +570,8 @@
         "evidence": null
       }
     },
-    "current_action": "OBSERVE",
-    "next_action": "NEXT_UNIQUE_HOURLY_WAKE_AND_FRESH_GSC_READ",
+    "current_action": "INSPECT",
+    "next_action": "INSPECT_CURRENT_PAGE_AND_ISOLATED_SEO_WRITER",
     "first_google_organic_customer": "NOT_YET",
     "terminal_state": "RUNNING"
   },
