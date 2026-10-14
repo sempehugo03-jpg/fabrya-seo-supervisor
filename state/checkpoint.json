@@ -433,7 +433,7 @@
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
       "completed_at": 1791677619.6435385
     },
-    "last_external_wake": 38612984736,
+    "last_external_wake": "38624135294",
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
@@ -444,7 +444,7 @@
       "source_branch": "main",
       "github_schedule_role": "FALLBACK",
       "native_cloudflare_cron": "NOT_EXPOSED_BY_CONNECTED_SITES",
-      "proof_status": "PENDING_REAL_DELIVERIES"
+      "proof_status": "VERIFIED_REAL_DELIVERIES"
     },
     "gates": {
       "SEO_RUNTIME_AUTONOMOUS": {
@@ -3936,6 +3936,28 @@
       "job": "116020791792",
       "verified_steps": 6,
       "delivery_delta_seconds": 167.36500000953674
+    },
+    "497779": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38624135294",
+      "wake_commit": "ab6ad05c60b07e366d2c381d1ade67c5ddd3ff27",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-14T19:31:20.705336+00:00",
+      "completed_tasks_unchanged": true,
+      "job": "116058870562",
+      "verified_steps": 6,
+      "delivery_delta_seconds": 41.705336,
+      "evidence": {
+        "run_attempt": 1,
+        "run_trigger": "push",
+        "run_conclusion": "success",
+        "job_conclusion": "success",
+        "receipt_status": "COMPLETED",
+        "receipt_new_results": 0,
+        "receipt_decision": "NO_ACTION",
+        "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce"
+      },
+      "attested_at": "2026-10-14T19:37:45.791Z"
     }
   },
   "scheduled_baseline": {
@@ -4571,6 +4593,17 @@
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497779,
       "consumed_by_run": "38624135294"
+    },
+    {
+      "snapshot_commit": "27b3ade2630fb20fbddb2c4be272ff5a4313d549",
+      "read_at": "2026-10-14T19:35:00.361Z",
+      "start_date": "2026-09-14",
+      "end_date": "2026-10-11",
+      "settled_through": "2026-10-11",
+      "acquisition": "HOSTED_SCHEDULED_TASK",
+      "automation_slot": 497779,
+      "consumed_by_run": null,
+      "same_slot_reread": true
     }
   ],
   "seo_decision": {
@@ -9613,8 +9646,8 @@
       "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
       "gsc_snapshot_commit": "e725049c624f4fa34a4363260d1ec5c3621f2536",
       "wake_run": "38624135294",
-      "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-14T18:13:47.365566+00:00",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-14T19:31:20.705336+00:00",
       "reads": {
         "garage_page": {
           "status": 200,
@@ -9647,11 +9680,53 @@
       "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
       "watchdog_conclusion": "UNKNOWN",
       "watchdog_evidence_preserved": "38097697056",
-      "delivery_attestation_status": "PENDING_CURRENT_AUTOMATION_DELIVERY_EVIDENCE"
+      "delivery_attestation_status": "PASS"
+    },
+    {
+      "slot": 497779,
+      "observed_at": "2026-10-14T19:37:13.073Z",
+      "private_receipt_commit": "bc645db875e58eac5caab4908eeaec640d872091",
+      "private_receipt_blob": "b8a5a16b2091864902d0efb9c2ce0854773c8705",
+      "private_receipt_path": "seo/gsc/2026-10-14-497779-private-product-reread-1792006633.json",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "gsc_snapshot_commit": "27b3ade2630fb20fbddb2c4be272ff5a4313d549",
+      "wake_run": "38624135294",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-14T19:31:20.705336+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "sessions": 14,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01",
+          "noindex": true,
+          "nofollow": true,
+          "canonical": true
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Same-slot fresh GSC and current product reads; unique wake already emitted and verified; no public SEO writer",
+      "wake_conclusion": "success",
+      "wake_job": "116058870562",
+      "delivery_attestation_status": "PASS"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-14T19:30:51.000Z",
+    "observed_at": "2026-10-14T19:37:13.073Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -9683,18 +9758,18 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "e725049c624f4fa34a4363260d1ec5c3621f2536",
+    "gsc_private_snapshot_commit": "27b3ade2630fb20fbddb2c4be272ff5a4313d549",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "SLOT_497778_DELIVERY_ATTESTED; FRESH_GSC_READ; SLOT_497779_WAKE_VERIFIED; CURRENT_DELIVERY_ATTESTATION_PENDING; PUBLIC_59_REVALIDATED; PRIVATE_ATTRIBUTION_REREAD; NO_DUPLICATE_STAGE",
-    "next_action": "AUDIT SLOT_497779 DELIVERY WHEN AUTOMATION METADATA PROVES IT; REFRESH GSC NEXT CYCLE; CONTINUE SAFE QA AND INSPECTION",
+    "current_action": "SLOT_497779_DELIVERY_ATTESTED; SAME_SLOT_FRESH_GSC_REREAD; PUBLIC_59_REVALIDATED; PRIVATE_ATTRIBUTION_REREAD; NO_DUPLICATE_STAGE",
+    "next_action": "ISSUE NEXT UNIQUE HOURLY WAKE; REFRESH GSC NEXT CYCLE; CONTINUE SAFE QA AND INSPECTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-14T19:27:18.597Z",
-    "last_real_action": "VERIFIED FRESH GSC READ; ATTESTED SLOT_497778; VERIFIED REAL SLOT_497779 PUSH RUN AND JOB; VERIFIED CURRENT PRODUCT PUBLIC AND PRIVATE READS",
-    "gsc_manifest_read_at": "2026-10-14T19:29:15.000Z",
-    "latest_actual_gsc_read_at": "2026-10-14T19:29:15.000Z",
-    "latest_automation_last_run_time": "2026-10-14T18:13:47.365566+00:00",
-    "latest_automation_updated_at": "2026-10-14T18:14:10.092160+00:00"
+    "last_real_action": "ATTESTED SLOT_497779 FROM HOSTED METADATA AND REAL PUSH RUN/JOB/RECEIPT; VERIFIED FRESH GSC REREAD; VERIFIED CURRENT PRODUCT PUBLIC AND PRIVATE READS",
+    "gsc_manifest_read_at": "2026-10-14T19:35:00.361Z",
+    "latest_actual_gsc_read_at": "2026-10-14T19:35:00.361Z",
+    "latest_automation_last_run_time": "2026-10-14T19:31:20.705336+00:00",
+    "latest_automation_updated_at": "2026-10-14T19:31:43.135822+00:00"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
@@ -9737,5 +9812,16 @@
       "Verify recovery executor",
       "Recover same SEO state and unfinished useful task"
     ]
-  }
+  },
+  "same_slot_rereads": [
+    {
+      "slot": 497779,
+      "read_at": "2026-10-14T19:35:00.361Z",
+      "private_snapshot_commit": "27b3ade2630fb20fbddb2c4be272ff5a4313d549",
+      "private_snapshot_blob": "7733960549add94e9582beb1d6b5219d35c903e1",
+      "manifest_commit": "3962fb9fda0d6a8915c3037efc95669d0a73d72d",
+      "automation_last_run_time": "2026-10-14T19:31:20.705336+00:00",
+      "wake_reissued": false
+    }
+  ]
 }
