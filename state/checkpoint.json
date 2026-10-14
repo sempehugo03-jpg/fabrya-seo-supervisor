@@ -189,7 +189,15 @@
   "failures": {
     "competitor-surface:2026-W41:v1": 2
   },
-  "lease": null,
+  "lease": {
+    "owner": "38515868609:1",
+    "run": "38515868609",
+    "task": "runtime-verification",
+    "trigger": "schedule",
+    "wake": null,
+    "heartbeat": 1791955094.909367,
+    "expires": 1791955694.909367
+  },
   "events": [
     {
       "kind": "RECOVERED",
@@ -599,23 +607,12 @@
     "proof_status": "PENDING_REAL_DELIVERIES"
   },
   "runtime_cycle": {
-    "run": "38512772503",
+    "run": "38515868609",
     "attempt": "1",
-    "trigger": "push",
+    "trigger": "schedule",
     "commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
-    "started_at": 1791952980.241466,
-    "status": "COMPLETED",
-    "wake": {
-      "schema": 1,
-      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-      "slot": 497764,
-      "issued_at": 1791952942,
-      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce"
-    },
-    "completed_at": 1791952982.0641568,
-    "new_results": 0,
-    "decision": "NO_ACTION",
-    "reason": "Current page inspection required; no proven production writer"
+    "started_at": 1791955094.909364,
+    "status": "STARTED"
   },
   "external_baseline": {
     "run": "38093303066",
