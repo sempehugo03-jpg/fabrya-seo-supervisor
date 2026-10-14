@@ -433,7 +433,7 @@
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
       "completed_at": 1791677619.6435385
     },
-    "last_external_wake": "38624135294",
+    "last_external_wake": 38624135294,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
@@ -444,7 +444,7 @@
       "source_branch": "main",
       "github_schedule_role": "FALLBACK",
       "native_cloudflare_cron": "NOT_EXPOSED_BY_CONNECTED_SITES",
-      "proof_status": "VERIFIED_REAL_DELIVERIES"
+      "proof_status": "PENDING_REAL_DELIVERIES"
     },
     "gates": {
       "SEO_RUNTIME_AUTONOMOUS": {
@@ -453,6 +453,7 @@
         "evidence": {
           "scheduler": "HOSTED_AUTOMATION",
           "runs": [
+            38624135294,
             38612984736,
             38597626239,
             38581965996,
@@ -504,14 +505,14 @@
         "status": "PASS",
         "reason": "",
         "evidence": {
-          "snapshot_commit": "7427cbfaa884fd2473fbdd78aa2888669a0ab019",
-          "read_at": "2026-10-14T18:10:45.000Z",
+          "snapshot_commit": "e725049c624f4fa34a4363260d1ec5c3621f2536",
+          "read_at": "2026-10-14T19:29:15.000Z",
           "start_date": "2026-09-14",
           "end_date": "2026-10-11",
           "settled_through": "2026-10-11",
           "acquisition": "HOSTED_SCHEDULED_TASK",
-          "automation_slot": 497778,
-          "consumed_by_run": "38612984736"
+          "automation_slot": 497779,
+          "consumed_by_run": "38624135294"
         }
       },
       "OPPORTUNITY_ENGINE": {
