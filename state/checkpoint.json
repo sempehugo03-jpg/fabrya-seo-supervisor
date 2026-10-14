@@ -189,15 +189,7 @@
   "failures": {
     "competitor-surface:2026-W41:v1": 2
   },
-  "lease": {
-    "owner": "38489864779:1",
-    "run": "38489864779",
-    "task": "runtime-verification",
-    "trigger": "schedule",
-    "wake": null,
-    "heartbeat": 1791937417.0665002,
-    "expires": 1791938017.0665002
-  },
+  "lease": null,
   "events": [
     {
       "kind": "RECOVERED",
@@ -397,39 +389,25 @@
   "SEO_AUTOPILOT_STATUS": {
     "current_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
     "last_wake": {
-      "run": "38483439768",
+      "run": "38489864779",
       "attempt": "1",
-      "trigger": "push",
+      "trigger": "schedule",
       "commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
-      "started_at": 1791933530.223082,
+      "started_at": 1791937417.066497,
       "status": "COMPLETED",
-      "wake": {
-        "schema": 1,
-        "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-        "slot": 497759,
-        "issued_at": 1791933503,
-        "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce"
-      },
-      "completed_at": 1791933532.1563878,
+      "completed_at": 1791937418.9663875,
       "new_results": 0,
       "decision": "NO_ACTION",
       "reason": "Current page inspection required; no proven production writer"
     },
     "last_successful_cycle": {
-      "run": "38483439768",
+      "run": "38489864779",
       "attempt": "1",
-      "trigger": "push",
+      "trigger": "schedule",
       "commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
-      "started_at": 1791933530.223082,
+      "started_at": 1791937417.066497,
       "status": "COMPLETED",
-      "wake": {
-        "schema": 1,
-        "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-        "slot": 497759,
-        "issued_at": 1791933503,
-        "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce"
-      },
-      "completed_at": 1791933532.1563878,
+      "completed_at": 1791937418.9663875,
       "new_results": 0,
       "decision": "NO_ACTION",
       "reason": "Current page inspection required; no proven production writer"
@@ -524,8 +502,8 @@
         "status": "PASS",
         "reason": "",
         "evidence": {
-          "run": "38483439768",
-          "snapshot": "f55b48d150fef1e05c6323b353d95a3b72eeca12",
+          "run": "38489864779",
+          "snapshot": "0fc87b35466cdfdfd0868ecd89cc3b1203396164",
           "decision": "INSPECT"
         }
       },
@@ -610,7 +588,11 @@
     "trigger": "schedule",
     "commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
     "started_at": 1791937417.066497,
-    "status": "STARTED"
+    "status": "COMPLETED",
+    "completed_at": 1791937418.9663875,
+    "new_results": 0,
+    "decision": "NO_ACTION",
+    "reason": "Current page inspection required; no proven production writer"
   },
   "external_baseline": {
     "run": "38093303066",
@@ -2779,6 +2761,18 @@
       "new_results": 0,
       "decision": "NO_ACTION",
       "reason": "Current page inspection required; no proven production writer"
+    },
+    {
+      "run": "38489864779",
+      "attempt": "1",
+      "trigger": "schedule",
+      "commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "started_at": 1791937417.066497,
+      "status": "COMPLETED",
+      "completed_at": 1791937418.9663875,
+      "new_results": 0,
+      "decision": "NO_ACTION",
+      "reason": "Current page inspection required; no proven production writer"
     }
   ],
   "external_scheduler_attestations": {
@@ -3217,13 +3211,13 @@
       "at": 1791705142.5808213
     },
     "following_schedule": {
-      "run": "38427959685",
+      "run": "38489864779",
       "attempt": "1",
       "trigger": "schedule",
       "commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
-      "started_at": 1791907699.6898327,
+      "started_at": 1791937417.066497,
       "status": "COMPLETED",
-      "completed_at": 1791907701.2668655,
+      "completed_at": 1791937418.9663875,
       "new_results": 0,
       "decision": "NO_ACTION",
       "reason": "Current page inspection required; no proven production writer"
@@ -3667,13 +3661,23 @@
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497759,
       "consumed_by_run": "38483439768"
+    },
+    {
+      "snapshot_commit": "0fc87b35466cdfdfd0868ecd89cc3b1203396164",
+      "read_at": "2026-10-14T00:22:52.724Z",
+      "start_date": "2026-09-14",
+      "end_date": "2026-10-11",
+      "settled_through": "2026-10-11",
+      "acquisition": "HOSTED_SCHEDULED_TASK",
+      "automation_slot": 497760,
+      "consumed_by_run": "38489864779"
     }
   ],
   "seo_decision": {
-    "run": "38483439768",
-    "trigger": "push",
-    "source_snapshot": "f55b48d150fef1e05c6323b353d95a3b72eeca12",
-    "source_read_at": "2026-10-13T23:18:07.321Z",
+    "run": "38489864779",
+    "trigger": "schedule",
+    "source_snapshot": "0fc87b35466cdfdfd0868ecd89cc3b1203396164",
+    "source_read_at": "2026-10-14T00:22:52.724Z",
     "actions": [
       {
         "url": "https://fabrya.fr/conseils/site-garagiste",
@@ -5743,6 +5747,50 @@
       "trigger": "push",
       "source_snapshot": "f55b48d150fef1e05c6323b353d95a3b72eeca12",
       "source_read_at": "2026-10-13T23:18:07.321Z",
+      "actions": [
+        {
+          "url": "https://fabrya.fr/conseils/site-garagiste",
+          "score": 0.246097,
+          "action": "INSPECT_EXISTING_PAGE",
+          "hypotheses": [
+            "Inspect query/page intent alignment and useful evidence",
+            "Inspect internal links and commercial CTA"
+          ],
+          "visible_nonbrand_position": 85.27586206896552,
+          "query_coverage": 0.617,
+          "sample_warning": "LOW_SAMPLE",
+          "page_quality": "UNKNOWN",
+          "conversion_probability": "UNKNOWN",
+          "expected_effect": "Resolve uncertainty before selecting one reversible improvement",
+          "publication_authorized": false
+        },
+        {
+          "url": "https://fabrya.fr/conseils/site-photographe",
+          "score": 0.083228,
+          "action": "INSPECT_EXISTING_PAGE",
+          "hypotheses": [
+            "Inspect query/page intent alignment and useful evidence",
+            "Inspect internal links and commercial CTA"
+          ],
+          "visible_nonbrand_position": 24,
+          "query_coverage": 0.1818,
+          "sample_warning": "LOW_SAMPLE",
+          "page_quality": "UNKNOWN",
+          "conversion_probability": "UNKNOWN",
+          "expected_effect": "Resolve uncertainty before selecting one reversible improvement",
+          "publication_authorized": false
+        }
+      ],
+      "decision": "INSPECT",
+      "reason": "Current page inspection required; no proven production writer",
+      "next_action": "INSPECT_CURRENT_PAGE_AND_ISOLATED_SEO_WRITER",
+      "first_google_organic_customer": "NOT_YET"
+    },
+    {
+      "run": "38489864779",
+      "trigger": "schedule",
+      "source_snapshot": "0fc87b35466cdfdfd0868ecd89cc3b1203396164",
+      "source_read_at": "2026-10-14T00:22:52.724Z",
       "actions": [
         {
           "url": "https://fabrya.fr/conseils/site-garagiste",
