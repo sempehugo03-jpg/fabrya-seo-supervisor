@@ -9301,8 +9301,8 @@
       "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
       "gsc_snapshot_commit": "568f829c56b215ddd4d57f22824fe0551e592247",
       "wake_run": "38581965996",
-      "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-14T13:34:19.685512+00:00",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-14T14:44:36.759751+00:00",
       "reads": {
         "garage_page": {
           "status": 200,
@@ -9333,11 +9333,56 @@
       "wake_job": "115913897816",
       "watchdog_run": "PENDING_VERIFIED_LOOKUP",
       "watchdog_conclusion": "PENDING",
+      "delivery_attestation_status": "VERIFIED",
+      "delivery_attested_at": "2026-10-14T16:20:33.306Z"
+    },
+    {
+      "slot": 497776,
+      "observed_at": "2026-10-14T16:22:51.000Z",
+      "private_receipt_commit": "4b67be07d1a17d755f2f830141b62ae490e82d38",
+      "private_receipt_blob": "01b814967eeba4a6168e0722c699ce0998898044",
+      "private_receipt_path": "seo/gsc/2026-10-14-497776-private-product-1791994971.json",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "gsc_snapshot_commit": "a57e0763c520529db6abf58cb73d83a07799dacb",
+      "wake_run": "38597626239",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-14T14:44:36.759751+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "sessions": 14,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01",
+          "noindex": true,
+          "nofollow": true
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC read completed before the unseen-slot wake; real push run and job succeeded; current hosted delivery attestation remains pending because observed automation metadata is from an earlier UTC slot; public EUR59 and disabled ordering revalidated; no production SEO writer is proven",
+      "wake_conclusion": "success",
+      "wake_job": "115968308034",
+      "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
+      "watchdog_conclusion": "UNKNOWN",
+      "watchdog_evidence_preserved": "38097697056",
       "delivery_attestation_status": "PENDING_CURRENT_AUTOMATION_DELIVERY_EVIDENCE"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-14T14:43:31.706Z",
+    "observed_at": "2026-10-14T16:22:51.000Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -9351,7 +9396,7 @@
     "public_59_release_observed": true,
     "product_repository": "sempehugo03-jpg/signature-digital-core",
     "product_branch_commit": "5f9d4e1633ee33d09339d105b31d92e27570e197",
-    "product_checkpoint_blob": "2e240d9e2b738639b0c09c08d91a3f2e5af723a5",
+    "product_checkpoint_blob": "01d79d92c6756f047e20625bc3cf6daf7929fe5f",
     "product_state": "BLOCKED_TECHNICAL",
     "product_public_ready": "NOT_YET",
     "product_public_deployment_status": "NOT_AUTHORIZED",
@@ -9366,20 +9411,20 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "568f829c56b215ddd4d57f22824fe0551e592247",
+    "gsc_private_snapshot_commit": "a57e0763c520529db6abf58cb73d83a07799dacb",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "FRESH_GSC_READ; SLOT_497774_WAKE_VERIFIED; DELIVERY_ATTESTATION_PENDING; PUBLIC_59_REVALIDATED; NO_DUPLICATE_STAGE",
-    "next_action": "AUDIT_SLOT_497774_DELIVERY_WHEN AUTOMATION_METADATA_PROVES_IT; REFRESH_GSC_NEXT_CYCLE; CONTINUE_SAFE_QA_AND_INSPECTION",
+    "current_action": "FRESH_GSC_READ; SLOT_497774_DELIVERY_ATTESTED; SLOT_497776_WAKE_VERIFIED; CURRENT_DELIVERY_ATTESTATION_PENDING; PUBLIC_59_REVALIDATED; NO_DUPLICATE_STAGE",
+    "next_action": "AUDIT_SLOT_497776_DELIVERY_WHEN AUTOMATION_METADATA_PROVES IT; REFRESH_GSC_NEXT_CYCLE; CONTINUE_SAFE_QA_AND_INSPECTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "latest_product_checkpoint_observed_at": "2026-10-14T11:46:14.719Z",
-    "last_real_action": "VERIFIED_FRESH_GSC_READ; VERIFIED_REAL SLOT_497774 PUSH RUN AND JOB; VERIFIED_CURRENT PRODUCT PUBLIC AND PRIVATE READS",
-    "gsc_manifest_read_at": "2026-10-14T14:33:23.000Z",
-    "latest_automation_last_run_time": "2026-10-14T13:34:19.685512+00:00",
+    "latest_product_checkpoint_observed_at": "2026-10-14T15:28:56.300Z",
+    "last_real_action": "VERIFIED_FRESH_GSC READ; VERIFIED HOSTED SLOT_497774 DELIVERY; VERIFIED REAL SLOT_497776 PUSH RUN AND JOB; VERIFIED CURRENT PRODUCT PUBLIC AND PRIVATE READS",
+    "gsc_manifest_read_at": "2026-10-14T16:20:48.000Z",
+    "latest_automation_last_run_time": "2026-10-14T14:44:36.759751+00:00",
     "public_deployment_id": "appgdep_6acd85d8c9fc8191aff4aa16a08a0b68",
     "private_deployment_id": "appgdep_6acbeac300208191af76086e1ec2723d",
-    "latest_actual_gsc_read_at": "2026-10-14T14:33:23.000Z",
-    "latest_automation_updated_at": "2026-10-14T13:34:42.269427+00:00"
+    "latest_actual_gsc_read_at": "2026-10-14T16:20:48.000Z",
+    "latest_automation_updated_at": "2026-10-14T14:44:58.954256+00:00"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
