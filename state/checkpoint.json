@@ -3827,6 +3827,17 @@
       "observed_last_run_time": "2026-10-14T14:44:36.759751+00:00",
       "completed_tasks_unchanged": true,
       "attested_at": "2026-10-14T16:20:33.306Z"
+    },
+    "497776": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38597626239",
+      "wake_commit": "d49e0f6c62bc5da07b363cdc50860b2d3cf51801",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-14T16:25:27.490429+00:00",
+      "completed_tasks_unchanged": true,
+      "job": "115968308034",
+      "verified_steps": 6,
+      "delivery_delta_seconds": 144.49000000953674
     }
   },
   "scheduled_baseline": {
@@ -4431,6 +4442,17 @@
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497776,
       "consumed_by_run": "38597626239"
+    },
+    {
+      "snapshot_commit": "6b1e0705d4f8792f31b07dee2dd52594a89b92c6",
+      "read_at": "2026-10-14T16:50:30.000Z",
+      "start_date": "2026-09-14",
+      "end_date": "2026-10-11",
+      "settled_through": "2026-10-11",
+      "acquisition": "HOSTED_SCHEDULED_TASK",
+      "automation_slot": 497776,
+      "consumed_by_run": "PENDING_NEXT_UNIQUE_SLOT_WAKE",
+      "same_slot_reread": true
     }
   ],
   "seo_decision": {
@@ -9345,8 +9367,8 @@
       "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
       "gsc_snapshot_commit": "a57e0763c520529db6abf58cb73d83a07799dacb",
       "wake_run": "38597626239",
-      "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-14T14:44:36.759751+00:00",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-14T16:25:27.490429+00:00",
       "reads": {
         "garage_page": {
           "status": 200,
@@ -9372,21 +9394,60 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Fresh GSC read completed before the unseen-slot wake; real push run and job succeeded; current hosted delivery attestation remains pending because observed automation metadata is from an earlier UTC slot; public EUR59 and disabled ordering revalidated; no production SEO writer is proven",
+      "reason": "Real push run, receipt and six-step job succeeded; hosted task last_run is in the same UTC slot and within 30 minutes of wake issuance; current same-slot reread found no public writer or paid conversion proof",
       "wake_conclusion": "success",
       "wake_job": "115968308034",
       "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
       "watchdog_conclusion": "UNKNOWN",
       "watchdog_evidence_preserved": "38097697056",
-      "delivery_attestation_status": "PENDING_CURRENT_AUTOMATION_DELIVERY_EVIDENCE"
+      "delivery_attestation_status": "VERIFIED",
+      "delivery_attested_at": "2026-10-14T16:50:52.000Z",
+      "same_slot_rereads": [
+        {
+          "observed_at": "2026-10-14T16:50:52.000Z",
+          "private_receipt_commit": "e2f0c1e475725a7cabeca7bf295ab9d6576633a1",
+          "private_receipt_blob": "e0254e9f3a081bea0f9f33ebdd9cf683e87a1198",
+          "private_receipt_path": "seo/gsc/2026-10-14-497776-private-product-reread-1791996652.json",
+          "gsc_snapshot_commit": "6b1e0705d4f8792f31b07dee2dd52594a89b92c6",
+          "gsc_snapshot_blob": "5e7f677d06863c7d16e0fd4010cdf20306adc263",
+          "wake_reissued": false,
+          "reads": {
+            "garage_page": {
+              "status": 200,
+              "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+            },
+            "attribution": {
+              "status": 200,
+              "first_google_organic_customer": "NOT_YET",
+              "exclusion_policy_ready": false,
+              "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+              "live_deployment_required": true,
+              "sessions": 14,
+              "projects": 2,
+              "demos": 1,
+              "checkouts": 0,
+              "confirmed_live_payments": 0
+            },
+            "existing_stage_preview": {
+              "status": 200,
+              "id": "seo-garage-20261011-business-01",
+              "noindex": true,
+              "nofollow": true,
+              "canonical": true
+            }
+          },
+          "decision": "NO_STAGE_DUPLICATE"
+        }
+      ]
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-14T16:22:51.000Z",
+    "observed_at": "2026-10-14T16:50:52.000Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
     "public_source_commit": "22619183a017cf268f458b74baf687fc8e2fd59f",
+    "public_deployment_id": "appgdep_6acd85d8c9fc8191aff4aa16a08a0b68",
     "public_deployment_status": "succeeded",
     "public_price_eur_month": 59,
     "public_trial_days": 30,
@@ -9404,6 +9465,7 @@
     "product_technical_blocker": "BROWSER_QA_CONSUMER_NOT_CONNECTED",
     "private_version": 22,
     "private_source_commit": "e2690dc45c5ab62912f15fb483ed84b8081d5f94",
+    "private_deployment_id": "appgdep_6acbeac300208191af76086e1ec2723d",
     "private_deployment_status": "succeeded",
     "private_attribution_http": 200,
     "private_confirmed_live_payments": 0,
@@ -9411,20 +9473,18 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "a57e0763c520529db6abf58cb73d83a07799dacb",
+    "gsc_private_snapshot_commit": "6b1e0705d4f8792f31b07dee2dd52594a89b92c6",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "FRESH_GSC_READ; SLOT_497774_DELIVERY_ATTESTED; SLOT_497776_WAKE_VERIFIED; CURRENT_DELIVERY_ATTESTATION_PENDING; PUBLIC_59_REVALIDATED; NO_DUPLICATE_STAGE",
-    "next_action": "AUDIT_SLOT_497776_DELIVERY_WHEN AUTOMATION_METADATA_PROVES IT; REFRESH_GSC_NEXT_CYCLE; CONTINUE_SAFE_QA_AND_INSPECTION",
+    "current_action": "SLOT_497776_DELIVERY_ATTESTED; FRESH_SAME_SLOT_GSC_REREAD; PUBLIC_59_REVALIDATED; PRIVATE_ATTRIBUTION_REREAD; NO_DUPLICATE_WAKE; NO_DUPLICATE_STAGE",
+    "next_action": "REFRESH_GSC_NEXT_CYCLE; EMIT NEXT UNIQUE-SLOT WAKE; CONTINUE SAFE QA AND INSPECTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "latest_product_checkpoint_observed_at": "2026-10-14T15:28:56.300Z",
-    "last_real_action": "VERIFIED_FRESH_GSC READ; VERIFIED HOSTED SLOT_497774 DELIVERY; VERIFIED REAL SLOT_497776 PUSH RUN AND JOB; VERIFIED CURRENT PRODUCT PUBLIC AND PRIVATE READS",
-    "gsc_manifest_read_at": "2026-10-14T16:20:48.000Z",
-    "latest_automation_last_run_time": "2026-10-14T14:44:36.759751+00:00",
-    "public_deployment_id": "appgdep_6acd85d8c9fc8191aff4aa16a08a0b68",
-    "private_deployment_id": "appgdep_6acbeac300208191af76086e1ec2723d",
-    "latest_actual_gsc_read_at": "2026-10-14T16:20:48.000Z",
-    "latest_automation_updated_at": "2026-10-14T14:44:58.954256+00:00"
+    "latest_product_checkpoint_observed_at": "UNKNOWN",
+    "last_real_action": "VERIFIED FRESH GSC REREAD; VERIFIED HOSTED SLOT_497776 DELIVERY; VERIFIED CURRENT PRODUCT PUBLIC AND PRIVATE READS",
+    "gsc_manifest_read_at": "2026-10-14T16:50:30.000Z",
+    "latest_actual_gsc_read_at": "2026-10-14T16:50:30.000Z",
+    "latest_automation_last_run_time": "2026-10-14T16:25:27.490429+00:00",
+    "latest_automation_updated_at": "2026-10-14T16:25:49.576447+00:00"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
