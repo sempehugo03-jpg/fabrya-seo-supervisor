@@ -3501,6 +3501,16 @@
       "completed_tasks_unchanged": true,
       "job": "115700520341",
       "watchdog_run": "38517893000"
+    },
+    "497767": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38525778592",
+      "wake_commit": "0d5beff2d47fd0e7e92370bfd49e954be029dde8",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-14T07:03:56.946941+00:00",
+      "completed_tasks_unchanged": true,
+      "job": "115725649124",
+      "watchdog_run": "38525864024"
     }
   },
   "scheduled_baseline": {
@@ -8477,8 +8487,8 @@
       "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
       "gsc_snapshot_commit": "1c8f2edf624a35e0e3770a5de2dc5bdae65cc042",
       "wake_run": "38525778592",
-      "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-14T05:42:10.378739+00:00",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-14T07:03:56.946941+00:00",
       "reads": {
         "garage_page": {
           "status": 200,
@@ -8509,7 +8519,8 @@
       "wake_job": "115725649124",
       "watchdog_run": "38525864024",
       "watchdog_conclusion": "skipped",
-      "delivery_attestation_status": "PENDING_TASK_METADATA_MATCH"
+      "delivery_attestation_status": "VERIFIED",
+      "delivery_attested_at": "2026-10-14T08:15:25.033Z"
     }
   ],
   "public_product_resync": {
