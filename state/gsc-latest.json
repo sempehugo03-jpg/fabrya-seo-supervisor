@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "source": "GSC_WIZARD",
+  "source": "GSC_API",
   "read_at": "2026-10-14T23:28:31.794Z",
   "start_date": "2026-09-14",
   "end_date": "2026-10-11",
@@ -10,46 +10,64 @@
   "automation_slot": 497783,
   "pages": [
     {
-      "page": "https://fabrya.fr/",
+      "url": "https://fabrya.fr/",
       "clicks": 0,
       "impressions": 26,
       "ctr": 0,
-      "position": 1.3461538461538463
+      "position": 1.3461538461538463,
+      "commercial_intent": "BRAND",
+      "nonbrand_visible_impressions": "UNKNOWN",
+      "nonbrand_visible_position": "UNKNOWN"
     },
     {
-      "page": "https://fabrya.fr/conseils/google-artisan",
+      "url": "https://fabrya.fr/conseils/google-artisan",
       "clicks": 0,
       "impressions": 14,
       "ctr": 0,
-      "position": 27.5
+      "position": 27.5,
+      "commercial_intent": "UNKNOWN",
+      "nonbrand_visible_impressions": "UNKNOWN",
+      "nonbrand_visible_position": "UNKNOWN"
     },
     {
-      "page": "https://fabrya.fr/conseils/seo-local",
+      "url": "https://fabrya.fr/conseils/seo-local",
       "clicks": 0,
       "impressions": 7,
       "ctr": 0,
-      "position": 1.4285714285714286
+      "position": 1.4285714285714286,
+      "commercial_intent": "UNKNOWN",
+      "nonbrand_visible_impressions": "UNKNOWN",
+      "nonbrand_visible_position": "UNKNOWN"
     },
     {
-      "page": "https://fabrya.fr/conseils/site-avocat",
+      "url": "https://fabrya.fr/conseils/site-avocat",
       "clicks": 0,
       "impressions": 2,
       "ctr": 0,
-      "position": 1.5
+      "position": 1.5,
+      "commercial_intent": "UNKNOWN",
+      "nonbrand_visible_impressions": "UNKNOWN",
+      "nonbrand_visible_position": "UNKNOWN"
     },
     {
-      "page": "https://fabrya.fr/conseils/site-garagiste",
+      "url": "https://fabrya.fr/conseils/site-garagiste",
       "clicks": 0,
       "impressions": 47,
       "ctr": 0,
-      "position": 53.87234042553192
+      "position": 53.87234042553192,
+      "commercial_intent": "COMMERCIAL",
+      "nonbrand_visible_impressions": 29,
+      "nonbrand_visible_position": 85.27586206896552
     },
     {
-      "page": "https://fabrya.fr/conseils/site-photographe",
+      "url": "https://fabrya.fr/conseils/site-photographe",
       "clicks": 0,
       "impressions": 11,
       "ctr": 0,
-      "position": 5.545454545454546
+      "position": 5.545454545454546,
+      "commercial_intent": "COMMERCIAL",
+      "nonbrand_visible_impressions": 2,
+      "nonbrand_visible_position": 24
     }
   ]
 }
