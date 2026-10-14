@@ -3721,6 +3721,15 @@
         "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce"
       },
       "attested_at": "2026-10-14T11:46:17.229Z"
+    },
+    "497773": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38570588776",
+      "wake_commit": "e8c50e4ad170e0c4b455e5c53a2fde5d1e1ab49e",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-14T13:20:10.416968+00:00",
+      "completed_tasks_unchanged": true,
+      "attested_at": "2026-10-14T13:31:27.557Z"
     }
   },
   "scheduled_baseline": {
@@ -9131,8 +9140,8 @@
       "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
       "gsc_snapshot_commit": "c0386f1080593790388e4d26964b4f44dbbcbba8",
       "wake_run": "38570588776",
-      "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-14T11:49:46.002050+00:00",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-14T13:20:10.416968+00:00",
       "reads": {
         "garage_page": {
           "status": 200,
@@ -9163,8 +9172,8 @@
       "wake_job": "115874421865",
       "watchdog_run": "38570712021",
       "watchdog_conclusion": "skipped",
-      "delivery_attestation_status": "PENDING_NEXT_HOSTED_INVOCATION",
-      "delivery_attestation_reason": "Observed automation last_run_time is from slot 497771; current Work and current run are not independent hosted delivery proof"
+      "delivery_attestation_status": "VERIFIED",
+      "delivery_attested_at": "2026-10-14T13:31:27.557Z"
     }
   ],
   "public_product_resync": {
