@@ -3865,6 +3865,17 @@
       "job": "115968308034",
       "verified_steps": 6,
       "delivery_delta_seconds": 144.49000000953674
+    },
+    "497778": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38612984736",
+      "wake_commit": "b6c78a79bf2b70e3a3bbf5f39d8a5ef77a44635d",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-14T18:13:47.365566+00:00",
+      "completed_tasks_unchanged": true,
+      "job": "116020791792",
+      "verified_steps": 6,
+      "delivery_delta_seconds": 167.36500000953674
     }
   },
   "scheduled_baseline": {
@@ -9486,8 +9497,8 @@
       "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
       "gsc_snapshot_commit": "7427cbfaa884fd2473fbdd78aa2888669a0ab019",
       "wake_run": "38612984736",
-      "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-14T16:52:13.157435+00:00",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-14T18:13:47.365566+00:00",
       "reads": {
         "garage_page": {
           "status": 200,
@@ -9514,13 +9525,14 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Fresh GSC read completed before the unique-slot wake; real push run and six-step job succeeded; hosted delivery attestation remains pending because observed automation metadata predates this wake; public EUR59 and disabled ordering revalidated; no production SEO writer is proven",
+      "reason": "Real push run, receipt and six-step job succeeded; hosted task last_run is in the same UTC slot and within 30 minutes of wake issuance; no public writer or paid conversion proof",
       "wake_conclusion": "success",
       "wake_job": "116020791792",
       "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
       "watchdog_conclusion": "UNKNOWN",
       "watchdog_evidence_preserved": "38097697056",
-      "delivery_attestation_status": "PENDING_CURRENT_AUTOMATION_DELIVERY_EVIDENCE"
+      "delivery_attestation_status": "VERIFIED",
+      "delivery_attested_at": "2026-10-14T19:29:33.420Z"
     }
   ],
   "public_product_resync": {
