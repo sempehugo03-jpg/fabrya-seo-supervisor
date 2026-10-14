@@ -3759,6 +3759,15 @@
       "observed_last_run_time": "2026-10-14T13:20:10.416968+00:00",
       "completed_tasks_unchanged": true,
       "attested_at": "2026-10-14T13:31:27.557Z"
+    },
+    "497774": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38581965996",
+      "wake_commit": "626c720e4e2b65352948927aa721c3c000cee48f",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-14T14:44:36.759751+00:00",
+      "completed_tasks_unchanged": true,
+      "attested_at": "2026-10-14T16:20:33.306Z"
     }
   },
   "scheduled_baseline": {
