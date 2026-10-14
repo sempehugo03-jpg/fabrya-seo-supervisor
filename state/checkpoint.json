@@ -9772,10 +9772,55 @@
       "wake_conclusion": "success",
       "wake_job": "116058870562",
       "delivery_attestation_status": "PASS"
+    },
+    {
+      "slot": 497780,
+      "observed_at": "2026-10-14T20:55:40.987Z",
+      "private_receipt_commit": "abfd1ec3fd402db02c576f8da7d41a0696a64728",
+      "private_receipt_blob": "25b5c4c9d34352f1e87f39198dd7d38ca73d18a6",
+      "private_receipt_path": "seo/gsc/2026-10-14-497780-private-product-1792011340.json",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "gsc_snapshot_commit": "8f6767e5197bc0ff5a743e4545e9a14f1d16689f",
+      "wake_run": "38635788583",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-14T19:37:53.924446+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "sessions": 14,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01",
+          "noindex": true,
+          "nofollow": true,
+          "canonical": true
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC before unique wake; real push run and six-step job succeeded; hosted delivery attestation pending because observed automation metadata predates this wake; public EUR59 and disabled ordering revalidated; no production SEO writer",
+      "wake_conclusion": "success",
+      "wake_job": "116098480979",
+      "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
+      "watchdog_conclusion": "UNKNOWN",
+      "watchdog_evidence_preserved": "38097697056",
+      "delivery_attestation_status": "PENDING_CURRENT_AUTOMATION_DELIVERY_EVIDENCE"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-14T19:37:13.073Z",
+    "observed_at": "2026-10-14T20:55:40.987Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -9790,7 +9835,7 @@
     "public_59_release_observed": true,
     "product_repository": "sempehugo03-jpg/signature-digital-core",
     "product_branch_commit": "5f9d4e1633ee33d09339d105b31d92e27570e197",
-    "product_checkpoint_blob": "edf57c0cf05a15a56a327d25466cd7b4ced4a4be",
+    "product_checkpoint_blob": "74455730f57787e9ac51a5d79abadd3502e6bff8",
     "product_state": "BLOCKED_TECHNICAL",
     "product_public_ready": "NOT_YET",
     "product_public_deployment_status": "NOT_AUTHORIZED",
@@ -9807,18 +9852,18 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "27b3ade2630fb20fbddb2c4be272ff5a4313d549",
+    "gsc_private_snapshot_commit": "8f6767e5197bc0ff5a743e4545e9a14f1d16689f",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "SLOT_497779_DELIVERY_ATTESTED; SAME_SLOT_FRESH_GSC_REREAD; PUBLIC_59_REVALIDATED; PRIVATE_ATTRIBUTION_REREAD; NO_DUPLICATE_STAGE",
-    "next_action": "ISSUE NEXT UNIQUE HOURLY WAKE; REFRESH GSC NEXT CYCLE; CONTINUE SAFE QA AND INSPECTION",
+    "current_action": "FRESH_GSC_READ; SLOT_497780_WAKE_VERIFIED; CURRENT_DELIVERY_ATTESTATION_PENDING; PUBLIC_59_REVALIDATED; PRIVATE_ATTRIBUTION_REREAD; NO_DUPLICATE_STAGE",
+    "next_action": "AUDIT SLOT_497780 DELIVERY WHEN AUTOMATION METADATA PROVES IT; REFRESH GSC NEXT CYCLE; CONTINUE SAFE QA AND INSPECTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "latest_product_checkpoint_observed_at": "2026-10-14T19:27:18.597Z",
-    "last_real_action": "ATTESTED SLOT_497779 FROM HOSTED METADATA AND REAL PUSH RUN/JOB/RECEIPT; VERIFIED FRESH GSC REREAD; VERIFIED CURRENT PRODUCT PUBLIC AND PRIVATE READS",
-    "gsc_manifest_read_at": "2026-10-14T19:35:00.361Z",
-    "latest_actual_gsc_read_at": "2026-10-14T19:35:00.361Z",
-    "latest_automation_last_run_time": "2026-10-14T19:31:20.705336+00:00",
-    "latest_automation_updated_at": "2026-10-14T19:31:43.135822+00:00"
+    "latest_product_checkpoint_observed_at": "2026-10-14T20:39:41.602Z",
+    "last_real_action": "VERIFIED FRESH GSC READ; VERIFIED REAL SLOT_497780 PUSH RUN AND SIX-STEP JOB; VERIFIED CURRENT PRODUCT PUBLIC AND PRIVATE READS",
+    "gsc_manifest_read_at": "2026-10-14T20:52:43.539Z",
+    "latest_actual_gsc_read_at": "2026-10-14T20:52:43.539Z",
+    "latest_automation_last_run_time": "2026-10-14T19:37:53.924446+00:00",
+    "latest_automation_updated_at": "2026-10-14T19:38:15.555904+00:00"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
