@@ -396,6 +396,20 @@
       "manifest_repair_commit": "3e5fce053580d10a3de4e8a2b55af44a0ce361bb",
       "status": "PENDING_NEXT_UNIQUE_WAKE",
       "at": 1792020749
+    },
+    {
+      "kind": "SAME_SLOT_REREAD",
+      "slot": 497783,
+      "at": 1792021360,
+      "gsc_snapshot_commit": "a9b778540fc527ca005b964b54eaaca8fc848f37",
+      "manifest_commit": "c6844a389950953ebe247a503151dba362dec18d",
+      "wake_reissued": false,
+      "wake_run": "38654338191",
+      "wake_conclusion": "failure",
+      "watchdog_run": "38654383001",
+      "watchdog_conclusion": "failure",
+      "delivery_attested": false,
+      "repair_status": "PENDING_NEXT_UNIQUE_WAKE"
     }
   ],
   "blocked": [
@@ -4736,6 +4750,18 @@
       "consumed_by_run": null,
       "wake_run": "38654338191",
       "wake_conclusion": "failure"
+    },
+    {
+      "snapshot_commit": "a9b778540fc527ca005b964b54eaaca8fc848f37",
+      "read_at": "2026-10-14T23:40:32.000Z",
+      "start_date": "2026-09-14",
+      "end_date": "2026-10-11",
+      "settled_through": "2026-10-12",
+      "acquisition": "HOSTED_SCHEDULED_TASK",
+      "automation_slot": 497783,
+      "consumed_by_run": null,
+      "same_slot_reread": true,
+      "manifest_commit": "c6844a389950953ebe247a503151dba362dec18d"
     }
   ],
   "seo_decision": {
@@ -9958,10 +9984,55 @@
       "watchdog_job": "116160566348",
       "watchdog_conclusion": "failure",
       "delivery_attestation_status": "FAIL_RUN_CONCLUSION"
+    },
+    {
+      "slot": 497783,
+      "observed_at": "2026-10-14T23:41:57.000Z",
+      "private_receipt_commit": "04b53d32e156e68190983fd32fd6bed2f4e4a6dd",
+      "private_receipt_blob": "f399e76a7da2d07db7b347b793cf91199847ae51",
+      "private_receipt_path": "seo/gsc/2026-10-14-497783-private-product-reread-1792021317.json",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "gsc_snapshot_commit": "a9b778540fc527ca005b964b54eaaca8fc848f37",
+      "wake_run": "38654338191",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-14T23:32:42.614194+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "sessions": 14,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01",
+          "noindex": true,
+          "nofollow": true,
+          "canonical": true
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Same-slot fresh GSC and current Product reads; unique wake already emitted; real wake and watchdog jobs failed; repaired strict aggregate remains pending the next unique hourly wake",
+      "wake_conclusion": "failure",
+      "wake_job": "116160416628",
+      "watchdog_run": "38654383001",
+      "watchdog_job": "116160566348",
+      "watchdog_conclusion": "failure",
+      "delivery_attestation_status": "FAIL_RUN_CONCLUSION"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-14T23:31:40.779Z",
+    "observed_at": "2026-10-14T23:41:57.000Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -9993,18 +10064,18 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "29e5dae79789638dbdde58f4396bfedb4d70058c",
+    "gsc_private_snapshot_commit": "a9b778540fc527ca005b964b54eaaca8fc848f37",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "FRESH_GSC_READ; UNIQUE_WAKE_FAILED; STRICT AGGREGATE ENVELOPE REPAIRED; PRODUCT PUBLIC/PRIVATE REREAD; NO_DUPLICATE_STAGE",
+    "current_action": "FRESH GSC REREAD; DUPLICATE WAKE SUPPRESSED; STRICT MANIFEST VERIFIED; PRODUCT PUBLIC/PRIVATE REREAD; NO_DUPLICATE_STAGE",
     "next_action": "NEXT UNIQUE HOURLY WAKE RECOVERS SAME LEASE; REFRESH GSC BEFORE EXECUTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "latest_product_checkpoint_observed_at": "2026-10-14T20:39:41.602Z",
-    "last_real_action": "VERIFIED GSC READ; VERIFIED REAL FAILED PUSH AND WATCHDOG JOBS; REPAIRED EXACT AGGREGATE ENVELOPE DEFECT; VERIFIED CURRENT PRODUCT PUBLIC AND PRIVATE READS",
-    "gsc_manifest_read_at": "2026-10-14T23:28:31.794Z",
-    "latest_actual_gsc_read_at": "2026-10-14T23:28:31.794Z",
-    "latest_automation_last_run_time": "2026-10-14T21:47:54.056278+00:00",
-    "latest_automation_updated_at": "2026-10-14T21:48:15.605845+00:00"
+    "latest_product_checkpoint_observed_at": "2026-10-14T23:27:09.536Z",
+    "last_real_action": "VERIFIED SAME-SLOT GSC REREAD; VERIFIED FAILED PUSH/WATCHDOG JOBS; VERIFIED STRICT REPAIR; VERIFIED CURRENT PRODUCT PUBLIC AND PRIVATE READS",
+    "gsc_manifest_read_at": "2026-10-14T23:40:32.000Z",
+    "latest_actual_gsc_read_at": "2026-10-14T23:40:32.000Z",
+    "latest_automation_last_run_time": "2026-10-14T23:32:42.614194+00:00",
+    "latest_automation_updated_at": "2026-10-14T23:33:04.745985+00:00"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
@@ -10067,6 +10138,23 @@
       "manifest_blob": "e620df28c29f97f89c9f7924efc5009f33097faa",
       "automation_last_run_time": "2026-10-14T20:56:06.344626+00:00",
       "wake_reissued": false
+    },
+    {
+      "slot": 497783,
+      "read_at": "2026-10-14T23:40:32.000Z",
+      "private_snapshot_commit": "a9b778540fc527ca005b964b54eaaca8fc848f37",
+      "private_snapshot_blob": "601db5dc902a8e6c3d967a9ac4c6389d3f2d0596",
+      "manifest_commit": "c6844a389950953ebe247a503151dba362dec18d",
+      "manifest_blob": "7b6cff7ff1f7cba4ed8dad0edb755ffcce7d7d71",
+      "automation_last_run_time": "2026-10-14T23:32:42.614194+00:00",
+      "wake_reissued": false,
+      "wake_run": "38654338191",
+      "wake_conclusion": "failure",
+      "watchdog_run": "38654383001",
+      "watchdog_conclusion": "failure",
+      "delivery_attested": false,
+      "delivery_attestation_status": "FAIL_RUN_CONCLUSION",
+      "repair_status": "PENDING_NEXT_UNIQUE_WAKE"
     }
   ]
 }
