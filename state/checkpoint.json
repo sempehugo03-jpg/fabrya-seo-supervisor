@@ -433,7 +433,7 @@
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
       "completed_at": 1791677619.6435385
     },
-    "last_external_wake": 38489917669,
+    "last_external_wake": 38501297441,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
@@ -453,6 +453,7 @@
         "evidence": {
           "scheduler": "HOSTED_AUTOMATION",
           "runs": [
+            38501297441,
             38489917669,
             38483439768,
             38478318407,
@@ -502,14 +503,14 @@
         "status": "PASS",
         "reason": "",
         "evidence": {
-          "snapshot_commit": "0fc87b35466cdfdfd0868ecd89cc3b1203396164",
-          "read_at": "2026-10-14T00:22:52.724Z",
+          "snapshot_commit": "9234229cca21a5330324eb61c742ed151d497eb1",
+          "read_at": "2026-10-14T02:29:09.444Z",
           "start_date": "2026-09-14",
           "end_date": "2026-10-11",
           "settled_through": "2026-10-11",
           "acquisition": "HOSTED_SCHEDULED_TASK",
-          "automation_slot": 497760,
-          "consumed_by_run": "38489917669"
+          "automation_slot": 497762,
+          "consumed_by_run": "38501297441"
         }
       },
       "OPPORTUNITY_ENGINE": {
@@ -3294,6 +3295,16 @@
       "completed_tasks_unchanged": true,
       "job": "115612525481",
       "watchdog_run": "38490019699"
+    },
+    "497762": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38501297441",
+      "wake_commit": "0dd321dd6944a99524d3a3bf2028b001d8da5032",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-14T02:32:17.817802+00:00",
+      "completed_tasks_unchanged": true,
+      "job": "115648635689",
+      "watchdog_run": "38501378026"
     }
   },
   "scheduled_baseline": {
@@ -7801,8 +7812,8 @@
       "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
       "gsc_snapshot_commit": "9234229cca21a5330324eb61c742ed151d497eb1",
       "wake_run": "38501297441",
-      "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-14T00:44:39.001565+00:00",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-14T02:32:17.817802+00:00",
       "reads": {
         "garage_page": {
           "status": 200,
@@ -7833,7 +7844,8 @@
       "wake_job": "115648635689",
       "watchdog_run": "38501378026",
       "watchdog_conclusion": "skipped",
-      "delivery_attestation_status": "PENDING_TASK_METADATA_MATCH"
+      "delivery_attestation_status": "VERIFIED",
+      "delivery_attested_at": "2026-10-14T03:22:40.339Z"
     }
   ],
   "public_product_resync": {
