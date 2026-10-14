@@ -8124,10 +8124,51 @@
         "existing_stage_preview_noindex": true,
         "decision": "NO_STAGE_DUPLICATE"
       }
+    },
+    {
+      "slot": 497764,
+      "observed_at": "2026-10-14T04:44:00.682Z",
+      "private_receipt_commit": "7b8da597106ddc77eefba0684259bfdcfb96d4e5",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "gsc_snapshot_commit": "9bc4260afd99f3e43857821853175bf20094fbc8",
+      "wake_run": "38512772503",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-14T03:51:31.349315+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "sessions": 14,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01",
+          "noindex": true,
+          "nofollow": true
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC was read before the unique wake; public 59 EUR was revalidated; the existing bounded private stage was not duplicated; no production SEO writer is proven",
+      "wake_conclusion": "success",
+      "wake_job": "115684802568",
+      "watchdog_run": "38512862346",
+      "watchdog_conclusion": "skipped",
+      "delivery_attestation_status": "PENDING_TASK_METADATA_MATCH"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-14T03:50:46.402Z",
+    "observed_at": "2026-10-14T04:44:00.682Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -8156,20 +8197,20 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "fa040ff0ea6239c27ba181ed91758007da90699b",
-    "gsc_snapshot_reused_same_slot": true,
+    "gsc_private_snapshot_commit": "9bc4260afd99f3e43857821853175bf20094fbc8",
+    "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "SLOT_497763_DELIVERY_ATTESTED; PUBLIC_59_REVALIDATED; SAME_SLOT_GSC_REFRESH; NO_DUPLICATE_WAKE; NO_DUPLICATE_STAGE",
-    "next_action": "REFRESH_GSC_NEXT_CYCLE; EMIT_NEXT_UNIQUE_HOURLY_WAKE; CONTINUE_SAFE_QA_AND_INSPECTION",
+    "current_action": "PUBLIC_59_REVALIDATED; WAKE_SLOT_497764_SUCCESS; DELIVERY_ATTESTATION_PENDING; NO_DUPLICATE_STAGE",
+    "next_action": "ATTEST_SLOT_497764_ON_NEXT_MATCHING_TASK_METADATA; REFRESH_GSC_NEXT_CYCLE; CONTINUE_SAFE_QA_AND_INSPECTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-14T01:11:08.371Z",
-    "last_real_action": "VERIFIED_FRESH_GSC_READ; ATTESTED_SLOT_497763_TASK_DELIVERY; VERIFIED_CURRENT_PRODUCT_PUBLIC_AND_PRIVATE_READS",
-    "gsc_manifest_read_at": "2026-10-14T03:22:46.987Z",
-    "latest_automation_last_run_time": "2026-10-14T03:24:36.835162+00:00",
+    "last_real_action": "VERIFIED_FRESH_GSC_READ; VERIFIED_SLOT_497764_RUN_JOB_RECEIPT_AND_WATCHDOG; VERIFIED_CURRENT_PRODUCT_PUBLIC_AND_PRIVATE_READS",
+    "gsc_manifest_read_at": "2026-10-14T04:40:14.164Z",
+    "latest_automation_last_run_time": "2026-10-14T03:51:31.349315+00:00",
     "public_deployment_id": "appgdep_6acd85d8c9fc8191aff4aa16a08a0b68",
     "private_deployment_id": "appgdep_6acbeac300208191af76086e1ec2723d",
-    "latest_actual_gsc_read_at": "2026-10-14T03:50:46.402Z",
-    "latest_automation_updated_at": "2026-10-14T03:24:59.163515+00:00"
+    "latest_actual_gsc_read_at": "2026-10-14T04:40:14.164Z",
+    "latest_automation_updated_at": "2026-10-14T03:51:52.851671+00:00"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
