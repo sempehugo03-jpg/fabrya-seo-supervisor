@@ -601,14 +601,14 @@
         "status": "PASS",
         "reason": "",
         "evidence": {
-          "snapshot_commit": "bca08f36ffea45c56e5ba46dbb573cae9111a858",
-          "read_at": "2026-10-15T18:09:24.791Z",
+          "snapshot_commit": "94433f7de019069638e8bf18796af4ec0cf9479f",
+          "read_at": "2026-10-15T20:39:56.063Z",
           "start_date": "2026-09-15",
           "end_date": "2026-10-12",
           "settled_through": "2026-10-13",
           "acquisition": "HOSTED_SCHEDULED_TASK",
-          "automation_slot": 497802,
-          "consumed_by_run": "38783399093"
+          "automation_slot": 497804,
+          "consumed_by_run": "38804125880"
         }
       },
       "OPPORTUNITY_ENGINE": {
@@ -4963,6 +4963,28 @@
         "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce"
       },
       "attested_at": "2026-10-15T19:41:41.000Z"
+    },
+    "497804": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38804125880",
+      "wake_commit": "52fcea96622818920d38934a9b2eefeb75cbecae",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-15T20:44:37.986180+00:00",
+      "completed_tasks_unchanged": true,
+      "job": "116660442890",
+      "verified_steps": 6,
+      "delivery_delta_seconds": 108.98618,
+      "evidence": {
+        "run_attempt": 1,
+        "run_trigger": "push",
+        "run_conclusion": "success",
+        "job_conclusion": "success",
+        "receipt_status": "COMPLETED",
+        "receipt_new_results": 0,
+        "receipt_decision": "NO_ACTION",
+        "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a"
+      },
+      "attested_at": "2026-10-15T21:34:26.151Z"
     }
   },
   "scheduled_baseline": {
@@ -11659,8 +11681,8 @@
       "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
       "gsc_snapshot_commit": "94433f7de019069638e8bf18796af4ec0cf9479f",
       "wake_run": "38804125880",
-      "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-15T19:43:26.911437+00:00",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-15T20:44:37.986180+00:00",
       "reads": {
         "project_id": "appgprj_6acac4a9d9808191b57085eb34fa06be",
         "version": 33,
@@ -11694,13 +11716,13 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Fresh GSC data was consumed by the successful unique wake; the existing private stage remains valid and was not duplicated. Hosted automation metadata observed before this wake cannot attest its delivery yet.",
+      "reason": "The following hosted task metadata matches the prior slot and wake; the real push run, six-step job and completed receipt succeeded with no new duplicate result.",
       "wake_conclusion": "success",
       "wake_job": "116660442890",
       "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
       "watchdog_conclusion": "UNKNOWN",
       "watchdog_evidence_preserved": "38097697056",
-      "delivery_attestation_status": "FAIL_METADATA_NOT_YET_OBSERVED"
+      "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION"
     }
   ],
   "public_product_resync": {
@@ -11743,15 +11765,15 @@
     "gsc_private_snapshot_commit": "94433f7de019069638e8bf18796af4ec0cf9479f",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "FRESH GSC READ; UNIQUE WAKE SUCCEEDED; HOSTED DELIVERY ATTESTATION PENDING NEXT METADATA OBSERVATION; PRODUCT PUBLIC/PRIVATE REREAD; NO_DUPLICATE_STAGE",
+    "current_action": "PREVIOUS HOSTED DELIVERY ATTESTED; FRESH GSC READ PERSISTED; PRODUCT REREAD PENDING; NEXT UNIQUE WAKE PENDING",
     "next_action": "AUDIT SLOT 497804 AGAINST NEXT OBSERVED HOSTED TASK METADATA; REFRESH GSC BEFORE NEXT UNIQUE HOURLY WAKE",
     "product_next_action": "OBSERVE EXACT PRODUCT BRANCH AND CHECKPOINT WHEN PRESENT; NO SEO STOP",
     "latest_product_checkpoint_observed_at": "2026-10-15T20:42:06.216Z",
-    "last_real_action": "VERIFIED FRESH GSC READ; VERIFIED UNIQUE PUSH JOB; VERIFIED CURRENT PUBLIC PRICE/CTA AND PRIVATE CMS/ATTRIBUTION",
+    "last_real_action": "ATTESTED SLOT 497804 AGAINST FOLLOWING HOSTED TASK METADATA; VERIFIED FRESH GSC READ",
     "gsc_manifest_read_at": "2026-10-15T20:39:56.063Z",
     "latest_actual_gsc_read_at": "2026-10-15T20:39:56.063Z",
-    "latest_automation_last_run_time": "2026-10-15T19:43:26.911437+00:00",
-    "latest_automation_updated_at": "2026-10-15T19:43:49.116846+00:00",
+    "latest_automation_last_run_time": "2026-10-15T20:44:37.986180+00:00",
+    "latest_automation_updated_at": "2026-10-15T20:45:00.903670+00:00",
     "public_latest_saved_version": 508,
     "public_latest_saved_source_commit": "008297dda91e9531c4a6b7c5d092dcf5d948fbe4",
     "public_latest_saved_deployment_status": "NOT_DEPLOYED"
