@@ -111,6 +111,9 @@ class ExternalScheduler(unittest.TestCase):
         self.assertEqual(state['external_recovery_evidence']['run'], '3')
         compact_runs = [run for run in runs if run['id'] != 3]
         compact_jobs = {key: value for key, value in jobs.items() if key != '3'}
+        state['cycle_receipts'] = [
+            receipt for receipt in state['cycle_receipts'] if receipt['run'] != '3'
+        ]
         durable = reconcile(state, 'current', compact_runs, compact_jobs)
         self.assertEqual(durable['gates']['SEO_RUNTIME_AUTONOMOUS']['status'], 'PASS')
         self.assertEqual(durable['gates']['WATCHDOG_RECOVERY']['status'], 'PASS')

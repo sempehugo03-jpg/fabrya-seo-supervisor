@@ -121,6 +121,14 @@ def reconcile(state, current_commit, runs, jobs_by_run):
         durable = state.get('external_recovery_evidence')
         durable_run = durable and str(durable.get('run'))
         durable_receipt = durable_run and all_receipts.get(durable_run)
+        durable_receipt_valid = (
+            durable_receipt is None or (
+                durable.get('commit') == durable_receipt.get('commit')
+                and durable_receipt.get('status') == 'COMPLETED'
+                and durable_receipt.get('trigger') == 'workflow_run'
+                and str(durable_receipt.get('attempt')) == '1'
+            )
+        ) if durable else False
         durable_event = next((event for event in state.get('events', [])
             if event.get('kind') == 'RECOVERED'
             and event.get('old_owner') == (external_probe or {}).get('owner')
@@ -128,13 +136,12 @@ def reconcile(state, current_commit, runs, jobs_by_run):
             and event.get('trigger') == 'workflow_run'
             and event.get('previous_conclusion') == 'failure'
             and event.get('by') == durable.get('event_by')), None) if durable else None
-        if (durable and external_probe and durable_event and durable_receipt
+        if (durable and external_probe and durable_event
                 and durable.get('probe_owner') == external_probe.get('owner')
                 and durable.get('event_by') == durable_run + ':1'
-                and durable.get('commit') == durable_receipt.get('commit')
-                and durable_receipt.get('status') == 'COMPLETED'
-                and durable_receipt.get('trigger') == 'workflow_run'
-                and str(durable_receipt.get('attempt')) == '1'
+                and durable.get('commit') == external_probe.get('wake', {}).get('source_commit')
+                and durable_receipt_valid
+                and durable.get('completed_at')
                 and durable.get('receipt_status') == 'COMPLETED'
                 and durable.get('run_attempt') == 1
                 and durable.get('run_conclusion') == 'success'
