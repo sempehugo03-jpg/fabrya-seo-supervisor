@@ -11248,10 +11248,60 @@
       "watchdog_conclusion": "UNKNOWN",
       "watchdog_evidence_preserved": "38097697056",
       "delivery_attestation_status": "PASS"
+    },
+    {
+      "slot": 497799,
+      "observed_at": "2026-10-15T15:18:07.354Z",
+      "private_receipt_commit": "475e1d2bcfe07712aea9b12b128b066fb0341894",
+      "private_receipt_blob": "8215148dc10fc0f635b8e475ff43090014ef02ba",
+      "private_receipt_path": "seo/gsc/2026-10-15-497799-private-product-1792077487.json",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "gsc_snapshot_commit": "54cc2a2e1ef8c9c81c48f80402cb46f5b72a7f4a",
+      "wake_run": "38758886450",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-15T14:18:50.848654+00:00",
+      "reads": {
+        "project_id": "appgprj_6acac4a9d9808191b57085eb34fa06be",
+        "version": 22,
+        "source_commit": "e2690dc45c5ab62912f15fb483ed84b8081d5f94",
+        "deployment_id": "appgdep_6acbeac300208191af76086e1ec2723d",
+        "deployment_status": "succeeded",
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "sessions": 14,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01",
+          "noindex": true,
+          "nofollow": true,
+          "canonical": true
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC preceded the unique wake; real push run, receipt and six-step job succeeded; current hosted delivery attestation remains pending until a following invocation; public EUR59 and disabled ordering revalidated; no production SEO writer",
+      "wake_conclusion": "success",
+      "wake_job": "116504556552",
+      "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
+      "watchdog_conclusion": "UNKNOWN",
+      "watchdog_evidence_preserved": "38097697056",
+      "delivery_attestation_status": "PENDING_FOLLOWING_INVOCATION"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-15T14:17:49.281Z",
+    "observed_at": "2026-10-15T15:18:07.354Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -11283,7 +11333,7 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "b0adcd65a87d2e670d949b009602b671d8793423",
+    "gsc_private_snapshot_commit": "54cc2a2e1ef8c9c81c48f80402cb46f5b72a7f4a",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
     "current_action": "FRESH GSC READ; PREVIOUS HOSTED DELIVERY ATTESTED; UNIQUE HOURLY WAKE VERIFIED; PRODUCT PUBLIC/PRIVATE REREAD; CURRENT DELIVERY ATTESTATION PENDING FOLLOWING INVOCATION; NO_DUPLICATE_STAGE",
@@ -11291,10 +11341,10 @@
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-15T12:51:16.664Z",
     "last_real_action": "ATTESTED PREVIOUS HOSTED WAKE; VERIFIED FRESH GSC READ; VERIFIED UNIQUE PUSH JOB; VERIFIED CURRENT PRODUCT PUBLIC AND PRIVATE READS",
-    "gsc_manifest_read_at": "2026-10-15T14:13:19.000Z",
-    "latest_actual_gsc_read_at": "2026-10-15T14:13:19.000Z",
-    "latest_automation_last_run_time": "2026-10-15T13:23:51.236873+00:00",
-    "latest_automation_updated_at": "2026-10-15T13:24:13.068261+00:00"
+    "gsc_manifest_read_at": "2026-10-15T15:14:52.000Z",
+    "latest_actual_gsc_read_at": "2026-10-15T15:14:52.000Z",
+    "latest_automation_last_run_time": "2026-10-15T14:18:50.848654+00:00",
+    "latest_automation_updated_at": "2026-10-15T14:19:13.045825+00:00"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
