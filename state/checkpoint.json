@@ -406,6 +406,16 @@
       "trigger": "schedule",
       "old_trigger": "workflow_run",
       "recovered_at": 1792025299.256615
+    },
+    {
+      "kind": "STATE_REPAIR_VERIFIED",
+      "defect": "PUBLIC_GSC_AGGREGATE_ENVELOPE_INVALID",
+      "run": "38663749433",
+      "job": "116190769813",
+      "wake_slot": 497785,
+      "manifest_commit": "d96b83f2539ced54881b68470a1c7bf159f9ddbb",
+      "status": "VERIFIED_SUCCESS",
+      "at": 1792026535
     }
   ],
   "blocked": [
@@ -10078,10 +10088,55 @@
       "watchdog_job": "116160566348",
       "watchdog_conclusion": "failure",
       "delivery_attestation_status": "FAIL_RUN_CONCLUSION"
+    },
+    {
+      "slot": 497785,
+      "observed_at": "2026-10-15T01:08:22.000Z",
+      "private_receipt_commit": "273a203e5dc45f5d107e2689caf604c3e37b7386",
+      "private_receipt_blob": "04451c5355ab62ed50539349f9f7b5a7a5b6ce22",
+      "private_receipt_path": "seo/gsc/2026-10-15-497785-private-product-1792026502.json",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "gsc_snapshot_commit": "74399cd1e3177e7df482128bdff6c3d081e42743",
+      "wake_run": "38663749433",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-14T23:42:59.578779+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "sessions": 14,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01",
+          "noindex": true,
+          "nofollow": true,
+          "canonical": true
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC preceded the unique wake; real push run, receipt and six-step job succeeded; hosted delivery attestation remains pending because observed task metadata predates this wake; public EUR59 and disabled ordering revalidated; no production SEO writer",
+      "wake_conclusion": "success",
+      "wake_job": "116190769813",
+      "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
+      "watchdog_conclusion": "UNKNOWN",
+      "watchdog_evidence_preserved": "38097697056",
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-14T23:41:57.000Z",
+    "observed_at": "2026-10-15T01:08:22.000Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -10090,18 +10145,18 @@
     "public_deployment_status": "succeeded",
     "public_price_eur_month": 59,
     "public_trial_days": 30,
-    "public_price_evidence": "Browser rendered EUR59/month, no setup fee, first debit after 30 days, mail contact CTA, and new orders/card input/paid activation unavailable",
+    "public_price_evidence": "Rendered public page states 59 €/month, no setup fee, first charge after 30 days, and progressive opening with no new order, card entry, or paid activation.",
     "public_new_orders_enabled": false,
     "public_payments_enabled": false,
     "public_59_release_observed": true,
     "product_repository": "sempehugo03-jpg/signature-digital-core",
     "product_branch_commit": "5f9d4e1633ee33d09339d105b31d92e27570e197",
-    "product_checkpoint_blob": "6fae9c1cfadc2c40f83d7774692a3f669e79afba",
-    "product_state": "BLOCKED_HUMAN",
+    "product_checkpoint_blob": "41cc024454a0867428315ae850ee0cbd793e5973",
+    "product_state": "BLOCKED_TECHNICAL",
     "product_public_ready": "NOT_YET",
     "product_public_deployment_status": "NOT_AUTHORIZED",
     "product_human_blocker": "CODEX_PRODUCT_AUTHENTICATION_REQUIRED",
-    "product_technical_blocker": "DURABLE_PRODUCT_CODEX_CONSUMER_NOT_AUTHENTICATED",
+    "product_technical_blocker": "BROWSER_QA_CONSUMER_NOT_CONNECTED",
     "product_blocker_is_seo_stop": false,
     "private_version": 22,
     "private_source_commit": "e2690dc45c5ab62912f15fb483ed84b8081d5f94",
@@ -10113,18 +10168,18 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "a9b778540fc527ca005b964b54eaaca8fc848f37",
+    "gsc_private_snapshot_commit": "74399cd1e3177e7df482128bdff6c3d081e42743",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "FRESH GSC REREAD; DUPLICATE WAKE SUPPRESSED; STRICT MANIFEST VERIFIED; PRODUCT PUBLIC/PRIVATE REREAD; NO_DUPLICATE_STAGE",
-    "next_action": "NEXT UNIQUE HOURLY WAKE RECOVERS SAME LEASE; REFRESH GSC BEFORE EXECUTION",
+    "current_action": "FRESH GSC READ; UNIQUE WAKE SUCCEEDED; STRICT MANIFEST VERIFIED; PRODUCT PUBLIC/PRIVATE REREAD; NO_DUPLICATE_STAGE",
+    "next_action": "AUDIT HOSTED DELIVERY ON FOLLOWING INVOCATION; REFRESH GSC BEFORE NEXT EXECUTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "latest_product_checkpoint_observed_at": "2026-10-14T23:27:09.536Z",
-    "last_real_action": "VERIFIED SAME-SLOT GSC REREAD; VERIFIED FAILED PUSH/WATCHDOG JOBS; VERIFIED STRICT REPAIR; VERIFIED CURRENT PRODUCT PUBLIC AND PRIVATE READS",
-    "gsc_manifest_read_at": "2026-10-14T23:40:32.000Z",
-    "latest_actual_gsc_read_at": "2026-10-14T23:40:32.000Z",
-    "latest_automation_last_run_time": "2026-10-14T23:32:42.614194+00:00",
-    "latest_automation_updated_at": "2026-10-14T23:33:04.745985+00:00"
+    "latest_product_checkpoint_observed_at": "2026-10-15T00:56:28.322Z",
+    "last_real_action": "VERIFIED FRESH GSC READ; VERIFIED SUCCESSFUL PUSH JOB AND REPAIR RECOVERY; VERIFIED CURRENT PRODUCT PUBLIC AND PRIVATE READS",
+    "gsc_manifest_read_at": "2026-10-15T01:04:50.000Z",
+    "latest_actual_gsc_read_at": "2026-10-15T01:04:50.000Z",
+    "latest_automation_last_run_time": "2026-10-14T23:42:59.578779+00:00",
+    "latest_automation_updated_at": "2026-10-14T23:43:21.556721+00:00"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
