@@ -1,30 +1,40 @@
 {
   "schema": 1,
   "source": "GSC_API",
-  "read_at": "2026-10-14T23:40:32.000Z",
-  "start_date": "2026-09-14",
-  "end_date": "2026-10-11",
+  "read_at": "2026-10-15T01:04:50.000Z",
+  "start_date": "2026-09-15",
+  "end_date": "2026-10-12",
   "settled_through": "2026-10-12",
-  "private_snapshot_commit": "a9b778540fc527ca005b964b54eaaca8fc848f37",
+  "private_snapshot_commit": "74399cd1e3177e7df482128bdff6c3d081e42743",
   "acquisition": "HOSTED_SCHEDULED_TASK",
-  "automation_slot": 497783,
+  "automation_slot": 497785,
   "pages": [
     {
       "url": "https://fabrya.fr/",
       "clicks": 0,
-      "impressions": 26,
+      "impressions": 29,
       "ctr": 0,
-      "position": 1.3461538461538463,
-      "commercial_intent": "BRAND",
+      "position": 1.3103448275862069,
+      "commercial_intent": "UNKNOWN",
+      "nonbrand_visible_impressions": "UNKNOWN",
+      "nonbrand_visible_position": "UNKNOWN"
+    },
+    {
+      "url": "https://fabrya.fr/conseils",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 1.3333333333333333,
+      "commercial_intent": "UNKNOWN",
       "nonbrand_visible_impressions": "UNKNOWN",
       "nonbrand_visible_position": "UNKNOWN"
     },
     {
       "url": "https://fabrya.fr/conseils/google-artisan",
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 26,
       "ctr": 0,
-      "position": 27.5,
+      "position": 23.115384615384617,
       "commercial_intent": "UNKNOWN",
       "nonbrand_visible_impressions": "UNKNOWN",
       "nonbrand_visible_position": "UNKNOWN"
@@ -32,9 +42,9 @@
     {
       "url": "https://fabrya.fr/conseils/seo-local",
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 17,
       "ctr": 0,
-      "position": 1.4285714285714286,
+      "position": 1.8823529411764706,
       "commercial_intent": "UNKNOWN",
       "nonbrand_visible_impressions": "UNKNOWN",
       "nonbrand_visible_position": "UNKNOWN"
@@ -50,14 +60,44 @@
       "nonbrand_visible_position": "UNKNOWN"
     },
     {
+      "url": "https://fabrya.fr/conseils/site-cle-en-main",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6,
+      "commercial_intent": "UNKNOWN",
+      "nonbrand_visible_impressions": "UNKNOWN",
+      "nonbrand_visible_position": "UNKNOWN"
+    },
+    {
+      "url": "https://fabrya.fr/conseils/site-estheticienne",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 3,
+      "commercial_intent": "UNKNOWN",
+      "nonbrand_visible_impressions": "UNKNOWN",
+      "nonbrand_visible_position": "UNKNOWN"
+    },
+    {
       "url": "https://fabrya.fr/conseils/site-garagiste",
       "clicks": 0,
       "impressions": 47,
       "ctr": 0,
       "position": 53.87234042553192,
-      "commercial_intent": "COMMERCIAL",
-      "nonbrand_visible_impressions": 29,
-      "nonbrand_visible_position": 85.27586206896552
+      "commercial_intent": "UNKNOWN",
+      "nonbrand_visible_impressions": "UNKNOWN",
+      "nonbrand_visible_position": "UNKNOWN"
+    },
+    {
+      "url": "https://fabrya.fr/conseils/site-pas-clients",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5,
+      "commercial_intent": "UNKNOWN",
+      "nonbrand_visible_impressions": "UNKNOWN",
+      "nonbrand_visible_position": "UNKNOWN"
     },
     {
       "url": "https://fabrya.fr/conseils/site-photographe",
@@ -65,9 +105,9 @@
       "impressions": 11,
       "ctr": 0,
       "position": 5.545454545454546,
-      "commercial_intent": "COMMERCIAL",
-      "nonbrand_visible_impressions": 2,
-      "nonbrand_visible_position": 24
+      "commercial_intent": "UNKNOWN",
+      "nonbrand_visible_impressions": "UNKNOWN",
+      "nonbrand_visible_position": "UNKNOWN"
     }
   ]
 }
