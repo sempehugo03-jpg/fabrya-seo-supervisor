@@ -15,7 +15,7 @@
       "impressions": 29,
       "ctr": 0,
       "position": 1.3103448275862069,
-      "commercial_intent": "UNKNOWN",
+      "commercial_intent": "BRAND",
       "nonbrand_visible_impressions": "UNKNOWN",
       "nonbrand_visible_position": "UNKNOWN"
     },
@@ -85,9 +85,9 @@
       "impressions": 47,
       "ctr": 0,
       "position": 53.87234042553192,
-      "commercial_intent": "UNKNOWN",
-      "nonbrand_visible_impressions": "UNKNOWN",
-      "nonbrand_visible_position": "UNKNOWN"
+      "commercial_intent": "COMMERCIAL",
+      "nonbrand_visible_impressions": 29,
+      "nonbrand_visible_position": 85.27586206896552
     },
     {
       "url": "https://fabrya.fr/conseils/site-pas-clients",
@@ -105,9 +105,9 @@
       "impressions": 11,
       "ctr": 0,
       "position": 5.545454545454546,
-      "commercial_intent": "UNKNOWN",
-      "nonbrand_visible_impressions": "UNKNOWN",
-      "nonbrand_visible_position": "UNKNOWN"
+      "commercial_intent": "COMMERCIAL",
+      "nonbrand_visible_impressions": 2,
+      "nonbrand_visible_position": 24
     }
   ]
 }
