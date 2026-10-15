@@ -4841,6 +4841,28 @@
         "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce"
       },
       "attested_at": "2026-10-15T15:50:37.312Z"
+    },
+    "497800": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38770941709",
+      "wake_commit": "b3de06bbe74eabafb48862a678a3e7855824bd0f",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-15T16:43:42.695248+00:00",
+      "completed_tasks_unchanged": true,
+      "job": "116546263524",
+      "verified_steps": 6,
+      "delivery_delta_seconds": 208.6949999332428,
+      "evidence": {
+        "run_attempt": 1,
+        "run_trigger": "push",
+        "run_conclusion": "success",
+        "job_conclusion": "success",
+        "receipt_status": "COMPLETED",
+        "receipt_new_results": 0,
+        "receipt_decision": "NO_ACTION",
+        "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce"
+      },
+      "attested_at": "2026-10-15T18:10:07.658Z"
     }
   },
   "scheduled_baseline": {
