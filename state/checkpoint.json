@@ -511,7 +511,7 @@
       "reason": "Current page inspection required; no proven production writer"
     },
     "last_schedule_run": 38790610979,
-    "last_successful_schedule": 38755620245,
+    "last_successful_schedule": 38790610979,
     "last_watchdog_recovery": null,
     "last_external_wake": 38783399093,
     "scheduler": {
