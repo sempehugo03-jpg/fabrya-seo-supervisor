@@ -590,14 +590,14 @@
         "status": "PASS",
         "reason": "",
         "evidence": {
-          "snapshot_commit": "49cd26b91590c27be187ae652f98563e2fb4801b",
-          "read_at": "2026-10-15T10:18:17.028Z",
+          "snapshot_commit": "f377e4444d01cb66bdd4a1f1e94417c577172a2d",
+          "read_at": "2026-10-15T12:04:08.000Z",
           "start_date": "2026-09-15",
           "end_date": "2026-10-12",
           "settled_through": "2026-10-12",
           "acquisition": "HOSTED_SCHEDULED_TASK",
-          "automation_slot": 497794,
-          "consumed_by_run": "38719359234"
+          "automation_slot": 497796,
+          "consumed_by_run": "38732088864"
         }
       },
       "OPPORTUNITY_ENGINE": {
@@ -4583,6 +4583,26 @@
       "observed_last_run_time": "2026-10-15T10:24:44.524983+00:00",
       "completed_tasks_unchanged": true,
       "job": "116369813748"
+    },
+    "497796": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38732088864",
+      "wake_commit": "60b27fa2e54fa63e2361bff97dac699e0ad15080",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-15T12:08:49.555882+00:00",
+      "completed_tasks_unchanged": true,
+      "job": "116412068348",
+      "evidence": {
+        "run_attempt": 1,
+        "run_trigger": "push",
+        "run_conclusion": "success",
+        "job_conclusion": "success",
+        "receipt_status": "COMPLETED",
+        "receipt_new_results": 0,
+        "receipt_decision": "NO_ACTION",
+        "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce"
+      },
+      "attested_at": "2026-10-15T13:19:40.594Z"
     }
   },
   "scheduled_baseline": {
@@ -10922,8 +10942,8 @@
       "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
       "gsc_snapshot_commit": "f377e4444d01cb66bdd4a1f1e94417c577172a2d",
       "wake_run": "38732088864",
-      "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-15T10:37:31.250686+00:00",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-15T12:08:49.555882+00:00",
       "reads": {
         "project_id": "appgprj_6acac4a9d9808191b57085eb34fa06be",
         "version": 22,
@@ -10961,7 +10981,7 @@
       "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
       "watchdog_conclusion": "UNKNOWN",
       "watchdog_evidence_preserved": "38097697056",
-      "delivery_attestation_status": "PENDING_FOLLOWING_INVOCATION"
+      "delivery_attestation_status": "PASS"
     }
   ],
   "public_product_resync": {
