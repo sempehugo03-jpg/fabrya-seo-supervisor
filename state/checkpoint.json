@@ -4690,6 +4690,26 @@
         "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce"
       },
       "attested_at": "2026-10-15T14:14:08.228Z"
+    },
+    "497798": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38749856805",
+      "wake_commit": "b1a006168c3eccb6eeb57da4dfa3de291d140449",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-15T14:18:50.848654+00:00",
+      "completed_tasks_unchanged": true,
+      "job": "116473095136",
+      "evidence": {
+        "run_attempt": 1,
+        "run_trigger": "push",
+        "run_conclusion": "success",
+        "job_conclusion": "success",
+        "receipt_status": "COMPLETED",
+        "receipt_new_results": 0,
+        "receipt_decision": "NO_ACTION",
+        "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce"
+      },
+      "attested_at": "2026-10-15T15:15:16.132Z"
     }
   },
   "scheduled_baseline": {
@@ -11129,8 +11149,8 @@
       "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
       "gsc_snapshot_commit": "b0adcd65a87d2e670d949b009602b671d8793423",
       "wake_run": "38749856805",
-      "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-15T13:23:51.236873+00:00",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-15T14:18:50.848654+00:00",
       "reads": {
         "project_id": "appgprj_6acac4a9d9808191b57085eb34fa06be",
         "version": 22,
@@ -11162,13 +11182,13 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Fresh GSC preceded the unique wake; real push run, receipt and six-step job succeeded; current hosted delivery attestation remains pending until a following invocation; public EUR59 and disabled ordering revalidated; no production SEO writer",
+      "reason": "Fresh GSC preceded the unique wake; real push run, receipt, hosted delivery and six-step job are now attested; public EUR59 and disabled ordering revalidated; no production SEO writer",
       "wake_conclusion": "success",
       "wake_job": "116473095136",
       "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
       "watchdog_conclusion": "UNKNOWN",
       "watchdog_evidence_preserved": "38097697056",
-      "delivery_attestation_status": "PENDING_FOLLOWING_INVOCATION"
+      "delivery_attestation_status": "PASS"
     }
   ],
   "public_product_resync": {
