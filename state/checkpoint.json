@@ -10357,10 +10357,55 @@
       "watchdog_conclusion": "UNKNOWN",
       "watchdog_evidence_preserved": "38097697056",
       "delivery_attestation_status": "PASS"
+    },
+    {
+      "slot": 497788,
+      "observed_at": "2026-10-15T04:28:32.000Z",
+      "private_receipt_commit": "3b4610f486c5955b4b12ee2868ddb82efa1286e0",
+      "private_receipt_blob": "8fd8e9a985842fda9ec78502420a5a188b7d0143",
+      "private_receipt_path": "seo/gsc/2026-10-15-497788-private-product-1792038512.json",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "gsc_snapshot_commit": "612b4023910271fc1c9b5b69b4d1881530e37b01",
+      "wake_run": "38681518197",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-15T02:57:33.375396+00:00",
+      "reads": {
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "sessions": 14,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01",
+          "noindex": true,
+          "nofollow": true,
+          "canonical": true
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC preceded the unique wake; real push run, receipt and six-step job succeeded; current hosted delivery attestation remains pending until a following invocation; public EUR59 and disabled ordering revalidated; no production SEO writer",
+      "wake_conclusion": "success",
+      "wake_job": "116246911916",
+      "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
+      "watchdog_conclusion": "UNKNOWN",
+      "watchdog_evidence_preserved": "38097697056",
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-15T02:56:40.000Z",
+    "observed_at": "2026-10-15T04:28:32.000Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -10392,18 +10437,18 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "33a374afd5cc55bd90800b960348b38a480956aa",
-    "gsc_snapshot_reused_same_slot": true,
+    "gsc_private_snapshot_commit": "612b4023910271fc1c9b5b69b4d1881530e37b01",
+    "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "FRESH SAME-SLOT GSC REREAD; PRIOR UNIQUE WAKE DELIVERY ATTESTED; NO SECOND WAKE; PRODUCT PUBLIC/PRIVATE REREAD; NO_DUPLICATE_STAGE",
-    "next_action": "REFRESH GSC BEFORE NEXT EXECUTION; EMIT NEXT UNIQUE UTC SLOT ONLY",
+    "current_action": "FRESH GSC READ; UNIQUE WAKE SUCCEEDED; PRODUCT PUBLIC/PRIVATE REREAD; NO_DUPLICATE_STAGE",
+    "next_action": "AUDIT HOSTED DELIVERY ON FOLLOWING INVOCATION; REFRESH GSC BEFORE NEXT EXECUTION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-15T01:48:37.058Z",
-    "last_real_action": "VERIFIED FRESH GSC REREAD; VERIFIED HOSTED DELIVERY; VERIFIED SUCCESSFUL PUSH JOB; VERIFIED CURRENT PRODUCT PUBLIC AND PRIVATE READS",
-    "gsc_manifest_read_at": "2026-10-15T02:56:28.000Z",
-    "latest_actual_gsc_read_at": "2026-10-15T02:56:28.000Z",
-    "latest_automation_last_run_time": "2026-10-15T02:27:20.086641+00:00",
-    "latest_automation_updated_at": "2026-10-15T02:27:41.789351+00:00"
+    "last_real_action": "VERIFIED FRESH GSC READ; VERIFIED SUCCESSFUL PUSH JOB; VERIFIED CURRENT PRODUCT PUBLIC AND PRIVATE READS",
+    "gsc_manifest_read_at": "2026-10-15T04:26:29.000Z",
+    "latest_actual_gsc_read_at": "2026-10-15T04:26:29.000Z",
+    "latest_automation_last_run_time": "2026-10-15T02:57:33.375396+00:00",
+    "latest_automation_updated_at": "2026-10-15T02:57:55.100201+00:00"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
