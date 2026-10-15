@@ -10815,10 +10815,60 @@
       "watchdog_conclusion": "UNKNOWN",
       "watchdog_evidence_preserved": "38097697056",
       "delivery_attestation_status": "PASS"
+    },
+    {
+      "slot": 497794,
+      "observed_at": "2026-10-15T10:23:04.789Z",
+      "private_receipt_commit": "87be78cb1d08425cd885e30b0ea576b309b45fef",
+      "private_receipt_blob": "95025b2300d05c5bdae26f81d3f0cc3751d32c10",
+      "private_receipt_path": "seo/gsc/2026-10-15-497794-private-product-1792059784.json",
+      "source_commit": "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
+      "gsc_snapshot_commit": "49cd26b91590c27be187ae652f98563e2fb4801b",
+      "wake_run": "38719359234",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-15T09:00:40.544977+00:00",
+      "reads": {
+        "project_id": "appgprj_6acac4a9d9808191b57085eb34fa06be",
+        "version": 22,
+        "source_commit": "e2690dc45c5ab62912f15fb483ed84b8081d5f94",
+        "deployment_id": "appgdep_6acbeac300208191af76086e1ec2723d",
+        "deployment_status": "succeeded",
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "sessions": 14,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01",
+          "noindex": true,
+          "nofollow": true,
+          "canonical": true
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC preceded the unique wake; real push run, receipt and six-step job succeeded; current hosted delivery attestation remains pending until a following invocation; public EUR59 and disabled ordering revalidated; no production SEO writer",
+      "wake_conclusion": "success",
+      "wake_job": "116369813748",
+      "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
+      "watchdog_conclusion": "UNKNOWN",
+      "watchdog_evidence_preserved": "38097697056",
+      "delivery_attestation_status": "PENDING_FOLLOWING_INVOCATION"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-15T09:00:00.934Z",
+    "observed_at": "2026-10-15T10:23:04.789Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -10850,18 +10900,18 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "328f66d04c0f3c23e487a423f20fc784df371ad9",
+    "gsc_private_snapshot_commit": "49cd26b91590c27be187ae652f98563e2fb4801b",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "SAME-SLOT FRESH GSC REREAD; EXISTING UNIQUE WAKE VERIFIED; PRODUCT PUBLIC/PRIVATE REREAD; NO_DUPLICATE_STAGE",
+    "current_action": "FRESH GSC READ; UNIQUE WAKE VERIFIED; PRODUCT PUBLIC/PRIVATE REREAD; NO_DUPLICATE_STAGE",
     "next_action": "REFRESH GSC BEFORE NEXT UNIQUE HOURLY WAKE",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-15T07:22:12.304Z",
-    "last_real_action": "VERIFIED FRESH SAME-SLOT GSC READ; VERIFIED EXISTING UNIQUE PUSH JOB; VERIFIED CURRENT PRODUCT PUBLIC AND PRIVATE READS",
-    "gsc_manifest_read_at": "2026-10-15T08:58:18.608Z",
-    "latest_actual_gsc_read_at": "2026-10-15T08:58:18.608Z",
-    "latest_automation_last_run_time": "2026-10-15T08:25:12.228619+00:00",
-    "latest_automation_updated_at": "2026-10-15T08:25:34.905461+00:00"
+    "last_real_action": "VERIFIED FRESH GSC READ; VERIFIED UNIQUE PUSH JOB; VERIFIED CURRENT PRODUCT PUBLIC AND PRIVATE READS",
+    "gsc_manifest_read_at": "2026-10-15T10:18:17.028Z",
+    "latest_actual_gsc_read_at": "2026-10-15T10:18:17.028Z",
+    "latest_automation_last_run_time": "2026-10-15T09:00:40.544977+00:00",
+    "latest_automation_updated_at": "2026-10-15T09:01:02.230401+00:00"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
