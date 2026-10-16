@@ -573,25 +573,14 @@
     }
   },
   "SEO_AUTOPILOT_STATUS": {
-    "current_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
+    "current_commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
     "last_wake": {
-      "run": "38971142273",
+      "run": "38981926064",
       "attempt": "1",
-      "trigger": "push",
+      "trigger": "workflow_run",
       "commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
-      "started_at": 1792186954.5034947,
-      "status": "COMPLETED",
-      "wake": {
-        "schema": 1,
-        "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-        "slot": 497829,
-        "issued_at": 1792186931,
-        "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a"
-      },
-      "completed_at": 1792186956.038659,
-      "new_results": 0,
-      "decision": "NO_ACTION",
-      "reason": "Current page inspection required; no proven production writer"
+      "started_at": 1792193519.4584777,
+      "status": "STARTED"
     },
     "last_successful_cycle": {
       "run": "38971142273",
@@ -613,7 +602,7 @@
       "reason": "Current page inspection required; no proven production writer"
     },
     "last_schedule_run": 38968667495,
-    "last_successful_schedule": 38968667495,
+    "last_successful_schedule": null,
     "last_watchdog_recovery": {
       "run": "38097697056",
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
@@ -669,11 +658,9 @@
             38687702627,
             38681518197,
             38670857956,
-            38663749433,
-            38635788583,
-            38624135294
+            38663749433
           ],
-          "commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
+          "commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
           "transport_sources": [
             "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
             "24ce1fd6827b650a7272fb00935aa671fd2d6d1a"
@@ -758,8 +745,8 @@
         "evidence": null
       }
     },
-    "current_action": "GSC_PROVIDER_READ_FAILED_CONTINUE_SAFE_ACTIONS",
-    "next_action": "ISSUE_UNIQUE_CURRENT_SLOT_WAKE_AND_RETRY_GSC_NEXT_CYCLE",
+    "current_action": "INSPECT",
+    "next_action": "INSPECT_CURRENT_PAGE_AND_ISOLATED_SEO_WRITER",
     "first_google_organic_customer": "NOT_YET",
     "terminal_state": "RUNNING"
   },
