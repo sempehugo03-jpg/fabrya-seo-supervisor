@@ -601,14 +601,14 @@
         "status": "PASS",
         "reason": "",
         "evidence": {
-          "snapshot_commit": "ddde88f196170dc09752002bf6d12ed4d172d254",
-          "read_at": "2026-10-16T01:20:31.000Z",
+          "snapshot_commit": "725a2039cec519591478a76ccaad8dfd1fcc667c",
+          "read_at": "2026-10-16T02:22:45.000Z",
           "start_date": "2026-09-16",
           "end_date": "2026-10-13",
           "settled_through": "2026-10-13",
           "acquisition": "HOSTED_SCHEDULED_TASK",
-          "automation_slot": 497809,
-          "consumed_by_run": "38834850319"
+          "automation_slot": 497810,
+          "consumed_by_run": "38840501105"
         }
       },
       "OPPORTUNITY_ENGINE": {
@@ -5801,7 +5801,7 @@
       "settled_through": "2026-10-13",
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497810,
-      "consumed_by_run": "PENDING_CURRENT_WAKE"
+      "consumed_by_run": "38840501105"
     }
   ],
   "seo_decision": {
@@ -12023,7 +12023,7 @@
       "private_receipt_path": "seo/gsc/2026-10-16-497810-private-product-reread-1792117564.json",
       "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
       "gsc_snapshot_commit": "725a2039cec519591478a76ccaad8dfd1fcc667c",
-      "wake_run": "PENDING_CURRENT_WAKE",
+      "wake_run": "38840501105",
       "delivery_attested": false,
       "observed_automation_last_run_time": "2026-10-16T01:25:01.167258+00:00",
       "reads": {
@@ -12059,9 +12059,9 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Fresh GSC read and current Product/Integration/Sites inspection completed; existing bounded garage stage remains valid and was not duplicated. Current wake and hosted delivery attestation are pending.",
-      "wake_conclusion": "PENDING",
-      "wake_job": "PENDING",
+      "reason": "Fresh GSC data was consumed by successful unique push run 38840501105; the existing bounded garage stage remains valid and was not duplicated. Hosted task metadata observed before this wake cannot attest its delivery yet.",
+      "wake_conclusion": "success",
+      "wake_job": "116779242342",
       "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
       "watchdog_conclusion": "UNKNOWN",
       "watchdog_evidence_preserved": "38097697056",
@@ -12108,11 +12108,11 @@
     "gsc_private_snapshot_commit": "725a2039cec519591478a76ccaad8dfd1fcc667c",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "ATTESTED SLOT 497809; FRESH GSC READ; PRODUCT/INTEGRATION RESYNC; UNIQUE WAKE PENDING",
-    "next_action": "EMIT AND VERIFY UNIQUE SLOT 497810 WAKE; AUDIT ITS DELIVERY AGAINST A LATER OBSERVED HOSTED TASK last_run_time",
+    "current_action": "ATTESTED SLOT 497809; FRESH GSC READ; PRODUCT/INTEGRATION RESYNC; UNIQUE WAKE 38840501105 SUCCEEDED; CURRENT DELIVERY ATTESTATION PENDING NEXT METADATA OBSERVATION",
+    "next_action": "AUDIT SLOT 497810 AGAINST A LATER OBSERVED HOSTED TASK last_run_time; REFRESH GSC BEFORE THE NEXT UNIQUE HOURLY WAKE",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-16T02:26:04.000Z",
-    "last_real_action": "ATTESTED PRIOR SLOT; VERIFIED FRESH GSC, PRODUCT/INTEGRATION STATES, PUBLIC PRICE/CTA, PRIVATE CMS/ATTRIBUTION; NO DUPLICATE STAGE",
+    "last_real_action": "ATTESTED PRIOR SLOT; VERIFIED FRESH GSC AND SUCCESSFUL UNIQUE PUSH RUN; VERIFIED CURRENT PRODUCT/INTEGRATION STATES, PUBLIC PRICE/CTA, PRIVATE CMS/ATTRIBUTION; NO DUPLICATE STAGE",
     "gsc_manifest_read_at": "2026-10-16T02:22:45.000Z",
     "latest_actual_gsc_read_at": "2026-10-16T02:22:45.000Z",
     "latest_automation_last_run_time": "2026-10-16T01:25:01.167258+00:00",
