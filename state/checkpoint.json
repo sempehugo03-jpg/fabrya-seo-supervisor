@@ -5224,13 +5224,13 @@
       "run": "38861779592",
       "wake_commit": "14f975ce573498e9dde4d398adabcea19b2c31ca",
       "delivery": "HOSTED_SCHEDULED_TASK",
-      "observed_last_run_time": "2026-10-16T06:34:19.385131+00:00",
+      "observed_last_run_time": "2026-10-16T06:50:55.208135+00:00",
       "completed_tasks_unchanged": true,
       "run_attempt": 1,
       "run_conclusion": "success",
       "job": "116845464923",
       "steps_verified": 6,
-      "delivery_delta_seconds": 119.38499999046326,
+      "delivery_delta_seconds": 1115.207999944687,
       "evidence": {
         "run_attempt": 1,
         "run_trigger": "push",
@@ -5241,7 +5241,7 @@
         "receipt_decision": "NO_ACTION",
         "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a"
       },
-      "attested_at": "2026-10-16T06:50:31.751Z"
+      "attested_at": "2026-10-16T07:46:19.449Z"
     }
   },
   "scheduled_baseline": {
@@ -5936,6 +5936,16 @@
       "automation_slot": 497814,
       "consumed_by_run": "PENDING_NEXT_UNIQUE_WAKE",
       "same_slot_reread": true
+    },
+    {
+      "snapshot_commit": "28c4da54712b1e1ab2dc4c2b82d96f042d90f773",
+      "read_at": "2026-10-16T07:44:11.908Z",
+      "start_date": "2026-09-16",
+      "end_date": "2026-10-13",
+      "settled_through": "2026-10-13",
+      "acquisition": "HOSTED_SCHEDULED_TASK",
+      "automation_slot": 497815,
+      "consumed_by_run": "PENDING_UNIQUE_WAKE"
     }
   ],
   "seo_decision": {
@@ -12367,7 +12377,7 @@
       "gsc_snapshot_commit": "8edacee8f2059c82e86e2a120e81107a5614f80b",
       "wake_run": "38861779592",
       "delivery_attested": true,
-      "observed_automation_last_run_time": "2026-10-16T06:34:19.385131+00:00",
+      "observed_automation_last_run_time": "2026-10-16T06:50:55.208135+00:00",
       "reads": {
         "project_id": "appgprj_6acac4a9d9808191b57085eb34fa06be",
         "version": 57,
@@ -12401,18 +12411,70 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Same-slot mandatory GSC/Product reread completed; existing unique wake 38861779592 is now independently delivery-attested and was not reissued.",
+      "reason": "Observed hosted task metadata at 2026-10-16T06:50:55.208135+00:00 remains in wake slot 497814 and within 30 minutes of issued_at; unique push run 38861779592 attempt 1, six-step job 116845464923 and completed receipt verified.",
       "wake_conclusion": "success",
       "wake_job": "116845464923",
       "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
       "watchdog_conclusion": "UNKNOWN",
       "watchdog_evidence_preserved": "38097697056",
-      "delivery_attestation_status": "PASS_EXISTING_UNIQUE_WAKE",
+      "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION",
       "same_slot_reread": true
+    },
+    {
+      "slot": 497815,
+      "observed_at": "2026-10-16T07:45:40.238Z",
+      "private_receipt_commit": "7c445560fa92c6c6f16df9747ea77da5c799ab8c",
+      "private_receipt_blob": "f1b53526c83ded3f083202038511aa4057118d3d",
+      "private_receipt_path": "seo/gsc/2026-10-16-497815-private-product-reread-1792136740.json",
+      "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
+      "gsc_snapshot_commit": "28c4da54712b1e1ab2dc4c2b82d96f042d90f773",
+      "wake_run": null,
+      "delivery_attested": false,
+      "observed_automation_last_run_time": null,
+      "reads": {
+        "project_id": "appgprj_6acac4a9d9808191b57085eb34fa06be",
+        "version": 57,
+        "source_commit": "fe06648e9cb875660ab484e793f2961c57f453a9",
+        "deployment_id": "appgdep_6ad1c78b4768819187c9bd842a47e7c7",
+        "deployment_status": "succeeded",
+        "garage_page": {
+          "status": 200,
+          "version": "PRESERVED_FROM_EXISTING_STAGE"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "channel": "direct",
+          "is_test": 1,
+          "sessions": 24,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01",
+          "noindex": true,
+          "nofollow": true,
+          "canonical": true
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Fresh GSC/Product/Sites/private transport reads completed before the next unique wake; delivery attestation must wait for a later hosted invocation.",
+      "wake_conclusion": "PENDING",
+      "wake_job": null,
+      "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
+      "watchdog_conclusion": "UNKNOWN",
+      "watchdog_evidence_preserved": "38097697056",
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-16T06:49:23.171Z",
+    "observed_at": "2026-10-16T07:45:40.238Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -12448,18 +12510,18 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "8edacee8f2059c82e86e2a120e81107a5614f80b",
+    "gsc_private_snapshot_commit": "28c4da54712b1e1ab2dc4c2b82d96f042d90f773",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "SAME SLOT 497814 FRESH REREAD COMPLETED; UNIQUE WAKE DELIVERY ATTESTED; NO DUPLICATE WAKE",
-    "next_action": "REFRESH GSC AND EMIT ONLY THE NEXT UNIQUE UTC HOURLY SLOT",
+    "current_action": "FRESH GSC/PRODUCT/INTEGRATION/SITES/PRIVATE READS COMPLETE; UNIQUE SLOT 497815 WAKE PENDING",
+    "next_action": "EMIT EXACTLY ONE SLOT 497815 WAKE, VERIFY ITS PUSH RUN, LEAVE DELIVERY ATTESTATION FOR NEXT HOSTED INVOCATION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "latest_product_checkpoint_observed_at": "2026-10-16T06:49:23.171Z",
-    "last_real_action": "FRESH SAME-SLOT GSC READ PRESERVED PRIVATELY; PUBLIC AGGREGATE REFRESHED; SLOT 497814 DELIVERY ATTESTED; PRODUCT/INTEGRATION/SITES/PRIVATE CMS AND ATTRIBUTION REREAD",
-    "gsc_manifest_read_at": "2026-10-16T06:48:38.475Z",
-    "latest_actual_gsc_read_at": "2026-10-16T06:48:38.475Z",
-    "latest_automation_last_run_time": "2026-10-16T06:34:19.385131+00:00",
-    "latest_automation_updated_at": "2026-10-16T06:34:41.821068+00:00",
+    "latest_product_checkpoint_observed_at": "2026-10-16T07:45:40.238Z",
+    "last_real_action": "FRESH GSC READ STORED PRIVATELY; PUBLIC AGGREGATE REFRESHED; PRIOR SLOT 497814 DELIVERY REATTESTED; PRODUCT/INTEGRATION/SITES/PRIVATE CMS AND ATTRIBUTION REREAD",
+    "gsc_manifest_read_at": "2026-10-16T07:44:11.908Z",
+    "latest_actual_gsc_read_at": "2026-10-16T07:44:11.908Z",
+    "latest_automation_last_run_time": "2026-10-16T06:50:55.208135+00:00",
+    "latest_automation_updated_at": "2026-10-16T06:51:16.834900+00:00",
     "public_latest_saved_version": 508,
     "public_latest_saved_source_commit": "008297dda91e9531c4a6b7c5d092dcf5d948fbe4",
     "public_latest_saved_deployment_status": "NOT_DEPLOYED",
@@ -12469,13 +12531,13 @@
     "integration_repository": "sempehugo03-jpg/fabrya-engine",
     "integration_pr": 36,
     "integration_branch": "work3/product-integration-20261015",
-    "integration_design_current_blob": "dd108166e9a8ea0956659cd5d210b32cb3a411f6",
+    "integration_design_current_blob": "48b07ee87c1ce8e2d7524ca640597b98b64188ad",
     "integration_design_status": "RUNNING",
     "integration_design_owner": "design-3735fe3da8e1-0619",
     "dg001_consumed": true,
     "dg001_issue": "https://github.com/sempehugo03-jpg/fabrya-engine/issues/42",
     "dg001_comment_id": "6205263096",
-    "integration_branch_commit": "4cba58291214ce7ddb457d739395d10a2756b773"
+    "integration_branch_commit": "d5bb2754c8b3916e0cef7681ef81002d45c37f95"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
