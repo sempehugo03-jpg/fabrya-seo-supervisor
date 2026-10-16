@@ -601,22 +601,22 @@
         "status": "PASS",
         "reason": "",
         "evidence": {
-          "snapshot_commit": "5bd78d26fd8d2ab78a6669fc1c1607d54367668a",
-          "read_at": "2026-10-16T05:25:18.066Z",
+          "snapshot_commit": "c189033c4f61c5617061a72c2aae5725d6d97957",
+          "read_at": "2026-10-16T06:31:18.973Z",
           "start_date": "2026-09-16",
           "end_date": "2026-10-13",
           "settled_through": "2026-10-13",
           "acquisition": "HOSTED_SCHEDULED_TASK",
-          "automation_slot": 497813,
-          "consumed_by_run": "38855778546"
+          "automation_slot": 497814,
+          "consumed_by_run": "PENDING_UNIQUE_WAKE"
         }
       },
       "OPPORTUNITY_ENGINE": {
         "status": "PASS",
         "reason": "",
         "evidence": {
-          "run": "38855778546",
-          "snapshot": "5bd78d26fd8d2ab78a6669fc1c1607d54367668a",
+          "run": "PENDING_UNIQUE_WAKE",
+          "snapshot": "c189033c4f61c5617061a72c2aae5725d6d97957",
           "decision": "INSPECT"
         }
       },
@@ -5186,6 +5186,19 @@
       "job": "116809602766",
       "steps_verified": 6,
       "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a"
+    },
+    "497813": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38855778546",
+      "wake_commit": "416fcc68d71d8f5d052837b999235101be2904e1",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-16T05:28:05.711810+00:00",
+      "completed_tasks_unchanged": true,
+      "run_attempt": 1,
+      "run_conclusion": "success",
+      "job": "116826793329",
+      "steps_verified": 6,
+      "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a"
     }
   },
   "scheduled_baseline": {
@@ -5869,6 +5882,16 @@
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497813,
       "consumed_by_run": "38855778546"
+    },
+    {
+      "snapshot_commit": "c189033c4f61c5617061a72c2aae5725d6d97957",
+      "read_at": "2026-10-16T06:31:18.973Z",
+      "start_date": "2026-09-16",
+      "end_date": "2026-10-13",
+      "settled_through": "2026-10-13",
+      "acquisition": "HOSTED_SCHEDULED_TASK",
+      "automation_slot": 497814,
+      "consumed_by_run": "PENDING_UNIQUE_WAKE"
     }
   ],
   "seo_decision": {
@@ -12195,6 +12218,58 @@
       "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
       "gsc_snapshot_commit": "5bd78d26fd8d2ab78a6669fc1c1607d54367668a",
       "wake_run": "38855778546",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-16T05:28:05.711810+00:00",
+      "reads": {
+        "project_id": "appgprj_6acac4a9d9808191b57085eb34fa06be",
+        "version": 54,
+        "source_commit": "8e4b84ac9947a6c814d18a4c39c609b2600717a1",
+        "deployment_id": "appgdep_6ad1b160c17c8191a9fa07127dd434b9",
+        "deployment_status": "succeeded",
+        "garage_page": {
+          "status": 200,
+          "version": "PRESERVED_FROM_EXISTING_STAGE"
+        },
+        "attribution": {
+          "status": 200,
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "channel": "direct",
+          "is_test": 1,
+          "sessions": 24,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01",
+          "noindex": true,
+          "nofollow": true,
+          "canonical": true
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Observed hosted task metadata at 2026-10-16T05:28:05.711810+00:00 matches wake slot 497813 and issued_at within 30 minutes; unique push run 38855778546 attempt 1, six-step job 116826793329 and completed receipt verified.",
+      "wake_conclusion": "success",
+      "wake_job": "116826793329",
+      "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
+      "watchdog_conclusion": "UNKNOWN",
+      "watchdog_evidence_preserved": "38097697056",
+      "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION"
+    },
+    {
+      "slot": 497814,
+      "observed_at": "2026-10-16T06:31:40.805Z",
+      "private_receipt_commit": "d79098b4337381ef7ad222bed2e619c2e63653d6",
+      "private_receipt_blob": "de018926b4605a0f3e0c19d2970dd5b36a192d40",
+      "private_receipt_path": "seo/gsc/2026-10-16-497814-private-product-reread-1792132300.json",
+      "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
+      "gsc_snapshot_commit": "c189033c4f61c5617061a72c2aae5725d6d97957",
+      "wake_run": "PENDING",
       "delivery_attested": false,
       "observed_automation_last_run_time": null,
       "reads": {
@@ -12230,9 +12305,9 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Unique push run 38855778546 attempt 1 and six-step job 116826793329 completed successfully; hosted-task delivery metadata for this same slot is not yet observable, so delivery attestation remains pending.",
-      "wake_conclusion": "success",
-      "wake_job": "116826793329",
+      "reason": "Fresh GSC and exact DG-001 Product/Integration/Sites reads completed before the unique wake; existing durable SEO stage preserved.",
+      "wake_conclusion": "PENDING",
+      "wake_job": "PENDING",
       "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
       "watchdog_conclusion": "UNKNOWN",
       "watchdog_evidence_preserved": "38097697056",
@@ -12240,7 +12315,7 @@
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-16T05:25:39.462Z",
+    "observed_at": "2026-10-16T06:31:40.805Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -12259,12 +12334,12 @@
     "product_branch_commit": "5f9d4e1633ee33d09339d105b31d92e27570e197",
     "requested_product_checkpoint_ref": "state/fabrya-product-supervisor",
     "product_checkpoint_state": "FOUND_AT_READ",
-    "product_checkpoint_blob": "16ae98bace2c0d64fa9288a4b87d82b7bda8112b",
-    "product_state": "BLOCKED_TECHNICAL",
+    "product_checkpoint_blob": "06a4e18d735224f62843e4e6036bc05507a6882c",
+    "product_state": "BLOCKED_HUMAN",
     "product_public_ready": "NOT_YET",
     "product_public_deployment_status": "NOT_AUTHORIZED",
     "product_human_blocker": "CODEX_PRODUCT_AUTHENTICATION_REQUIRED",
-    "product_technical_blocker": "BROWSER_QA_CONSUMER_NOT_CONNECTED",
+    "product_technical_blocker": "DURABLE_PRODUCT_CODEX_CONSUMER_NOT_AUTHENTICATED",
     "product_blocker_is_seo_stop": false,
     "private_version": 54,
     "private_source_commit": "8e4b84ac9947a6c814d18a4c39c609b2600717a1",
@@ -12276,30 +12351,30 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "5bd78d26fd8d2ab78a6669fc1c1607d54367668a",
+    "gsc_private_snapshot_commit": "c189033c4f61c5617061a72c2aae5725d6d97957",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "UNIQUE SLOT 497813 WAKE VERIFIED; DELIVERY ATTESTATION PENDING NEXT HOSTED INVOCATION",
-    "next_action": "REFRESH GSC AND AUDIT SLOT 497813 DELIVERY ON NEXT HOURLY INVOCATION",
+    "current_action": "ATTESTED SLOT 497813; FRESH GSC READ; PRODUCT/INTEGRATION/SITES RESYNC; UNIQUE WAKE PENDING",
+    "next_action": "EMIT AND VERIFY UNIQUE SLOT 497814 WAKE",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "latest_product_checkpoint_observed_at": "2026-10-16T05:25:39.462Z",
-    "last_real_action": "FRESH GSC CONSUMED BY VERIFIED PUSH RUN 38855778546; SIX JOB STEPS SUCCEEDED; PRODUCT/INTEGRATION/SITES/PRIVATE CMS AND ATTRIBUTION REREAD PRESERVED",
-    "gsc_manifest_read_at": "2026-10-16T05:25:18.066Z",
-    "latest_actual_gsc_read_at": "2026-10-16T05:25:18.066Z",
-    "latest_automation_last_run_time": "2026-10-16T04:23:46.293807+00:00",
-    "latest_automation_updated_at": "2026-10-16T04:24:08.999558+00:00",
+    "latest_product_checkpoint_observed_at": "2026-10-16T06:31:40.805Z",
+    "last_real_action": "ATTESTED PRIOR HOSTED DELIVERY; VERIFIED FRESH GSC, CURRENT PRODUCT/INTEGRATION STATES, PUBLIC PRICE/CTA, PRIVATE CMS/ATTRIBUTION; NO DUPLICATE STAGE",
+    "gsc_manifest_read_at": "2026-10-16T06:31:18.973Z",
+    "latest_actual_gsc_read_at": "2026-10-16T06:31:18.973Z",
+    "latest_automation_last_run_time": "2026-10-16T05:28:05.711810+00:00",
+    "latest_automation_updated_at": "2026-10-16T05:28:27.910337+00:00",
     "public_latest_saved_version": 508,
     "public_latest_saved_source_commit": "008297dda91e9531c4a6b7c5d092dcf5d948fbe4",
     "public_latest_saved_deployment_status": "NOT_DEPLOYED",
     "requested_product_checkpoint_path": "state.json",
-    "product_revision": 135,
-    "product_last_worker_run": "38850424158",
+    "product_revision": 136,
+    "product_last_worker_run": "38858179795",
     "integration_repository": "sempehugo03-jpg/fabrya-engine",
     "integration_pr": 36,
     "integration_branch": "work3/product-integration-20261015",
-    "integration_design_current_blob": "146c0bf0b4e57baf0332ff729cfa3e3f1c887882",
+    "integration_design_current_blob": "11717a6a166bf2b653afee6c82147bc09db943f0",
     "integration_design_status": "RUNNING",
-    "integration_design_owner": "design-3735fe3da8e1",
+    "integration_design_owner": "design-3735fe3da8e1-0619",
     "dg001_consumed": true,
     "dg001_issue": "https://github.com/sempehugo03-jpg/fabrya-engine/issues/42",
     "dg001_comment_id": "6205263096"
