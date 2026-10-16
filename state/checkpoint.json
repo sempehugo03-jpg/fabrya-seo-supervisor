@@ -649,19 +649,19 @@
         "status": "PASS",
         "reason": "",
         "evidence": {
-          "snapshot_commit": "adf06d644faea62efcd49c89a2c690ca6813d54f",
-          "read_at": "2026-10-16T19:26:37.555Z",
+          "snapshot_commit": "6a14c940113a5832dde9fe6cb5bccc37c260dffe",
+          "read_at": "2026-10-16T20:24:47.656Z",
           "start_date": "2026-09-16",
           "end_date": "2026-10-13",
           "settled_through": "2026-10-14",
           "acquisition": "HOSTED_SCHEDULED_TASK",
-          "automation_slot": 497827,
-          "consumed_by_run": "38955100421",
-          "snapshot_blob": "2fcdc5f1d0be4912fd99381bc9d3b69f0dc00d59",
+          "automation_slot": 497828,
+          "consumed_by_run": "38962277492",
+          "snapshot_blob": "e7a60100953be98a80e4b3f583166f0a924a450d",
           "delivery_attested": true,
           "wake_conclusion": "success",
           "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION",
-          "observed_automation_last_run_time": "2026-10-16T19:29:41.818564+00:00"
+          "observed_automation_last_run_time": "2026-10-16T20:28:50.295559+00:00"
         }
       },
       "OPPORTUNITY_ENGINE": {
@@ -5641,6 +5641,28 @@
         "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a"
       },
       "attested_at": "2026-10-16T20:28:18.425Z"
+    },
+    "497828": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38962277492",
+      "wake_commit": "093a1399ee64c4f54eb10f7a77d346fde7c16698",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-16T20:28:50.295559+00:00",
+      "completed_tasks_unchanged": true,
+      "job": "117180037530",
+      "verified_steps": 6,
+      "delivery_delta_seconds": 133.29500007629395,
+      "evidence": {
+        "run_attempt": 1,
+        "run_trigger": "push",
+        "run_conclusion": "success",
+        "job_conclusion": "success",
+        "receipt_status": "COMPLETED",
+        "receipt_new_results": 0,
+        "receipt_decision": "NO_ACTION",
+        "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a"
+      },
+      "attested_at": "2026-10-16T20:34:38.874Z"
     }
   },
   "scheduled_baseline": {
@@ -6335,7 +6357,26 @@
       "settled_through": "2026-10-14",
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497828,
-      "consumed_by_run": "38962277492"
+      "consumed_by_run": "38962277492",
+      "snapshot_blob": "e7a60100953be98a80e4b3f583166f0a924a450d",
+      "delivery_attested": true,
+      "wake_conclusion": "success",
+      "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION",
+      "observed_automation_last_run_time": "2026-10-16T20:28:50.295559+00:00"
+    },
+    {
+      "snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
+      "snapshot_blob": "3ea49803b082b2a4d7765526ec6b23399a93638b",
+      "read_at": "2026-10-16T20:33:23.509Z",
+      "start_date": "2026-09-16",
+      "end_date": "2026-10-13",
+      "settled_through": "2026-10-14",
+      "acquisition": "HOSTED_SCHEDULED_TASK",
+      "automation_slot": 497828,
+      "consumed_by_run": "PENDING_NEXT_UNIQUE_WAKE",
+      "same_slot_reread": true,
+      "delivery_attested": false,
+      "delivery_attestation_status": "PENDING_NEXT_UNIQUE_WAKE"
     }
   ],
   "seo_decision": {
@@ -13274,8 +13315,8 @@
       "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
       "gsc_snapshot_commit": "6a14c940113a5832dde9fe6cb5bccc37c260dffe",
       "wake_run": "38962277492",
-      "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-16T19:29:41.818564+00:00",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-16T20:28:50.295559+00:00",
       "reads": {
         "project_id": "appgprj_6acac4a9d9808191b57085eb34fa06be",
         "version": 83,
@@ -13310,14 +13351,63 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Fresh GSC consumed by unique slot 497828 wake; existing garage stage remains durable while public writer gates stay unproven.",
-      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
+      "reason": "Observed hosted task last_run_time matches slot 497828 within 30 minutes; unique push run 38962277492 attempt 1, six-step job 117180037530 and completed receipt verified.",
+      "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION",
       "wake_job": "117180037530",
       "wake_conclusion": "success"
+    },
+    {
+      "slot": 497828,
+      "observed_at": "2026-10-16T20:34:05.957Z",
+      "private_receipt_commit": "fbc50564ce151138797c831db472c22d59a803a5",
+      "private_receipt_blob": "09768bf3af521f99bad8ad612158a1bb450672f8",
+      "private_receipt_path": "seo/gsc/2026-10-16-497828-private-product-reread-1792182845.json",
+      "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
+      "gsc_snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
+      "wake_run": "PENDING_NEXT_UNIQUE_WAKE",
+      "delivery_attested": false,
+      "observed_automation_last_run_time": "2026-10-16T20:28:50.295559+00:00",
+      "same_slot_reread": true,
+      "reads": {
+        "project_id": "appgprj_6acac4a9d9808191b57085eb34fa06be",
+        "version": 83,
+        "source_commit": "ad66d47242729bcea6509e91b66126f67661da52",
+        "deployment_id": "appgdep_6ad2851e59b481919aa77e2c2833dd99",
+        "deployment_status": "succeeded",
+        "garage_page": {
+          "status": 200,
+          "version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        },
+        "attribution": {
+          "status": 200,
+          "source": "SERVER_FIRST_TOUCH_AND_EXISTING_PAYMENT_RECORDS",
+          "first_google_organic_customer": "NOT_YET",
+          "exclusion_policy_ready": false,
+          "brand_proof": "UNKNOWN_WHEN_QUERY_ABSENT",
+          "live_deployment_required": true,
+          "channel": "direct",
+          "is_test": 1,
+          "sessions": 24,
+          "projects": 2,
+          "demos": 1,
+          "checkouts": 0,
+          "confirmed_live_payments": 0
+        },
+        "existing_stage_preview": {
+          "status": 200,
+          "id": "seo-garage-20261011-business-01",
+          "noindex": true,
+          "nofollow": true,
+          "canonical": true
+        }
+      },
+      "decision": "NO_STAGE_DUPLICATE",
+      "reason": "Same-slot reread confirms unchanged evidence; no second hourly wake issued.",
+      "delivery_attestation_status": "PENDING_NEXT_UNIQUE_WAKE"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-16T20:26:31.512Z",
+    "observed_at": "2026-10-16T20:34:05.957Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -13346,7 +13436,7 @@
     "product_technical_blocker": "BROWSER_QA_CONSUMER_NOT_CONNECTED",
     "product_blocker_is_seo_stop": false,
     "product_last_worker_run": "38951939997",
-    "latest_product_checkpoint_observed_at": "2026-10-16T20:26:31.512Z",
+    "latest_product_checkpoint_observed_at": "2026-10-16T20:34:05.957Z",
     "private_version": 83,
     "private_source_commit": "ad66d47242729bcea6509e91b66126f67661da52",
     "private_deployment_id": "appgdep_6ad2851e59b481919aa77e2c2833dd99",
@@ -13357,17 +13447,17 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "6a14c940113a5832dde9fe6cb5bccc37c260dffe",
+    "gsc_private_snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "FRESH GSC/PRODUCT/SITES/PRIVATE READS CONSUMED BY SUCCESSFUL UNIQUE WAKE",
-    "next_action": "AUDIT SLOT 497828 DELIVERY ON A FOLLOWING HOSTED INVOCATION",
+    "current_action": "SAME-SLOT FRESH GSC/PRODUCT/SITES/PRIVATE REREAD; EXISTING UNIQUE WAKE VERIFIED",
+    "next_action": "CONSUME SAME-SLOT REREAD ON NEXT UNIQUE HOURLY WAKE",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "last_real_action": "UNIQUE PUSH WAKE 38962277492 ATTEMPT 1 SUCCEEDED; ALL SIX JOB STEPS AND COMPLETED RECEIPT VERIFIED",
-    "gsc_manifest_read_at": "2026-10-16T20:24:47.656Z",
-    "latest_actual_gsc_read_at": "2026-10-16T20:24:47.656Z",
-    "latest_automation_last_run_time": "2026-10-16T19:29:41.818564+00:00",
-    "latest_automation_updated_at": "2026-10-16T19:30:03.472705+00:00",
+    "last_real_action": "UNIQUE PUSH WAKE 38962277492 ATTEMPT 1 SUCCEEDED; SIX JOB STEPS AND COMPLETED RECEIPT NOW INDEPENDENTLY ATTESTED",
+    "gsc_manifest_read_at": "2026-10-16T20:33:23.509Z",
+    "latest_actual_gsc_read_at": "2026-10-16T20:33:23.509Z",
+    "latest_automation_last_run_time": "2026-10-16T20:28:50.295559+00:00",
+    "latest_automation_updated_at": "2026-10-16T20:29:12.399727+00:00",
     "public_latest_saved_version": 508,
     "public_latest_saved_source_commit": "008297dda91e9531c4a6b7c5d092dcf5d948fbe4",
     "public_latest_saved_deployment_status": "NOT_DEPLOYED",
@@ -13389,7 +13479,7 @@
     "latest_wake_run": "38962277492",
     "latest_wake_job": "117180037530",
     "latest_wake_conclusion": "success",
-    "latest_wake_delivery_attested": false
+    "latest_wake_delivery_attested": true
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
