@@ -189,21 +189,7 @@
   "failures": {
     "competitor-surface:2026-W41:v1": 2
   },
-  "lease": {
-    "owner": "38906026509:1",
-    "run": "38906026509",
-    "task": "runtime-verification",
-    "trigger": "push",
-    "wake": {
-      "schema": 1,
-      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-      "slot": 497821,
-      "issued_at": 1792156320,
-      "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a"
-    },
-    "heartbeat": 1792156354.0019333,
-    "expires": 1792156954.0019336
-  },
+  "lease": null,
   "events": [
     {
       "kind": "RECOVERED",
@@ -454,6 +440,16 @@
       "wake_conclusion": "success",
       "delivery_attested": true,
       "snapshot_reused_identical": false
+    },
+    {
+      "kind": "RECOVERED",
+      "old_owner": "38906026509:1",
+      "by": "38906105886:1",
+      "previous_conclusion": "failure",
+      "task": "runtime-verification",
+      "trigger": "workflow_run",
+      "old_trigger": "push",
+      "recovered_at": 1792156365.522554
     }
   ],
   "blocked": [
