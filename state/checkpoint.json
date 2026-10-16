@@ -5944,7 +5944,7 @@
       "settled_through": "2026-10-13",
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497815,
-      "consumed_by_run": "PENDING_UNIQUE_WAKE"
+      "consumed_by_run": "38869349703"
     }
   ],
   "seo_decision": {
@@ -12427,7 +12427,7 @@
       "private_receipt_path": "seo/gsc/2026-10-16-497815-private-product-reread-1792136740.json",
       "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
       "gsc_snapshot_commit": "28c4da54712b1e1ab2dc4c2b82d96f042d90f773",
-      "wake_run": null,
+      "wake_run": "38869349703",
       "delivery_attested": false,
       "observed_automation_last_run_time": null,
       "reads": {
@@ -12463,9 +12463,9 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Fresh GSC/Product/Sites/private transport reads completed before the next unique wake; delivery attestation must wait for a later hosted invocation.",
-      "wake_conclusion": "PENDING",
-      "wake_job": null,
+      "reason": "Unique push run 38869349703 attempt 1 and six-step job 116869507158 completed successfully; hosted-task delivery metadata for slot 497815 is not yet observable, so delivery attestation remains pending.",
+      "wake_conclusion": "success",
+      "wake_job": "116869507158",
       "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
       "watchdog_conclusion": "UNKNOWN",
       "watchdog_evidence_preserved": "38097697056",
@@ -12512,11 +12512,11 @@
     "gsc_private_snapshot_commit": "28c4da54712b1e1ab2dc4c2b82d96f042d90f773",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "FRESH GSC/PRODUCT/INTEGRATION/SITES/PRIVATE READS COMPLETE; UNIQUE SLOT 497815 WAKE PENDING",
-    "next_action": "EMIT EXACTLY ONE SLOT 497815 WAKE, VERIFY ITS PUSH RUN, LEAVE DELIVERY ATTESTATION FOR NEXT HOSTED INVOCATION",
+    "current_action": "UNIQUE SLOT 497815 WAKE VERIFIED; DELIVERY ATTESTATION PENDING NEXT HOSTED INVOCATION",
+    "next_action": "REFRESH GSC AND AUDIT SLOT 497815 DELIVERY ON NEXT HOURLY INVOCATION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-16T07:45:40.238Z",
-    "last_real_action": "FRESH GSC READ STORED PRIVATELY; PUBLIC AGGREGATE REFRESHED; PRIOR SLOT 497814 DELIVERY REATTESTED; PRODUCT/INTEGRATION/SITES/PRIVATE CMS AND ATTRIBUTION REREAD",
+    "last_real_action": "FRESH GSC CONSUMED BY VERIFIED PUSH RUN 38869349703; SIX JOB STEPS SUCCEEDED; PRODUCT/INTEGRATION/SITES/PRIVATE CMS AND ATTRIBUTION REREAD PRESERVED",
     "gsc_manifest_read_at": "2026-10-16T07:44:11.908Z",
     "latest_actual_gsc_read_at": "2026-10-16T07:44:11.908Z",
     "latest_automation_last_run_time": "2026-10-16T06:50:55.208135+00:00",
