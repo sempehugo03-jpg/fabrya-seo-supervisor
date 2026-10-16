@@ -5995,7 +5995,7 @@
       "settled_through": "2026-10-13",
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497817,
-      "consumed_by_run": "PENDING_UNIQUE_WAKE"
+      "consumed_by_run": "38880036493"
     }
   ],
   "seo_decision": {
@@ -12530,7 +12530,7 @@
       "private_receipt_path": "seo/gsc/2026-10-16-497817-private-product-reread-1792142496.json",
       "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
       "gsc_snapshot_commit": "029249fa06ed552407c0922870985f05fc4f8ab0",
-      "wake_run": "PENDING_UNIQUE_WAKE",
+      "wake_run": "38880036493",
       "delivery_attested": false,
       "observed_automation_last_run_time": null,
       "reads": {
@@ -12566,9 +12566,9 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Fresh GSC, exact Product checkpoint, integration state, Sites deployments, public tariff, private CMS page, existing stage preview, and passive attribution were reread; current unique wake not yet emitted.",
-      "wake_conclusion": "PENDING",
-      "wake_job": "PENDING",
+      "reason": "Unique push run 38880036493 attempt 1 and six-step job 116904278264 completed successfully; completed cycle receipt verified against source commit 24ce1fd6827b650a7272fb00935aa671fd2d6d1a. Hosted-task delivery metadata for slot 497817 is not yet observable, so delivery attestation remains pending.",
+      "wake_conclusion": "success",
+      "wake_job": "116904278264",
       "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
       "watchdog_conclusion": "UNKNOWN",
       "watchdog_evidence_preserved": "38097697056",
@@ -12615,11 +12615,11 @@
     "gsc_private_snapshot_commit": "029249fa06ed552407c0922870985f05fc4f8ab0",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "FRESH GSC AND PRODUCT/INTEGRATION/SITES/PRIVATE CMS REREAD COMPLETE; UNIQUE SLOT 497817 WAKE PENDING",
-    "next_action": "EMIT UNIQUE SLOT 497817 WAKE AND VERIFY REAL RUN; DELIVERY ATTESTATION ON FOLLOWING HOSTED INVOCATION",
+    "current_action": "UNIQUE SLOT 497817 WAKE VERIFIED; DELIVERY ATTESTATION PENDING NEXT HOSTED INVOCATION",
+    "next_action": "REFRESH GSC AND AUDIT SLOT 497817 DELIVERY ON NEXT HOURLY INVOCATION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-16T09:22:20.579Z",
-    "last_real_action": "FRESH GSC STORED PRIVATELY AND AGGREGATE MANIFEST UPDATED; PRODUCT EXACT CHECKPOINT REVISION 139, INTEGRATION PR36, PUBLIC VERSION 507, PRIVATE VERSION 62, CMS AND ATTRIBUTION REREAD",
+    "last_real_action": "FRESH GSC CONSUMED BY VERIFIED PUSH RUN 38880036493; SIX JOB STEPS SUCCEEDED; PRODUCT/INTEGRATION/SITES/PRIVATE CMS AND ATTRIBUTION REREAD PRESERVED",
     "gsc_manifest_read_at": "2026-10-16T09:18:02.876Z",
     "latest_actual_gsc_read_at": "2026-10-16T09:18:02.876Z",
     "latest_automation_last_run_time": "2026-10-16T07:48:16.826066+00:00",
