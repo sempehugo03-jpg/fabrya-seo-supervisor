@@ -27,7 +27,7 @@
       "position": 1.3793103448275863,
       "commercial_intent": "BRAND",
       "nonbrand_visible_impressions": 0,
-      "nonbrand_visible_position": null
+      "nonbrand_visible_position": "UNKNOWN"
     },
     {
       "url": "https://fabrya.fr/conseils/google-artisan",
@@ -37,7 +37,7 @@
       "position": 27.714285714285715,
       "commercial_intent": "UNKNOWN",
       "nonbrand_visible_impressions": 0,
-      "nonbrand_visible_position": null
+      "nonbrand_visible_position": "UNKNOWN"
     },
     {
       "url": "https://fabrya.fr/conseils/seo-local",
@@ -47,7 +47,7 @@
       "position": 1.8823529411764706,
       "commercial_intent": "UNKNOWN",
       "nonbrand_visible_impressions": 0,
-      "nonbrand_visible_position": null
+      "nonbrand_visible_position": "UNKNOWN"
     },
     {
       "url": "https://fabrya.fr/conseils/site-photographe",
@@ -67,7 +67,7 @@
       "position": 1.3333333333333333,
       "commercial_intent": "UNKNOWN",
       "nonbrand_visible_impressions": 0,
-      "nonbrand_visible_position": null
+      "nonbrand_visible_position": "UNKNOWN"
     },
     {
       "url": "https://fabrya.fr/conseils/site-avocat",
@@ -77,7 +77,7 @@
       "position": 1.5,
       "commercial_intent": "UNKNOWN",
       "nonbrand_visible_impressions": 0,
-      "nonbrand_visible_position": null
+      "nonbrand_visible_position": "UNKNOWN"
     },
     {
       "url": "https://fabrya.fr/conseils/site-estheticienne",
@@ -87,7 +87,7 @@
       "position": 3,
       "commercial_intent": "UNKNOWN",
       "nonbrand_visible_impressions": 0,
-      "nonbrand_visible_position": null
+      "nonbrand_visible_position": "UNKNOWN"
     },
     {
       "url": "https://fabrya.fr/conseils/site-cle-en-main",
@@ -97,7 +97,7 @@
       "position": 6,
       "commercial_intent": "UNKNOWN",
       "nonbrand_visible_impressions": 0,
-      "nonbrand_visible_position": null
+      "nonbrand_visible_position": "UNKNOWN"
     },
     {
       "url": "https://fabrya.fr/conseils/site-pas-clients",
@@ -107,7 +107,7 @@
       "position": 5,
       "commercial_intent": "UNKNOWN",
       "nonbrand_visible_impressions": 0,
-      "nonbrand_visible_position": null
+      "nonbrand_visible_position": "UNKNOWN"
     }
   ]
 }
