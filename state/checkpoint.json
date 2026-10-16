@@ -601,14 +601,14 @@
         "status": "PASS",
         "reason": "",
         "evidence": {
-          "snapshot_commit": "aaeca311a658bd7d317de79a5e7e532af9d0928a",
-          "read_at": "2026-10-16T04:20:43.921Z",
+          "snapshot_commit": "5bd78d26fd8d2ab78a6669fc1c1607d54367668a",
+          "read_at": "2026-10-16T05:25:18.066Z",
           "start_date": "2026-09-16",
           "end_date": "2026-10-13",
           "settled_through": "2026-10-13",
           "acquisition": "HOSTED_SCHEDULED_TASK",
-          "automation_slot": 497812,
-          "consumed_by_run": "38850230147"
+          "automation_slot": 497813,
+          "consumed_by_run": "38855778546"
         }
       },
       "OPPORTUNITY_ENGINE": {
@@ -5868,7 +5868,7 @@
       "settled_through": "2026-10-13",
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497813,
-      "consumed_by_run": "PENDING_UNIQUE_WAKE"
+      "consumed_by_run": "38855778546"
     }
   ],
   "seo_decision": {
@@ -12194,7 +12194,7 @@
       "private_receipt_path": "seo/gsc/2026-10-16-497813-private-product-reread-1792128339.json",
       "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
       "gsc_snapshot_commit": "5bd78d26fd8d2ab78a6669fc1c1607d54367668a",
-      "wake_run": "PENDING",
+      "wake_run": "38855778546",
       "delivery_attested": false,
       "observed_automation_last_run_time": null,
       "reads": {
@@ -12230,9 +12230,9 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Fresh GSC and exact DG-001 Product/Integration/Sites reads completed before the unique wake; existing durable SEO stage preserved.",
-      "wake_conclusion": "PENDING",
-      "wake_job": "PENDING",
+      "reason": "Unique push run 38855778546 attempt 1 and six-step job 116826793329 completed successfully; hosted-task delivery metadata for this same slot is not yet observable, so delivery attestation remains pending.",
+      "wake_conclusion": "success",
+      "wake_job": "116826793329",
       "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
       "watchdog_conclusion": "UNKNOWN",
       "watchdog_evidence_preserved": "38097697056",
@@ -12279,11 +12279,11 @@
     "gsc_private_snapshot_commit": "5bd78d26fd8d2ab78a6669fc1c1607d54367668a",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "ATTESTED SLOT 497812; FRESH GSC READ; PRODUCT/INTEGRATION/SITES RESYNC; UNIQUE WAKE PENDING",
-    "next_action": "EMIT AND VERIFY UNIQUE SLOT 497813 WAKE",
+    "current_action": "UNIQUE SLOT 497813 WAKE VERIFIED; DELIVERY ATTESTATION PENDING NEXT HOSTED INVOCATION",
+    "next_action": "REFRESH GSC AND AUDIT SLOT 497813 DELIVERY ON NEXT HOURLY INVOCATION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-16T05:25:39.462Z",
-    "last_real_action": "ATTESTED PRIOR HOSTED DELIVERY; VERIFIED FRESH GSC, CURRENT PRODUCT/INTEGRATION STATES, PUBLIC PRICE/CTA, PRIVATE CMS/ATTRIBUTION; NO DUPLICATE STAGE",
+    "last_real_action": "FRESH GSC CONSUMED BY VERIFIED PUSH RUN 38855778546; SIX JOB STEPS SUCCEEDED; PRODUCT/INTEGRATION/SITES/PRIVATE CMS AND ATTRIBUTION REREAD PRESERVED",
     "gsc_manifest_read_at": "2026-10-16T05:25:18.066Z",
     "latest_actual_gsc_read_at": "2026-10-16T05:25:18.066Z",
     "latest_automation_last_run_time": "2026-10-16T04:23:46.293807+00:00",
