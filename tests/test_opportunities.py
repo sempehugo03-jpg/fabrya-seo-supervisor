@@ -35,6 +35,20 @@ class OpportunitiesTest(unittest.TestCase):
         self.assertEqual(len(state['gsc_observations']), 1)
         self.assertEqual(capability_gates(state)['GSC_DIRECT_READ']['status'], 'FAIL')
 
+    def test_incomplete_observation_fails_closed_without_crashing(self):
+        state = {'external_scheduler_attestations': {
+            '497831': {'delivery': 'HOSTED_SCHEDULED_TASK', 'run': 'consumer-run'}
+        }, 'gsc_observations': [{
+            'acquisition': 'HOSTED_SCHEDULED_TASK',
+            'automation_slot': 497831,
+            'snapshot_commit': 'error-receipt'
+        }], 'seo_decision': {
+            'run': 'consumer-run',
+            'source_snapshot': 'previous-snapshot',
+            'decision': 'NO_ACTION'
+        }}
+        self.assertEqual(capability_gates(state)['GSC_DIRECT_READ']['status'], 'FAIL')
+
     def test_attestation_must_match_the_run_that_consumed_snapshot(self):
         data = copy.deepcopy(self.data)
         data['acquisition'] = 'HOSTED_SCHEDULED_TASK'
