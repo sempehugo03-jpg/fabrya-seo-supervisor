@@ -5711,7 +5711,7 @@
       "settled_through": "2026-10-13",
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497808,
-      "consumed_by_run": "PENDING_CURRENT_SLOT"
+      "consumed_by_run": "38830274086"
     }
   ],
   "seo_decision": {
@@ -11829,7 +11829,7 @@
       "private_receipt_path": "seo/staging/product-observation-2026-10-16-497808.json",
       "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
       "gsc_snapshot_commit": "81ea855cc1bb29f5ae67f5eebdcfa1f584ced416",
-      "wake_run": "PENDING_CURRENT_SLOT",
+      "wake_run": "38830274086",
       "delivery_attested": false,
       "observed_automation_last_run_time": "2026-10-15T21:38:14.358956+00:00",
       "reads": {
@@ -11865,9 +11865,9 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Fresh GSC gained two impressions and one settled day; the existing bounded garage stage still covers the commercial hypothesis and was not duplicated. Current hosted delivery awaits later task metadata.",
-      "wake_conclusion": "PENDING",
-      "wake_job": "PENDING",
+      "reason": "Fresh GSC data was consumed by successful unique push run 38830274086; the existing bounded garage stage remains valid and was not duplicated. Hosted task metadata observed before this wake cannot attest its delivery yet.",
+      "wake_conclusion": "success",
+      "wake_job": "116747223715",
       "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
       "watchdog_conclusion": "UNKNOWN",
       "watchdog_evidence_preserved": "38097697056",
@@ -11914,11 +11914,11 @@
     "gsc_private_snapshot_commit": "81ea855cc1bb29f5ae67f5eebdcfa1f584ced416",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "ATTESTED SLOT 497805; FRESH GSC READ; DG-001 CONSUMED; PRODUCT AND INTEGRATION READ SEPARATELY; CURRENT UNIQUE WAKE PENDING",
-    "next_action": "EMIT AND VERIFY SLOT 497808; AUDIT ITS HOSTED DELIVERY ONLY AFTER LATER TASK METADATA",
+    "current_action": "ATTESTED SLOT 497805; FRESH GSC READ; DG-001 CONSUMED; PRODUCT AND INTEGRATION READ SEPARATELY; UNIQUE WAKE 38830274086 SUCCEEDED; CURRENT DELIVERY ATTESTATION PENDING NEXT METADATA OBSERVATION",
+    "next_action": "AUDIT SLOT 497808 AGAINST A LATER OBSERVED HOSTED TASK last_run_time; REFRESH GSC BEFORE THE NEXT UNIQUE HOURLY WAKE",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-16T00:34:31.244Z",
-    "last_real_action": "ATTESTED PRIOR SLOT; VERIFIED FRESH GSC, CURRENT PRODUCT/INTEGRATION STATES, PUBLIC PRICE/CTA, PRIVATE CMS/ATTRIBUTION; NO DUPLICATE STAGE",
+    "last_real_action": "ATTESTED PRIOR SLOT; VERIFIED FRESH GSC AND SUCCESSFUL UNIQUE PUSH RUN; VERIFIED CURRENT PRODUCT/INTEGRATION STATES, PUBLIC PRICE/CTA, PRIVATE CMS/ATTRIBUTION; NO DUPLICATE STAGE",
     "gsc_manifest_read_at": "2026-10-16T00:30:36.000Z",
     "latest_actual_gsc_read_at": "2026-10-16T00:30:36.000Z",
     "latest_automation_last_run_time": "2026-10-15T21:38:14.358956+00:00",
