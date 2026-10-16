@@ -583,8 +583,7 @@
             38505967517,
             38501297441,
             38489917669,
-            38483439768,
-            38478318407
+            38483439768
           ],
           "commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
           "transport_sources": [
@@ -602,14 +601,14 @@
         "status": "PASS",
         "reason": "",
         "evidence": {
-          "snapshot_commit": "81ea855cc1bb29f5ae67f5eebdcfa1f584ced416",
-          "read_at": "2026-10-16T00:30:36.000Z",
+          "snapshot_commit": "ddde88f196170dc09752002bf6d12ed4d172d254",
+          "read_at": "2026-10-16T01:20:31.000Z",
           "start_date": "2026-09-16",
           "end_date": "2026-10-13",
           "settled_through": "2026-10-13",
           "acquisition": "HOSTED_SCHEDULED_TASK",
-          "automation_slot": 497808,
-          "consumed_by_run": "38830274086"
+          "automation_slot": 497809,
+          "consumed_by_run": "38834850319"
         }
       },
       "OPPORTUNITY_ENGINE": {
