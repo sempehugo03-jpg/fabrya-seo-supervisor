@@ -601,15 +601,14 @@
         "status": "PASS",
         "reason": "",
         "evidence": {
-          "snapshot_commit": "69099b884f3c151c99ddd0130575cfa94988d435",
-          "read_at": "2026-10-16T09:40:25.614Z",
+          "snapshot_commit": "3ea3d6de5a9a19f8d0fe77fdc1072145cfcfbbef",
+          "read_at": "2026-10-16T11:20:23.888Z",
           "start_date": "2026-09-16",
           "end_date": "2026-10-13",
           "settled_through": "2026-10-13",
           "acquisition": "HOSTED_SCHEDULED_TASK",
-          "automation_slot": 497817,
-          "consumed_by_run": "38880036493",
-          "same_slot_reread": true
+          "automation_slot": 497819,
+          "consumed_by_run": "38893397574"
         }
       },
       "OPPORTUNITY_ENGINE": {
@@ -6034,7 +6033,7 @@
       "settled_through": "2026-10-13",
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497819,
-      "consumed_by_run": "PENDING_UNIQUE_WAKE"
+      "consumed_by_run": "38893397574"
     }
   ],
   "seo_decision": {
@@ -12622,7 +12621,7 @@
       "private_receipt_path": "seo/gsc/2026-10-16-497819-private-product-reread-1792149728.json",
       "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
       "gsc_snapshot_commit": "3ea3d6de5a9a19f8d0fe77fdc1072145cfcfbbef",
-      "wake_run": "PENDING_UNIQUE_WAKE",
+      "wake_run": "38893397574",
       "delivery_attested": false,
       "observed_automation_last_run_time": null,
       "reads": {
@@ -12658,9 +12657,9 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Fresh GSC read and exact Product/Integration/Sites/private CMS/attribution reread completed; unique wake for slot 497819 pending.",
-      "wake_conclusion": "PENDING",
-      "wake_job": null,
+      "reason": "Unique push wake run 38893397574 attempt 1, six-step job 116948045606 and completed receipt verified; hosted delivery attestation remains FAIL until a following hosted invocation exposes matching task metadata.",
+      "wake_conclusion": "success",
+      "wake_job": "116948045606",
       "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
       "watchdog_conclusion": "UNKNOWN",
       "watchdog_evidence_preserved": "38097697056",
@@ -12707,11 +12706,11 @@
     "gsc_private_snapshot_commit": "3ea3d6de5a9a19f8d0fe77fdc1072145cfcfbbef",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "FRESH GSC AND EXACT PRODUCT/INTEGRATION/SITES/PRIVATE CMS REREAD COMPLETE; UNIQUE SLOT 497819 WAKE PENDING",
-    "next_action": "VERIFY UNIQUE SLOT 497819 PUSH RUN AND RECEIPT; DELIVERY ATTESTATION REQUIRES FOLLOWING HOSTED INVOCATION",
+    "current_action": "FRESH GSC CONSUMED BY VERIFIED UNIQUE SLOT 497819 PUSH RUN; PRODUCT/INTEGRATION/SITES/PRIVATE CMS REREAD CURRENT",
+    "next_action": "ATTEST SLOT 497819 DELIVERY ONLY ON A FOLLOWING HOSTED INVOCATION WITH MATCHING TASK METADATA; REFRESH GSC NEXT CYCLE",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-16T09:16:36.825Z",
-    "last_real_action": "FRESH GSC STORED PRIVATELY; PUBLIC AGGREGATE REFRESHED; EXACT PRODUCT/INTEGRATION/SITES/PRIVATE CMS AND ATTRIBUTION REREAD; UNIQUE WAKE PENDING",
+    "last_real_action": "FRESH GSC STORED PRIVATELY AND CONSUMED BY RUN 38893397574; PUBLIC AGGREGATE REFRESHED; UNIQUE PUSH RUN ATTEMPT 1 AND SIX-STEP JOB SUCCEEDED; RECEIPT COMPLETED; DELIVERY ATTESTATION PENDING",
     "gsc_manifest_read_at": "2026-10-16T11:20:23.888Z",
     "latest_actual_gsc_read_at": "2026-10-16T11:20:23.888Z",
     "latest_automation_last_run_time": "2026-10-16T09:42:51.783014+00:00",
@@ -12732,7 +12731,11 @@
     "dg001_issue": "https://github.com/sempehugo03-jpg/fabrya-engine/issues/42",
     "dg001_comment_id": "6205263096",
     "integration_branch_commit": "12928b2f4c2dd2c476d8ae163c6d38cee9d53aa1",
-    "integration_design_heartbeat_at": "2026-10-16T10:24:51Z"
+    "integration_design_heartbeat_at": "2026-10-16T10:24:51Z",
+    "latest_wake_run": "38893397574",
+    "latest_wake_job": "116948045606",
+    "latest_wake_conclusion": "success",
+    "latest_wake_delivery_attested": false
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
