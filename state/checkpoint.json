@@ -464,6 +464,16 @@
       "trigger": "workflow_run",
       "old_trigger": "push",
       "recovered_at": 1792156365.522554
+    },
+    {
+      "kind": "STATE_REPAIR_PREPARED",
+      "defect": "PUBLIC_GSC_NULL_ABSENT_NONBRAND_METRIC",
+      "error": "Invalid metric",
+      "failed_wake_run": "38906026509",
+      "failed_watchdog_run": "38906105886",
+      "manifest_repair_commit": "76075165d11aabda9cad381e5c86827caad3541b",
+      "status": "PENDING_NEXT_UNIQUE_WAKE",
+      "at": 1792156465
     }
   ],
   "blocked": [
@@ -6091,7 +6101,8 @@
       "settled_through": "2026-10-13",
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497821,
-      "consumed_by_run": "PENDING_UNIQUE_WAKE"
+      "consumed_by_run": "PENDING_NEXT_UNIQUE_WAKE",
+      "validation_repair_commit": "76075165d11aabda9cad381e5c86827caad3541b"
     }
   ],
   "seo_decision": {
@@ -12732,7 +12743,7 @@
       "private_receipt_path": "seo/gsc/2026-10-16-497821-private-product-reread-1792156262.json",
       "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
       "gsc_snapshot_commit": "eaef691c25b415b6b4652add6738ff3b930fdf98",
-      "wake_run": "PENDING_UNIQUE_WAKE",
+      "wake_run": "38906026509",
       "delivery_attested": false,
       "observed_automation_last_run_time": "2026-10-16T11:58:34.106148+00:00",
       "reads": {
@@ -12768,13 +12779,13 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Fresh GSC and exact Product/Sites/private CMS/attribution reads completed; next unique hourly wake pending.",
-      "wake_conclusion": "PENDING",
-      "wake_job": "PENDING",
-      "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
-      "watchdog_conclusion": "UNKNOWN",
+      "reason": "Wake and automatic watchdog both rejected null absent nonbrand position as Invalid metric; aggregate manifest corrected to explicit UNKNOWN. No duplicate wake in the same slot; next unique hourly wake retries persisted state.",
+      "wake_conclusion": "failure",
+      "wake_job": "116989693695",
+      "watchdog_run": "38906105886",
+      "watchdog_conclusion": "failure",
       "watchdog_evidence_preserved": "38097697056",
-      "delivery_attestation_status": "FAIL_PENDING_FOLLOWING_HOSTED_INVOCATION"
+      "delivery_attestation_status": "FAIL_INVALID_METRIC_REPAIRED_PENDING_NEXT_UNIQUE_WAKE"
     }
   ],
   "public_product_resync": {
@@ -12817,11 +12828,11 @@
     "gsc_private_snapshot_commit": "eaef691c25b415b6b4652add6738ff3b930fdf98",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "FRESH GSC READ COMPLETE; UNIQUE SLOT 497821 WAKE PENDING",
-    "next_action": "EMIT AND VERIFY UNIQUE SLOT 497821 WAKE; ATTEST DELIVERY ONLY ON FOLLOWING HOSTED INVOCATION",
+    "current_action": "PUBLIC GSC MANIFEST ABSENT NONBRAND METRICS CORRECTED TO UNKNOWN AFTER RUNNER/WATCHDOG VALIDATION FAILURE",
+    "next_action": "NEXT UNIQUE HOURLY WAKE RETRIES SAME PERSISTED STATE; VERIFY RUN AND RECEIPT",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "latest_product_checkpoint_observed_at": "2026-10-16T11:29:04.663Z",
-    "last_real_action": "FRESH GSC STORED PRIVATELY; PUBLIC AGGREGATE REFRESHED; PRODUCT/INTEGRATION/SITES/PRIVATE CMS AND ATTRIBUTION REREAD",
+    "last_real_action": "FRESH GSC/PRODUCT/SITES/PRIVATE READS PERSISTED; WAKE 38906026509 AND WATCHDOG 38906105886 FAILED ON INVALID METRIC; MANIFEST CORRECTED",
     "gsc_manifest_read_at": "2026-10-16T13:07:48.899Z",
     "latest_actual_gsc_read_at": "2026-10-16T13:07:48.899Z",
     "latest_automation_last_run_time": "2026-10-16T11:58:34.106148+00:00",
@@ -12843,10 +12854,13 @@
     "dg001_comment_id": "6205263096",
     "integration_branch_commit": "8840b6484de1c86ebb84cc915686d88213686f5a",
     "integration_design_heartbeat_at": "2026-10-16T12:39:00Z",
-    "latest_wake_run": "PENDING",
-    "latest_wake_job": "PENDING",
-    "latest_wake_conclusion": "PENDING",
-    "latest_wake_delivery_attested": false
+    "latest_wake_run": "38906026509",
+    "latest_wake_job": "116989693695",
+    "latest_wake_conclusion": "failure",
+    "latest_wake_delivery_attested": false,
+    "latest_watchdog_run": "38906105886",
+    "latest_watchdog_conclusion": "failure",
+    "gsc_manifest_repair_commit": "76075165d11aabda9cad381e5c86827caad3541b"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
