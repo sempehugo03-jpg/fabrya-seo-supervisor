@@ -1,13 +1,13 @@
 {
   "schema": 1,
   "source": "GSC_API",
-  "read_at": "2026-10-16T11:55:56.000Z",
+  "read_at": "2026-10-16T13:07:48.899Z",
   "start_date": "2026-09-16",
   "end_date": "2026-10-13",
   "settled_through": "2026-10-13",
-  "private_snapshot_commit": "0f02995cfb9efec45b3faef2cf3562291facbec8",
+  "private_snapshot_commit": "eaef691c25b415b6b4652add6738ff3b930fdf98",
   "acquisition": "HOSTED_SCHEDULED_TASK",
-  "automation_slot": 497819,
+  "automation_slot": 497821,
   "pages": [
     {
       "url": "https://fabrya.fr/conseils/site-garagiste",
