@@ -531,7 +531,7 @@
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
       "completed_at": 1791677619.6435385
     },
-    "last_external_wake": 38834850319,
+    "last_external_wake": 38840501105,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
@@ -551,6 +551,7 @@
         "evidence": {
           "scheduler": "HOSTED_AUTOMATION",
           "runs": [
+            38840501105,
             38834850319,
             38830274086,
             38811167649,
@@ -5120,6 +5121,28 @@
         "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a"
       },
       "attested_at": "2026-10-16T02:26:59.970Z"
+    },
+    "497810": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "38840501105",
+      "wake_commit": "f05290aa62f9ca49f5c79d5be52129519246fc1b",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-16T02:29:02.687806+00:00",
+      "completed_tasks_unchanged": true,
+      "job": "116779242342",
+      "verified_steps": 6,
+      "delivery_delta_seconds": 108.68700003623962,
+      "evidence": {
+        "run_attempt": 1,
+        "run_trigger": "push",
+        "run_conclusion": "success",
+        "job_conclusion": "success",
+        "receipt_status": "COMPLETED",
+        "receipt_new_results": 0,
+        "receipt_decision": "NO_ACTION",
+        "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a"
+      },
+      "attested_at": "2026-10-16T02:46:18.537Z"
     }
   },
   "scheduled_baseline": {
@@ -5802,6 +5825,17 @@
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497810,
       "consumed_by_run": "38840501105"
+    },
+    {
+      "snapshot_commit": "649a861d7437405355eca2eb01da81f77dde8854",
+      "read_at": "2026-10-16T02:43:03.000Z",
+      "start_date": "2026-09-16",
+      "end_date": "2026-10-13",
+      "settled_through": "2026-10-13",
+      "acquisition": "HOSTED_SCHEDULED_TASK",
+      "automation_slot": 497810,
+      "consumed_by_run": "PENDING_NEXT_UNIQUE_WAKE",
+      "same_slot_reread": true
     }
   ],
   "seo_decision": {
@@ -12024,8 +12058,8 @@
       "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
       "gsc_snapshot_commit": "725a2039cec519591478a76ccaad8dfd1fcc667c",
       "wake_run": "38840501105",
-      "delivery_attested": false,
-      "observed_automation_last_run_time": "2026-10-16T01:25:01.167258+00:00",
+      "delivery_attested": true,
+      "observed_automation_last_run_time": "2026-10-16T02:29:02.687806+00:00",
       "reads": {
         "project_id": "appgprj_6acac4a9d9808191b57085eb34fa06be",
         "version": 47,
@@ -12059,17 +12093,17 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "Fresh GSC data was consumed by successful unique push run 38840501105; the existing bounded garage stage remains valid and was not duplicated. Hosted task metadata observed before this wake cannot attest its delivery yet.",
+      "reason": "Verified hosted task metadata matches slot 497810; the unique push run, six-step job and completed receipt succeeded without a duplicate result.",
       "wake_conclusion": "success",
       "wake_job": "116779242342",
       "watchdog_run": "UNKNOWN_CURRENT_CYCLE",
       "watchdog_conclusion": "UNKNOWN",
       "watchdog_evidence_preserved": "38097697056",
-      "delivery_attestation_status": "FAIL_METADATA_NOT_YET_OBSERVED"
+      "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-16T02:26:04.000Z",
+    "observed_at": "2026-10-16T02:45:23.000Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_CURRENT_STATE_INSPECTION",
     "contract_commit": "63fdb9db8efa6af254b42bb73ff34ec4c5f7d5f4",
     "public_version": 507,
@@ -12105,18 +12139,18 @@
     "seo_public_writer_state": "NOT_CONNECTED",
     "first_touch_public_state": "NOT_CONNECTED",
     "internal_seo_utm_is_google_proof": false,
-    "gsc_private_snapshot_commit": "725a2039cec519591478a76ccaad8dfd1fcc667c",
+    "gsc_private_snapshot_commit": "649a861d7437405355eca2eb01da81f77dde8854",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "ATTESTED SLOT 497809; FRESH GSC READ; PRODUCT/INTEGRATION RESYNC; UNIQUE WAKE 38840501105 SUCCEEDED; CURRENT DELIVERY ATTESTATION PENDING NEXT METADATA OBSERVATION",
-    "next_action": "AUDIT SLOT 497810 AGAINST A LATER OBSERVED HOSTED TASK last_run_time; REFRESH GSC BEFORE THE NEXT UNIQUE HOURLY WAKE",
+    "current_action": "ATTESTED SLOT 497810; FRESH SAME-SLOT GSC REREAD; PRODUCT/INTEGRATION RESYNC; NO DUPLICATE WAKE",
+    "next_action": "REFRESH GSC BEFORE THE NEXT UNIQUE HOURLY WAKE",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "latest_product_checkpoint_observed_at": "2026-10-16T02:26:04.000Z",
-    "last_real_action": "ATTESTED PRIOR SLOT; VERIFIED FRESH GSC AND SUCCESSFUL UNIQUE PUSH RUN; VERIFIED CURRENT PRODUCT/INTEGRATION STATES, PUBLIC PRICE/CTA, PRIVATE CMS/ATTRIBUTION; NO DUPLICATE STAGE",
-    "gsc_manifest_read_at": "2026-10-16T02:22:45.000Z",
-    "latest_actual_gsc_read_at": "2026-10-16T02:22:45.000Z",
-    "latest_automation_last_run_time": "2026-10-16T01:25:01.167258+00:00",
-    "latest_automation_updated_at": "2026-10-16T01:25:23.835420+00:00",
+    "latest_product_checkpoint_observed_at": "2026-10-16T02:45:23.000Z",
+    "last_real_action": "ATTESTED EXISTING UNIQUE WAKE; VERIFIED FRESH GSC REREAD, CURRENT PRODUCT/INTEGRATION STATES, PUBLIC PRICE/CTA, PRIVATE CMS/ATTRIBUTION; NO DUPLICATE STAGE OR WAKE",
+    "gsc_manifest_read_at": "2026-10-16T02:43:03.000Z",
+    "latest_actual_gsc_read_at": "2026-10-16T02:43:03.000Z",
+    "latest_automation_last_run_time": "2026-10-16T02:29:02.687806+00:00",
+    "latest_automation_updated_at": "2026-10-16T02:29:24.607271+00:00",
     "public_latest_saved_version": 508,
     "public_latest_saved_source_commit": "008297dda91e9531c4a6b7c5d092dcf5d948fbe4",
     "public_latest_saved_deployment_status": "NOT_DEPLOYED",
@@ -12127,10 +12161,10 @@
     "integration_pr": 36,
     "integration_pr_state": "open",
     "integration_pr_draft": true,
-    "integration_pr_head_commit": "86e12fc590804b4cab9577af37060dd3369273af",
+    "integration_pr_head_commit": "a2560b98bd73e12f7de62ab5f31fb264a15330b2",
     "integration_branch": "work3/product-integration-20261015",
-    "integration_branch_commit": "86e12fc590804b4cab9577af37060dd3369273af",
-    "integration_design_current_blob": "d1bc7435ba03121f6dbfa8d7ff0490ead2e1e327",
+    "integration_branch_commit": "a2560b98bd73e12f7de62ab5f31fb264a15330b2",
+    "integration_design_current_blob": "52f3e02acca5da96924800828981a55303e21254",
     "integration_design_status": "RUNNING",
     "integration_design_owner": "design-3735fe3da8e1",
     "dg001_consumed": true,
@@ -12306,6 +12340,25 @@
       "delivery_attested": true,
       "delivery_attestation_status": "PASS_EXISTING_UNIQUE_WAKE",
       "snapshot_reused_identical": true
+    },
+    {
+      "slot": 497810,
+      "read_at": "2026-10-16T02:43:03.000Z",
+      "private_snapshot_commit": "649a861d7437405355eca2eb01da81f77dde8854",
+      "private_snapshot_blob": "b74aa2de24c4e59a7a3212d385a1eed4b17116a2",
+      "private_snapshot_path": "seo/gsc/2026-10-16-497810-reread-1792118583.json",
+      "manifest_commit": "4db7a7b7bfe887d8fade797965c1b91cfe48fa3b",
+      "manifest_blob": "665ab252263c0d3cabe7f2831a2fa1a64efab92c",
+      "private_product_receipt_commit": "56d4a9c3f3c15aff629693430a99e52ac0999ad5",
+      "private_product_receipt_blob": "ce86b74dba313e65fda8823c58c4af04d13f59f5",
+      "private_product_receipt_path": "seo/gsc/2026-10-16-497810-private-product-reread-1792118723.json",
+      "automation_last_run_time": "2026-10-16T02:29:02.687806+00:00",
+      "wake_reissued": false,
+      "wake_run": "38840501105",
+      "wake_conclusion": "success",
+      "delivery_attested": true,
+      "delivery_attestation_status": "PASS_EXISTING_UNIQUE_WAKE",
+      "snapshot_reused_identical": false
     }
   ]
 }
