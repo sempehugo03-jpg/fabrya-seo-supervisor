@@ -521,23 +521,19 @@
   "SEO_AUTOPILOT_STATUS": {
     "current_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
     "last_wake": {
-      "run": "38893397574",
+      "run": "38906105886",
       "attempt": "1",
-      "trigger": "push",
+      "trigger": "workflow_run",
       "commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
-      "started_at": 1792149801.6071858,
-      "status": "COMPLETED",
+      "started_at": 1792156367.0061653,
+      "status": "STARTED",
       "wake": {
         "schema": 1,
         "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-        "slot": 497819,
-        "issued_at": 1792149775,
+        "slot": 497821,
+        "issued_at": 1792156320,
         "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a"
-      },
-      "completed_at": 1792149803.0170717,
-      "new_results": 0,
-      "decision": "NO_ACTION",
-      "reason": "Current page inspection required; no proven production writer"
+      }
     },
     "last_successful_cycle": {
       "run": "38893397574",
@@ -558,7 +554,7 @@
       "decision": "NO_ACTION",
       "reason": "Current page inspection required; no proven production writer"
     },
-    "last_schedule_run": 38881941779,
+    "last_schedule_run": 38914979263,
     "last_successful_schedule": 38881941779,
     "last_watchdog_recovery": {
       "run": "38097697056",
@@ -616,8 +612,7 @@
             38581965996,
             38570588776,
             38556023153,
-            38548207401,
-            38534142404
+            38548207401
           ],
           "commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
           "transport_sources": [
