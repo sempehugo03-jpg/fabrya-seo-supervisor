@@ -479,6 +479,17 @@
       "trigger": "schedule",
       "delivery_attestation_effect": "NONE",
       "at": 1792161135.582
+    },
+    {
+      "kind": "STATE_REPAIR_VERIFIED_UNIQUE_WAKE",
+      "defect": "PUBLIC_GSC_NULL_ABSENT_NONBRAND_METRIC",
+      "manifest_repair_commit": "76075165d11aabda9cad381e5c86827caad3541b",
+      "wake_run": "38916594994",
+      "wake_job": "117025525856",
+      "run_attempt": 1,
+      "status": "SUCCESS",
+      "delivery_attestation_effect": "NONE_CURRENT_INVOCATION",
+      "at": 1792161215.22
     }
   ],
   "blocked": [
@@ -6114,7 +6125,10 @@
       "settled_through": "2026-10-13",
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497822,
-      "consumed_by_run": "PENDING_CURRENT_UNIQUE_WAKE"
+      "consumed_by_run": "38916594994",
+      "wake_conclusion": "success",
+      "delivery_attested": false,
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION"
     }
   ],
   "seo_decision": {
@@ -12807,7 +12821,7 @@
       "private_receipt_path": "seo/gsc/2026-10-16-497822-private-product-reread-1792161100.json",
       "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
       "gsc_snapshot_commit": "6ca0bd49ffc1adc173d8d31392bc75ed787fc57e",
-      "wake_run": "PENDING_CURRENT_UNIQUE_WAKE",
+      "wake_run": "38916594994",
       "delivery_attested": false,
       "observed_automation_last_run_time": "2026-10-16T13:14:57.052256+00:00",
       "reads": {
@@ -12844,7 +12858,9 @@
       },
       "decision": "NO_STAGE_DUPLICATE",
       "reason": "Fresh GSC unchanged; existing garage stage remains durable while public SEO writer gates stay unproven",
-      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION"
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
+      "wake_job": "117025525856",
+      "wake_conclusion": "success"
     }
   ],
   "public_product_resync": {
@@ -12891,10 +12907,10 @@
     "gsc_private_snapshot_commit": "6ca0bd49ffc1adc173d8d31392bc75ed787fc57e",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "FRESH GSC/PRODUCT/SITES/PRIVATE READS PERSISTED; UNIQUE WAKE PENDING",
-    "next_action": "EMIT UNIQUE SLOT 497822 WAKE; VERIFY PUSH RUN AND RECEIPT",
+    "current_action": "FRESH GSC/PRODUCT/SITES/PRIVATE READS CONSUMED BY SUCCESSFUL UNIQUE WAKE",
+    "next_action": "AUDIT SLOT 497822 DELIVERY ON A FOLLOWING HOSTED INVOCATION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "last_real_action": "PRIOR MANIFEST REPAIR VERIFIED BY FALLBACK SCHEDULE 38914979263; CURRENT LIVE PRIVATE VERSION 72 READ SAFELY",
+    "last_real_action": "UNIQUE PUSH WAKE 38916594994 ATTEMPT 1 SUCCEEDED; ALL SIX JOB STEPS AND COMPLETED RECEIPT VERIFIED",
     "gsc_manifest_read_at": "2026-10-16T14:30:05.803Z",
     "latest_actual_gsc_read_at": "2026-10-16T14:30:05.803Z",
     "latest_automation_last_run_time": "2026-10-16T13:14:57.052256+00:00",
@@ -12916,7 +12932,11 @@
     "dg001_comment_id": "6205263096",
     "previous_failed_wake_run": "38906026509",
     "previous_failed_wake_delivery_attested": false,
-    "previous_repair_verifier_run": "38914979263"
+    "previous_repair_verifier_run": "38914979263",
+    "latest_wake_run": "38916594994",
+    "latest_wake_job": "117025525856",
+    "latest_wake_conclusion": "success",
+    "latest_wake_delivery_attested": false
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
