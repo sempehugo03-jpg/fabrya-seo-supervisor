@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "source": "GSC_API",
-  "read_at": "2026-10-16T02:22:45.000Z",
+  "read_at": "2026-10-16T02:43:03.000Z",
   "start_date": "2026-09-16",
   "end_date": "2026-10-13",
   "settled_through": "2026-10-13",
-  "private_snapshot_commit": "725a2039cec519591478a76ccaad8dfd1fcc667c",
+  "private_snapshot_commit": "649a861d7437405355eca2eb01da81f77dde8854",
   "acquisition": "HOSTED_SCHEDULED_TASK",
   "automation_slot": 497810,
   "pages": [
