@@ -6172,8 +6172,10 @@
       "settled_through": "2026-10-14",
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497823,
-      "consumed_by_run": "PENDING_CURRENT_UNIQUE_WAKE",
-      "delivery_attested": false
+      "consumed_by_run": "38923841272",
+      "delivery_attested": false,
+      "wake_conclusion": "success",
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION"
     }
   ],
   "seo_decision": {
@@ -12915,7 +12917,7 @@
       "private_receipt_path": "seo/gsc/2026-10-16-497823-private-product-reread-1792164294.json",
       "source_commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
       "gsc_snapshot_commit": "7eeed76475d8afb5f614ac87aec0c48392c9575e",
-      "wake_run": "PENDING_CURRENT_UNIQUE_WAKE",
+      "wake_run": "38923841272",
       "delivery_attested": false,
       "observed_automation_last_run_time": "2026-10-16T14:33:55.554816+00:00",
       "reads": {
@@ -12952,7 +12954,9 @@
       },
       "decision": "NO_STAGE_DUPLICATE",
       "reason": "Fresh GSC unchanged; existing garage stage remains durable while public writer gates stay unproven",
-      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION"
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
+      "wake_job": "117050226769",
+      "wake_conclusion": "success"
     }
   ],
   "public_product_resync": {
@@ -12999,10 +13003,10 @@
     "gsc_private_snapshot_commit": "7eeed76475d8afb5f614ac87aec0c48392c9575e",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "FRESH GSC/PRODUCT/SITES/PRIVATE READS PERSISTED; PREVIOUS SLOT DELIVERY ATTESTED; CURRENT UNIQUE WAKE PENDING",
-    "next_action": "EMIT UNIQUE SLOT 497823 WAKE; VERIFY PUSH RUN AND RECEIPT",
+    "current_action": "FRESH GSC/PRODUCT/SITES/PRIVATE READS CONSUMED BY SUCCESSFUL UNIQUE WAKE",
+    "next_action": "AUDIT SLOT 497823 DELIVERY ON A FOLLOWING HOSTED INVOCATION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "last_real_action": "SLOT 497822 DELIVERY ATTESTED FROM CURRENT HOSTED METADATA; PRIVATE VERSION 74 READ SAFELY",
+    "last_real_action": "UNIQUE PUSH WAKE 38923841272 ATTEMPT 1 SUCCEEDED; ALL SIX JOB STEPS AND COMPLETED RECEIPT VERIFIED",
     "gsc_manifest_read_at": "2026-10-16T15:23:29.982Z",
     "latest_actual_gsc_read_at": "2026-10-16T15:23:29.982Z",
     "latest_automation_last_run_time": "2026-10-16T14:33:55.554816+00:00",
@@ -13024,7 +13028,11 @@
     "dg001_comment_id": "6205263096",
     "previous_wake_run": "38916594994",
     "previous_wake_job": "117025525856",
-    "previous_wake_delivery_attested": true
+    "previous_wake_delivery_attested": true,
+    "latest_wake_run": "38923841272",
+    "latest_wake_job": "117050226769",
+    "latest_wake_conclusion": "success",
+    "latest_wake_delivery_attested": false
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
