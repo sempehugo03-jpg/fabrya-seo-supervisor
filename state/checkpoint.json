@@ -601,6 +601,7 @@
         "evidence": {
           "scheduler": "HOSTED_AUTOMATION",
           "runs": [
+            38923841272,
             38916594994,
             38893397574,
             38880036493,
@@ -631,8 +632,7 @@
             38612984736,
             38597626239,
             38581965996,
-            38570588776,
-            38556023153
+            38570588776
           ],
           "commit": "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
           "transport_sources": [
@@ -659,8 +659,8 @@
           "acquisition": "HOSTED_SCHEDULED_TASK",
           "automation_slot": 497823,
           "consumed_by_run": "38923841272",
-          "wake_conclusion": "success",
           "delivery_attested": true,
+          "wake_conclusion": "success",
           "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION",
           "observed_automation_last_run_time": "2026-10-16T15:26:57.268296+00:00"
         }
