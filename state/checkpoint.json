@@ -189,7 +189,21 @@
   "failures": {
     "competitor-surface:2026-W41:v1": 2
   },
-  "lease": null,
+  "lease": {
+    "owner": "39064331345:1",
+    "run": "39064331345",
+    "task": "runtime-verification",
+    "trigger": "push",
+    "wake": {
+      "schema": 1,
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "slot": 497851,
+      "issued_at": 1792266752,
+      "source_commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3"
+    },
+    "heartbeat": 1792266778.4595294,
+    "expires": 1792267378.4595294
+  },
   "events": [
     {
       "kind": "RECOVERED",
@@ -900,16 +914,19 @@
     "proof_status": "PASS"
   },
   "runtime_cycle": {
-    "run": "39062575003",
+    "run": "39064331345",
     "attempt": "1",
-    "trigger": "schedule",
+    "trigger": "push",
     "commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
-    "started_at": 1792265300.0477526,
-    "status": "COMPLETED",
-    "completed_at": 1792265302.168105,
-    "new_results": 0,
-    "decision": "NO_ACTION",
-    "reason": "Current page inspection required; no proven production writer"
+    "started_at": 1792266778.4595256,
+    "status": "STARTED",
+    "wake": {
+      "schema": 1,
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "slot": 497851,
+      "issued_at": 1792266752,
+      "source_commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3"
+    }
   },
   "external_baseline": {
     "run": "38093303066",
