@@ -7418,7 +7418,12 @@
       "manifest_reused": true,
       "fresh_read_claimed": false,
       "delivery_attested": false,
-      "delivery_attestation_status": "PENDING_WAKE_EMISSION"
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
+      "wake_run": "39074112936",
+      "wake_job": "117517604224",
+      "wake_conclusion": "success",
+      "wake_attempt": 1,
+      "wake_head_sha": "a941bf64fb528a64ad894371be8c8f3471880bad"
     }
   ],
   "seo_decision": {
@@ -15163,11 +15168,11 @@
       "gsc_attempts": 3,
       "gsc_snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
       "gsc_manifest_reused": true,
-      "wake_run": null,
-      "wake_job": null,
-      "wake_conclusion": null,
+      "wake_run": "39074112936",
+      "wake_job": "117517604224",
+      "wake_conclusion": "success",
       "delivery_attested": false,
-      "delivery_attestation_status": "PENDING_WAKE_EMISSION",
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
       "observed_automation_last_run_time": "2026-10-17T21:12:20.242380+00:00",
       "reads": {
         "project_id": "appgprj_6acac4a9d9808191b57085eb34fa06be",
@@ -15204,7 +15209,10 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "GSC provider read failed after three bounded attempts; prior actual manifest retained. Current public, private CMS, Product supervisor and integration states verified."
+      "reason": "GSC provider read failed after three bounded attempts; prior actual manifest retained. Current public, private CMS, Product supervisor and integration states verified.",
+      "wake_attempt": 1,
+      "wake_head_sha": "a941bf64fb528a64ad894371be8c8f3471880bad",
+      "wake_steps_verified": 6
     }
   ],
   "public_product_resync": {
@@ -15254,7 +15262,7 @@
     "current_action": "INSPECT",
     "next_action": "INSPECT CURRENT PAGE AND ISOLATED SEO WRITER",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "last_real_action": "SLOT 497854 PRE-WAKE READS COMPLETED; UNIQUE WAKE PENDING",
+    "last_real_action": "SLOT 497854 WAKE COMPLETED SUCCESSFULLY; DELIVERY ATTESTATION DEFERRED TO FOLLOWING HOSTED INVOCATION",
     "gsc_manifest_read_at": "2026-10-16T20:33:23.509Z",
     "latest_actual_gsc_read_at": "2026-10-16T20:33:23.509Z",
     "latest_automation_last_run_time": "2026-10-17T21:12:20.242380+00:00",
@@ -15277,9 +15285,9 @@
     "previous_wake_run": "39069832471",
     "previous_wake_job": "117504953157",
     "previous_wake_delivery_attested": true,
-    "latest_wake_run": null,
-    "latest_wake_job": null,
-    "latest_wake_conclusion": null,
+    "latest_wake_run": "39074112936",
+    "latest_wake_job": "117517604224",
+    "latest_wake_conclusion": "success",
     "latest_wake_delivery_attested": false,
     "gsc_current_cycle_status": "ERROR_PROVIDER_PAYMENT_REQUIRED",
     "gsc_current_cycle_attempts": 3,
@@ -15288,7 +15296,7 @@
     "gsc_provider_error_receipt_path": "seo/gsc/2026-10-17-497854-gsc-read-error-1792275096.json",
     "gsc_manifest_reused_due_provider_error": true,
     "integration_first_blocker_status": "REVIEW_IN_PROGRESS_TEST_COMPOSITION_AND_KEYS_MISSING",
-    "latest_wake_delivery_attestation_status": "PENDING_WAKE_EMISSION",
+    "latest_wake_delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
     "runtime_repair": {
       "status": "VERIFIED",
       "reason": "Capability reconciliation now fails closed when an observation lacks consumed_by_run.",
@@ -15325,7 +15333,7 @@
       "latest_fixed_wake_steps_verified": 6
     },
     "latest_wake_attempt": 1,
-    "latest_wake_head_sha": "a4887d37dd148cad1b282571aae825534a52f92c",
+    "latest_wake_head_sha": "a941bf64fb528a64ad894371be8c8f3471880bad",
     "latest_wake_steps_verified": 6,
     "gsc_current_cycle_calls_attempted": 9,
     "public_setup_fee_eur": 0,
