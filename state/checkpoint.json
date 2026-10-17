@@ -6744,9 +6744,13 @@
       "prior_manifest_blob": "24a10fb4c16695dc6dc5b2fa4573970401b79fcc",
       "manifest_reused": true,
       "fresh_read_claimed": false,
-      "wake_run": "PENDING_CURRENT_SLOT",
+      "wake_run": "39013755154",
       "delivery_attested": false,
-      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION"
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
+      "wake_job": "117341494846",
+      "wake_conclusion": "success",
+      "wake_attempt": 1,
+      "wake_head_sha": "d1babdfe373962aa51c92bcabc5b5cfc77e53b1b"
     }
   ],
   "seo_decision": {
@@ -14132,7 +14136,7 @@
       "gsc_attempts": 3,
       "gsc_snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
       "gsc_manifest_reused": true,
-      "wake_run": "PENDING_CURRENT_SLOT",
+      "wake_run": "39013755154",
       "delivery_attested": false,
       "observed_automation_last_run_time": "2026-10-17T05:42:15.549763+00:00",
       "reads": {
@@ -14170,11 +14174,15 @@
       },
       "decision": "NO_STAGE_DUPLICATE",
       "reason": "GSC provider read failed after three bounded attempts; prior actual manifest retained. Private CMS/page/preview and current Product/Sites states verified.",
-      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION"
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
+      "wake_job": "117341494846",
+      "wake_conclusion": "success",
+      "wake_attempt": 1,
+      "wake_head_sha": "d1babdfe373962aa51c92bcabc5b5cfc77e53b1b"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-17T07:28:12.101Z",
+    "observed_at": "2026-10-17T07:29:21.318Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_AND_READ_ONLY_BROWSER",
     "contract_commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
     "public_version": 507,
@@ -14217,10 +14225,10 @@
     "gsc_private_snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "GSC RETRY RECORDED; CURRENT UNIQUE WAKE PENDING",
-    "next_action": "EMIT SLOT 497839 WAKE AND VERIFY REAL RUN; ATTEST ONLY ON A FOLLOWING HOSTED INVOCATION",
+    "current_action": "UNIQUE WAKE COMPLETED WITH SIX SUCCESSFUL STEPS; DELIVERY ATTESTATION AWAITS A FOLLOWING HOSTED INVOCATION",
+    "next_action": "RETRY GSC AND AUDIT SLOT 497839 DELIVERY ON THE NEXT HOSTED INVOCATION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "last_real_action": "SLOT 497837 DELIVERY ATTESTED FROM HOSTED TASK METADATA; CURRENT PRODUCT AND PRIVATE SEO PATH VERIFIED",
+    "last_real_action": "WAKE RUN 39013755154 COMPLETED SUCCESSFULLY ON MAIN 82A12541; PRODUCT REVISION 160 AND PRIVATE SEO PATH WERE VERIFIED",
     "gsc_manifest_read_at": "2026-10-16T20:33:23.509Z",
     "latest_actual_gsc_read_at": "2026-10-16T20:33:23.509Z",
     "latest_automation_last_run_time": "2026-10-17T05:42:15.549763+00:00",
@@ -14243,9 +14251,9 @@
     "previous_wake_run": "39007163538",
     "previous_wake_job": "117321869483",
     "previous_wake_delivery_attested": true,
-    "latest_wake_run": "PENDING_CURRENT_SLOT",
-    "latest_wake_job": null,
-    "latest_wake_conclusion": "PENDING",
+    "latest_wake_run": "39013755154",
+    "latest_wake_job": "117341494846",
+    "latest_wake_conclusion": "success",
     "latest_wake_delivery_attested": false,
     "gsc_current_cycle_status": "ERROR_PROVIDER_PAYMENT_REQUIRED",
     "gsc_current_cycle_attempts": 3,
@@ -14291,7 +14299,7 @@
       "latest_fixed_wake_steps_verified": 6
     },
     "latest_wake_attempt": 1,
-    "latest_wake_head_sha": "b583e172fbab4783f8c3329ca02fd71e9772c218",
+    "latest_wake_head_sha": "d1babdfe373962aa51c92bcabc5b5cfc77e53b1b",
     "latest_wake_steps_verified": 6
   },
   "current_page_observations": {
