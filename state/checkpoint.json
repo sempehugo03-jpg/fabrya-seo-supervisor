@@ -601,13 +601,13 @@
       "reason": "Current page inspection required; no proven production writer"
     },
     "last_schedule_run": 38991566838,
-    "last_successful_schedule": 38982788661,
+    "last_successful_schedule": 38991566838,
     "last_watchdog_recovery": {
       "run": "38097697056",
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
       "completed_at": 1791677619.6435385
     },
-    "last_external_wake": 38971142273,
+    "last_external_wake": 38991173589,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
@@ -627,6 +627,7 @@
         "evidence": {
           "scheduler": "HOSTED_AUTOMATION",
           "runs": [
+            38991173589,
             38971142273,
             38962277492,
             38955100421,
@@ -655,13 +656,13 @@
             38719359234,
             38705097287,
             38687702627,
-            38681518197,
-            38670857956
+            38681518197
           ],
           "commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
           "transport_sources": [
             "1a2f9609fb426cd9dcf6868c1e3c3a5dd38649ce",
-            "24ce1fd6827b650a7272fb00935aa671fd2d6d1a"
+            "24ce1fd6827b650a7272fb00935aa671fd2d6d1a",
+            "82a125414e3290ce19844d52d8cdcb42b71c81b3"
           ],
           "recovery": {
             "run": "38097697056",
