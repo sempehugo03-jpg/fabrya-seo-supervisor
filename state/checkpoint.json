@@ -6559,9 +6559,13 @@
       "prior_manifest_blob": "24a10fb4c16695dc6dc5b2fa4573970401b79fcc",
       "manifest_reused": true,
       "fresh_read_claimed": false,
-      "wake_run": "PENDING_CURRENT_SLOT",
+      "wake_run": "38998921015",
       "delivery_attested": false,
-      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION"
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
+      "wake_job": "117297505098",
+      "wake_conclusion": "success",
+      "wake_attempt": 1,
+      "wake_head_sha": "da14f49a509c4ab047b4cb6cda18665ae62309c4"
     }
   ],
   "seo_decision": {
@@ -13774,7 +13778,7 @@
       "gsc_attempts": 3,
       "gsc_snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
       "gsc_manifest_reused": true,
-      "wake_run": "PENDING_CURRENT_SLOT",
+      "wake_run": "38998921015",
       "delivery_attested": false,
       "observed_automation_last_run_time": "2026-10-17T01:49:04.760801+00:00",
       "reads": {
@@ -13812,7 +13816,11 @@
       },
       "decision": "NO_STAGE_DUPLICATE",
       "reason": "GSC provider read failed after three bounded attempts; prior actual manifest retained. Private CMS/page/preview and current Product/Sites states verified.",
-      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION"
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
+      "wake_job": "117297505098",
+      "wake_conclusion": "success",
+      "wake_attempt": 1,
+      "wake_head_sha": "da14f49a509c4ab047b4cb6cda18665ae62309c4"
     }
   ],
   "public_product_resync": {
@@ -13859,10 +13867,10 @@
     "gsc_private_snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "CURRENT PRODUCT/SITES/PRIVATE TRANSPORT VERIFIED; GSC PROVIDER ERROR RECORDED; UNIQUE WAKE PENDING",
-    "next_action": "ISSUE ONE WAKE FOR UTC SLOT 497835 AND VERIFY ITS REAL RUN",
+    "current_action": "UNIQUE WAKE COMPLETED WITH SIX SUCCESSFUL STEPS; DELIVERY ATTESTATION AWAITS A FOLLOWING HOSTED INVOCATION",
+    "next_action": "RETRY GSC AND AUDIT SLOT 497835 DELIVERY ON THE NEXT HOSTED INVOCATION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "last_real_action": "PRIVATE CMS/ATTRIBUTION AND CURRENT PRODUCT/INTEGRATION/PUBLIC STATES RE-READ WITHOUT PRODUCT OR PAYMENT WRITE",
+    "last_real_action": "WAKE RUN 38998921015 COMPLETED SUCCESSFULLY ON MAIN 82A12541; PRIVATE CMS/ATTRIBUTION AND CURRENT PRODUCT/INTEGRATION/PUBLIC STATES WERE VERIFIED",
     "gsc_manifest_read_at": "2026-10-16T20:33:23.509Z",
     "latest_actual_gsc_read_at": "2026-10-16T20:33:23.509Z",
     "latest_automation_last_run_time": "2026-10-17T01:49:04.760801+00:00",
@@ -13885,9 +13893,9 @@
     "previous_wake_run": "38991173589",
     "previous_wake_job": "117273676741",
     "previous_wake_delivery_attested": true,
-    "latest_wake_run": "PENDING_CURRENT_SLOT",
-    "latest_wake_job": null,
-    "latest_wake_conclusion": "pending",
+    "latest_wake_run": "38998921015",
+    "latest_wake_job": "117297505098",
+    "latest_wake_conclusion": "success",
     "latest_wake_delivery_attested": false,
     "gsc_current_cycle_status": "ERROR_PROVIDER_PAYMENT_REQUIRED",
     "gsc_current_cycle_attempts": 3,
@@ -13926,14 +13934,14 @@
       "recovery_conclusion": "success",
       "recovery_steps_verified": 6,
       "recovery_receipt_status": "COMPLETED",
-      "hosted_wake_delivery_still_unattested": false,
-      "latest_fixed_wake_run": "38991173589",
-      "latest_fixed_wake_job": "117273676741",
+      "hosted_wake_delivery_still_unattested": true,
+      "latest_fixed_wake_run": "38998921015",
+      "latest_fixed_wake_job": "117297505098",
       "latest_fixed_wake_conclusion": "success",
       "latest_fixed_wake_steps_verified": 6
     },
     "latest_wake_attempt": 1,
-    "latest_wake_head_sha": "b4b0f33946e476bb1a5f8ea04f3ddca2a4e475ca",
+    "latest_wake_head_sha": "da14f49a509c4ab047b4cb6cda18665ae62309c4",
     "latest_wake_steps_verified": 6
   },
   "current_page_observations": {
