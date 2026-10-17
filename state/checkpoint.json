@@ -6678,9 +6678,13 @@
       "prior_manifest_blob": "24a10fb4c16695dc6dc5b2fa4573970401b79fcc",
       "manifest_reused": true,
       "fresh_read_claimed": false,
-      "wake_run": "PENDING_UNIQUE_WAKE",
+      "wake_run": "39007163538",
       "delivery_attested": false,
-      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION"
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
+      "wake_job": "117321869483",
+      "wake_conclusion": "success",
+      "wake_attempt": 1,
+      "wake_head_sha": "b583e172fbab4783f8c3329ca02fd71e9772c218"
     }
   ],
   "seo_decision": {
@@ -14010,7 +14014,7 @@
       "gsc_attempts": 3,
       "gsc_snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
       "gsc_manifest_reused": true,
-      "wake_run": "PENDING_UNIQUE_WAKE",
+      "wake_run": "39007163538",
       "delivery_attested": false,
       "observed_automation_last_run_time": "2026-10-17T04:49:38.905368+00:00",
       "reads": {
@@ -14048,11 +14052,15 @@
       },
       "decision": "NO_STAGE_DUPLICATE",
       "reason": "GSC provider read failed after three bounded attempts; prior actual manifest retained. Private CMS/page/preview and current Product/Sites states verified.",
-      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION"
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
+      "wake_job": "117321869483",
+      "wake_conclusion": "success",
+      "wake_attempt": 1,
+      "wake_head_sha": "b583e172fbab4783f8c3329ca02fd71e9772c218"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-17T05:40:36.000Z",
+    "observed_at": "2026-10-17T05:42:01.588Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_AND_READ_ONLY_BROWSER",
     "contract_commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
     "public_version": 507,
@@ -14095,10 +14103,10 @@
     "gsc_private_snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "GSC READ RETRIED THREE TIMES; CURRENT PRODUCT REVISION 160 AND PRIVATE SEO PATH VERIFIED",
-    "next_action": "ISSUE UNIQUE WAKE FOR SLOT 497837 AND VERIFY ITS ACTUAL RUN",
+    "current_action": "UNIQUE WAKE COMPLETED WITH SIX SUCCESSFUL STEPS; DELIVERY ATTESTATION AWAITS A FOLLOWING HOSTED INVOCATION",
+    "next_action": "RETRY GSC AND AUDIT SLOT 497837 DELIVERY ON THE NEXT HOSTED INVOCATION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "last_real_action": "CURRENT PRIVATE CMS/ATTRIBUTION AND PRODUCT/INTEGRATION/PUBLIC STATES VERIFIED",
+    "last_real_action": "WAKE RUN 39007163538 COMPLETED SUCCESSFULLY ON MAIN 82A12541; PRODUCT REVISION 160 AND PRIVATE SEO PATH WERE VERIFIED",
     "gsc_manifest_read_at": "2026-10-16T20:33:23.509Z",
     "latest_actual_gsc_read_at": "2026-10-16T20:33:23.509Z",
     "latest_automation_last_run_time": "2026-10-17T04:49:38.905368+00:00",
@@ -14121,9 +14129,9 @@
     "previous_wake_run": "39001670027",
     "previous_wake_job": "117305714247",
     "previous_wake_delivery_attested": true,
-    "latest_wake_run": "PENDING_UNIQUE_WAKE",
-    "latest_wake_job": null,
-    "latest_wake_conclusion": null,
+    "latest_wake_run": "39007163538",
+    "latest_wake_job": "117321869483",
+    "latest_wake_conclusion": "success",
     "latest_wake_delivery_attested": false,
     "gsc_current_cycle_status": "ERROR_PROVIDER_PAYMENT_REQUIRED",
     "gsc_current_cycle_attempts": 3,
@@ -14162,14 +14170,14 @@
       "recovery_conclusion": "success",
       "recovery_steps_verified": 6,
       "recovery_receipt_status": "COMPLETED",
-      "hosted_wake_delivery_still_unattested": false,
-      "latest_fixed_wake_run": "39001670027",
-      "latest_fixed_wake_job": "117305714247",
+      "hosted_wake_delivery_still_unattested": true,
+      "latest_fixed_wake_run": "39007163538",
+      "latest_fixed_wake_job": "117321869483",
       "latest_fixed_wake_conclusion": "success",
       "latest_fixed_wake_steps_verified": 6
     },
     "latest_wake_attempt": 1,
-    "latest_wake_head_sha": "360d560158ef8d5d1210d903ce516321f87c136b",
+    "latest_wake_head_sha": "b583e172fbab4783f8c3329ca02fd71e9772c218",
     "latest_wake_steps_verified": 6
   },
   "current_page_observations": {
