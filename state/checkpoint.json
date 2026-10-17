@@ -606,6 +606,14 @@
       "wake_run": "39028964906",
       "delivery_attestation_effect": "NONE_CURRENT_INVOCATION",
       "at": 1792236728.118
+    },
+    {
+      "kind": "EXTERNAL_WAKE_ATTESTED",
+      "automation_slot": 497843,
+      "run": "39028964906",
+      "job": "117385420695",
+      "wake_commit": "a708b2fdae1b2f23184af998bea375ba7e09c441",
+      "at": 1792238991.922
     }
   ],
   "blocked": [
@@ -6094,6 +6102,28 @@
       "cycle_receipt_status": "COMPLETED",
       "cycle_receipt_new_results": 0,
       "attested_at": "2026-10-17T11:30:25.087Z"
+    },
+    "497843": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "39028964906",
+      "job": "117385420695",
+      "wake_commit": "a708b2fdae1b2f23184af998bea375ba7e09c441",
+      "source_commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-17T11:32:28.287953+00:00",
+      "observed_task_updated_at": "2026-10-17T11:32:50.873439+00:00",
+      "delivery_delta_seconds": 116.287953,
+      "run_attempt": 1,
+      "run_trigger": "push",
+      "run_conclusion": "success",
+      "job_conclusion": "success",
+      "successful_job_steps": 6,
+      "completed_tasks_before": 5,
+      "completed_tasks_after": 5,
+      "completed_tasks_unchanged": true,
+      "cycle_receipt_status": "COMPLETED",
+      "cycle_receipt_new_results": 0,
+      "attested_at": "2026-10-17T12:09:51.922Z"
     }
   },
   "scheduled_baseline": {
@@ -6973,7 +7003,7 @@
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497843,
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-      "observed_automation_last_run_time": "2026-10-17T10:27:43.593744+00:00",
+      "observed_automation_last_run_time": "2026-10-17T11:32:28.287953+00:00",
       "provider_error_receipt_commit": "4b32f8e5d2461bf47f5a3af382bf1322aeec0744",
       "provider_error_receipt_blob": "b3f85c994b27c0ba7cc2e53b7c736d33b05d3559",
       "provider_error_receipt_path": "seo/gsc/2026-10-17-497843-gsc-read-error-1792236592.json",
@@ -6987,8 +7017,8 @@
       "wake_conclusion": "success",
       "wake_attempt": 1,
       "wake_head_sha": "a708b2fdae1b2f23184af998bea375ba7e09c441",
-      "delivery_attested": false,
-      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION"
+      "delivery_attested": true,
+      "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION"
     }
   ],
   "seo_decision": {
@@ -14552,9 +14582,9 @@
       "wake_conclusion": "success",
       "wake_attempt": 1,
       "wake_head_sha": "a708b2fdae1b2f23184af998bea375ba7e09c441",
-      "delivery_attested": false,
-      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
-      "observed_automation_last_run_time": "2026-10-17T10:27:43.593744+00:00",
+      "delivery_attested": true,
+      "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION",
+      "observed_automation_last_run_time": "2026-10-17T11:32:28.287953+00:00",
       "reads": {
         "project_id": "appgprj_6acac4a9d9808191b57085eb34fa06be",
         "version": 88,
@@ -14642,8 +14672,8 @@
     "last_real_action": "WAKE RUN 39028964906 COMPLETED SUCCESSFULLY ON MAIN 82A12541; PRODUCT REVISION 164, INTEGRATION HEAD AND PRIVATE SEO PATH WERE VERIFIED",
     "gsc_manifest_read_at": "2026-10-16T20:33:23.509Z",
     "latest_actual_gsc_read_at": "2026-10-16T20:33:23.509Z",
-    "latest_automation_last_run_time": "2026-10-17T10:27:43.593744+00:00",
-    "latest_automation_updated_at": "2026-10-17T10:28:05.956575+00:00",
+    "latest_automation_last_run_time": "2026-10-17T11:32:28.287953+00:00",
+    "latest_automation_updated_at": "2026-10-17T11:32:50.873439+00:00",
     "public_latest_saved_version": 508,
     "public_latest_saved_source_commit": "008297dda91e9531c4a6b7c5d092dcf5d948fbe4",
     "public_latest_saved_deployment_status": "NOT_DEPLOYED",
@@ -14659,8 +14689,8 @@
     "dg001_consumed": true,
     "dg001_issue": "https://github.com/sempehugo03-jpg/fabrya-engine/issues/42",
     "dg001_comment_id": "6205263096",
-    "previous_wake_run": "39024816277",
-    "previous_wake_job": "117373618188",
+    "previous_wake_run": "39028964906",
+    "previous_wake_job": "117385420695",
     "previous_wake_delivery_attested": true,
     "latest_wake_run": "39028964906",
     "latest_wake_job": "117385420695",
