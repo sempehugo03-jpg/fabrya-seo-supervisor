@@ -6500,7 +6500,15 @@
       "wake_job": "117273676741",
       "wake_conclusion": "success",
       "wake_attempt": 1,
-      "wake_head_sha": "b4b0f33946e476bb1a5f8ea04f3ddca2a4e475ca"
+      "wake_head_sha": "b4b0f33946e476bb1a5f8ea04f3ddca2a4e475ca",
+      "same_slot_reread": true,
+      "same_slot_reread_at": "2026-10-17T01:47:53Z",
+      "same_slot_reread_attempts": 3,
+      "same_slot_reread_calls_attempted": 9,
+      "same_slot_reread_error_code": "GSC_PROVIDER_PAYMENT_REQUIRED",
+      "same_slot_reread_receipt_commit": "28afc5eaf105fced7f5adffeb76770774468af54",
+      "same_slot_reread_receipt_blob": "4e6667f6ba589c87c72bbb76d0c2a7433da2762e",
+      "same_slot_reread_receipt_path": "seo/gsc/2026-10-17-497833-same-slot-gsc-read-error-1792201673.json"
     }
   ],
   "seo_decision": {
@@ -13694,11 +13702,16 @@
       "wake_job": "117273676741",
       "wake_conclusion": "success",
       "wake_attempt": 1,
-      "wake_head_sha": "b4b0f33946e476bb1a5f8ea04f3ddca2a4e475ca"
+      "wake_head_sha": "b4b0f33946e476bb1a5f8ea04f3ddca2a4e475ca",
+      "same_slot_reread": true,
+      "same_slot_reread_at": "2026-10-17T01:47:53Z",
+      "same_slot_private_receipt_commit": "6d541cb5aea42afe4d1cdf424dd2b213e87170e1",
+      "same_slot_private_receipt_blob": "2d6cc181c7eea4c8c430b36bb301cba0fe348a84",
+      "same_slot_private_receipt_path": "seo/gsc/2026-10-17-497833-same-slot-private-product-reread-1792201673.json"
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-17T01:29:27Z",
+    "observed_at": "2026-10-17T01:47:53Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_AND_READ_ONLY_BROWSER",
     "contract_commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
     "public_version": 507,
@@ -13707,7 +13720,7 @@
     "public_deployment_status": "succeeded",
     "public_price_eur_month": 59,
     "public_trial_days": 30,
-    "public_price_evidence": "LIVE_BROWSER_READ_2026-10-17T01:28Z",
+    "public_price_evidence": "LIVE_BROWSER_READ_2026-10-17T01:46Z",
     "public_new_orders_enabled": false,
     "public_payments_enabled": false,
     "public_59_release_observed": true,
@@ -13741,10 +13754,10 @@
     "gsc_private_snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "SLOT 497833 HOSTED DELIVERY ATTESTED; SAME-SLOT WAKE REMAINS DEDUPLICATED",
+    "current_action": "SAME-SLOT WAKE DEDUPLICATED; HOSTED DELIVERY ATTESTED; GSC PROVIDER ERROR RECONFIRMED; PRIVATE CMS/ATTRIBUTION AND CURRENT PRODUCT STATES RE-READ",
     "next_action": "RETRY GSC AND ISSUE ONE WAKE ON THE NEXT UNIQUE UTC SLOT",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
-    "last_real_action": "WAKE RUN 38991173589 COMPLETED SUCCESSFULLY ON MAIN 82A12541; PRIVATE CMS/ATTRIBUTION AND CURRENT PRODUCT/INTEGRATION/PUBLIC STATES WERE VERIFIED",
+    "last_real_action": "SAME-SLOT NO-WRITE; PRIVATE CMS/ATTRIBUTION, PRODUCT/INTEGRATION AND LIVE 59 EUR PAGE RE-READ",
     "gsc_manifest_read_at": "2026-10-16T20:33:23.509Z",
     "latest_actual_gsc_read_at": "2026-10-16T20:33:23.509Z",
     "latest_automation_last_run_time": "2026-10-17T01:32:20.946785+00:00",
@@ -13773,9 +13786,9 @@
     "latest_wake_delivery_attested": true,
     "gsc_current_cycle_status": "ERROR_PROVIDER_PAYMENT_REQUIRED",
     "gsc_current_cycle_attempts": 3,
-    "gsc_provider_error_receipt_commit": "b34c69dd847062f7c9400e4b2cf7472f81065fbc",
-    "gsc_provider_error_receipt_blob": "6b2e8380dc4cf4a5e9529e858236812317f1213b",
-    "gsc_provider_error_receipt_path": "seo/gsc/2026-10-17-497833-gsc-read-error-1792200515.json",
+    "gsc_provider_error_receipt_commit": "28afc5eaf105fced7f5adffeb76770774468af54",
+    "gsc_provider_error_receipt_blob": "4e6667f6ba589c87c72bbb76d0c2a7433da2762e",
+    "gsc_provider_error_receipt_path": "seo/gsc/2026-10-17-497833-same-slot-gsc-read-error-1792201673.json",
     "gsc_manifest_reused_due_provider_error": true,
     "integration_first_blocker_status": "REVIEW_IN_PROGRESS_TEST_COMPOSITION_AND_KEYS_MISSING",
     "latest_wake_delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION",
@@ -14086,6 +14099,27 @@
       "wake_conclusion": "success",
       "delivery_attested": true,
       "delivery_attestation_status": "PASS_EXISTING_UNIQUE_WAKE",
+      "snapshot_reused_identical": true
+    },
+    {
+      "slot": 497833,
+      "read_at": "2026-10-17T01:47:53Z",
+      "fresh_reread_attempt_path": "seo/gsc/2026-10-17-497833-same-slot-gsc-read-error-1792201673.json",
+      "fresh_reread_attempt_commit": "28afc5eaf105fced7f5adffeb76770774468af54",
+      "fresh_reread_attempt_blob": "4e6667f6ba589c87c72bbb76d0c2a7433da2762e",
+      "fresh_reread_attempt_status": "ERROR_PROVIDER_PAYMENT_REQUIRED",
+      "private_snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
+      "manifest_blob": "24a10fb4c16695dc6dc5b2fa4573970401b79fcc",
+      "private_product_receipt_commit": "6d541cb5aea42afe4d1cdf424dd2b213e87170e1",
+      "private_product_receipt_blob": "2d6cc181c7eea4c8c430b36bb301cba0fe348a84",
+      "private_product_receipt_path": "seo/gsc/2026-10-17-497833-same-slot-private-product-reread-1792201673.json",
+      "automation_last_run_time": "2026-10-17T01:32:20.946785+00:00",
+      "wake_reissued": false,
+      "wake_run": "38991173589",
+      "wake_job": "117273676741",
+      "wake_conclusion": "success",
+      "delivery_attested": true,
+      "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION",
       "snapshot_reused_identical": true
     }
   ]
