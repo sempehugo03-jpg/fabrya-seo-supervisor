@@ -587,6 +587,14 @@
       "wake_run": "39024816277",
       "delivery_attestation_effect": "NONE_CURRENT_INVOCATION",
       "at": 1792232844.569
+    },
+    {
+      "kind": "EXTERNAL_WAKE_ATTESTED",
+      "automation_slot": 497842,
+      "run": "39024816277",
+      "job": "117373618188",
+      "wake_commit": "133027027c71b94702735ff2b3e01e609a349f7e",
+      "at": 1792236625.087
     }
   ],
   "blocked": [
@@ -664,7 +672,7 @@
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
       "completed_at": 1791677619.6435385
     },
-    "last_external_wake": 39021523312,
+    "last_external_wake": 39024816277,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
@@ -684,6 +692,7 @@
         "evidence": {
           "scheduler": "HOSTED_AUTOMATION",
           "runs": [
+            39024816277,
             39021523312,
             39013755154,
             39007163538,
@@ -6013,6 +6022,28 @@
       "cycle_receipt_status": "COMPLETED",
       "cycle_receipt_new_results": 0,
       "attested_at": "2026-10-17T10:27:24.569Z"
+    },
+    "497842": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "39024816277",
+      "job": "117373618188",
+      "wake_commit": "133027027c71b94702735ff2b3e01e609a349f7e",
+      "source_commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-17T10:27:43.593744+00:00",
+      "observed_task_updated_at": "2026-10-17T10:28:05.956575+00:00",
+      "delivery_delta_seconds": 158.593744,
+      "run_attempt": 1,
+      "run_trigger": "push",
+      "run_conclusion": "success",
+      "job_conclusion": "success",
+      "successful_job_steps": 6,
+      "completed_tasks_before": 5,
+      "completed_tasks_after": 5,
+      "completed_tasks_unchanged": true,
+      "cycle_receipt_status": "COMPLETED",
+      "cycle_receipt_new_results": 0,
+      "attested_at": "2026-10-17T11:30:25.087Z"
     }
   },
   "scheduled_baseline": {
@@ -6866,7 +6897,7 @@
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497842,
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-      "observed_automation_last_run_time": "2026-10-17T09:34:21.924994+00:00",
+      "observed_automation_last_run_time": "2026-10-17T10:27:43.593744+00:00",
       "provider_error_receipt_commit": "dd41a201c506ebf70675b68fad439476965c0880",
       "provider_error_receipt_blob": "3ce55e22f03bd1c1e61c017771f6ae1fa2aca6be",
       "provider_error_receipt_path": "seo/gsc/2026-10-17-497842-gsc-read-error-1792232677.json",
@@ -6880,8 +6911,8 @@
       "wake_conclusion": "success",
       "wake_attempt": 1,
       "wake_head_sha": "133027027c71b94702735ff2b3e01e609a349f7e",
-      "delivery_attested": false,
-      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION"
+      "delivery_attested": true,
+      "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION"
     }
   ],
   "seo_decision": {
@@ -14389,9 +14420,9 @@
       "wake_conclusion": "success",
       "wake_attempt": 1,
       "wake_head_sha": "133027027c71b94702735ff2b3e01e609a349f7e",
-      "delivery_attested": false,
-      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
-      "observed_automation_last_run_time": "2026-10-17T09:34:21.924994+00:00",
+      "delivery_attested": true,
+      "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION",
+      "observed_automation_last_run_time": "2026-10-17T10:27:43.593744+00:00",
       "reads": {
         "project_id": "appgprj_6acac4a9d9808191b57085eb34fa06be",
         "version": 88,
