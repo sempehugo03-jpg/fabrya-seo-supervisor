@@ -727,7 +727,7 @@
       "reason": "Current page inspection required; no proven production writer"
     },
     "last_schedule_run": 39062575003,
-    "last_successful_schedule": 39039551123,
+    "last_successful_schedule": 39062575003,
     "last_watchdog_recovery": {
       "run": "38097697056",
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
