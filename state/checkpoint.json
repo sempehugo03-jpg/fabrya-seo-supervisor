@@ -7714,7 +7714,13 @@
       "manifest_reused": true,
       "fresh_read_claimed": false,
       "delivery_attested": false,
-      "delivery_attestation_status": "PENDING_WAKE_EMISSION"
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
+      "wake_run": "39095350783",
+      "wake_job": "117580529404",
+      "wake_conclusion": "success",
+      "wake_attempt": 1,
+      "wake_head_sha": "cb8d8e9e3ced5a62c74e7fd45463335778da0c0f",
+      "wake_steps_verified": 6
     }
   ],
   "seo_decision": {
@@ -15758,7 +15764,7 @@
       "gsc_snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
       "gsc_manifest_reused": true,
       "delivery_attested": false,
-      "delivery_attestation_status": "PENDING_WAKE_EMISSION",
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
       "observed_automation_last_run_time": "2026-10-18T02:47:01.203411+00:00",
       "reads": {
         "project_id": "appgprj_6acac4a9d9808191b57085eb34fa06be",
@@ -15796,11 +15802,17 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "GSC unavailable after three bounded attempts; prior actual retained; current Product, integration, public and private states verified."
+      "reason": "GSC unavailable after three bounded attempts; prior actual retained; current Product, integration, public and private states verified.",
+      "wake_run": "39095350783",
+      "wake_job": "117580529404",
+      "wake_conclusion": "success",
+      "wake_attempt": 1,
+      "wake_head_sha": "cb8d8e9e3ced5a62c74e7fd45463335778da0c0f",
+      "wake_steps_verified": 6
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-18T03:56:01.872Z",
+    "observed_at": "2026-10-18T03:57:35.574Z",
     "acquisition": "HOSTED_SCHEDULED_TASK_AND_READ_ONLY_BROWSER",
     "contract_commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
     "public_version": 507,
@@ -15846,10 +15858,10 @@
     "gsc_private_snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
     "gsc_snapshot_reused_same_slot": true,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "SLOT_497859_READS_COMPLETE; WAKE_PENDING_CAS",
-    "next_action": "EMIT_ONE_CAS_WAKE_FOR_SLOT_497859; VERIFY_GITHUB_RUN_AND_CHECKPOINT",
+    "current_action": "SLOT_497859_WAKE_COMPLETED; DELIVERY_ATTESTATION_PENDING_FOLLOWING_HOSTED_INVOCATION",
+    "next_action": "AUDIT_SLOT_497859_AGAINST_FOLLOWING_HOSTED_TASK_METADATA; RETRY_REAL_GSC_NEXT_CYCLE",
     "product_next_action": "PRODUCT_SUPERVISOR_OWNS_AUTHENTICATED_CONSUMER; SEO_CONTINUES_SAFE_READS",
-    "last_real_action": "SLOT_497858_DELIVERY_ATTESTED_FROM HOSTED TASK METADATA 2026-10-18T02:47:01.203411+00:00; GSC READ RETRIED 3 TIMES FOR SLOT 497859",
+    "last_real_action": "ONE CAS WAKE EMITTED FOR SLOT 497859; GITHUB RUN 39095350783 JOB 117580529404 COMPLETED SUCCESS WITH 6/6 STEPS; WATCHDOG 39095398847 SKIPPED BECAUSE PRIMARY SUCCEEDED",
     "gsc_manifest_read_at": "2026-10-16T20:33:23.509Z",
     "latest_actual_gsc_read_at": "2026-10-16T20:33:23.509Z",
     "latest_automation_last_run_time": "2026-10-18T02:47:01.203411+00:00",
@@ -15872,10 +15884,10 @@
     "previous_wake_run": "39091222179",
     "previous_wake_job": "117568202240",
     "previous_wake_delivery_attested": true,
-    "latest_wake_run": "39091222179",
-    "latest_wake_job": "117568202240",
+    "latest_wake_run": "39095350783",
+    "latest_wake_job": "117580529404",
     "latest_wake_conclusion": "success",
-    "latest_wake_delivery_attested": true,
+    "latest_wake_delivery_attested": false,
     "gsc_current_cycle_status": "ERROR_CONNECTOR_INVALID_ARGUMENT",
     "gsc_current_cycle_attempts": 3,
     "gsc_provider_error_receipt_commit": "c2cb6d28b3747a1407d4786f9d8009206ce5cab9",
@@ -15883,7 +15895,7 @@
     "gsc_provider_error_receipt_path": "seo/gsc/2026-10-18-497859-gsc-read-error-1792295728.json",
     "gsc_manifest_reused_due_provider_error": true,
     "integration_first_blocker_status": "REVIEW_IN_PROGRESS_TEST_COMPOSITION_AND_KEYS_MISSING",
-    "latest_wake_delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION",
+    "latest_wake_delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
     "runtime_repair": {
       "status": "VERIFIED",
       "reason": "Capability reconciliation now fails closed when an observation lacks consumed_by_run.",
@@ -15914,8 +15926,8 @@
       "recovery_steps_verified": 6,
       "recovery_receipt_status": "COMPLETED",
       "hosted_wake_delivery_still_unattested": true,
-      "latest_fixed_wake_run": "39040880327",
-      "latest_fixed_wake_job": "117419971885",
+      "latest_fixed_wake_run": "39095350783",
+      "latest_fixed_wake_job": "117580529404",
       "latest_fixed_wake_conclusion": "success",
       "latest_fixed_wake_steps_verified": 6,
       "latest_marker_repair": {
@@ -15941,7 +15953,7 @@
       }
     },
     "latest_wake_attempt": 1,
-    "latest_wake_head_sha": "1dfad6430355a231aaf9b990da3f9ef9027627d3",
+    "latest_wake_head_sha": "cb8d8e9e3ced5a62c74e7fd45463335778da0c0f",
     "latest_wake_steps_verified": 6,
     "gsc_current_cycle_calls_attempted": 9,
     "public_setup_fee_eur": 0,
@@ -15953,7 +15965,7 @@
     "public_cta_kind": "MAILTO_CONTACT",
     "integration_current_scope_id": "WORK3-COURANT-V2-STATIC-RECEPTION-20261017",
     "integration_current_scope_status": "CHECKPOINTED_THREE_EXACT_OWNER_CREATION_PASSES_GLOBAL_NOT_CERTIFIED",
-    "latest_watchdog_run": "39091277533",
+    "latest_watchdog_run": "39095398847",
     "latest_watchdog_conclusion": "skipped",
     "latest_watchdog_role": "NO_RECOVERY_NEEDED_PRIMARY_SUCCESS"
   },
