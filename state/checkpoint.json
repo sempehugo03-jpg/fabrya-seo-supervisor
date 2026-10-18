@@ -656,6 +656,24 @@
       "repair": "PUBLIC_CONTACT_VALUE_REMOVED_FROM_PUBLIC_CHECKPOINT",
       "delivery_attestation_effect": "NONE_CURRENT_INVOCATION",
       "at": 1792261021.34
+    },
+    {
+      "kind": "WAKE_MARKER_SOURCE_COMMIT_REPAIRED",
+      "automation_slot": 497856,
+      "failed_run": "39081948621",
+      "failed_job": "117540537213",
+      "failed_wake_commit": "f8926fcbf70adbf93c085e69c9fb9bd63e1d0e6f",
+      "recovery_run": "39081958638",
+      "recovery_job": "117540610345",
+      "repaired_wake_commit": "207500d652e0ac4dd1ea0c790e6ea7a8320f086a",
+      "recovery_conclusion": "success",
+      "steps_verified": 6,
+      "watchdog_run": "39081974678",
+      "watchdog_job": "117540752743",
+      "watchdog_conclusion": "success",
+      "watchdog_steps_verified": 5,
+      "delivery_attestation_effect": "NONE_CURRENT_INVOCATION",
+      "at": 1792282516.452
     }
   ],
   "blocked": [
@@ -7462,7 +7480,13 @@
       "manifest_reused": true,
       "fresh_read_claimed": false,
       "delivery_attested": false,
-      "delivery_attestation_status": "PENDING_WAKE_EMISSION"
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
+      "wake_run": "39081958638",
+      "wake_job": "117540610345",
+      "wake_conclusion": "success",
+      "wake_attempt": 1,
+      "wake_head_sha": "207500d652e0ac4dd1ea0c790e6ea7a8320f086a",
+      "wake_steps_verified": 6
     }
   ],
   "seo_decision": {
@@ -15266,11 +15290,11 @@
       "gsc_attempts": 3,
       "gsc_snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
       "gsc_manifest_reused": true,
-      "wake_run": null,
-      "wake_job": null,
-      "wake_conclusion": null,
+      "wake_run": "39081958638",
+      "wake_job": "117540610345",
+      "wake_conclusion": "success",
       "delivery_attested": false,
-      "delivery_attestation_status": "PENDING_WAKE_EMISSION",
+      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
       "observed_automation_last_run_time": "2026-10-17T22:45:18.855940+00:00",
       "reads": {
         "project_id": "appgprj_6acac4a9d9808191b57085eb34fa06be",
@@ -15307,7 +15331,10 @@
         }
       },
       "decision": "NO_STAGE_DUPLICATE",
-      "reason": "GSC unavailable after three bounded attempts; prior actual retained; current Product, integration, public and private states verified."
+      "reason": "GSC unavailable after three bounded attempts; prior actual retained; current Product, integration, public and private states verified.",
+      "wake_attempt": 1,
+      "wake_head_sha": "207500d652e0ac4dd1ea0c790e6ea7a8320f086a",
+      "wake_steps_verified": 6
     }
   ],
   "public_product_resync": {
@@ -15357,10 +15384,10 @@
     "gsc_private_snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "GSC_READ_BOUNDED_ERROR_AND_CURRENT_PRODUCT_PRIVATE_PUBLIC_RESYNC_COMPLETE",
-    "next_action": "EMIT_SINGLE_SLOT_497856_WAKE_AND_VERIFY_REAL_RUN",
+    "current_action": "SLOT_497856_WAKE_VERIFIED_SUCCESS_NO_NEW_RESULT",
+    "next_action": "FOLLOWING_HOSTED_INVOCATION_MAY_ATTEST_DELIVERY_IF_AUTOMATION_METADATA_MATCHES",
     "product_next_action": "PRODUCT_SUPERVISOR_OWNS_AUTHENTICATED_CONSUMER; SEO_CONTINUES_SAFE_READS",
-    "last_real_action": "SLOT 497856 PRE-WAKE EVIDENCE PERSISTED; SINGLE CAS WAKE PENDING",
+    "last_real_action": "SLOT 497856 WAKE COMPLETED SUCCESSFULLY; DELIVERY ATTESTATION DEFERRED TO A FOLLOWING HOSTED INVOCATION",
     "gsc_manifest_read_at": "2026-10-16T20:33:23.509Z",
     "latest_actual_gsc_read_at": "2026-10-16T20:33:23.509Z",
     "latest_automation_last_run_time": "2026-10-17T22:45:18.855940+00:00",
@@ -15383,9 +15410,9 @@
     "previous_wake_run": "39069832471",
     "previous_wake_job": "117504953157",
     "previous_wake_delivery_attested": true,
-    "latest_wake_run": null,
-    "latest_wake_job": null,
-    "latest_wake_conclusion": null,
+    "latest_wake_run": "39081958638",
+    "latest_wake_job": "117540610345",
+    "latest_wake_conclusion": "success",
     "latest_wake_delivery_attested": false,
     "gsc_current_cycle_status": "ERROR_PROVIDER_PAYMENT_REQUIRED",
     "gsc_current_cycle_attempts": 3,
@@ -15394,7 +15421,7 @@
     "gsc_provider_error_receipt_path": "seo/gsc/2026-10-18-497856-gsc-read-error-1792282307.json",
     "gsc_manifest_reused_due_provider_error": true,
     "integration_first_blocker_status": "REVIEW_IN_PROGRESS_TEST_COMPOSITION_AND_KEYS_MISSING",
-    "latest_wake_delivery_attestation_status": "PENDING_WAKE_EMISSION",
+    "latest_wake_delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
     "runtime_repair": {
       "status": "VERIFIED",
       "reason": "Capability reconciliation now fails closed when an observation lacks consumed_by_run.",
@@ -15428,11 +15455,32 @@
       "latest_fixed_wake_run": "39040880327",
       "latest_fixed_wake_job": "117419971885",
       "latest_fixed_wake_conclusion": "success",
-      "latest_fixed_wake_steps_verified": 6
+      "latest_fixed_wake_steps_verified": 6,
+      "latest_marker_repair": {
+        "slot": 497856,
+        "malformed_commit": "f8926fcbf70adbf93c085e69c9fb9bd63e1d0e6f",
+        "failed_run": "39081948621",
+        "failed_job": "117540537213",
+        "failed_conclusion": "failure",
+        "failed_step": "Prepare useful SEO reviews and recover checkpoints",
+        "defect": "WAKE_SOURCE_COMMIT_OMITTED",
+        "repaired_commit": "207500d652e0ac4dd1ea0c790e6ea7a8320f086a",
+        "recovery_run": "39081958638",
+        "recovery_job": "117540610345",
+        "recovery_conclusion": "success",
+        "recovery_steps_verified": 6,
+        "source_commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
+        "watchdog_run": "39081974678",
+        "watchdog_job": "117540752743",
+        "watchdog_conclusion": "success",
+        "watchdog_steps_verified": 5,
+        "delivery_attested": false,
+        "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION"
+      }
     },
-    "latest_wake_attempt": null,
-    "latest_wake_head_sha": null,
-    "latest_wake_steps_verified": 0,
+    "latest_wake_attempt": 1,
+    "latest_wake_head_sha": "207500d652e0ac4dd1ea0c790e6ea7a8320f086a",
+    "latest_wake_steps_verified": 6,
     "gsc_current_cycle_calls_attempted": 9,
     "public_setup_fee_eur": 0,
     "public_card_entry_enabled": false,
