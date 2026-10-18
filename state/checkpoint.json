@@ -777,7 +777,7 @@
       "decision": "NO_ACTION",
       "reason": "Current page inspection required; no proven production writer"
     },
-    "last_schedule_run": 39104359796,
+    "last_schedule_run": 39123984754,
     "last_successful_schedule": 39104359796,
     "last_watchdog_recovery": {
       "run": "38097697056",
@@ -833,8 +833,7 @@
             38955100421,
             38947076530,
             38940362447,
-            38923841272,
-            38916594994
+            38923841272
           ],
           "commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
           "transport_sources": [
