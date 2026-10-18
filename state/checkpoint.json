@@ -763,14 +763,14 @@
       "decision": "NO_ACTION",
       "reason": "Current page inspection required; no proven production writer"
     },
-    "last_schedule_run": 39079281908,
+    "last_schedule_run": 39086591223,
     "last_successful_schedule": 39079281908,
     "last_watchdog_recovery": {
       "run": "38097697056",
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
       "completed_at": 1791677619.6435385
     },
-    "last_external_wake": 39074112936,
+    "last_external_wake": 39081958638,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
@@ -790,6 +790,7 @@
         "evidence": {
           "scheduler": "HOSTED_AUTOMATION",
           "runs": [
+            39081958638,
             39074112936,
             39069832471,
             39064331345,
@@ -817,8 +818,7 @@
             38869349703,
             38861779592,
             38855778546,
-            38850230147,
-            38840501105
+            38850230147
           ],
           "commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
           "transport_sources": [
