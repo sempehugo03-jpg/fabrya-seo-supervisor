@@ -952,6 +952,14 @@
       "wake_commit": "5e9431d087fc3c01f2b6c2ef7649ef9bb65f0247",
       "reason": "TASK_METADATA_NOT_YET_MATCHED",
       "at": 1792435212.117
+    },
+    {
+      "kind": "EXTERNAL_WAKE_ATTESTED",
+      "automation_slot": 497898,
+      "run": "39304063997",
+      "job": "118236422513",
+      "wake_commit": "5e9431d087fc3c01f2b6c2ef7649ef9bb65f0247",
+      "at": 1792441820.377
     }
   ],
   "blocked": [
@@ -7926,6 +7934,32 @@
       "cycle_receipt_new_results": 0,
       "cycle_receipt_decision": "NO_ACTION",
       "attested_at": "2026-10-19T17:55:57.815Z"
+    },
+    "497898": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "39304063997",
+      "job": "118236422513",
+      "wake_commit": "5e9431d087fc3c01f2b6c2ef7649ef9bb65f0247",
+      "source_commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-19T18:40:28.408259+00:00",
+      "observed_task_updated_at": "2026-10-19T18:40:50.469081+00:00",
+      "delivery_delta_seconds": 175.408259,
+      "run_attempt": 1,
+      "run_trigger": "push",
+      "run_conclusion": "success",
+      "job_conclusion": "success",
+      "successful_job_steps": 6,
+      "completed_tasks_before": 6,
+      "completed_tasks_after": 6,
+      "completed_tasks_unchanged": true,
+      "cycle_receipt_status": "COMPLETED",
+      "cycle_receipt_new_results": 0,
+      "cycle_receipt_decision": "NO_ACTION",
+      "watchdog_run": "39304244523",
+      "watchdog_conclusion": "skipped",
+      "watchdog_role": "NO_RECOVERY_NEEDED",
+      "attested_at": "2026-10-19T20:30:20.376Z"
     }
   },
   "scheduled_baseline": {
@@ -19887,8 +19921,8 @@
       "slot": 497898,
       "observed_at": "2026-10-19T18:40:11.062Z",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-      "observed_automation_last_run_time": "2026-10-19T18:02:38.566933+00:00",
-      "observed_automation_updated_at": "2026-10-19T18:03:00.990066+00:00",
+      "observed_automation_last_run_time": "2026-10-19T18:40:28.408259+00:00",
+      "observed_automation_updated_at": "2026-10-19T18:40:50.469081+00:00",
       "wake_reissued": true,
       "unique_wake_preserved": true,
       "duplicate_wake_emitted": false,
@@ -19901,8 +19935,8 @@
       "wake_head_sha": "5e9431d087fc3c01f2b6c2ef7649ef9bb65f0247",
       "wake_steps_verified": 6,
       "wake_verified_at": "2026-10-19T18:38:48Z",
-      "delivery_attested": false,
-      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
+      "delivery_attested": true,
+      "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION",
       "previous_slot_audit": {
         "slot": 497897,
         "wake_run": "39298759553",
@@ -19996,7 +20030,9 @@
         "private_source_commit": "d87dc4e29cb7e345e4ef53f6bca399506c52a9a9"
       },
       "dg001_comment_id": 6273756696,
-      "reason": "CURRENT_WAKE_SUCCESSFUL_TASK_METADATA_NOT_YET_MATCHED"
+      "reason": "CURRENT_WAKE_SUCCESSFUL_TASK_METADATA_NOT_YET_MATCHED",
+      "time_window_matches": true,
+      "same_utc_slot": true
     }
   ],
   "public_product_resync": {
@@ -20071,7 +20107,7 @@
     "latest_wake_run": "39304063997",
     "latest_wake_job": "118236422513",
     "latest_wake_conclusion": "success",
-    "latest_wake_delivery_attested": false,
+    "latest_wake_delivery_attested": true,
     "gsc_current_cycle_status": "ERROR_PROVIDER_PAYMENT_REQUIRED",
     "gsc_current_cycle_attempts": 3,
     "gsc_provider_error_receipt_commit": "83939b6091f293e7df9362a7d46ca6f83ae9d30e",
@@ -20079,7 +20115,7 @@
     "gsc_provider_error_receipt_path": "seo/gsc/2026-10-19-497898-gsc-read-error-1792435019.json",
     "gsc_manifest_reused_due_provider_error": true,
     "integration_first_blocker_status": "REVIEW_IN_PROGRESS_TEST_COMPOSITION_AND_KEYS_MISSING",
-    "latest_wake_delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
+    "latest_wake_delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION",
     "runtime_repair": {
       "status": "VERIFIED",
       "reason": "Capability reconciliation now fails closed when an observation lacks consumed_by_run.",
@@ -20158,11 +20194,11 @@
     "private_product_receipt_commit": "e2e2a2b9bd132a1070997aed153d47fb840fc9b1",
     "private_product_receipt_blob": "651f9e9052314648ca998f117dbe55a3bd63ec30",
     "private_product_receipt_path": "seo/gsc/2026-10-19-497898-private-product-reread-1792435040.json",
-    "pending_wake_slot": 497898,
-    "pending_wake_commit": "5e9431d087fc3c01f2b6c2ef7649ef9bb65f0247",
-    "pending_wake_run": "39304063997",
-    "pending_wake_job": "118236422513",
-    "pending_wake_status": "success",
+    "pending_wake_slot": null,
+    "pending_wake_commit": null,
+    "pending_wake_run": null,
+    "pending_wake_job": null,
+    "pending_wake_status": null,
     "private_latest_saved_source_commit": "fa782ccf76f9feffa371010a8729a4b71824726f",
     "previous_wake_conclusion": "failure",
     "previous_wake_failure_class": "TRANSIENT_GITHUB_HTTP_502",
