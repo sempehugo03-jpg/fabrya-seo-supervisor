@@ -7820,6 +7820,29 @@
       "cycle_receipt_decision": "NO_ACTION",
       "watchdog_observation": "PRIOR_ACQUIRED_EVIDENCE_PRESERVED_NO_RECOVERY_NEEDED_FOR_SUCCESSFUL_RUN",
       "attested_at": "2026-10-19T14:53:57.630Z"
+    },
+    "497896": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "39288084460",
+      "job": "118181242896",
+      "wake_commit": "dbfa083043e8e58f5140c6e2d7495d5ae0ed4713",
+      "source_commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-19T16:47:18.043383+00:00",
+      "observed_task_updated_at": "2026-10-19T16:47:40.850829+00:00",
+      "delivery_delta_seconds": 132.043383,
+      "run_attempt": 1,
+      "run_trigger": "push",
+      "run_conclusion": "success",
+      "job_conclusion": "success",
+      "successful_job_steps": 6,
+      "completed_tasks_before": 6,
+      "completed_tasks_after": 6,
+      "completed_tasks_unchanged": true,
+      "cycle_receipt_status": "COMPLETED",
+      "cycle_receipt_new_results": 0,
+      "cycle_receipt_decision": "NO_ACTION",
+      "attested_at": "2026-10-19T17:55:57.815Z"
     }
   },
   "scheduled_baseline": {
