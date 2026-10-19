@@ -184,20 +184,65 @@
       "trigger": "push",
       "commit": "bde54d97ceed1d4f13583dc124470f3b8d8a66d2",
       "completed_at": 1791765197.2129135
+    },
+    "competitor-surface:2026-W43:v2": {
+      "result": {
+        "kind": "PUBLIC_COMPETITOR_SURFACE",
+        "results": [
+          {
+            "url": "https://fr.wix.com/photography/website",
+            "status": "BLOCKED",
+            "error_type": "RuntimeError",
+            "error": "Public document too large",
+            "at": 1792369621.6905982,
+            "claims_verified": false
+          },
+          {
+            "url": "https://wecomm.fr/creation-site-web/photographe/",
+            "status": "READ",
+            "fetched_at": 1792369622.253632,
+            "document_sha256": "870cdc0751779cdc79d590956275ecf7c0a60998c5351cc81a0acd9d44833330",
+            "h1_count": 1,
+            "observed_lexical_terms": [
+              "portfolio",
+              "réservation",
+              "devis",
+              "google maps",
+              "fiche google",
+              "galerie"
+            ],
+            "claims_verified": false
+          },
+          {
+            "url": "https://lokalio.fr/creation-site-internet-garagiste",
+            "status": "READ",
+            "fetched_at": 1792369624.0681252,
+            "document_sha256": "5c2502cb163941fea12a78cb174f2d0731ae1e5d9346c437528a1aaabb279684",
+            "h1_count": 1,
+            "observed_lexical_terms": [
+              "devis",
+              "fiche google"
+            ],
+            "claims_verified": false
+          }
+        ],
+        "observed_pages": 2,
+        "operational_status": "WITH_BLOCKERS",
+        "interpretation": "Lexical observations, not feature tests or ranking evidence",
+        "next_action": "Validate one real portfolio-to-request demo before promising booking",
+        "publication_authorized": false
+      },
+      "run": "39180772424",
+      "attempt": "1",
+      "trigger": "schedule",
+      "commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
+      "completed_at": 1792369624.0682747
     }
   },
   "failures": {
     "competitor-surface:2026-W41:v1": 2
   },
-  "lease": {
-    "owner": "39180772424:1",
-    "run": "39180772424",
-    "task": "competitor-surface:2026-W43:v2",
-    "trigger": "schedule",
-    "wake": null,
-    "heartbeat": 1792369619.4961667,
-    "expires": 1792370219.496167
-  },
+  "lease": null,
   "events": [
     {
       "kind": "RECOVERED",
@@ -756,6 +801,12 @@
       "wake_run": "39176512987",
       "delivery_attestation_effect": "CURRENT_WAKE_ATTESTED_INDEPENDENTLY",
       "at": 1792368127.633
+    },
+    {
+      "kind": "COMPLETED",
+      "task": "competitor-surface:2026-W43:v2",
+      "owner": "39180772424:1",
+      "trigger": "schedule"
     }
   ],
   "blocked": [
