@@ -878,7 +878,7 @@
       "reason": "Brief review completed"
     },
     "last_schedule_run": 39180772424,
-    "last_successful_schedule": 39172746421,
+    "last_successful_schedule": 39180772424,
     "last_watchdog_recovery": {
       "run": "38097697056",
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
@@ -933,8 +933,7 @@
             39013755154,
             39007163538,
             39001670027,
-            38998921015,
-            38991173589
+            38998921015
           ],
           "commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
           "transport_sources": [
