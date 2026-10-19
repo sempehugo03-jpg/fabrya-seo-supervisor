@@ -19258,8 +19258,8 @@
       },
       "private_product": {
         "status": "READ",
-        "receipt_commit": "0fbdd7b6b5e51ce5133d75eb59c3bc3758e59044",
-        "receipt_blob": "794b2cffc8016d37d376f6d98406adfb77b83790",
+        "receipt_commit": "f695cfa4a27b0dc10942902780a6285ec3ee2f72",
+        "receipt_blob": "b3d0ff09f031f8212adb4bc5c09fcad5b4fb876b",
         "receipt_path": "seo/gsc/2026-10-19-497894-private-product-reread-1792420634.json",
         "first_google_organic_customer": "NOT_YET"
       },
@@ -19281,11 +19281,13 @@
       },
       "private_site": {
         "project_id": "appgprj_6acac4a9d9808191b57085eb34fa06be",
-        "latest_saved_version": 118,
-        "latest_saved_deployment_status": "failed",
-        "current_live_version": 117,
+        "latest_saved_version": 119,
+        "latest_saved_deployment_status": "succeeded",
+        "current_live_version": 119,
         "current_live_deployment_status": "succeeded",
-        "page_version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        "page_version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0",
+        "source_commit": "f7a2888b71a8523ec7b0a48c417dbc59439141f7",
+        "deployment_id": "appgdep_6ad62b41ed908191844a5b1885b79097"
       },
       "product_checkpoint": {
         "repository_full_name": "sempehugo03-jpg/signature-digital-core",
@@ -19304,18 +19306,20 @@
         "pull_request": 36,
         "branch": "work3/product-integration-20261015",
         "head": "5ca79de4c0231368dd4983e4ddfea7ba2efa4c76",
-        "design_current_blob": "2584772c0292965e242ddcd9553204933b551ffd",
-        "status": "ACTIVE",
+        "design_current_blob": "9282166939f86e731a05899285c9376c53ff40b0",
+        "status": "CHECKPOINTED",
         "owner": "integration-ee22dc8c2fb4-ABC-20261017",
-        "heartbeat_at": "2026-10-19T14:31:30.352Z",
-        "lease_expires_at": "2026-10-19T15:09:25.725Z",
-        "private_version": 117
+        "heartbeat_at": "2026-10-19T14:40:05.691Z",
+        "lease_expires_at": "2026-10-19T14:40:05.691Z",
+        "private_version": 119,
+        "private_source_commit": "f7a2888b71a8523ec7b0a48c417dbc59439141f7"
       },
-      "reason": "CURRENT_WAKE_SUCCESSFUL_TASK_METADATA_NOT_YET_MATCHED"
+      "reason": "CURRENT_WAKE_SUCCESSFUL_TASK_METADATA_NOT_YET_MATCHED",
+      "concurrent_private_publish_reconciled": true
     }
   ],
   "public_product_resync": {
-    "observed_at": "2026-10-19T14:37:56.404Z",
+    "observed_at": "2026-10-19T14:41:12.431Z",
     "acquisition": "HOSTED_SCHEDULED_TASK",
     "contract_commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
     "public_version": 509,
@@ -19344,9 +19348,9 @@
     "product_technical_blocker": "DURABLE_PRODUCT_CODEX_CONSUMER_NOT_AUTHENTICATED",
     "product_blocker_is_seo_stop": false,
     "product_last_worker_run": "39243129427",
-    "private_version": 117,
-    "private_source_commit": "21023b6463b210b8b1231a5822463781dfdd1379",
-    "private_deployment_id": "appgdep_6ad622ca3ac0819194d308f5aef16367",
+    "private_version": 119,
+    "private_source_commit": "f7a2888b71a8523ec7b0a48c417dbc59439141f7",
+    "private_deployment_id": "appgdep_6ad62b41ed908191844a5b1885b79097",
     "private_deployment_status": "succeeded",
     "private_attribution_http": 200,
     "private_confirmed_live_payments": 0,
@@ -19357,7 +19361,7 @@
     "gsc_private_snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
     "gsc_snapshot_reused_same_slot": false,
     "first_google_organic_customer": "NOT_YET",
-    "current_action": "SLOT_497894_READS_AND_WAKE_COMPLETE_NO_DUPLICATE_STAGE",
+    "current_action": "SLOT_497894_READS_WAKE_AND_CONCURRENT_PRIVATE119_RECONCILED",
     "next_action": "AUDIT_SLOT_497894_DELIVERY_ON_NEXT_HOSTED_INVOCATION",
     "product_next_action": "CONNECT_AUTHENTICATED_CODEX_PRODUCT_CONSUMER",
     "last_real_action": "BOUNDED_GSC_PRODUCT_READS_AND_WAKE_COMPLETE",
@@ -19372,11 +19376,11 @@
     "integration_pr": 36,
     "integration_branch": "work3/product-integration-20261015",
     "integration_branch_commit": "5ca79de4c0231368dd4983e4ddfea7ba2efa4c76",
-    "integration_design_current_blob": "2584772c0292965e242ddcd9553204933b551ffd",
-    "integration_design_status": "ACTIVE",
+    "integration_design_current_blob": "9282166939f86e731a05899285c9376c53ff40b0",
+    "integration_design_status": "CHECKPOINTED",
     "integration_design_owner": "integration-ee22dc8c2fb4-ABC-20261017",
-    "integration_design_heartbeat_at": "2026-10-19T14:31:30.352Z",
-    "integration_design_lease_expires_at": "2026-10-19T15:09:25.725Z",
+    "integration_design_heartbeat_at": "2026-10-19T14:40:05.691Z",
+    "integration_design_lease_expires_at": "2026-10-19T14:40:05.691Z",
     "dg001_consumed": true,
     "dg001_issue": 42,
     "dg001_comment_id": 6205263096,
@@ -19458,7 +19462,7 @@
     "public_setup_fee_eur": 0,
     "public_card_entry_enabled": false,
     "public_paid_activation_enabled": false,
-    "integration_design_private_version": 117,
+    "integration_design_private_version": 119,
     "integration_latest_site_version": 113,
     "integration_version_mismatch_inferred": false,
     "public_cta_kind": "MAILTO",
@@ -19468,8 +19472,11 @@
     "latest_watchdog_conclusion": "skipped",
     "latest_watchdog_role": "NO_RECOVERY_NEEDED",
     "public_preview_notice": "Prévisualisation visuelle · Comptes, envois et paiements fermés",
-    "private_latest_saved_version": 118,
-    "private_latest_saved_deployment_status": "failed"
+    "private_latest_saved_version": 119,
+    "private_latest_saved_deployment_status": "failed",
+    "private_product_receipt_commit": "f695cfa4a27b0dc10942902780a6285ec3ee2f72",
+    "private_product_receipt_blob": "b3d0ff09f031f8212adb4bc5c09fcad5b4fb876b",
+    "private_product_receipt_path": "seo/gsc/2026-10-19-497894-private-product-reread-1792420634.json"
   },
   "current_page_observations": {
     "observed_at": "2026-10-11T19:10:20.636Z",
@@ -20375,8 +20382,8 @@
       },
       "private_product": {
         "status": "READ",
-        "receipt_commit": "0fbdd7b6b5e51ce5133d75eb59c3bc3758e59044",
-        "receipt_blob": "794b2cffc8016d37d376f6d98406adfb77b83790",
+        "receipt_commit": "f695cfa4a27b0dc10942902780a6285ec3ee2f72",
+        "receipt_blob": "b3d0ff09f031f8212adb4bc5c09fcad5b4fb876b",
         "receipt_path": "seo/gsc/2026-10-19-497894-private-product-reread-1792420634.json",
         "first_google_organic_customer": "NOT_YET"
       },
@@ -20398,11 +20405,13 @@
       },
       "private_site": {
         "project_id": "appgprj_6acac4a9d9808191b57085eb34fa06be",
-        "latest_saved_version": 118,
-        "latest_saved_deployment_status": "failed",
-        "current_live_version": 117,
+        "latest_saved_version": 119,
+        "latest_saved_deployment_status": "succeeded",
+        "current_live_version": 119,
         "current_live_deployment_status": "succeeded",
-        "page_version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0"
+        "page_version": "5e51c9fe2f71280211d106f4d77c699357a47322bf749cb3f13387a50b5d75e0",
+        "source_commit": "f7a2888b71a8523ec7b0a48c417dbc59439141f7",
+        "deployment_id": "appgdep_6ad62b41ed908191844a5b1885b79097"
       },
       "product_checkpoint": {
         "repository_full_name": "sempehugo03-jpg/signature-digital-core",
@@ -20421,14 +20430,16 @@
         "pull_request": 36,
         "branch": "work3/product-integration-20261015",
         "head": "5ca79de4c0231368dd4983e4ddfea7ba2efa4c76",
-        "design_current_blob": "2584772c0292965e242ddcd9553204933b551ffd",
-        "status": "ACTIVE",
+        "design_current_blob": "9282166939f86e731a05899285c9376c53ff40b0",
+        "status": "CHECKPOINTED",
         "owner": "integration-ee22dc8c2fb4-ABC-20261017",
-        "heartbeat_at": "2026-10-19T14:31:30.352Z",
-        "lease_expires_at": "2026-10-19T15:09:25.725Z",
-        "private_version": 117
+        "heartbeat_at": "2026-10-19T14:40:05.691Z",
+        "lease_expires_at": "2026-10-19T14:40:05.691Z",
+        "private_version": 119,
+        "private_source_commit": "f7a2888b71a8523ec7b0a48c417dbc59439141f7"
       },
-      "reason": "CURRENT_WAKE_SUCCESSFUL_TASK_METADATA_NOT_YET_MATCHED"
+      "reason": "CURRENT_WAKE_SUCCESSFUL_TASK_METADATA_NOT_YET_MATCHED",
+      "concurrent_private_publish_reconciled": true
     }
   ]
 }
