@@ -1127,6 +1127,16 @@
       "wake_commit": "9009e54c2bf02cbd5e20e576665cef3fbda21f09",
       "reason": "TASK_METADATA_NOT_YET_MATCHED",
       "at": 1792493627
+    },
+    {
+      "kind": "EXTERNAL_WAKE_ATTESTED",
+      "automation_slot": 497914,
+      "run": "39410737152",
+      "job": "118587582300",
+      "wake_commit": "9009e54c2bf02cbd5e20e576665cef3fbda21f09",
+      "observed_last_run_time": "2026-10-20T10:54:21.806901+00:00",
+      "completed_tasks_unchanged": true,
+      "at": 1792497805
     }
   ],
   "blocked": [
@@ -4393,7 +4403,11 @@
       "completed_at": 1792493451.6042802,
       "new_results": 0,
       "decision": "NO_ACTION",
-      "reason": "Current page inspection required; no proven production writer"
+      "reason": "Current page inspection required; no proven production writer",
+      "delivery_attested": true,
+      "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION",
+      "observed_last_run_time": "2026-10-20T10:54:21.806901+00:00",
+      "observed_updated_at": "2026-10-20T10:54:44.251063+00:00"
     }
   },
   "cycle_receipts": [
@@ -8568,6 +8582,14 @@
       "watchdog_conclusion": "skipped",
       "watchdog_role": "NO_RECOVERY_NEEDED",
       "attested_at": "2026-10-20T09:39:13.052Z"
+    },
+    "497914": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "39410737152",
+      "wake_commit": "9009e54c2bf02cbd5e20e576665cef3fbda21f09",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-20T10:54:21.806901+00:00",
+      "completed_tasks_unchanged": true
     }
   },
   "scheduled_baseline": {
@@ -10258,8 +10280,8 @@
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497914,
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-      "observed_automation_last_run_time": "2026-10-20T09:39:39.171061+00:00",
-      "observed_automation_updated_at": "2026-10-20T09:40:01.090327+00:00",
+      "observed_automation_last_run_time": "2026-10-20T10:54:21.806901+00:00",
+      "observed_automation_updated_at": "2026-10-20T10:54:44.251063+00:00",
       "provider_error_receipt_commit": "a70d1909954b8e19b3f29bff5fc19cfc0226918c",
       "provider_error_receipt_blob": "3688996789f01177ef3aed48e09da4cb0d883e5a",
       "provider_error_receipt_path": "seo/gsc/2026-10-20-497914-gsc-read-error-1792493213.json",
@@ -10274,8 +10296,8 @@
       "wake_attempt": 1,
       "wake_head_sha": "9009e54c2bf02cbd5e20e576665cef3fbda21f09",
       "consumed_by_run": "39410737152",
-      "delivery_attested": false,
-      "delivery_attestation_status": "PENDING_NEXT_HOSTED_INVOCATION"
+      "delivery_attested": true,
+      "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION"
     }
   ],
   "seo_decision": {
@@ -22139,8 +22161,8 @@
       "slot": 497914,
       "observed_at": "2026-10-20T10:53:47.957Z",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-      "observed_automation_last_run_time": "2026-10-20T09:39:39.171061+00:00",
-      "observed_automation_updated_at": "2026-10-20T09:40:01.090327+00:00",
+      "observed_automation_last_run_time": "2026-10-20T10:54:21.806901+00:00",
+      "observed_automation_updated_at": "2026-10-20T10:54:44.251063+00:00",
       "wake_reissued": true,
       "unique_wake_preserved": true,
       "duplicate_wake_emitted": false,
@@ -22152,8 +22174,8 @@
       "wake_attempt": 1,
       "wake_head_sha": "9009e54c2bf02cbd5e20e576665cef3fbda21f09",
       "wake_steps_verified": 6,
-      "delivery_attested": false,
-      "delivery_attestation_status": "PENDING_NEXT_HOSTED_INVOCATION",
+      "delivery_attested": true,
+      "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION",
       "watchdog_run": "39410846903",
       "watchdog_job": "118587946651",
       "watchdog_conclusion": "skipped",
@@ -22172,8 +22194,8 @@
         "prior_actual_read_at": "2026-10-16T20:33:23.509Z",
         "fresh_read_claimed": false,
         "consumed_by_run": "39410737152",
-        "delivery_attested": false,
-        "delivery_attestation_status": "PENDING_NEXT_HOSTED_INVOCATION"
+        "delivery_attested": true,
+        "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION"
       },
       "private_product": {
         "status": "READ",
@@ -22252,7 +22274,7 @@
         "RETAIN_SAFE_PUBLIC_59_MAILTO_READ_ONLY",
         "PROSPECTION_REMAINS_IN_RESERVE"
       ],
-      "reason": "EXTERNAL_WAKE_SUCCESS_TASK_METADATA_NOT_YET_MATCHED"
+      "reason": "EXTERNAL_WAKE_ATTESTED_FOLLOWING_HOSTED_INVOCATION"
     }
   ],
   "public_product_resync": {
@@ -22304,8 +22326,8 @@
     "last_real_action": "RUNTIME_MAINTAINED_ON_REAL_EXTERNAL_WAKE",
     "gsc_manifest_read_at": "2026-10-16T20:33:23.509Z",
     "latest_actual_gsc_read_at": "2026-10-16T20:33:23.509Z",
-    "latest_automation_last_run_time": "2026-10-20T09:39:39.171061+00:00",
-    "latest_automation_updated_at": "2026-10-20T09:40:01.090327+00:00",
+    "latest_automation_last_run_time": "2026-10-20T10:54:21.806901+00:00",
+    "latest_automation_updated_at": "2026-10-20T10:54:44.251063+00:00",
     "public_latest_saved_version": 509,
     "public_latest_saved_source_commit": "6edb9b75814676f2a03619b0b7e5e4773ff408a8",
     "public_latest_saved_deployment_status": "succeeded",
@@ -22327,7 +22349,7 @@
     "latest_wake_run": "39410737152",
     "latest_wake_job": "118587582300",
     "latest_wake_conclusion": "success",
-    "latest_wake_delivery_attested": false,
+    "latest_wake_delivery_attested": true,
     "gsc_current_cycle_status": "ERROR_PROVIDER_PAYMENT_REQUIRED",
     "gsc_current_cycle_attempts": 3,
     "gsc_provider_error_receipt_commit": "a70d1909954b8e19b3f29bff5fc19cfc0226918c",
@@ -22335,7 +22357,7 @@
     "gsc_provider_error_receipt_path": "seo/gsc/2026-10-20-497914-gsc-read-error-1792493213.json",
     "gsc_manifest_reused_due_provider_error": true,
     "integration_first_blocker_status": "REVIEW_IN_PROGRESS_TEST_COMPOSITION_AND_KEYS_MISSING",
-    "latest_wake_delivery_attestation_status": "PENDING_NEXT_HOSTED_INVOCATION",
+    "latest_wake_delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION",
     "runtime_repair": {
       "status": "VERIFIED_EXTERNAL_WAKE_SUCCESS",
       "reason": "Capability reconciliation now fails closed when an observation lacks consumed_by_run.",
@@ -22456,7 +22478,7 @@
     "pending_wake_commit": "9009e54c2bf02cbd5e20e576665cef3fbda21f09",
     "pending_wake_run": "39410737152",
     "pending_wake_job": "118587582300",
-    "pending_wake_status": "COMPLETED_UNATTESTED",
+    "pending_wake_status": "ATTESTED_FOLLOWING_HOSTED_INVOCATION",
     "product_last_checkpoint_run": "39387785396",
     "product_last_checkpoint_at": "2026-10-20T07:38:05.238Z",
     "integration_takeover_authority": "Hugo direct 2026-10-20 04:05 Paris",
