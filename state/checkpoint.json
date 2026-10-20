@@ -21270,7 +21270,7 @@
       }
     },
     "latest_wake_attempt": 1,
-    "latest_wake_head_sha": "e50c5c1e06d6e6ee8d7d554ff42fb776eb3d",
+    "latest_wake_head_sha": "e50c5c1e06d6c7e6e6ee8d7d554ff42fb776eb3d",
     "latest_wake_steps_verified": 6,
     "gsc_current_cycle_calls_attempted": 9,
     "public_setup_fee_eur": 0,
