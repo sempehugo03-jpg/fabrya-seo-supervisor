@@ -242,7 +242,21 @@
   "failures": {
     "competitor-surface:2026-W41:v1": 2
   },
-  "lease": null,
+  "lease": {
+    "owner": "39379978387:1",
+    "run": "39379978387",
+    "task": "runtime-verification",
+    "trigger": "push",
+    "wake": {
+      "schema": 1,
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "slot": 497910,
+      "issued_at": 1792477336,
+      "source_commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3"
+    },
+    "heartbeat": 1792477377.349922,
+    "expires": 1792477977.349922
+  },
   "events": [
     {
       "kind": "RECOVERED",
@@ -1238,12 +1252,19 @@
     "proof_status": "PASS"
   },
   "runtime_cycle": {
-    "run": "39374711742",
+    "run": "39379978387",
     "attempt": "1",
-    "trigger": "workflow_run",
+    "trigger": "push",
     "commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
-    "started_at": 1792473866.5808277,
-    "status": "STARTED"
+    "started_at": 1792477377.3499181,
+    "status": "STARTED",
+    "wake": {
+      "schema": 1,
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "slot": 497910,
+      "issued_at": 1792477336,
+      "source_commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3"
+    }
   },
   "external_baseline": {
     "run": "38093303066",
