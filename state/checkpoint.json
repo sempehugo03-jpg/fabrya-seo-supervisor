@@ -1275,6 +1275,7 @@
         "evidence": {
           "scheduler": "HOSTED_AUTOMATION",
           "runs": [
+            39419799684,
             39410737152,
             39401161507,
             39392244634,
@@ -1394,11 +1395,7 @@
         "evidence": {
           "run": "38097697056",
           "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
-          "completed_at": 1791677619.6435385,
-          "maintenance_run": "39419884840",
-          "maintenance_job": "118617896286",
-          "maintenance_conclusion": "skipped",
-          "role": "NO_RECOVERY_NEEDED"
+          "completed_at": 1791677619.6435385
         }
       },
       "PRIVACY_GATE": {
