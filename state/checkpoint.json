@@ -1050,23 +1050,12 @@
   "SEO_AUTOPILOT_STATUS": {
     "current_commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
     "last_wake": {
-      "run": "39373018100",
+      "run": "39374711742",
       "attempt": "1",
-      "trigger": "push",
+      "trigger": "workflow_run",
       "commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
-      "started_at": 1792472755.17183,
-      "status": "COMPLETED",
-      "wake": {
-        "schema": 1,
-        "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-        "slot": 497909,
-        "issued_at": 1792472725,
-        "source_commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3"
-      },
-      "completed_at": 1792472756.932786,
-      "new_results": 0,
-      "decision": "NO_ACTION",
-      "reason": "Current page inspection required; no proven production writer"
+      "started_at": 1792473866.5808277,
+      "status": "STARTED"
     },
     "last_successful_cycle": {
       "run": "39373018100",
@@ -1144,8 +1133,7 @@
             39107479379,
             39103991027,
             39098543259,
-            39095350783,
-            39091222179
+            39095350783
           ],
           "commit": "82a125414e3290ce19844d52d8cdcb42b71c81b3",
           "transport_sources": [
