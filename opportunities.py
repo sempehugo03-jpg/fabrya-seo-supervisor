@@ -82,7 +82,7 @@ def consume(state, data, run, trigger):
     validate(data)
     evidence_id = data['private_snapshot_commit']
     history = state.setdefault('gsc_observations', [])
-    if not any(x['snapshot_commit'] == evidence_id for x in history):
+    if not any(isinstance(x, dict) and x.get('snapshot_commit') == evidence_id for x in history):
         history.append({'snapshot_commit': evidence_id, 'read_at': data['read_at'],
             'start_date': data['start_date'], 'end_date': data['end_date'],
             'settled_through': data['settled_through'], 'acquisition': data['acquisition'],
