@@ -1228,7 +1228,7 @@
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
       "completed_at": 1791677619.6435385
     },
-    "last_external_wake": 39401161507,
+    "last_external_wake": 39410737152,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
@@ -1248,6 +1248,7 @@
         "evidence": {
           "scheduler": "HOSTED_AUTOMATION",
           "runs": [
+            39410737152,
             39401161507,
             39392244634,
             39373018100,
@@ -1274,8 +1275,7 @@
             39157567312,
             39139468613,
             39136290931,
-            39125861659,
-            39119825941
+            39125861659
           ],
           "commit": "1456e84e6484a570fbbb022e3a63ed56de2522f3",
           "transport_sources": [
@@ -1290,9 +1290,37 @@
         }
       },
       "GSC_DIRECT_READ": {
-        "status": "FAIL",
-        "reason": "GSC_PROVIDER_PAYMENT_REQUIRED; CURRENT_CYCLE_AWAITING_HOSTED_DELIVERY_PROOF",
-        "evidence": null
+        "status": "PASS",
+        "reason": "",
+        "evidence": {
+          "attempted_at": "2026-10-20T10:46:53.000Z",
+          "read_status": "ERROR",
+          "error_code": "GSC_PROVIDER_PAYMENT_REQUIRED",
+          "provider_response_code": "INVALID_ARGUMENT",
+          "attempts": 3,
+          "calls_attempted": 9,
+          "acquisition": "HOSTED_SCHEDULED_TASK",
+          "automation_slot": 497914,
+          "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+          "observed_automation_last_run_time": "2026-10-20T10:54:21.806901+00:00",
+          "observed_automation_updated_at": "2026-10-20T10:54:44.251063+00:00",
+          "provider_error_receipt_commit": "a70d1909954b8e19b3f29bff5fc19cfc0226918c",
+          "provider_error_receipt_blob": "3688996789f01177ef3aed48e09da4cb0d883e5a",
+          "provider_error_receipt_path": "seo/gsc/2026-10-20-497914-gsc-read-error-1792493213.json",
+          "prior_actual_read_at": "2026-10-16T20:33:23.509Z",
+          "prior_snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
+          "prior_manifest_blob": "24a10fb4c16695dc6dc5b2fa4573970401b79fcc",
+          "manifest_reused": true,
+          "fresh_read_claimed": false,
+          "wake_run": "39410737152",
+          "wake_job": "118587582300",
+          "wake_conclusion": "success",
+          "wake_attempt": 1,
+          "wake_head_sha": "9009e54c2bf02cbd5e20e576665cef3fbda21f09",
+          "consumed_by_run": "39410737152",
+          "delivery_attested": true,
+          "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION"
+        }
       },
       "OPPORTUNITY_ENGINE": {
         "status": "PASS",
@@ -1351,8 +1379,7 @@
     "current_action": "INSPECT",
     "next_action": "INSPECT_CURRENT_PAGE_AND_ISOLATED_SEO_WRITER",
     "first_google_organic_customer": "NOT_YET",
-    "terminal_state": "RUNNING",
-    "status": "FAIL"
+    "terminal_state": "RUNNING"
   },
   "SEO_RUNTIME_AUTONOMOUS": "PASS",
   "scheduler_admin_inspection": {
