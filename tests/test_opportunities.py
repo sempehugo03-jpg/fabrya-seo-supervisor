@@ -49,6 +49,17 @@ class OpportunitiesTest(unittest.TestCase):
         }}
         self.assertEqual(capability_gates(state)['GSC_DIRECT_READ']['status'], 'FAIL')
 
+    def test_consume_tolerates_incomplete_observation_history(self):
+        state = {'gsc_observations': [{
+            'acquisition': 'HOSTED_SCHEDULED_TASK',
+            'automation_slot': 497910,
+            'read_at': '2026-10-20T06:00:00Z'
+        }]}
+        decision = consume(state, self.data, 'consumer-run', 'push')
+        self.assertEqual(decision['source_snapshot'], self.data['private_snapshot_commit'])
+        self.assertEqual(len(state['gsc_observations']), 2)
+        self.assertEqual(state['gsc_observations'][-1]['consumed_by_run'], 'consumer-run')
+
     def test_attestation_must_match_the_run_that_consumed_snapshot(self):
         data = copy.deepcopy(self.data)
         data['acquisition'] = 'HOSTED_SCHEDULED_TASK'
