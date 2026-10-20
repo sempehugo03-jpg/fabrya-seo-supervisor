@@ -1274,7 +1274,7 @@
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
       "completed_at": 1791677619.6435385
     },
-    "last_external_wake": 39434977976,
+    "last_external_wake": 39419799684,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
@@ -1321,8 +1321,7 @@
             39166513338,
             39157567312,
             39139468613,
-            39136290931,
-            39125861659
+            39136290931
           ],
           "commit": "1456e84e6484a570fbbb022e3a63ed56de2522f3",
           "transport_sources": [
