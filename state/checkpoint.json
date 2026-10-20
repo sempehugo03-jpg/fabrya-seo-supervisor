@@ -1173,6 +1173,16 @@
       "wake_commit": "e825a5a5b1aa645de84b896b2d46cd94dfcdcd20",
       "reason": "TASK_METADATA_NOT_YET_MATCHED",
       "at": 1792504844
+    },
+    {
+      "kind": "EXTERNAL_WAKE_ATTESTED",
+      "automation_slot": 497917,
+      "run": "39434977976",
+      "job": "118669502524",
+      "wake_commit": "e825a5a5b1aa645de84b896b2d46cd94dfcdcd20",
+      "observed_last_run_time": "2026-10-20T14:01:23.857638+00:00",
+      "completed_tasks_unchanged": true,
+      "at": 1792508252
     }
   ],
   "blocked": [
@@ -1264,7 +1274,7 @@
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
       "completed_at": 1791677619.6435385
     },
-    "last_external_wake": 39419799684,
+    "last_external_wake": 39434977976,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
@@ -1327,8 +1337,8 @@
         }
       },
       "GSC_DIRECT_READ": {
-        "status": "FAIL",
-        "reason": "CURRENT_SLOT_DELIVERY_NOT_YET_ATTESTED; GSC_PROVIDER_PAYMENT_REQUIRED",
+        "status": "PASS",
+        "reason": "",
         "evidence": {
           "attempted_at": "2026-10-20T13:55:11.623Z",
           "read_status": "ERROR",
@@ -1339,8 +1349,8 @@
           "acquisition": "HOSTED_SCHEDULED_TASK",
           "automation_slot": 497917,
           "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-          "observed_automation_last_run_time": "2026-10-20T12:44:43.263104+00:00",
-          "observed_automation_updated_at": "2026-10-20T12:45:04.870645+00:00",
+          "observed_automation_last_run_time": "2026-10-20T14:01:23.857638+00:00",
+          "observed_automation_updated_at": "2026-10-20T14:01:46.833124+00:00",
           "provider_error_receipt_commit": "6bbfb69ff04e45278a1e1f399421f92659eec08c",
           "provider_error_receipt_blob": "9f4c65739a1d256d6c5e0ec5a071d8f7b77ba3a7",
           "provider_error_receipt_path": "seo/gsc/2026-10-20-497917-gsc-read-error-1792504532.json",
@@ -1355,8 +1365,8 @@
           "wake_attempt": 1,
           "wake_head_sha": "e825a5a5b1aa645de84b896b2d46cd94dfcdcd20",
           "consumed_by_run": "39434977976",
-          "delivery_attested": false,
-          "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION"
+          "delivery_attested": true,
+          "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION"
         }
       },
       "OPPORTUNITY_ENGINE": {
@@ -8700,6 +8710,35 @@
       "delivery": "HOSTED_SCHEDULED_TASK",
       "observed_last_run_time": "2026-10-20T12:12:14.820703+00:00",
       "completed_tasks_unchanged": true
+    },
+    "497917": {
+      "automation_id": "6ac6c67c278081918b6a6d8846594c72",
+      "run": "39434977976",
+      "job": "118669502524",
+      "wake_commit": "e825a5a5b1aa645de84b896b2d46cd94dfcdcd20",
+      "source_commit": "1456e84e6484a570fbbb022e3a63ed56de2522f3",
+      "delivery": "HOSTED_SCHEDULED_TASK",
+      "observed_last_run_time": "2026-10-20T14:01:23.857638+00:00",
+      "observed_task_updated_at": "2026-10-20T14:01:46.833124+00:00",
+      "issued_at": 1792504667,
+      "same_utc_slot": true,
+      "delivery_delta_seconds": 216.85700011253357,
+      "within_30_minutes": true,
+      "run_attempt": 1,
+      "run_trigger": "push",
+      "run_conclusion": "success",
+      "job_conclusion": "success",
+      "successful_job_steps": 6,
+      "cycle_receipt_status": "COMPLETED",
+      "cycle_receipt_new_results": 0,
+      "cycle_receipt_decision": "NO_ACTION",
+      "completed_tasks_before": 6,
+      "completed_tasks_after": 6,
+      "completed_tasks_unchanged": true,
+      "watchdog_run": "39435120571",
+      "watchdog_conclusion": "skipped",
+      "watchdog_role": "NO_RECOVERY_NEEDED",
+      "attested_at": "2026-10-20T14:57:32.272Z"
     }
   },
   "scheduled_baseline": {
@@ -10396,8 +10435,8 @@
       "acquisition": "HOSTED_SCHEDULED_TASK",
       "automation_slot": 497917,
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-      "observed_automation_last_run_time": "2026-10-20T12:44:43.263104+00:00",
-      "observed_automation_updated_at": "2026-10-20T12:45:04.870645+00:00",
+      "observed_automation_last_run_time": "2026-10-20T14:01:23.857638+00:00",
+      "observed_automation_updated_at": "2026-10-20T14:01:46.833124+00:00",
       "provider_error_receipt_commit": "6bbfb69ff04e45278a1e1f399421f92659eec08c",
       "provider_error_receipt_blob": "9f4c65739a1d256d6c5e0ec5a071d8f7b77ba3a7",
       "provider_error_receipt_path": "seo/gsc/2026-10-20-497917-gsc-read-error-1792504532.json",
@@ -10412,8 +10451,8 @@
       "wake_attempt": 1,
       "wake_head_sha": "e825a5a5b1aa645de84b896b2d46cd94dfcdcd20",
       "consumed_by_run": "39434977976",
-      "delivery_attested": false,
-      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION"
+      "delivery_attested": true,
+      "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION"
     }
   ],
   "seo_decision": {
@@ -22523,8 +22562,8 @@
       "slot": 497917,
       "observed_at": "2026-10-20T14:00:44.766Z",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
-      "observed_automation_last_run_time": "2026-10-20T12:44:43.263104+00:00",
-      "observed_automation_updated_at": "2026-10-20T12:45:04.870645+00:00",
+      "observed_automation_last_run_time": "2026-10-20T14:01:23.857638+00:00",
+      "observed_automation_updated_at": "2026-10-20T14:01:46.833124+00:00",
       "wake_reissued": true,
       "unique_wake_preserved": true,
       "duplicate_wake_emitted": false,
@@ -22536,8 +22575,8 @@
       "wake_attempt": 1,
       "wake_head_sha": "e825a5a5b1aa645de84b896b2d46cd94dfcdcd20",
       "wake_steps_verified": 6,
-      "delivery_attested": false,
-      "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
+      "delivery_attested": true,
+      "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION",
       "watchdog_run": "39435120571",
       "watchdog_job": "118670003167",
       "watchdog_conclusion": "skipped",
@@ -22692,8 +22731,8 @@
     "last_real_action": "RUNTIME_MAINTAINED_ON_REAL_EXTERNAL_WAKE",
     "gsc_manifest_read_at": "2026-10-16T20:33:23.509Z",
     "latest_actual_gsc_read_at": "2026-10-16T20:33:23.509Z",
-    "latest_automation_last_run_time": "2026-10-20T12:44:43.263104+00:00",
-    "latest_automation_updated_at": "2026-10-20T12:45:04.870645+00:00",
+    "latest_automation_last_run_time": "2026-10-20T14:01:23.857638+00:00",
+    "latest_automation_updated_at": "2026-10-20T14:01:46.833124+00:00",
     "public_latest_saved_version": 510,
     "public_latest_saved_source_commit": "7ddc56fdbbc433b1464c577687d7b2b6b338f03b",
     "public_latest_saved_deployment_status": "succeeded",
@@ -22715,7 +22754,7 @@
     "latest_wake_run": "39434977976",
     "latest_wake_job": "118669502524",
     "latest_wake_conclusion": "success",
-    "latest_wake_delivery_attested": false,
+    "latest_wake_delivery_attested": true,
     "gsc_current_cycle_status": "ERROR_PROVIDER_PAYMENT_REQUIRED",
     "gsc_current_cycle_attempts": 3,
     "gsc_provider_error_receipt_commit": "6bbfb69ff04e45278a1e1f399421f92659eec08c",
@@ -22723,7 +22762,7 @@
     "gsc_provider_error_receipt_path": "seo/gsc/2026-10-20-497917-gsc-read-error-1792504532.json",
     "gsc_manifest_reused_due_provider_error": true,
     "integration_first_blocker_status": "SITES_D1_R2_MANAGEMENT_NOT_EXPOSED_PUBLIC_CONNECTION_FAIL",
-    "latest_wake_delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
+    "latest_wake_delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION",
     "runtime_repair": {
       "status": "VERIFIED_EXTERNAL_WAKE_SUCCESS",
       "reason": "Capability reconciliation now fails closed when an observation lacks consumed_by_run.",
@@ -22844,7 +22883,7 @@
     "pending_wake_commit": "e825a5a5b1aa645de84b896b2d46cd94dfcdcd20",
     "pending_wake_run": "39434977976",
     "pending_wake_job": "118669502524",
-    "pending_wake_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
+    "pending_wake_status": "ATTESTED_FOLLOWING_HOSTED_INVOCATION",
     "product_last_checkpoint_run": "39426956246",
     "product_last_checkpoint_at": "2026-10-20T13:01:57.200Z",
     "integration_takeover_authority": "Hugo direct 2026-10-20 04:05 Paris",
