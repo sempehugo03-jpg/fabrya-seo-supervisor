@@ -1202,14 +1202,14 @@
       "decision": "NO_ACTION",
       "reason": "Current page inspection required; no proven production writer"
     },
-    "last_schedule_run": 39374670137,
+    "last_schedule_run": 39407458559,
     "last_successful_schedule": null,
     "last_watchdog_recovery": {
       "run": "38097697056",
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
       "completed_at": 1791677619.6435385
     },
-    "last_external_wake": 39392244634,
+    "last_external_wake": 39401161507,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
@@ -1229,6 +1229,7 @@
         "evidence": {
           "scheduler": "HOSTED_AUTOMATION",
           "runs": [
+            39401161507,
             39392244634,
             39373018100,
             39364074642,
@@ -1256,8 +1257,7 @@
             39136290931,
             39125861659,
             39119825941,
-            39116438427,
-            39113338174
+            39116438427
           ],
           "commit": "1456e84e6484a570fbbb022e3a63ed56de2522f3",
           "transport_sources": [
@@ -1273,7 +1273,7 @@
       },
       "GSC_DIRECT_READ": {
         "status": "FAIL",
-        "reason": "CURRENT_REAL_READ_FAILED_PROVIDER_PAYMENT_REQUIRED; PRIOR_AGGREGATED_MANIFEST_REUSED",
+        "reason": "REAL_READ_PERSISTED_AWAITING_HOSTED_DELIVERY_PROOF",
         "evidence": null
       },
       "OPPORTUNITY_ENGINE": {
