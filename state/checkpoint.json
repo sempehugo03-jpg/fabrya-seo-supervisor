@@ -1293,7 +1293,7 @@
       "decision": "NO_ACTION",
       "reason": "Current page inspection required; no proven production writer"
     },
-    "last_schedule_run": 39407458559,
+    "last_schedule_run": 39447503451,
     "last_successful_schedule": 39407458559,
     "last_watchdog_recovery": {
       "run": "38097697056",
@@ -1361,47 +1361,36 @@
         }
       },
       "GSC_DIRECT_READ": {
-        "status": "FAIL",
-        "reason": "CURRENT_HOSTED_READ_RETURNED_PROVIDER_PAYMENT_REQUIRED; CURRENT_WAKE_DELIVERY_NOT_YET_ATTESTED",
+        "status": "PASS",
+        "reason": "",
         "evidence": {
-          "attempted_at": "2026-10-20T14:57:56.622Z",
+          "attempted_at": "2026-10-20T13:55:11.623Z",
           "read_status": "ERROR",
           "error_code": "GSC_PROVIDER_PAYMENT_REQUIRED",
           "provider_response_code": "INVALID_ARGUMENT",
           "attempts": 3,
           "calls_attempted": 9,
           "acquisition": "HOSTED_SCHEDULED_TASK",
-          "automation_slot": 497918,
+          "automation_slot": 497917,
           "automation_id": "6ac6c67c278081918b6a6d8846594c72",
           "observed_automation_last_run_time": "2026-10-20T14:01:23.857638+00:00",
           "observed_automation_updated_at": "2026-10-20T14:01:46.833124+00:00",
-          "provider_error_receipt_commit": "46b283b7b5feca671d314630c180bb7dc4733431",
-          "provider_error_receipt_blob": "fccfa949d853402fbf7dae5a476ee7c4fc01c407",
-          "provider_error_receipt_path": "seo/gsc/2026-10-20-497918-gsc-read-error-1792508276.json",
+          "provider_error_receipt_commit": "6bbfb69ff04e45278a1e1f399421f92659eec08c",
+          "provider_error_receipt_blob": "9f4c65739a1d256d6c5e0ec5a071d8f7b77ba3a7",
+          "provider_error_receipt_path": "seo/gsc/2026-10-20-497917-gsc-read-error-1792504532.json",
           "prior_actual_read_at": "2026-10-16T20:33:23.509Z",
           "prior_snapshot_commit": "f06e67785c993fc3441252ccb7c6a53bee9ad662",
           "prior_manifest_blob": "24a10fb4c16695dc6dc5b2fa4573970401b79fcc",
           "manifest_reused": true,
           "fresh_read_claimed": false,
-          "wake_slot": 497919,
-          "wake_run": "39444858205",
-          "wake_job": "118703945334",
+          "wake_run": "39434977976",
+          "wake_job": "118669502524",
           "wake_conclusion": "success",
           "wake_attempt": 1,
-          "wake_head_sha": "acb2b41262d183d9141171feb437c62f99eae4b6",
-          "consumed_by_run": "39444858205",
-          "delivery_attested": false,
-          "delivery_attestation_status": "PENDING_FOLLOWING_HOSTED_INVOCATION",
-          "slot_boundary_correction": {
-            "rejected_wake_slot": 497918,
-            "rejected_wake_commit": "7377b4350d964365b02d97964569c17c81d83cb8",
-            "failed_run": "39444619168",
-            "failed_job": "118703114889",
-            "reason": "ISSUED_AT_MOVED_TO_NEXT_UTC_SLOT_DURING_EMISSION",
-            "watchdog_recovery_run": "39444713913",
-            "watchdog_recovery_job": "118703439619",
-            "watchdog_recovery_conclusion": "success"
-          }
+          "wake_head_sha": "e825a5a5b1aa645de84b896b2d46cd94dfcdcd20",
+          "consumed_by_run": "39434977976",
+          "delivery_attested": true,
+          "delivery_attestation_status": "PASS_FOLLOWING_HOSTED_INVOCATION"
         }
       },
       "OPPORTUNITY_ENGINE": {
@@ -1415,12 +1404,12 @@
       },
       "STAGING_EXECUTOR": {
         "status": "FAIL",
-        "reason": "REAL_PRIVATE_CMS_STAGE_EXISTS; CURRENT_PRIVATE_TRANSPORT_AUTH_REQUIRED; SCHEDULED_EXECUTOR_CONSUMPTION_PENDING",
+        "reason": "REAL_PRIVATE_CMS_STAGE_ACCEPTED; SCHEDULED_EXECUTOR_CONSUMPTION_PENDING",
         "evidence": null
       },
       "SEO_QA": {
         "status": "FAIL",
-        "reason": "PRIVATE_STAGE_EXISTS; CURRENT_PRIVATE_TRANSPORT_AUTH_REQUIRED; REAL_TARGET_RENDERER_QA_PENDING",
+        "reason": "PRIVATE_STAGE_EXISTS; REAL_TARGET_RENDERER_QA_PENDING",
         "evidence": null
       },
       "SAFE_AUTO_PUBLISH": {
@@ -1440,7 +1429,7 @@
       },
       "ATTRIBUTION_PIPELINE": {
         "status": "FAIL",
-        "reason": "CURRENT_PRIVATE_TRANSPORT_AUTH_REQUIRED; PUBLIC_FUNNEL_AND_OWNER_EXCLUSIONS_NOT_CURRENTLY_OBSERVABLE",
+        "reason": "IMMUTABLE_PRIVATE_FIRST_TOUCH_JOIN_INSTALLED; PUBLIC_FUNNEL_AND_OWNER_EXCLUSIONS_PENDING",
         "evidence": null
       },
       "WATCHDOG_RECOVERY": {
@@ -1459,7 +1448,7 @@
       }
     },
     "current_action": "INSPECT",
-    "next_action": "AUDIT_SLOT_497919_ON_FOLLOWING_HOSTED_INVOCATION",
+    "next_action": "INSPECT_CURRENT_PAGE_AND_ISOLATED_SEO_WRITER",
     "first_google_organic_customer": "NOT_YET",
     "terminal_state": "RUNNING"
   },
