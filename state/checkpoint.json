@@ -1279,8 +1279,8 @@
       "decision": "NO_ACTION",
       "reason": "Current page inspection required; no proven production writer"
     },
-    "last_schedule_run": 40132828208,
-    "last_successful_schedule": 40120477324,
+    "last_schedule_run": 40142409953,
+    "last_successful_schedule": 40132828208,
     "last_watchdog_recovery": {
       "run": "38097697056",
       "commit": "f6298be4693c0257207f51b572eaca42f9dc81dc",
@@ -1316,8 +1316,7 @@
             39349616497,
             39342091558,
             39330335105,
-            39320441426,
-            39304063997
+            39320441426
           ],
           "commit": "1456e84e6484a570fbbb022e3a63ed56de2522f3",
           "transport_sources": [
