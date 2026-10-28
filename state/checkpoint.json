@@ -1338,10 +1338,10 @@
       "decision": "NO_ACTION",
       "reason": "Current page inspection required; no proven production writer"
     },
-    "last_schedule_run": 40619195993,
-    "last_successful_schedule": 40599668481,
+    "last_schedule_run": 40658670278,
+    "last_successful_schedule": 40619195993,
     "last_watchdog_recovery": null,
-    "last_external_wake": 39419799684,
+    "last_external_wake": null,
     "scheduler": {
       "provider": "HOSTED_AUTOMATION",
       "automation_id": "6ac6c67c278081918b6a6d8846594c72",
