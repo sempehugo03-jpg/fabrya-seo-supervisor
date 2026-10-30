@@ -1323,16 +1323,12 @@
   "SEO_AUTOPILOT_STATUS": {
     "current_commit": "1456e84e6484a570fbbb022e3a63ed56de2522f3",
     "last_wake": {
-      "run": "41084247871",
+      "run": "41121988012",
       "attempt": "1",
-      "trigger": "schedule",
+      "trigger": "workflow_run",
       "commit": "1456e84e6484a570fbbb022e3a63ed56de2522f3",
-      "started_at": 1793375406.6481328,
-      "status": "COMPLETED",
-      "completed_at": 1793375408.990211,
-      "new_results": 0,
-      "decision": "NO_ACTION",
-      "reason": "Current page inspection required; no proven production writer"
+      "started_at": 1793391458.7005184,
+      "status": "STARTED"
     },
     "last_successful_cycle": {
       "run": "41084247871",
@@ -1346,8 +1342,8 @@
       "decision": "NO_ACTION",
       "reason": "Current page inspection required; no proven production writer"
     },
-    "last_schedule_run": 41084247871,
-    "last_successful_schedule": 41029630031,
+    "last_schedule_run": 41147071319,
+    "last_successful_schedule": 41084247871,
     "last_watchdog_recovery": null,
     "last_external_wake": null,
     "scheduler": {
