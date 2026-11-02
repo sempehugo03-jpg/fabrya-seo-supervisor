@@ -348,7 +348,15 @@
   "failures": {
     "competitor-surface:2026-W41:v1": 2
   },
-  "lease": null,
+  "lease": {
+    "owner": "41517914415:1",
+    "run": "41517914415",
+    "task": "runtime-verification",
+    "trigger": "schedule",
+    "wake": null,
+    "heartbeat": 1793650710.5840156,
+    "expires": 1793651310.5840156
+  },
   "events": [
     {
       "kind": "RECOVERED",
@@ -1543,16 +1551,12 @@
     "proof_status": "PASS"
   },
   "runtime_cycle": {
-    "run": "41425970982",
+    "run": "41517914415",
     "attempt": "1",
     "trigger": "schedule",
     "commit": "1456e84e6484a570fbbb022e3a63ed56de2522f3",
-    "started_at": 1793613981.6062434,
-    "status": "COMPLETED",
-    "completed_at": 1793613983.9843423,
-    "new_results": 0,
-    "decision": "NO_ACTION",
-    "reason": "Current page inspection required; no proven production writer"
+    "started_at": 1793650710.584013,
+    "status": "STARTED"
   },
   "external_baseline": {
     "run": "38093303066",
