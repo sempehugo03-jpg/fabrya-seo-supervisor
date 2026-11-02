@@ -1407,8 +1407,8 @@
       "decision": "PREPARATION_COMPLETED",
       "reason": "Brief review completed"
     },
-    "last_schedule_run": 41379686456,
-    "last_successful_schedule": 41364118711,
+    "last_schedule_run": 41425970982,
+    "last_successful_schedule": 41379686456,
     "last_watchdog_recovery": null,
     "last_external_wake": null,
     "scheduler": {
