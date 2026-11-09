@@ -351,11 +351,11 @@
   "lease": {
     "owner": "42548831119:1",
     "run": "42548831119",
-    "task": "runtime-verification",
+    "task": "competitor-surface:2026-W46:v2",
     "trigger": "workflow_run",
     "wake": null,
-    "heartbeat": 1794189835.3516772,
-    "expires": 1794190435.3516774
+    "heartbeat": 1794189837.151801,
+    "expires": 1794190437.1518013
   },
   "events": [
     {
