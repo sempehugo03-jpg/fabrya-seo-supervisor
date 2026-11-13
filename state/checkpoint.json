@@ -1466,8 +1466,8 @@
       "decision": "NO_ACTION",
       "reason": "Current page inspection required; no proven production writer"
     },
-    "last_schedule_run": 43474884526,
-    "last_successful_schedule": 43406320330,
+    "last_schedule_run": 43523087214,
+    "last_successful_schedule": 43474884526,
     "last_watchdog_recovery": null,
     "last_external_wake": null,
     "scheduler": {
