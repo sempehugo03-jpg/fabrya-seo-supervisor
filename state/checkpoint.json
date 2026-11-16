@@ -404,11 +404,11 @@
   "lease": {
     "owner": "43777801873:1",
     "run": "43777801873",
-    "task": "runtime-verification",
+    "task": "competitor-surface:2026-W47:v2",
     "trigger": "schedule",
     "wake": null,
-    "heartbeat": 1794787247.4282715,
-    "expires": 1794787847.4282718
+    "heartbeat": 1794787249.46952,
+    "expires": 1794787849.4695206
   },
   "events": [
     {
